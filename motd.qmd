@@ -1,0 +1,13 @@
+---
+title: "MOTD"
+listing:
+  contents: motd
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+resources:
+  - motd.qmd
+---
+ - Report problems - trouble@stat.berkeley.edu
+ - Read our docs   - https://statistics.berkeley.edu/computing
