@@ -1,3 +1,3 @@
 # berkeley-scf.github.io
 
-Index for berkeley-scf tutorials.
+Computing support for the Department of Statistics at UC Berkeley.

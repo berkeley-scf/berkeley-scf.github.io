@@ -1,10 +1,8 @@
 ---
-title: Tutorial Index
-layout: default
-author: Christopher Paciorek
+title: Tutorials
 ---
 
-# Tutorial Index
+This is an index of Berkeley SCF training materials.
 
  - [The basics of UNIX and the command line](/tutorial-unix-basics/)
  - [Using the bash shell](/tutorial-using-bash/)
