@@ -216,6 +216,32 @@ Note
   <pubDate>Thu, 20 Feb 2025 00:00:00 GMT</pubDate>
 </item>
 <item>
+  <title>Unexpected downtime: Evans Hall networks down</title>
+  <dc:creator>Ryan Lovett</dc:creator>
+  <link>https://computing.stat.berkeley.edu/motd/2025-02-06-evans-networks.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="investigating-2025-02-06-1130p" class="level2">
+<h2 class="anchored" data-anchor-id="investigating-2025-02-06-1130p">Investigating 2025-02-06 11:30p</h2>
+<p>Several wired networks in Evans Hall are down at the moment. I’ve reported it to campus.</p>
+</section>
+<section id="resolved-2025-02-07-1228a" class="level2">
+<h2 class="anchored" data-anchor-id="resolved-2025-02-07-1228a">Resolved 2025-02-07 12:28a</h2>
+<p>The networks started to come back online a few minutes after midnight.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>Network</category>
+  <category>Incident</category>
+  <guid>https://computing.stat.berkeley.edu/motd/2025-02-06-evans-networks.html</guid>
+  <pubDate>Thu, 06 Feb 2025 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>Unexpected downtime: Campus power outage</title>
   <dc:creator>Ryan Lovett</dc:creator>
   <link>https://computing.stat.berkeley.edu/motd/2025-01-04-power-outage.html</link>

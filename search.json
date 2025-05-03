@@ -66,6 +66,37 @@
     "text": "We will be performing operating system upgrades on all of our compute servers during the upcoming spring break. The upgrades will occur in batches from Monday, March 24, through Thursday, March 27, starting each morning at approximately 8:30am. We will begin with the least active nodes.\nYour home and scratch directories will not be affected, however /tmp and /var/tmp on each machine will be wiped. /data partitions, which exist on a small number of systems, will not be impacted.\nWe will place reservations on the systems to be upgraded about 72 hours in advance. If you currently have or plan to start jobs that you expect to run into next week, please ensure that your code can resume from where it left off if interrupted. For jobs starting before the upgrade, we recommend setting a time limit of no more than 72 hours.\nSelf-Installed Packages If you have installed your own R packages, you will need to reinstall them after the upgrade or request that we install them system-wide. Check your packages in ~/R/x86_64-pc-linux-gnu-library in versioned subdirectories. Although these directories will remain after the upgrade, R on the new system will look in ~/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/. This is necessary because compiled R packages link against system libraries from the old OS, which may not exist or have different versions on the new OS. To request system-wide installation, please contact us at consult@stat.berkeley.edu.\nPython packages installed via conda are not affected. If you have installed Python packages using pip and the setup involves compiling shared objects, these libraries will need to be reinstalled. Compiling shared objects typically means that the package installation involves building components that link to system libraries. If you’re unsure which packages need reinstallation, you can check the package documentation or contact us for assistance."
   },
   {
+    "objectID": "motd/2025-02-06-evans-networks.html",
+    "href": "motd/2025-02-06-evans-networks.html",
+    "title": "Unexpected downtime: Evans Hall networks down",
+    "section": "",
+    "text": "Several wired networks in Evans Hall are down at the moment. I’ve reported it to campus."
+  },
+  {
+    "objectID": "motd/2025-02-06-evans-networks.html#investigating-2025-02-06-1130p",
+    "href": "motd/2025-02-06-evans-networks.html#investigating-2025-02-06-1130p",
+    "title": "Unexpected downtime: Evans Hall networks down",
+    "section": "",
+    "text": "Several wired networks in Evans Hall are down at the moment. I’ve reported it to campus."
+  },
+  {
+    "objectID": "motd/2025-02-06-evans-networks.html#resolved-2025-02-07-1228a",
+    "href": "motd/2025-02-06-evans-networks.html#resolved-2025-02-07-1228a",
+    "title": "Unexpected downtime: Evans Hall networks down",
+    "section": "Resolved 2025-02-07 12:28a",
+    "text": "Resolved 2025-02-07 12:28a\nThe networks started to come back online a few minutes after midnight."
+  },
+  {
+    "objectID": "motd.html",
+    "href": "motd.html",
+    "title": "MOTD",
+    "section": "",
+    "text": "Report problems - trouble@stat.berkeley.edu\nRead our docs - https://statistics.berkeley.edu/computing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTape Backups\n\n\n\nMaintenance\n\nBackups\n\n\n\n\n\n\n\n\n\nApr 29, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nBrief network maintenance\n\n\n\nNetwork\n\n\n\n\n\n\n\n\n\nApr 25, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nLambda head node unreachable\n\n\n\nLambda\n\n\n\n\n\n\n\n\n\nApr 12, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nJupyterHub: new default python kernel, desktop extension\n\n\n\nJupyterHub\n\nPython\n\nRemote Desktop\n\n\n\n\n\n\n\n\n\nApr 3, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nPython and R Upgrades\n\n\n\nPython\n\nR\n\nUbuntu\n\n\n\n\n\n\n\n\n\nApr 1, 2025\n\n\nChris Paciorek\n\n\n\n\n\n\n\n\n\n\n\n\nDowntime notice: Cluster node OS upgrade\n\n\n\nUbuntu\n\nMaintenance\n\n\n\n\n\n\n\n\n\nMar 21, 2025\n\n\nDan Ackerman\n\n\n\n\n\n\n\n\n\n\n\n\nMaintenance reminder: Slurm scheduler software update\n\n\n\nUbuntu\n\nMaintenance\n\n\n\n\n\n\n\n\n\nMar 3, 2025\n\n\nDan Ackerman\n\n\n\n\n\n\n\n\n\n\n\n\narwen RAM problems\n\n\n\nHardware\n\nIncident\n\n\n\n\n\n\n\n\n\nFeb 20, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nUnexpected downtime: Evans Hall networks down\n\n\n\nNetwork\n\nIncident\n\n\n\n\n\n\n\n\n\nFeb 6, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nUnexpected downtime: Campus power outage\n\n\n\nPower\n\nIncident\n\n\n\n\n\n\n\n\n\nJan 4, 2025\n\n\nRyan Lovett\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "MOTD"
+    ]
+  },
+  {
     "objectID": "tutorials.html",
     "href": "tutorials.html",
     "title": "Tutorials",
@@ -73,16 +104,6 @@
     "text": "This is an index of Berkeley SCF training materials.\n\nThe basics of UNIX and the command line\nUsing the bash shell\nCreating dynamic documents, focused on R\nWorking with large datasets in SQL, R, and Python\nParallelization tools for R, Python, MATLAB, and C\nFlexible parallelization in Python using Dask and in R using future\nString processing\nWriting efficient R code\nDebugging in R",
     "crumbs": [
       "Tutorials"
-    ]
-  },
-  {
-    "objectID": "motd.html",
-    "href": "motd.html",
-    "title": "MOTD",
-    "section": "",
-    "text": "Report problems - trouble@stat.berkeley.edu\nRead our docs - https://statistics.berkeley.edu/computing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTape Backups\n\n\n\nMaintenance\n\nBackups\n\n\n\n\n\n\n\n\n\nApr 29, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nBrief network maintenance\n\n\n\nNetwork\n\n\n\n\n\n\n\n\n\nApr 25, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nLambda head node unreachable\n\n\n\nLambda\n\n\n\n\n\n\n\n\n\nApr 12, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nJupyterHub: new default python kernel, desktop extension\n\n\n\nJupyterHub\n\nPython\n\nRemote Desktop\n\n\n\n\n\n\n\n\n\nApr 3, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nPython and R Upgrades\n\n\n\nPython\n\nR\n\nUbuntu\n\n\n\n\n\n\n\n\n\nApr 1, 2025\n\n\nChris Paciorek\n\n\n\n\n\n\n\n\n\n\n\n\nDowntime notice: Cluster node OS upgrade\n\n\n\nUbuntu\n\nMaintenance\n\n\n\n\n\n\n\n\n\nMar 21, 2025\n\n\nDan Ackerman\n\n\n\n\n\n\n\n\n\n\n\n\nMaintenance reminder: Slurm scheduler software update\n\n\n\nUbuntu\n\nMaintenance\n\n\n\n\n\n\n\n\n\nMar 3, 2025\n\n\nDan Ackerman\n\n\n\n\n\n\n\n\n\n\n\n\narwen RAM problems\n\n\n\nHardware\n\nIncident\n\n\n\n\n\n\n\n\n\nFeb 20, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nUnexpected downtime: Campus power outage\n\n\n\nPower\n\nIncident\n\n\n\n\n\n\n\n\n\nJan 4, 2025\n\n\nRyan Lovett\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "MOTD"
     ]
   },
   {
