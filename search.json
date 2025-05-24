@@ -1,20 +1,38 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Computing in Statistics",
-    "section": "",
-    "text": "The Statistical Computing Facility (SCF) is a unit of the academic Department of Statistics, formally organized in 1986. We provide computing, networking, and information resources to the community of students, faculty, and staff of the Statistics Department and the Econometrics Laboratory of the Department of Economics in support of the University’s mission of teaching, research, and public service. It is staffed by a Director of Computing, a Statistical Computing Consultant, and a UNIX System Administrator.\nWe have additional documentation at the department’s website.",
-    "crumbs": [
-      "Computing in Statistics"
-    ]
-  },
-  {
     "objectID": "motd/2025-04-01-software.html",
     "href": "motd/2025-04-01-software.html",
     "title": "Python and R Upgrades",
     "section": "",
     "text": "With the recent operating system upgrade to Ubuntu 24.04, we have also upgraded to Python 3.13 and R 4.4.3. Older versions are available via the module system."
+  },
+  {
+    "objectID": "motd/2025-03-21-os-upgrades.html",
+    "href": "motd/2025-03-21-os-upgrades.html",
+    "title": "Downtime notice: Cluster node OS upgrade",
+    "section": "",
+    "text": "We will be performing operating system upgrades on all of our compute servers during the upcoming spring break. The upgrades will occur in batches from Monday, March 24, through Thursday, March 27, starting each morning at approximately 8:30am. We will begin with the least active nodes.\nYour home and scratch directories will not be affected, however /tmp and /var/tmp on each machine will be wiped. /data partitions, which exist on a small number of systems, will not be impacted.\nWe will place reservations on the systems to be upgraded about 72 hours in advance. If you currently have or plan to start jobs that you expect to run into next week, please ensure that your code can resume from where it left off if interrupted. For jobs starting before the upgrade, we recommend setting a time limit of no more than 72 hours.\nSelf-Installed Packages If you have installed your own R packages, you will need to reinstall them after the upgrade or request that we install them system-wide. Check your packages in ~/R/x86_64-pc-linux-gnu-library in versioned subdirectories. Although these directories will remain after the upgrade, R on the new system will look in ~/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/. This is necessary because compiled R packages link against system libraries from the old OS, which may not exist or have different versions on the new OS. To request system-wide installation, please contact us at consult@stat.berkeley.edu.\nPython packages installed via conda are not affected. If you have installed Python packages using pip and the setup involves compiling shared objects, these libraries will need to be reinstalled. Compiling shared objects typically means that the package installation involves building components that link to system libraries. If you’re unsure which packages need reinstallation, you can check the package documentation or contact us for assistance."
+  },
+  {
+    "objectID": "motd/2025-02-06-evans-networks.html",
+    "href": "motd/2025-02-06-evans-networks.html",
+    "title": "Unexpected downtime: Evans Hall networks down",
+    "section": "",
+    "text": "Several wired networks in Evans Hall are down at the moment. I’ve reported it to campus."
+  },
+  {
+    "objectID": "motd/2025-02-06-evans-networks.html#investigating-2025-02-06-1130p",
+    "href": "motd/2025-02-06-evans-networks.html#investigating-2025-02-06-1130p",
+    "title": "Unexpected downtime: Evans Hall networks down",
+    "section": "",
+    "text": "Several wired networks in Evans Hall are down at the moment. I’ve reported it to campus."
+  },
+  {
+    "objectID": "motd/2025-02-06-evans-networks.html#resolved-2025-02-07-1228a",
+    "href": "motd/2025-02-06-evans-networks.html#resolved-2025-02-07-1228a",
+    "title": "Unexpected downtime: Evans Hall networks down",
+    "section": "Resolved 2025-02-07 12:28a",
+    "text": "Resolved 2025-02-07 12:28a\nThe networks started to come back online a few minutes after midnight."
   },
   {
     "objectID": "motd/2025-02-20-arwen.html",
@@ -52,39 +70,32 @@
     "text": "Monitoring 2025-04-03 2:06p\narwen is back online after removing a memory module."
   },
   {
-    "objectID": "motd/2025-04-29-backups.html",
-    "href": "motd/2025-04-29-backups.html",
-    "title": "Tape Backups",
+    "objectID": "motd/2025-01-04-power-outage.html",
+    "href": "motd/2025-01-04-power-outage.html",
+    "title": "Unexpected downtime: Campus power outage",
     "section": "",
-    "text": "We will be running the monthly backups Sunday, May 4 beginning in the afternoon.\nComputers will not be rebooted or unavailable, nor will processes be terminated. You may experience slightly slower input/output performance until the dumps are complete."
+    "text": "I just received word that there is a power outage affecting the north side of campus. Unfortunately this has hit our server rooms and all systems are down. I’ll respond with updates when I know more."
   },
   {
-    "objectID": "motd/2025-03-21-os-upgrades.html",
-    "href": "motd/2025-03-21-os-upgrades.html",
-    "title": "Downtime notice: Cluster node OS upgrade",
+    "objectID": "motd/2025-01-04-power-outage.html#investigating-2025-01-04-927a",
+    "href": "motd/2025-01-04-power-outage.html#investigating-2025-01-04-927a",
+    "title": "Unexpected downtime: Campus power outage",
     "section": "",
-    "text": "We will be performing operating system upgrades on all of our compute servers during the upcoming spring break. The upgrades will occur in batches from Monday, March 24, through Thursday, March 27, starting each morning at approximately 8:30am. We will begin with the least active nodes.\nYour home and scratch directories will not be affected, however /tmp and /var/tmp on each machine will be wiped. /data partitions, which exist on a small number of systems, will not be impacted.\nWe will place reservations on the systems to be upgraded about 72 hours in advance. If you currently have or plan to start jobs that you expect to run into next week, please ensure that your code can resume from where it left off if interrupted. For jobs starting before the upgrade, we recommend setting a time limit of no more than 72 hours.\nSelf-Installed Packages If you have installed your own R packages, you will need to reinstall them after the upgrade or request that we install them system-wide. Check your packages in ~/R/x86_64-pc-linux-gnu-library in versioned subdirectories. Although these directories will remain after the upgrade, R on the new system will look in ~/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/. This is necessary because compiled R packages link against system libraries from the old OS, which may not exist or have different versions on the new OS. To request system-wide installation, please contact us at consult@stat.berkeley.edu.\nPython packages installed via conda are not affected. If you have installed Python packages using pip and the setup involves compiling shared objects, these libraries will need to be reinstalled. Compiling shared objects typically means that the package installation involves building components that link to system libraries. If you’re unsure which packages need reinstallation, you can check the package documentation or contact us for assistance."
+    "text": "I just received word that there is a power outage affecting the north side of campus. Unfortunately this has hit our server rooms and all systems are down. I’ll respond with updates when I know more."
   },
   {
-    "objectID": "motd/2025-02-06-evans-networks.html",
-    "href": "motd/2025-02-06-evans-networks.html",
-    "title": "Unexpected downtime: Evans Hall networks down",
-    "section": "",
-    "text": "Several wired networks in Evans Hall are down at the moment. I’ve reported it to campus."
+    "objectID": "motd/2025-01-04-power-outage.html#monitoring-2025-01-04-1106a",
+    "href": "motd/2025-01-04-power-outage.html#monitoring-2025-01-04-1106a",
+    "title": "Unexpected downtime: Campus power outage",
+    "section": "Monitoring 2025-01-04 11:06a",
+    "text": "Monitoring 2025-01-04 11:06a\nPower is still out in Evans Hall. Emergency lights are on, and the card readers are not functional."
   },
   {
-    "objectID": "motd/2025-02-06-evans-networks.html#investigating-2025-02-06-1130p",
-    "href": "motd/2025-02-06-evans-networks.html#investigating-2025-02-06-1130p",
-    "title": "Unexpected downtime: Evans Hall networks down",
-    "section": "",
-    "text": "Several wired networks in Evans Hall are down at the moment. I’ve reported it to campus."
-  },
-  {
-    "objectID": "motd/2025-02-06-evans-networks.html#resolved-2025-02-07-1228a",
-    "href": "motd/2025-02-06-evans-networks.html#resolved-2025-02-07-1228a",
-    "title": "Unexpected downtime: Evans Hall networks down",
-    "section": "Resolved 2025-02-07 12:28a",
-    "text": "Resolved 2025-02-07 12:28a\nThe networks started to come back online a few minutes after midnight."
+    "objectID": "motd/2025-01-04-power-outage.html#resolved-2025-01-04-400p",
+    "href": "motd/2025-01-04-power-outage.html#resolved-2025-01-04-400p",
+    "title": "Unexpected downtime: Campus power outage",
+    "section": "Resolved 2025-01-04 4:00p",
+    "text": "Resolved 2025-01-04 4:00p\nCampus issued WarnMe notifications that power was restored Saturday afternoon. Most machines were brought up by 4p or so, although some need local attention so I’ll bring them up Monday."
   },
   {
     "objectID": "motd.html",
@@ -94,6 +105,16 @@
     "text": "Report problems - trouble@stat.berkeley.edu\nRead our docs - https://statistics.berkeley.edu/computing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTape Backups\n\n\n\nMaintenance\n\nBackups\n\n\n\n\n\n\n\n\n\nApr 29, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nBrief network maintenance\n\n\n\nNetwork\n\n\n\n\n\n\n\n\n\nApr 25, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nLambda head node unreachable\n\n\n\nLambda\n\n\n\n\n\n\n\n\n\nApr 12, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nJupyterHub: new default python kernel, desktop extension\n\n\n\nJupyterHub\n\nPython\n\nRemote Desktop\n\n\n\n\n\n\n\n\n\nApr 3, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nPython and R Upgrades\n\n\n\nPython\n\nR\n\nUbuntu\n\n\n\n\n\n\n\n\n\nApr 1, 2025\n\n\nChris Paciorek\n\n\n\n\n\n\n\n\n\n\n\n\nDowntime notice: Cluster node OS upgrade\n\n\n\nUbuntu\n\nMaintenance\n\n\n\n\n\n\n\n\n\nMar 21, 2025\n\n\nDan Ackerman\n\n\n\n\n\n\n\n\n\n\n\n\nMaintenance reminder: Slurm scheduler software update\n\n\n\nUbuntu\n\nMaintenance\n\n\n\n\n\n\n\n\n\nMar 3, 2025\n\n\nDan Ackerman\n\n\n\n\n\n\n\n\n\n\n\n\narwen RAM problems\n\n\n\nHardware\n\nIncident\n\n\n\n\n\n\n\n\n\nFeb 20, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nUnexpected downtime: Evans Hall networks down\n\n\n\nNetwork\n\nIncident\n\n\n\n\n\n\n\n\n\nFeb 6, 2025\n\n\nRyan Lovett\n\n\n\n\n\n\n\n\n\n\n\n\nUnexpected downtime: Campus power outage\n\n\n\nPower\n\nIncident\n\n\n\n\n\n\n\n\n\nJan 4, 2025\n\n\nRyan Lovett\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "MOTD"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Computing in Statistics",
+    "section": "",
+    "text": "The Statistical Computing Facility (SCF) is a unit of the academic Department of Statistics, formally organized in 1986. We provide computing, networking, and information resources to the community of students, faculty, and staff of the Statistics Department and the Econometrics Laboratory of the Department of Economics in support of the University’s mission of teaching, research, and public service. It is staffed by a Director of Computing, a Statistical Computing Consultant, and a UNIX System Administrator.\nWe have additional documentation at the department’s website.",
+    "crumbs": [
+      "Computing in Statistics"
     ]
   },
   {
@@ -128,32 +149,18 @@
     "text": "Resolved 2025-04-16 11:00a\nThe lambda cluster’s head node was having network interface problems. They are clear for the time being."
   },
   {
-    "objectID": "motd/2025-01-04-power-outage.html",
-    "href": "motd/2025-01-04-power-outage.html",
-    "title": "Unexpected downtime: Campus power outage",
+    "objectID": "motd/2025-04-29-backups.html",
+    "href": "motd/2025-04-29-backups.html",
+    "title": "Tape Backups",
     "section": "",
-    "text": "I just received word that there is a power outage affecting the north side of campus. Unfortunately this has hit our server rooms and all systems are down. I’ll respond with updates when I know more."
+    "text": "We will be running the monthly backups Sunday, May 4 beginning in the afternoon.\nComputers will not be rebooted or unavailable, nor will processes be terminated. You may experience slightly slower input/output performance until the dumps are complete."
   },
   {
-    "objectID": "motd/2025-01-04-power-outage.html#investigating-2025-01-04-927a",
-    "href": "motd/2025-01-04-power-outage.html#investigating-2025-01-04-927a",
-    "title": "Unexpected downtime: Campus power outage",
+    "objectID": "motd/2025-04-03-jupyterhub.html",
+    "href": "motd/2025-04-03-jupyterhub.html",
+    "title": "JupyterHub: new default python kernel, desktop extension",
     "section": "",
-    "text": "I just received word that there is a power outage affecting the north side of campus. Unfortunately this has hit our server rooms and all systems are down. I’ll respond with updates when I know more."
-  },
-  {
-    "objectID": "motd/2025-01-04-power-outage.html#monitoring-2025-01-04-1106a",
-    "href": "motd/2025-01-04-power-outage.html#monitoring-2025-01-04-1106a",
-    "title": "Unexpected downtime: Campus power outage",
-    "section": "Monitoring 2025-01-04 11:06a",
-    "text": "Monitoring 2025-01-04 11:06a\nPower is still out in Evans Hall. Emergency lights are on, and the card readers are not functional."
-  },
-  {
-    "objectID": "motd/2025-01-04-power-outage.html#resolved-2025-01-04-400p",
-    "href": "motd/2025-01-04-power-outage.html#resolved-2025-01-04-400p",
-    "title": "Unexpected downtime: Campus power outage",
-    "section": "Resolved 2025-01-04 4:00p",
-    "text": "Resolved 2025-01-04 4:00p\nCampus issued WarnMe notifications that power was restored Saturday afternoon. Most machines were brought up by 4p or so, although some need local attention so I’ll bring them up Monday."
+    "text": "I have updated the default python kernel from 3.12 to 3.13 to match the login environment of our recently upgraded systems. The previous kernel is still available as “Python 3.12” in the jupyter lab launcher.\nI’ve also updated the remote desktop feature. The latest version supports copy/paste and desktop resizing, has a link back to the hub, and uses a unix socket for security."
   },
   {
     "objectID": "motd/2025-03-03-slurm-scheduler.html",
@@ -182,12 +189,5 @@
     "title": "Brief network maintenance",
     "section": "",
     "text": "We’ll be doing some maintenance to the network interfaces of our file server starting today at 2p. Our goal is to increase the network bandwidth of our file server. We anticipate that the outage will be very brief (one minute), however there is a slim possibility we may have to reboot the machine. Running jobs should not be terminated in either case."
-  },
-  {
-    "objectID": "motd/2025-04-03-jupyterhub.html",
-    "href": "motd/2025-04-03-jupyterhub.html",
-    "title": "JupyterHub: new default python kernel, desktop extension",
-    "section": "",
-    "text": "I have updated the default python kernel from 3.12 to 3.13 to match the login environment of our recently upgraded systems. The previous kernel is still available as “Python 3.12” in the jupyter lab launcher.\nI’ve also updated the remote desktop feature. The latest version supports copy/paste and desktop resizing, has a link back to the hub, and uses a unix socket for security."
   }
 ]
