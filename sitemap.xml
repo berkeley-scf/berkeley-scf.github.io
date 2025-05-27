@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://computing.stat.berkeley.edu/motd/2025-04-01-software.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
+    <loc>https://computing.stat.berkeley.edu/motd/2025-03-03-slurm-scheduler.html</loc>
+    <lastmod>2025-05-01T04:18:12.046Z</lastmod>
   </url>
   <url>
     <loc>https://computing.stat.berkeley.edu/motd/2025-03-21-os-upgrades.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/motd/2025-02-06-evans-networks.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/motd/2025-02-20-arwen.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/motd/2025-01-04-power-outage.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/motd.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/index.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/tutorials.html</loc>
-    <lastmod>2025-05-26T22:04:52.807Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/motd/2025-04-12-lambda.html</loc>
-    <lastmod>2025-05-26T22:04:52.807Z</lastmod>
-  </url>
-  <url>
-    <loc>https://computing.stat.berkeley.edu/motd/2025-04-29-backups.html</loc>
-    <lastmod>2025-05-26T22:04:52.807Z</lastmod>
+    <lastmod>2025-05-01T04:18:12.046Z</lastmod>
   </url>
   <url>
     <loc>https://computing.stat.berkeley.edu/motd/2025-04-03-jupyterhub.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
+    <lastmod>2025-05-01T04:18:12.046Z</lastmod>
   </url>
   <url>
-    <loc>https://computing.stat.berkeley.edu/motd/2025-03-03-slurm-scheduler.html</loc>
-    <lastmod>2025-05-26T22:04:52.806Z</lastmod>
+    <loc>https://computing.stat.berkeley.edu/motd/2025-04-12-lambda.html</loc>
+    <lastmod>2025-05-01T04:18:12.046Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/motd/2025-02-06-evans-networks.html</loc>
+    <lastmod>2025-05-02T00:19:07.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/motd.html</loc>
+    <lastmod>2025-05-01T04:18:12.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/index.html</loc>
+    <lastmod>2025-05-26T22:04:18.685Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/tutorials.html</loc>
+    <lastmod>2025-05-01T04:18:12.047Z</lastmod>
   </url>
   <url>
     <loc>https://computing.stat.berkeley.edu/motd/2025-04-25-network.html</loc>
-    <lastmod>2025-05-26T22:04:52.807Z</lastmod>
+    <lastmod>2025-05-03T00:07:41.326Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/motd/2025-04-01-software.html</loc>
+    <lastmod>2025-05-01T04:18:12.046Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/motd/2025-02-20-arwen.html</loc>
+    <lastmod>2025-05-01T04:18:12.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/motd/2025-01-04-power-outage.html</loc>
+    <lastmod>2025-05-01T04:18:12.045Z</lastmod>
+  </url>
+  <url>
+    <loc>https://computing.stat.berkeley.edu/motd/2025-04-29-backups.html</loc>
+    <lastmod>2025-05-03T00:08:08.331Z</lastmod>
   </url>
 </urlset>

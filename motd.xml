@@ -10,7 +10,7 @@
 <atom:link href="https://computing.stat.berkeley.edu/motd.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.7.31</generator>
-<lastBuildDate>Tue, 29 Apr 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 29 Apr 2025 07:00:00 GMT</lastBuildDate>
 <item>
   <title>Tape Backups</title>
   <dc:creator>Ryan Lovett</dc:creator>
@@ -29,7 +29,7 @@
   <category>Maintenance</category>
   <category>Backups</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-04-29-backups.html</guid>
-  <pubDate>Tue, 29 Apr 2025 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 29 Apr 2025 07:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Brief network maintenance</title>
@@ -47,7 +47,7 @@
  ]]></description>
   <category>Network</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-04-25-network.html</guid>
-  <pubDate>Fri, 25 Apr 2025 00:00:00 GMT</pubDate>
+  <pubDate>Fri, 25 Apr 2025 07:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Lambda head node unreachable</title>
@@ -72,7 +72,7 @@
  ]]></description>
   <category>Lambda</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-04-12-lambda.html</guid>
-  <pubDate>Sat, 12 Apr 2025 00:00:00 GMT</pubDate>
+  <pubDate>Sat, 12 Apr 2025 07:00:00 GMT</pubDate>
 </item>
 <item>
   <title>JupyterHub: new default python kernel, desktop extension</title>
@@ -93,7 +93,7 @@
   <category>Python</category>
   <category>Remote Desktop</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-04-03-jupyterhub.html</guid>
-  <pubDate>Thu, 03 Apr 2025 00:00:00 GMT</pubDate>
+  <pubDate>Thu, 03 Apr 2025 07:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Python and R Upgrades</title>
@@ -113,7 +113,7 @@
   <category>R</category>
   <category>Ubuntu</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-04-01-software.html</guid>
-  <pubDate>Tue, 01 Apr 2025 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 01 Apr 2025 07:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Downtime notice: Cluster node OS upgrade</title>
@@ -136,7 +136,7 @@
   <category>Ubuntu</category>
   <category>Maintenance</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-03-21-os-upgrades.html</guid>
-  <pubDate>Fri, 21 Mar 2025 00:00:00 GMT</pubDate>
+  <pubDate>Fri, 21 Mar 2025 07:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Maintenance reminder: Slurm scheduler software update</title>
@@ -179,7 +179,7 @@ Note
   <category>Ubuntu</category>
   <category>Maintenance</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-03-03-slurm-scheduler.html</guid>
-  <pubDate>Mon, 03 Mar 2025 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 03 Mar 2025 08:00:00 GMT</pubDate>
 </item>
 <item>
   <title>arwen RAM problems</title>
@@ -213,7 +213,7 @@ Note
   <category>Hardware</category>
   <category>Incident</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-02-20-arwen.html</guid>
-  <pubDate>Thu, 20 Feb 2025 00:00:00 GMT</pubDate>
+  <pubDate>Thu, 20 Feb 2025 08:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Unexpected downtime: Evans Hall networks down</title>
@@ -239,7 +239,7 @@ Note
   <category>Network</category>
   <category>Incident</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-02-06-evans-networks.html</guid>
-  <pubDate>Thu, 06 Feb 2025 00:00:00 GMT</pubDate>
+  <pubDate>Thu, 06 Feb 2025 08:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Unexpected downtime: Campus power outage</title>
@@ -269,7 +269,7 @@ Note
   <category>Power</category>
   <category>Incident</category>
   <guid>https://computing.stat.berkeley.edu/motd/2025-01-04-power-outage.html</guid>
-  <pubDate>Sat, 04 Jan 2025 00:00:00 GMT</pubDate>
+  <pubDate>Sat, 04 Jan 2025 08:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
