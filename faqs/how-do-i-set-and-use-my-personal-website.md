@@ -2,7 +2,7 @@
 title: "How do I set up and use my personal website?"
 ---
 Department members can publish documents and data on the web by
-uploading files to their [computing accounts](/node/3462). Note that
+uploading files to their [computing accounts](/getting-started/computing-accounts). Note that
 this website will be available at https://www.stat.berkeley.edu appended
 with /~*username*/ (as opposed to this departmental site,
 statistics.berkeley.edu). Alternatives include [Github

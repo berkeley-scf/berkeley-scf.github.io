@@ -1,6 +1,7 @@
 ---
 title: "VS Code"
 ---
+
 Follow these instructions to use VS Code on the SCF. You can either run
 VS Code on a login node or on one of the compute nodes in the SCF
 cluster. In either case VS Code will access files (including your home
@@ -10,7 +11,7 @@ To connect to the SCF using VS Code,  you'll need to have installed the
 'Remote Development' extension pack on your local VS Code.  Then to
 connect to the SCF, click on the blue icon labelled `\>\<` in the lower
 left corner and choose "Host", providing one of the
-<a href="/node/3475">SCF login nodes</a>.
+[SCF login nodes](/servers/login-servers).
 
 If you want to access the cluster nodes (including GPUs available on
 some cluster nodes), you'll need to do one of the following.

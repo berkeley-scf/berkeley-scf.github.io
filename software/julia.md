@@ -67,7 +67,7 @@ make the system-installed package available in your current project.
 ## Versions
 
 You can use Linux [environment
-modules](https://statistics.berkeley.edu/node/5458) to switch between
+modules](/faqs/using-environment-modules-scf) to switch between
 different Julia versions. This can be done on a one-time basis in a
 given terminal session or cluster submission script, or can be done in
 your .bashrc (after the stanza involving ~skel/std.bashrc) to set a

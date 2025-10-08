@@ -37,11 +37,9 @@ alternatives:
   for free. It can run MATLAB code and has its own set of packages akin
   to MATLAB toolboxes.
 - You may want to consider logging into one of our Linux servers and
-  running the MATLAB graphical interface remotely via [RDP](/node/4633).
+  running the MATLAB graphical interface remotely via [RDP](/faqs/remote-desktop).
 - We might be able to assist in porting your MATLAB code or work process
   to some other application.
 
-Please contact <consult@stat.berkeley.edu> if you have any questions or
+Please contact consult@stat.berkeley.edu if you have any questions or
 problems.
-
- 
