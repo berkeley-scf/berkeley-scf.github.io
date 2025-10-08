@@ -27,45 +27,22 @@ one-off websites set up by faculty include:
 - Integration of course website and content in one place, with the
   ability to manage via version control systems such as Git.
 
-<div class="table-responsive">
 
-<table class="table table-bordered" style="width: 100%;">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>Course Landing Page</td>
-<td>Class website</td>
-</tr>
-<tr class="even">
-<td><p><span
-style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span
-style="font-family:Arial,sans-serif"><span style="color:#000000"><span
-style="font-weight:400"><span style="font-style:normal"><span
-style="text-decoration:none"><span style="border:none"><span
-style="display:inline-block"><span style="overflow:hidden"><span
-style="width:298px"><span style="height:251px"><img
-src="https://lh7-us.googleusercontent.com/JwaYSIhThPLIpI-p3qQp_OxlN1WjE2WdOhA64FaSBl-NoOTydIqbn104Dv6dffDouYOOytZ4e_rEbcDhfwNUnN0v3EYM-Q0g_gId4bjZQVXTSeNxm0Kvca0LKXGqFRmfsIFKhOfZTkd31DYbhDcTkqU"
-width="298"
-height="251" /></span></span></span></span></span></span></span></span></span></span></span><br />
- </p></td>
-<td><span
-style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span
-style="font-family:Arial,sans-serif"><span style="color:#000000"><span
-style="font-weight:400"><span style="font-style:normal"><span
-style="text-decoration:none"><span style="border:none"><span
-style="display:inline-block"><span style="overflow:hidden"><span
-style="width:298px"><span style="height:249px"><img
-src="https://lh7-us.googleusercontent.com/LqhL2UsVZw3TH6pupIxkpY_KJcOy7n-b5DKL2kAbIvCH5TGX0QSrSVDiUIXvfAgxBNeHQEjXqpn3mG7fkk-wgerJUQevfDp9nMC1jtVdyQnRR-Vqmtwfv1VP3DF8Gjl75f3-U5XWO_CDAQ4QTLZVU9A"
-width="298"
-height="249" /></span></span></span></span></span></span></span></span></span></span></span></td>
-</tr>
-</tbody>
-</table>
+::::{grid} 2
 
-</div>
+::: {card}
+:header: Course Landing Page
+
+![Course Landing Page](https://lh7-us.googleusercontent.com/JwaYSIhThPLIpI-p3qQp_OxlN1WjE2WdOhA64FaSBl-NoOTydIqbn104Dv6dffDouYOOytZ4e_rEbcDhfwNUnN0v3EYM-Q0g_gId4bjZQVXTSeNxm0Kvca0LKXGqFRmfsIFKhOfZTkd31DYbhDcTkqU){width="298px" height="251px"}
+:::
+
+::: {card}
+:header: Class website
+
+![Class website](https://lh7-us.googleusercontent.com/LqhL2UsVZw3TH6pupIxkpY_KJcOy7n-b5DKL2kAbIvCH5TGX0QSrSVDiUIXvfAgxBNeHQEjXqpn3mG7fkk-wgerJUQevfDp9nMC1jtVdyQnRR-Vqmtwfv1VP3DF8Gjl75f3-U5XWO_CDAQ4QTLZVU9A){width="298px" height="249px"}
+:::
+
+::::
 
 ## Course Landing Pages
 
