@@ -166,9 +166,7 @@ click **Print**, do the following:
     your User and Account IDs, just make sure to select the preset in
     the **Presets** pop-up menu.
 
-<img src="/images/xerox_presets.png"
-style="width: 640px; height: 371px;" alt="Xerox Preset Screenshot" />
-
+![Xerox Preset Screenshot](/images/xerox_presets.png){width="640px" height="371px"}
  
 
 </div>

@@ -25,13 +25,11 @@ SSO](https://support.zoom.us/hc/en-us/articles/201363003-Getting-Started-with-SS
 option. SSO stands for "single sign-on" and will use CalNet for
 authentication.
 
-<img src="/images/zoom-login.png"
-style="width:50.0%;height:50.0%" alt="zoom login window" />
+![zoom login window](/images/zoom-login.png){width="50%"}
 
 Then enter "berkeley" as the domain:
 
-<img src="/images/zoom-sso.png"
-style="width:50.0%;height:50.0%" alt="zoom single sign on window" />
+![zoom single sign-on window](/images/zoom-sso.png){width="50%"}
 
 ## Settings
 

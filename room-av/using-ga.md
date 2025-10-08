@@ -60,8 +60,7 @@ meeting, rather than your laptop's webcam and mic. You will need to:
 
 |                                                          |                                                         |
 |:--------------------------------------------------------:|:-------------------------------------------------------:|
-| <img src="/images/AtoB_0.jpg" width="265" height="190"  alt="USB-A to USB-B connector" />             |  <img src="/images/CtoB.jpg" width="278" height="182" alt="USB-C to USB-B connector" />             |
-
+| ![USB-A to USB-B connector](/images/AtoB_0.jpg){width="265" height="190"} | ![USB-C to USB-B connector](/images/CtoB.jpg){width="278" height="182"} |
 
 - Make sure that the room camera, mic, and speakers are selected as the
   camera, mic, and speakers to be used by Zoom by selecting

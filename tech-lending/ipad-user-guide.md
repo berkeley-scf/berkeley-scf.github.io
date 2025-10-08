@@ -30,26 +30,26 @@ change the WiFi network:
 
 1.  Some apps support the Apple Pencil as a scribbling utensil, while
     others recognize it as an extension of one’s finger.
-2.  You will need to [charge the
+1.  You will need to [charge the
     Pencil](https://support.apple.com/en-us/HT211019) periodically.
 
 ## Annotate PDF or Doc files
 
 1.  Open the Google Drive application and locate the document that you
     wish to open in notability.
-2.  Find and tap the "..." next to the file name to invoke the options
+1.  Find and tap the "..." next to the file name to invoke the options
     list on the image below.  
-    <img src="/images/ipad01.png" style="width: 500px; height: 416px;" />
-3.  Tap "Open in", and then tap Notability on the applications
+    ![](/images/ipad01.png){width="500px" height="416px"}
+1.  Tap "Open in", and then tap Notability on the applications
     list.  Notability works best with PDF files, or documents created
     with Google Docs, Google Sheets, or Google Slides.
-4.  When Notability opens, select "Create New Note".  
-    <img src="/images/ipad4.png" style="width: 400px; height: 463px;" />
-5.  If the document is multi-page, every page will be selected by
+1.  When Notability opens, select "Create New Note".  
+    ![](/images/ipad4.png){width="400px" height="463px"}
+1.  If the document is multi-page, every page will be selected by
     default, You must unselect the pages that you don't need.
-6.  Tap "import".  If an additional dialog with the list of imported
+1.  Tap "import".  If an additional dialog with the list of imported
     files was generated, tap "done".
-7.  Go to the Notability main page and select the new note.
+1.  Go to the Notability main page and select the new note.
 
 ## Authentication
 
