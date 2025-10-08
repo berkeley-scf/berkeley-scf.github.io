@@ -36,9 +36,9 @@ jobs:
         run: npm install -g mystmd
       - name: Install dependencies
         run: |
-          npm install -g myst-parser
-          npm install -g js-yaml
-          npm install -g glob
+          npm install myst-parser
+          npm install js-yaml
+          npm install glob
       - name: Build HTML Assets
         run: myst build --html
       - name: Upload artifact
