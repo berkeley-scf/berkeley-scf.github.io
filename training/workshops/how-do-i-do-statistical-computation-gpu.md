@@ -22,14 +22,11 @@ the cloud.
   on commercial cloud providers such as Amazon's AWS and Google cloud.
   Email us for more information.
 
-<span style="line-height: 22px;">For more details on the SCF GPUs and on
-using GPUs on Savio, please </span><span style="line-height: 22px;">see
-</span><a href="/servers/gpu" style="line-height: 22px;">this
-link</a><span style="line-height: 22px;">.</span>
+We have more details on the [SCF GPUs and on using GPUs on Savio](/servers/gpu).
 
 For the most part, researchers tend not to program directly on a GPU but
 to use libraries such as PyTorch and JAX for Python (also CUDA.jl for
 Julia) that make use of GPU(s) without one having to specifically write
-GPU code. However, [this
+GPU code. However, [the parallelization
 tutorial](https://computing.stat.berkeley.edu/tutorial-parallelization)
 provides some information about programming directly on a GPU.
