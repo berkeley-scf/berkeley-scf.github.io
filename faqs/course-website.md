@@ -33,13 +33,13 @@ one-off websites set up by faculty include:
 ::: {card}
 :header: Course Landing Page
 
-![Course Landing Page](https://lh7-us.googleusercontent.com/JwaYSIhThPLIpI-p3qQp_OxlN1WjE2WdOhA64FaSBl-NoOTydIqbn104Dv6dffDouYOOytZ4e_rEbcDhfwNUnN0v3EYM-Q0g_gId4bjZQVXTSeNxm0Kvca0LKXGqFRmfsIFKhOfZTkd31DYbhDcTkqU){width="298px" height="251px"}
+![Course Landing Page](/images/course-landing-page.png){width="298px" height="251px"}
 :::
 
 ::: {card}
 :header: Class website
 
-![Class website](https://lh7-us.googleusercontent.com/LqhL2UsVZw3TH6pupIxkpY_KJcOy7n-b5DKL2kAbIvCH5TGX0QSrSVDiUIXvfAgxBNeHQEjXqpn3mG7fkk-wgerJUQevfDp9nMC1jtVdyQnRR-Vqmtwfv1VP3DF8Gjl75f3-U5XWO_CDAQ4QTLZVU9A){width="298px" height="249px"}
+![Class website](/images/class-website.png){width="298px" height="249px"}
 :::
 
 ::::
