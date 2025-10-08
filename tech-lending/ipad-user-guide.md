@@ -19,7 +19,7 @@ change the WiFi network:
 
 1.  Open the "Settings" application.
 1.  Tap "Wi-Fi". If not already on, slide the control button next to "Wi-Fi".  
-    The color around the slider should be green. ![Wi-Fi Slider](/images/wifi-slider.png){width="57px" height="41px"}
+    The color around the slider should be green. ![Wi-Fi Slider](../images/wifi-slider.png){width="57px" height="41px"}
 1.  Choose a UC Berkeley wireless network, presumably the main
     network: eduroam.
 
@@ -36,12 +36,12 @@ change the WiFi network:
     wish to open in notability.
 1.  Find and tap the "..." next to the file name to invoke the options
     list on the image below.  
-    ![iPad screenshot](/images/ipad01.png){width="500px" height="416px"}
+    ![iPad screenshot](../images/ipad01.png){width="500px" height="416px"}
 1.  Tap "Open in", and then tap Notability on the applications
     list.  Notability works best with PDF files, or documents created
     with Google Docs, Google Sheets, or Google Slides.
 1.  When Notability opens, select "Create New Note".  
-    ![Notability screenshot](/images/ipad4.png){width="400px" height="463px"}
+    ![Notability screenshot](../images/ipad4.png){width="400px" height="463px"}
 1.  If the document is multi-page, every page will be selected by
     default, You must unselect the pages that you don't need.
 1.  Tap "import".  If an additional dialog with the list of imported
