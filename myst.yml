@@ -22,7 +22,6 @@ project:
         - file: software/conda.md
         - file: software/containers.md
         - file: software/ssh.md
-        - file: software/zoom.md
     - file: servers.md
       children:
         - file: servers/login-servers.md
