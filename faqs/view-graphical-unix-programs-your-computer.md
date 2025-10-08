@@ -9,10 +9,8 @@ graphics created by applications running on remote UNIX systems.
 
 When you run an X server and an SSH client, you will launch programs
 from the SSH window and the X server will be display them See these
-<a href="/node/4180" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="69b1aab6-045e-4b12-bd5d-918504c5f615">instructions</a>
-for information on downloading and installing SSH software.
+[instructions](/software/ssh) for information on downloading and installing SSH
+software.
 
 Your Windows SSH client must be configured to forward X Window System
 communication (i.e., graphical windows) from the machine you are

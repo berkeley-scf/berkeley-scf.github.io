@@ -26,23 +26,24 @@ information about it so that we can name it (in the examples below it is
 named *PROJECT_NAME*). SSH to the account when it is available and run
 the following command:
 
-    PROJECT_NAME:~$ mkdir REPO_NAME
-    PROJECT_NAME:~$ git init --bare --shared REPO_NAME
+```{code} shell-session
+PROJECT_NAME:~$ mkdir REPO_NAME
+PROJECT_NAME:~$ git init --bare --shared REPO_NAME
+```
 
 where *REPO_NAME* is the name of the repository.
 
 ## Accessing the repository using SSH keypairs
 
-Collaborators should see
-<a href="/node/3483" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="ce34f1b8-a80e-4f6f-acdc-eca0d026a1a9">our instructions
+Collaborators should see [our instructions](/faqs/ssh-keys)
 on creating SSH keypairs</a>. Once you send your public key to
 <manager@stat.berkeley.edu> , we can deposit it into the project
 account. You will then be able to begin working with the data by cloning
 the repository:
 
-    user@laptop:~$ git clone ssh://PROJECT_NAME@gandalf.berkeley.edu/accounts/projects/FAC_NAME/PROJECT_NAME/REPO_NAME
+```{code} shell-session
+user@laptop:~$ git clone ssh://PROJECT_NAME@gandalf.berkeley.edu/accounts/projects/FAC_NAME/PROJECT_NAME/REPO_NAME
+```
 
 ## Accessing the repository using an SCF account
 
@@ -52,35 +53,39 @@ you would like for them to have an SCF account. Once it has has been
 created, they will have direct read access to the repository for
 cloning:
 
-    git clone ~PROJECT_NAME/REPO_NAME
+```{code} shell-session
+git clone ~PROJECT_NAME/REPO_NAME
+```
 
 ## Using git
 
-The SCF has prepared some [documentation on using git](/node/4243). A
+The SCF has prepared some [documentation on using git](/faqs/git). A
 basic workflow, after you have cloned the repository, is:
 
-    # Create a new file
-    vi doc1.tex
+```{code} shell-session
+# Create a new file
+vi doc1.tex
 
-    # Add it to the repository
-    git add doc.tex
+# Add it to the repository
+git add doc.tex
 
-    # Record your changes. You will be prompted to describe your changes.
-    git commit
+# Record your changes. You will be prompted to describe your changes.
+git commit
 
-    # Write your changes to the repository. You only need to set the origin once.
-    # All other pushes can omit the --set-upstream action.
-    git push --set-upstream origin master
+# Write your changes to the repository. You only need to set the origin once.
+# All other pushes can omit the --set-upstream action.
+git push --set-upstream origin master
 
-    # Edit an existing document
-    vi doc2.tex
+# Edit an existing document
+vi doc2.tex
 
-    # Record and write your changes
-    git commit
-    git push
+# Record and write your changes
+git commit
+git push
 
-    # Pull the most current version with changes from others
-    git pull
+# Pull the most current version with changes from others
+git pull
+```
 
 If the cloned repository is on your personal computer rather than in
 your SCF account, you will be able to use your preferred text editor to

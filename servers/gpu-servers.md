@@ -35,10 +35,7 @@ if you are not a member of the lab group, your jobs will run on a
 preemptible basis, which means they can be cancelled at any time by a
 higher-priority jobs. These servers can be accessed by submitting to the
 *jsteinhardt*, *yugroup*, *yss,* or *songmei* partitions (details below)
-using the <a href="/node/4805" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="ddfd25a8-44e8-4d4b-8ba1-463ead55b47b">SLURM scheduling
-software</a>.
+using the [SLURM scheduling software](/servers/cluster).
 
 #### Steinhardt lab group (*jsteinhardt* partition)
 
@@ -95,10 +92,7 @@ the GPU:
   as well as on gandalf and radagast among others.
 - We can install additional or upgrade current software as needed. 
 
-We use Linux environment
-<a href="/node/5458" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="6cf4643f-ad87-4040-bf87-8eb6e08ff379">modules</a> to
+We use Linux environment [modules](/faqs/using-environment-modules-scf) to
 manage the use of GPU-based software, as discussed next. Note that you
 could insert any of these commands in your .bashrc (after the stanza
 involving ~skel/std.bashrc) so they are always in effect or invoke them
@@ -108,10 +102,9 @@ terminal session.
 For use Python packages that use the GPU for back-end computations,
 simply import the package in Python.
 
-<span style="line-height: 1.69231em;">To program with CUDA and related
-packages directly, y</span><span style="line-height: 22px;">ou'll need
+To program with CUDA and related packages directly, you'll need
 to load CUDA as follows in order to be able to compile and run your
-code:</span>
+code:
 
 - CUDA: to use CUDA directly in C or another language, invoke "module
   load cuda".

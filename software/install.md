@@ -16,7 +16,7 @@ directory or a project directory.
 ### Tips for installing software
 
 - Note that any installation instructions that require you to use
-  \`apt-get\` or \`sudo\` won't work because they require administrative
+  `apt-get` or `sudo` won't work because they require administrative
   privileges.
 - However, in many cases, one can install software in your home
   directory by making sure the installation process will only create
@@ -33,7 +33,7 @@ Python packages, but it can be used to install software more generally.
 A good option for installing a piece of software is to check if there is
 a Conda package for it, before you try to install from source code.
 Executables installed when you install a Conda package will be placed in
-the \`bin\` subdirectory of the active Conda environment.
+the `bin` subdirectory of the active Conda environment.
 
 #### <span id="cke_bm_305S" style="display: none;"> </span>Mamba<span id="mamba"></span>
 
@@ -88,29 +88,20 @@ want, even if it is the same as the SCF's default Python version.
     # NameError: name 'numpy' is not defined
 
 One additional complication is that if you have packages installed via
-pip (which will be located in \`~/.local\` in your home directory), your
+pip (which will be located in `~/.local` in your home directory), your
 environment will try to use those packages, which means your environment
 is not fully isolated and can be hard to reproduce. In addition, if you
 choose to install packages for your environment via pip, you'll
-generally want to install without using the \`--user\` flag. Omitting
+generally want to install without using the `--user` flag. Omitting
 that flag will cause packages to be installed within the environment's
 directory, while including the flag will cause them to be installed in
-\`~/.local\` (and risk affecting your use of packages outside the
+`~/.local` (and risk affecting your use of packages outside the
 environment!).
 
 #### R and Conda
 
-<div class="highlight">
-
 Conda can actually be used to install R and R packages inside a Conda
 environment. You're welcome to do this, but most users make use of the R
 installation (and a wide range of R packages) that we provide at the
-system level and
-<a href="/node/4168" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="30eff939-ee0e-4030-b18c-20ac2135debc">install
-additional packages</a> for use with the system R.
-
-</div>
-
- 
+system level and [nstall additional packages](/software/R-packages) for use
+with the system R.

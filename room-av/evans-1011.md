@@ -34,10 +34,9 @@ from the iPad’s left column. To create them:
 1.  Create a Google Calendar event and add a Zoom meeting to it with the
     [Zoom for Google Workspace
     extension](https://workspace.google.com/marketplace/app/zoom_for_google_workspace/364750910244).
-2.  Request a <a href="/node/7622" data-entity-substitution="canonical"
-    data-entity-type="node"
-    data-entity-uuid="804ec64e-e89b-4c2f-a415-0b9c9441809b">room
-    reservation</a> by adding the room to the calendar event.
+1.  Request a [room
+    reservation](https://statistics.berkeley.edu/support/reserve-a-room) by adding
+    the room to the calendar event.
 
 If you add the room, "Stat-Conf-1011 Jerzy Neyman Cap:36" to your
 meeting on Google Calendar, and also add a Zoom meeting to the video
@@ -71,10 +70,8 @@ meeting to display instructions on both the tablet and room display.
 
 ### Direct Share (Proximity)
 
-<span style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Start
-or join a meeting on the iPad. Click Share Screen in your computer's
-Zoom application. (Linux
-excluded)</span></span></span></span></span></span>
+Start or join a meeting on the iPad. Click Share Screen in your computer's
+Zoom application. (Linux excluded)
 
 ### Share to the Room (no meeting)
 
@@ -89,5 +86,3 @@ cameras. The cameras are set to manual control, and there are presets
 for common positions. You can turn on auto-frame to track the speaker.
 You can also tap *Switch Camera* to switch between Audience and
 Presenter cameras.
-
- 

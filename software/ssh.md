@@ -18,10 +18,7 @@ the name of the primary program that implements the protocol.
   - Newer versions of Windows have ssh built-in. You can access it in a
     Command Prompt (cmd.exe) window.
   - The old standby for many years is a free program called **putty**
-    available at
-    <a href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/"
-    data-_mce_href="http://www.chiark.greenend.org.uk/~sgtatham/putty/"
-    target="_top">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a>.
+    available at http://www.chiark.greenend.org.uk/%7Esgtatham/putty/.
     You may choose to download putty as a single executable file which
     can be stored wherever you find it convenient, or as an installer
     which provides several other programs such as scp and sftp.
@@ -50,11 +47,9 @@ remote username, you needn't specify it on the command line, e.g. '**ssh
 remotehost**'. **putty** uses a graphical user interface to set the
 username and remotehost.
 
-We have a <a href="/node/3475" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="93dded50-6694-4f9d-bd99-79786cac0fd9">variety of
-servers</a> that you can login to, one of which is called
-*arwen.berkeley.edu*. Here's an example command-line login to arwen:
+We have a [variety of servers](/servers/login-servers) that you can login to,
+one of which is called `arwen.berkeley.edu`. Here's an example command-line
+login to arwen:
 
     me@my-laptop$ ssh myusername@arwen.berkeley.edu
     The authenticity of host 'arwen.berkeley.edu (128.32.135.115)' can't be established.
@@ -89,7 +84,4 @@ on the blocked machine. You can also just connect to any other SCF
 machine where you are not blocked.
 
 You can reduce the number of unsuccessful SSH attempts by setting up
-<a href="/node/3483" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="ce34f1b8-a80e-4f6f-acdc-eca0d026a1a9">public key
-authentication with SSH keys</a>.
+[public key authentication with SSH keys](/faqs/ssh-keys).

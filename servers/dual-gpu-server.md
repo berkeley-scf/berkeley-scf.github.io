@@ -9,15 +9,12 @@ permission of Prof. Yu or SCF staff.
 ## Submitting GPU jobs
 
 The hardware is hosted on the scf-sm21 node of our high-priority
-cluster. To use one of the GPUs, one
-<a href="/node/4805" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="ddfd25a8-44e8-4d4b-8ba1-463ead55b47b">submits to the
-cluster</a> but using \`-w scf-sm21\` as the flag to point the job to
+cluster. To use one of the GPUs, one [submits to the cluster](/servers/cluster)
+but using `-w scf-sm21` as the flag to point the job to
 the dual GPU on scf-sm21.
 
 One can submit a job that uses one of the two GPUs by using the flag
-\`--gres=gpu:1\`. In this mode of operation, two separate jobs (which
+`--gres=gpu:1`. In this mode of operation, two separate jobs (which
 could be submitted by one user or two users) can use the two GPUs, and
 the queueing software will assign the jobs to separate GPUs.
 
@@ -27,13 +24,13 @@ It's also possible to run a job that uses both GPUs at once. The
 remainder of this document describes how to do this using CUDA, Python,
 and Matlab.
 
-First, when submitting the job, include the flag \`--gres=gpu:2\` to
+First, when submitting the job, include the flag `--gres=gpu:2` to
 request both GPUs.
 
 ### CUDA
 
-In CUDA in the host code, simply call \`cudaSetDevice(0)\` or
-\`cudaSetDevice(1)\` and then do any data transfer or kernel
+In CUDA in the host code, simply call `cudaSetDevice(0)` or
+`cudaSetDevice(1)` and then do any data transfer or kernel
 computations that you'd like. Operations on the GPUs will continue in
 the background even if the host code is operating on the other GPU.
 
@@ -80,9 +77,8 @@ We haven't fully investigated this, but a quick online search suggests
 the following.
 
 1.  Caffe: When invoking caffe from the command line, one can specify
-    \`-gpu 0,1\` to use both GPUs.
-2.  Torch: You can switch between GPUs with
-    "cutorch.<span class="pl-c1">setDevice()". More details are
-    available [here](https://github.com/torch/cutorch/issues/42).</span>
-3.  <span class="pl-c1">Tensorflow: Details can be found
-    [here](https://www.tensorflow.org/versions/r0.7/how_tos/using_gpu/index.html).</span>
+    `-gpu 0,1` to use both GPUs.
+1.  Torch: You can switch between GPUs with `cutorch.setDevice()`. More details are
+    available [here](https://github.com/torch/cutorch/issues/42).
+1.  Tensorflow: Details can be found
+    [here](https://www.tensorflow.org/versions/r0.7/how_tos/using_gpu/index.html).

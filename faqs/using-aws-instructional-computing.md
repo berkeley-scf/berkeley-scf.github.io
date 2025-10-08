@@ -12,13 +12,11 @@ wishing to use AWS in their classes.
 Some potential instructional uses for AWS include:
 
 1.  Working with cloud-based virtual machines
-2.  Running parallelized computational tasks that scale to many cores
+1.  Running parallelized computational tasks that scale to many cores
     using cloud-based virtual clusters
-3.  Using <a href="/node/4900" data-entity-substitution="canonical"
-    data-entity-type="node"
-    data-entity-uuid="2f77097f-947b-4d0c-8b85-7e0d27485123">Spark</a> to
+1.  Using [Spark](/faqs/spark) to
     carry out distributed computation, including MapReduce computations
-4.  Using Amazon's MapReduce service for distributed computation
+1.  Using Amazon's MapReduce service for distributed computation
 
 We note that SCF supports the use of virtual machines on student laptops
 and SCF servers, as well as provides access to parallel computing

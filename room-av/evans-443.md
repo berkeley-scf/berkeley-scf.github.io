@@ -81,8 +81,5 @@ Create a Google Calendar event and add a Zoom meeting to it with the
 [Zoom for Google Workspace
 extension](https://workspace.google.com/marketplace/app/zoom_for_google_workspace/364750910244).
 
-Request a <a href="/node/7622" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="804ec64e-e89b-4c2f-a415-0b9c9441809b">room
-reservation</a> by adding the room to the calendar event.   
- 
+Request a [room reservation](https://statistics.berkeley.edu/support/reserve-a-room)
+by adding the room to the calendar event.   

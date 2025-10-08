@@ -6,11 +6,7 @@ is helping instructors create discoverable and modern class websites,
 with memorable URLs in the berkeley.edu domain.
 
 This page provides an overview and gives details to instructors on
-setting up a
-<a href="/node/8550#class-websites" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="2ffd5e9f-6710-4305-b868-e50a94af8d6c">class
-website</a> using the system.
+setting up a [class website](/faqs/course-website) using the system.
 
 The department strongly encourages instructors to set up a class
 website.
@@ -127,8 +123,8 @@ consult@stat.berkeley.edu.
 
 For instructors wishing to provide a full website and course materials,
 the SCF provides both a [Quarto
-template](https://github.com/berkeley-scf/course-site-quarto) and a
-[MyST template](https://github.com/berkeley-scf/course-site-myst). The
+template](https://github.com/berkeley-cdss/course-site-quarto) and a
+[MyST template](https://github.com/berkeley-cdss/course-site-myst). The
 README files found when navigating to each of those templates provide
 full instructions for setting up the course website.
 
@@ -154,14 +150,14 @@ Some features of the templates include the ability to:
   using functionality developed by Andrew Bray for Statistics 20.
 - Have the website be searchable.
 
-### Minimal Websites<span id="minimal-websites"></span>
+### Minimal Websites
 
 The SCF provides a [template for a minimal class
-website](https://github.com/berkeley-scf/course-site-quarto-lite) using
+website](https://github.com/berkeley-cdss/course-site-quarto-lite) using
 a consistent department style, [illustrated with this dummy
-site](https://berkeley-scf.github.io/course-site-quarto-lite/). An
+site](https://berkeley-cdss.github.io/course-site-quarto-lite/). An
 instructor can follow [these directions in the template
-README](https://github.com/berkeley-scf/course-site-quarto-lite?tab=readme-ov-file#instructions-for-course-staff),
+README](https://github.com/berkeley-cdss/course-site-quarto-lite?tab=readme-ov-file#instructions-for-course-staff),
 editing the pages for the website in a browser window. The content is
 managed by GitHub (and you'll need a GitHub account), but knowledge of
 Git or GitHub is not required.  

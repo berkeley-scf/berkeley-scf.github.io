@@ -9,17 +9,13 @@ to use more than one core, or are not sure how to follow these rules,
 please email <consult@stat.berkeley.edu>.
 
 For additional details, please see the
-<a href="/node/4244" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="1a0a6b9b-4498-4ed3-843b-83de434deb7a">notes from SCF
-workshops</a> on the basics of parallel programming in R, Python, Matlab
+[notes from SCF](/training/workshops/how-do-i-do-parallel-programming)
+workshops on the basics of parallel programming in R, Python, Matlab
 and C, with some additional details on using the cluster. If you're
-making use of the
-<a href="/node/4279" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="fdb7da38-b279-4357-917a-08c76f112767">threaded
-BLAS</a>, it's worth doing some testing to make sure that threading is
-giving an non-negligible speedup; see the notes above for more
+making use of the [threaded
+BLAS](/faqs/linear-algebra-and-parallelized-linear-algebra-using-blas), it's
+worth doing some testing to make sure that threading is giving an
+non-negligible speedup; see the notes above for more
 information.
 
 #### Running MATLAB across Multiple Nodes
@@ -297,7 +293,7 @@ and then use nvidia-smi commands, e.g.,
 
     scf-sm20:~$ nvidia-smi -q -d UTILIZATION,MEMORY -l 1
 
-We have [more details](/gpu) on setting up your code to use
+We have [more details](/servers/gpu) on setting up your code to use
 the GPU.
 
 </div>

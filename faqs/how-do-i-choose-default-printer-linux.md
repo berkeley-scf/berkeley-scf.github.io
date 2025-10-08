@@ -1,13 +1,7 @@
 ---
 title: "How do I choose a default printer in Linux?"
 ---
-<div class="toc">
-
 ## Environment Variables
-
-</div>
-
-<div class="section" lang="en">
 
 If you wish to change your default printer, you can put the name of the
 preferred printer in the environment variables PRINTER and LPDEST. For

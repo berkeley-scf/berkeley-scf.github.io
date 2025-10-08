@@ -1,21 +1,21 @@
 ---
 title: "Using the Hadoop cluster and Rhipe"
 ---
-**The SCF's test Hadoop cluster is now offline due to limited use.
-Please see our <a href="/node/4900" data-entity-substitution="canonical"
-data-entity-type="node"
-data-entity-uuid="2f77097f-947b-4d0c-8b85-7e0d27485123">page on
-Spark</a> or [contact
+
+::: {warning}
+The SCF's test Hadoop cluster is now offline due to limited use.
+Please see our [page on Spark](/faqs/spark) or [contact
 us](mailto:consult@stat.berkeley.edu?subject=Hadoop%2FSpark%20interest)
-if you would like to try out Hadoop or Spark in cluster computing.** The
+if you would like to try out Hadoop or Spark in cluster computing. The
 material below is now out of date, but preserved at the moment for
 historical purposes.
+:::
 
 ### SCF Hadoop Cluster Information
 
 The SCF has a small Hadoop test cluster that all SCF users can use to
 run Hadoop jobs, including R jobs that use the
-<a href="http://www.datadr.org" data-package="" title="Rhipe">Rhipe
+<a href="http://www.datadr.org" title="Rhipe">Rhipe
 package</a> as a front end to Hadoop.
 
 The Hadoop cluster has eight nodes, each with two cores, and a total of
@@ -23,8 +23,8 @@ about 1 Tb of disk space set up with the Hadoop distributed file system.
 Note that the nodes are a set of our outdated compute servers and the
 amount of disk space is limited. The goal of the Hadoop cluster at this
 point is to serve as a testbed rather than for doing real analyses of
-large data. If you have need for more resources please contact
-[us](mailto:consult@stat.berkeley.edu) and we can discuss how you might
+large data. If you have need for more resources please [contact
+us](/getting-started/contact-us) and we can discuss how you might
 use cloud resources such as Amazon's EC2.
 
 Below is more detailed information about using the Hadoop cluster.
@@ -42,9 +42,11 @@ Second, add the line 'hadoop=1' to your .bashrc file in your SCF home
 directory. It should be added before the following lines, which should
 already exist in your .bashrc file:
 
-    if [ -f ~skel/std.bashrc ]; then
-        source ~skel/std.bashrc
-    fi
+``` {code} bash
+if [ -f ~skel/std.bashrc ]; then
+    source ~skel/std.bashrc
+fi
+```
 
 This sets up some environment variables that you need in order to use
 Hadoop.
