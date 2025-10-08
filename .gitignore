@@ -1,4 +1,6 @@
 # MyST build outputs
 _build
+.ipynb_checkpoints
+node_modules
 
 .vscode
