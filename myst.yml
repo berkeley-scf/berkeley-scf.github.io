@@ -42,6 +42,8 @@ project:
     #  children:
     #    - pattern: faqs/*
     #      hidden: true
+    - pattern: faqs/*
+      hidden: true
     - file: kb.md
     - file: tutorials.md
     - file: training.md
