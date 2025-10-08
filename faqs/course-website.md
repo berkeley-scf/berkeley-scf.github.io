@@ -33,13 +33,21 @@ one-off websites set up by faculty include:
 ::: {card}
 :header: Course Landing Page
 
-![Course Landing Page](/images/course-landing-page.png){width="298px" height="251px"}
+```{image} ../images/course-landing-page.png
+:alt: Course Landing Page
+:width: 298px
+:height: 251px
+```
 :::
 
 ::: {card}
 :header: Class website
 
-![Class website](/images/class-website.png){width="298px" height="249px"}
+```{image} ../images/class-website.png
+:alt: Class website
+:width: 298px
+:height: 249px
+```
 :::
 
 ::::
@@ -78,12 +86,14 @@ We provide instructions below for setting up both minimal and
 full-featured websites using the SCF-developed department course website
 templates below. 
 
-**To get started with a website for your class, please email the SCF at
+::: {important}
+To get started with a website for your class, please email the SCF at
 consult@stat.berkeley.edu and let us know whether you'd like to set up a
 fully-featured site (and let us know if you'd prefer to use Quarto or
 MyST) or if you'd like to set up a minimal site. We'll then set up the
 structure of the site and point you to how/where you can start adding
-content.**
+content.
+:::
 
 Course websites will be found at statXYZ.berkeley.edu/{semester-year},
 e.g.,
