@@ -1,5 +1,5 @@
 // myst JavaScript plugin: listing.mjs
-// Reads and displays a directory of markdown files.
+// Reads and displays markdown files.
 import fs from 'fs';
 import path from 'path';
 import { mystParse } from 'myst-parser';
@@ -28,17 +28,20 @@ function assembleSummaryAST(fileData, imageWidth, imageHeight) {
     // Left column: date and author
     const leftCell = {
       type: 'tableCell',
+      class: 'listing-summary-cell-left',
       children: []
     };
     if (date) {
       leftCell.children.push({
         type: 'paragraph',
+        class: 'listing-summary-date',
         children: [{ type: 'text', value: safeText(date) }]
       });
     }
     if (author) {
       leftCell.children.push({
         type: 'paragraph',
+        class: 'listing-summary-author',
         children: [{ type: 'text', value: safeText(author) }]
       });
     }
@@ -47,6 +50,7 @@ function assembleSummaryAST(fileData, imageWidth, imageHeight) {
     // Middle column: title (linked) and description
     const middleCell = {
       type: 'tableCell',
+      class: 'listing-summary-cell-middle',
       children: []
     };
     if (title) {
@@ -56,7 +60,8 @@ function assembleSummaryAST(fileData, imageWidth, imageHeight) {
         children: [
           {
             type: 'link',
-            url: `/${filename.replace(/\.md$/, '')}`,
+            class: 'listing-summary-title',
+            url: `${filename.replace(/\.md$/, '')}`,
             children: [{ type: 'text', value: safeText(title) }]
           }
         ]
@@ -65,6 +70,7 @@ function assembleSummaryAST(fileData, imageWidth, imageHeight) {
     if (description) {
       middleCell.children.push({
         type: 'paragraph',
+        class: 'listing-summary-description',
         children: [{ type: 'text', value: safeText(description) }]
       });
     }
@@ -73,6 +79,7 @@ function assembleSummaryAST(fileData, imageWidth, imageHeight) {
     // Right column: thumbnail
     const rightCell = {
       type: 'tableCell',
+      class: 'listing-summary-cell-right',
       children: []
     };
     if (thumbnail && typeof thumbnail === 'object' && thumbnail.type === 'image') {
@@ -83,6 +90,7 @@ function assembleSummaryAST(fileData, imageWidth, imageHeight) {
       rightCell.children.push({
         type: 'image',
         url: thumbnail,
+        class: 'listing-summary-thumbnail',
         alt: safeText(title),
         ...(imageWidth ? { width: imageWidth } : {}),
         ...(imageHeight ? { height: imageHeight } : {})
@@ -96,10 +104,12 @@ function assembleSummaryAST(fileData, imageWidth, imageHeight) {
     };
   });
 
-  return [{
-    type: 'table',
-    children: tableRows
-  }];
+  return [
+    {
+      type: 'table',
+      children: tableRows
+    }
+  ];
 }
 
 function assembleTableAST(fileData) {
@@ -107,9 +117,9 @@ function assembleTableAST(fileData) {
   const headerRow = {
     type: 'tableRow',
     children: [
-      { type: 'tableCell', children: [{ type: 'paragraph', children: [{ type: 'text', value: 'Date' }] }] },
-      { type: 'tableCell', children: [{ type: 'paragraph', children: [{ type: 'text', value: 'Title' }] }] },
-      { type: 'tableCell', children: [{ type: 'paragraph', children: [{ type: 'text', value: 'Author' }] }] }
+      { type: 'tableCell', class: 'listing-table-cell-left', children: [{ type: 'paragraph', class: 'listing-table-date-header', children: [{ type: 'text', value: 'Date' }] }] },
+      { type: 'tableCell', class: 'listing-table-cell-middle', children: [{ type: 'paragraph', class: 'listing-table-title-header', children: [{ type: 'text', value: 'Title' }] }] },
+      { type: 'tableCell', class: 'listing-table-cell-right', children: [{ type: 'paragraph', class: 'listing-table-author-header', children: [{ type: 'text', value: 'Author' }] }] }
     ]
   };
 
@@ -117,23 +127,24 @@ function assembleTableAST(fileData) {
     return {
       type: 'tableRow',
       children: [
-        { type: 'tableCell', children: [{ type: 'paragraph', children: [{ type: 'text', value: date || '' }] }] },
+        { type: 'tableCell', children: [{ type: 'paragraph', class: 'listing-table-date', children: [{ type: 'text', value: date || '' }] }] },
         {
           type: 'tableCell',
           children: [
             {
               type: 'paragraph',
+              class: 'listing-table-title',
               children: [
                 {
                   type: 'link',
-                  url: `/${filename.replace(/\.md$/, '')}`,
+                  url: `${filename.replace(/\.md$/, '')}`,
                   children: [{ type: 'text', value: title || '' }]
                 }
               ]
             }
           ]
         },
-        { type: 'tableCell', children: [{ type: 'paragraph', children: [{ type: 'text', value: author || '' }] }] }
+        { type: 'tableCell', children: [{ type: 'paragraph', class: 'listing-table-author', children: [{ type: 'text', value: author || '' }] }] }
       ]
     };
   });
@@ -149,6 +160,7 @@ function renderGridCardHeader(template, title, date, url) {
   const text = template.replace('{title}', title || '').replace('{date}', date || '');
   return {
     type: 'header',
+    class: 'listing-grid-header',
     children: [
       {
         type: 'link',
@@ -168,15 +180,15 @@ function assembleGridAST(fileData, gridColumns = [1, 1, 2, 3], imageWidth, image
     type: 'grid',
     columns: columns,
     children: fileData.map(({ title, author, description, thumbnail, filename, bodyNodes, date }) => {
-      const url = `/${filename.replace(/\.md$/, '')}`;
+      const url = `${filename.replace(/\.md$/, '')}`;
       const cardChildren = [
         renderGridCardHeader(gridCardHeaderTemplate, title, date, url)
       ];
 
-      // Add thumbnail as an image node if it exists
       if (thumbnail) {
         cardChildren.push({
           type: 'image',
+          class: 'listing-grid-thumbnail',
           url: thumbnail,
           alt: title || '',
           ...(imageWidth ? { width: imageWidth } : {}),
@@ -184,10 +196,10 @@ function assembleGridAST(fileData, gridColumns = [1, 1, 2, 3], imageWidth, image
         });
       }
 
-      // Add description as a paragraph below the thumbnail if it exists
       if (description) {
         cardChildren.push({
           type: 'paragraph',
+          class: 'listing-grid-description',
           children: [{ type: 'text', value: description }]
         });
       }
@@ -202,18 +214,102 @@ function assembleGridAST(fileData, gridColumns = [1, 1, 2, 3], imageWidth, image
         type: 'footer',
         children: [{
           type: 'paragraph',
+          class: 'listing-grid-author',
           children: [{ type: 'text', value: author || '' }]
         }]
       });
 
       return {
         type: 'card',
+        class: 'listing-grid-card',
         children: cardChildren
       };
     })
   };
 
   return [grid];
+}
+
+function assembleRSSXML(fileData, baseUrl) {
+  // Helper to render bodyNodes as HTML
+  const renderNode = (node) => {
+    if (node.type === 'paragraph') {
+      const text = (node.children || []).map(renderNode).join('');
+      return `<p>${text}</p>`;
+    } else if (node.type === 'text') {
+      return node.value || '';
+    } else if (node.type === 'heading') {
+      const text = (node.children || []).map(renderNode).join('');
+      return `<h${node.depth || 1}>${text}</h${node.depth || 1}>`;
+    } else if (node.type === 'list') {
+      const tag = node.ordered ? 'ol' : 'ul';
+      const items = (node.children || []).map(renderNode).join('');
+      return `<${tag}>${items}</${tag}>`;
+    } else if (node.type === 'listItem') {
+      const text = (node.children || []).map(renderNode).join('');
+      return `<li>${text}</li>`;
+    } else if (node.type === 'link') {
+      const text = (node.children || []).map(renderNode).join('');
+      return `<a href="${node.url}">${text}</a>`;
+    } else if (node.type === 'image') {
+      return `<img src="${node.url}" alt="${node.alt || ''}" />`;
+    }
+    if (Array.isArray(node.children)) {
+      return node.children.map(renderNode).join('');
+    }
+    return '';
+  };
+
+  const escape = (str) => String(str || '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+  // Get channel title and description from the first file's frontmatter if available
+  let channelTitle = 'RSS Feed';
+  let channelDescription = '';
+  if (fileData.length > 0) {
+    if (fileData[0].title) channelTitle = fileData[0].title;
+    if (fileData[0].description) channelDescription = fileData[0].description;
+  }
+
+  const itemsXml = fileData.map(({ title, authors, date, description, filename, bodyNodes }) => {
+    // Ensure link is absolute using baseUrl
+    let link = '';
+    if (baseUrl) {
+      const base = baseUrl.replace(/\/$/, '');
+      const rel = filename.replace(/\.md$/, '');
+      link = `${base}/${rel}`;
+    } else {
+      link = filename.replace(/\.md$/, '');
+    }
+    const authorStr = Array.isArray(authors) ? authors.map(a => a.name).filter(Boolean).join(', ') : '';
+    let bodyHtml = '';
+    if (Array.isArray(bodyNodes)) {
+      bodyHtml = bodyNodes.map(renderNode).join('');
+    }
+    return [
+      '    <item>',
+      `      <title>${escape(title)}</title>`,
+      `      <link>${escape(link)}</link>`,
+      date ? `      <pubDate>${escape(new Date(date).toUTCString())}</pubDate>` : '',
+      authorStr ? `      <author>${escape(authorStr)}</author>` : '',
+      description ? `      <description>${escape(description)}</description>` : '',
+      bodyHtml ? `      <content:encoded><![CDATA[${bodyHtml}]]></content:encoded>` : '',
+      '    </item>'
+    ].filter(Boolean).join('\n');
+  }).join('\n');
+
+  const rssXml = [
+    '<?xml version="1.0" encoding="UTF-8" ?>',
+    '<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">',
+    '  <channel>',
+    `    <title>${escape(channelTitle)}</title>`,
+    `    <link>${escape(baseUrl || '')}</link>`,
+    `    <description>${escape(channelDescription)}</description>`,
+    itemsXml,
+    '  </channel>',
+    '</rss>'
+  ].join('\n');
+
+  return rssXml;
 }
 
 function resolveThumbnailPath(filePath, thumbnailRelPath, listingPageDir) {
@@ -250,8 +346,15 @@ function resolveContentFiles(contentsList) {
 const assemblyFunctions = {
   summary: assembleSummaryAST,
   table: assembleTableAST,
-  grid: assembleGridAST
+  grid: assembleGridAST,
+  rss: assembleRSSXML,
+  json: assembleSummaryJSON
 };
+
+function assembleSummaryJSON(fileData) {
+  // Output only the items array as the top-level value
+  return JSON.stringify(fileData, null, 2);
+}
 
 const listingDirective = {
   name: 'listing',
@@ -277,18 +380,23 @@ const listingDirective = {
       type: String,
       doc: 'Type of assembly function to use (e.g., "summary").'
     },
+    baseUrl: {
+      type: String,
+      doc: 'Base URL to prefix to links in RSS output.',
+      alias: ['base-url']
+    },
     'grid-columns': {
       type: String,
       doc: 'Comma-separated grid layout columns (e.g., "1, 1, 2, 3").'
     },
     imageWidth: {
       type: String,
-      doc: 'Width to set for thumbnail images (e.g., "120px" or "50%")',
+      doc: 'Thumbnail image width (e.g., "120px" or "50%")',
       alias: ['image-width']
     },
     imageHeight: {
       type: String,
-      doc: 'Height to set for thumbnail images (e.g., "120px" or "50%")',
+      doc: 'Thumbnail image height (e.g., "120px" or "50%"). Default: 120px',
       alias: ['image-height']
     },
     imagePlaceholder: {
@@ -303,7 +411,7 @@ const listingDirective = {
     },
     gridCardHeader: {
       type: String,
-      doc: 'Template for the grid card header. Supports {title} and {date}. Default: "{title}"',
+      doc: 'Template for the grid card header. Supports {title} and {date}. Default: {title}',
       alias: ['grid-card-header']
     }
   },
@@ -324,9 +432,10 @@ const listingDirective = {
     const sortFields = sortOption.split(',').map(s => s.trim()).filter(Boolean);
     const maxItems = options.maxItems || Infinity;
     const type = options.type || 'summary';
+    const baseUrl = options.baseUrl || options['base-url'] || '';
     // Accept comma-delimited string for gridColumns
     const gridCols = gridColumns.split(',').map(s => Number(s.trim())).filter(n => !isNaN(n));
-    const imageWidth = options.imageWidth || options['image-width'] || '120px';
+    const imageWidth = options.imageWidth || options['image-width'] || '';
     const imageHeight = options.imageHeight || options['image-height'] || '120px';
     const imagePlaceholder = options.imagePlaceholder || options['image-placeholder'] || '';
     const gridIncludeBody = options.gridIncludeBody || options['grid-include-body'] || false;
@@ -372,7 +481,7 @@ const listingDirective = {
         }
         // If no thumbnail and imagePlaceholder is set, use it
         if (!thumbnail && imagePlaceholder) {
-          thumbnail = imagePlaceholder.startsWith('/') ? imagePlaceholder : '/' + imagePlaceholder;
+          thumbnail = resolveThumbnailPath(filePath, imagePlaceholder, listingPageDir);
         }
         // Defensive heading node creation
         if (typeof title !== 'string') {
@@ -426,14 +535,20 @@ const listingDirective = {
     // Select the appropriate assembly function
     const assemblyFunction = assemblyFunctions[type] || assembleSummaryAST;
 
-    // After assembly
-    const result = (type === 'grid')
-      ? assemblyFunction(limitedFileData, gridCols, imageWidth, imageHeight, gridIncludeBody, gridCardHeaderTemplate)
-      : (type === 'summary')
-        ? assemblyFunction(limitedFileData, imageWidth, imageHeight)
-        : assemblyFunction(limitedFileData);
+    // Select the appropriate assembly function and call with correct arguments
+    let result;
+    if (type === 'rss') {
+      result = assemblyFunction(limitedFileData, options.baseUrl);
+    } else if (type === 'grid') {
+      result = assemblyFunction(limitedFileData, gridCols, imageWidth, imageHeight, gridIncludeBody, gridCardHeaderTemplate);
+    } else if (type === 'summary') {
+      result = assemblyFunction(limitedFileData, imageWidth, imageHeight);
+    } else if (type === 'json') {
+      result = assemblyFunction(limitedFileData, maxItems, baseUrl);
+    } else {
+      result = assemblyFunction(limitedFileData);
+    }
 
-    //console.log('AST result:', JSON.stringify(result, null, 2));
     return result;
   }
 };
