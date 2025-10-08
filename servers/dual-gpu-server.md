@@ -1,6 +1,7 @@
 ---
 title: "Dual GPU Server"
 ---
+
 In addition to our primary GPU, the SCF operates a Tesla K80 dual GPU
 that has two GPUs, each with 12 Gb memory and 2496 CUDA cores. This
 hardware was bought by Prof. Bin Yu and should only be used with
@@ -41,20 +42,22 @@ switching back and forth as needed. Operations on the GPUs will continue
 in the background even if the host code is operating on the other GPU.
 Here's some example code:
 
-    import pycuda.driver as drv
-    from pycuda.compiler import SourceModule
-    drv.init()
-    dev0 = drv.Device(0) # set up for GPU 0
-    ctx0 = dev0.make_context() 
-    dev1 = drv.Device(1) # set up for GPU 1
-    ctx1 = dev1.make_context() 
+```{code} python
+import pycuda.driver as drv
+from pycuda.compiler import SourceModule
+drv.init()
+dev0 = drv.Device(0) # set up for GPU 0
+ctx0 = dev0.make_context() 
+dev1 = drv.Device(1) # set up for GPU 1
+ctx1 = dev1.make_context() 
 
-    ctx0.push()
-    # do data transfer and kernel operations (on GPU 0)
-    ctx0.pop()
-    ctx1.push()
-    # do data transfer and kernel operations (on GPU 1)
-    ctx1.pop()
+ctx0.push()
+# do data transfer and kernel operations (on GPU 0)
+ctx0.pop()
+ctx1.push()
+# do data transfer and kernel operations (on GPU 1)
+ctx1.pop()
+```
 
 ### Matlab
 
@@ -62,10 +65,12 @@ In Matlab, to have multiple GPUs in use at once, you need to use parfor
 to run multiple processes, with each one controlling a GPU. Here's some
 example code:
 
-    parfor i = 1:gpuDeviceCount
-      g = gpuDevice(i);
-      % now do GPU-based operations
-    end
+```{code} matlab
+parfor i = 1:gpuDeviceCount
+  g = gpuDevice(i);
+  % now do GPU-based operations
+end
+```
 
 If you instead try to switch between GPUs using "gpuDevice()" on the
 master process, operations and memory use will terminate on the GPU that
