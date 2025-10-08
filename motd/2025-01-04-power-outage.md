@@ -1,7 +1,7 @@
 ---
 title: "Unexpected downtime: Campus power outage"
 description: "Electricity went out to many campus buildings, including Evans Hall."
-thumbnail: ../assets/img/logo.svg
+thumbnail: ../images/logo.svg
 author: "Ryan Lovett"
 date: "2025-01-04"
 options:

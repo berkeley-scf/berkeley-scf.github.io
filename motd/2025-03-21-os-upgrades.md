@@ -1,7 +1,7 @@
 ---
 title: "Downtime notice: Cluster node OS upgrade"
 description: "We are upgrading the operating system on most systems."
-thumbnail: ../assets/img/logo.svg
+thumbnail: ../images/logo.svg
 author: "Dan Ackerman"
 date: "2025-03-21"
 keywords:

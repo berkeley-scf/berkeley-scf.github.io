@@ -1,7 +1,7 @@
 ---
 title: "JupyterHub updates"
 description: "Updated default python kernel and the remote desktop feature."
-thumbnail: ../assets/img/jupyterhub.svg
+thumbnail: ../images/jupyterhub.svg
 author: "Ryan Lovett"
 date: "2025-04-03"
 keywords:

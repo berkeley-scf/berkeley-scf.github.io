@@ -87,4 +87,4 @@ site:
   options:
     #favicon: images/logo/favicon.ico
     folders: true
-    logo: assets/img/svg_Vertical_No_Endorser.svg
+    logo: images/svg_Vertical_No_Endorser.svg

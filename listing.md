@@ -116,7 +116,7 @@ The following frontmatter fields will be read by the plugin:
 ```
 :::{document-listing}
 :contents: motd
-:image-placeholder: /assets/img/logo.svg
+:image-placeholder: /images/logo.svg
 :type: grid
 :::
 ```

@@ -1,7 +1,7 @@
 ---
 title: "Maintenance reminder: Slurm scheduler software update"
 description: "We are performing a minor update to the SLURM scheduler."
-thumbnail: ../assets/img/logo.svg
+thumbnail: ../images/logo.svg
 author: "Dan Ackerman"
 date: "2025-03-03"
 options:
