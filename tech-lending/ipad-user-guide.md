@@ -18,11 +18,9 @@ The iPad may automatically log in to eduroam using a service account. To
 change the WiFi network:
 
 1.  Open the "Settings" application.
-2.  Tap “Wi-Fi”. If not already on, slide the control button next to
-    “Wi-Fi”. The color around the slider should be green. <img
-    src="https://lh6.googleusercontent.com/nBKCUqKX9Vljod_vUvuyk0-QVnd7R0ADHtZR-aFyFvV1IX1zqwTPO_CVFmN6cosxxrEqTO7rp3mZCO0yJ2cUYqu_fq-D1MTGEtNWtBmRo_Yfr5SQXmb_eXrNIBhbnmRaF8sU7mps"
-    style="border-width: initial; border-style: none; width: 57px; height: 41px;" />
-3.  Choose a UC Berkeley wireless network, presumably the main
+1.  Tap "Wi-Fi". If not already on, slide the control button next to "Wi-Fi".  
+    The color around the slider should be green. ![Wi-Fi Slider](/images/wifi-slider.png){width="57px" height="41px"}
+1.  Choose a UC Berkeley wireless network, presumably the main
     network: eduroam.
 
 ## Apple Pencil
@@ -38,12 +36,12 @@ change the WiFi network:
     wish to open in notability.
 1.  Find and tap the "..." next to the file name to invoke the options
     list on the image below.  
-    ![](/images/ipad01.png){width="500px" height="416px"}
+    ![iPad screenshot](/images/ipad01.png){width="500px" height="416px"}
 1.  Tap "Open in", and then tap Notability on the applications
     list.  Notability works best with PDF files, or documents created
     with Google Docs, Google Sheets, or Google Slides.
 1.  When Notability opens, select "Create New Note".  
-    ![](/images/ipad4.png){width="400px" height="463px"}
+    ![Notability screenshot](/images/ipad4.png){width="400px" height="463px"}
 1.  If the document is multi-page, every page will be selected by
     default, You must unselect the pages that you don't need.
 1.  Tap "import".  If an additional dialog with the list of imported
