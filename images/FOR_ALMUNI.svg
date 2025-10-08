@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="168px" height="179px" viewBox="0 0 168 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>FOR_ALMUNI</title>
+    <desc>Created with Sketch.</desc>
+    <g id="AA-Compliance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="OUTSIDE-COMMUNITY-LANDING" transform="translate(-255.000000, -1076.000000)">
+            <g id="FOR_ALMUNI" transform="translate(255.000000, 1076.000000)">
+                <circle id="Oval-Copy-3" fill="#2E637F" cx="84" cy="84" r="84"></circle>
+                <g id="Group-4" transform="translate(46.000000, 21.000000)">
+                    <circle id="Oval" fill="#FFFFFF" cx="67.9198443" cy="50.9599994" r="7.56000017"></circle>
+                    <line x1="28.5" y1="147.5" x2="32.540157" y2="36.2628123" id="Path-4" stroke="#FFFFFF" stroke-width="3.36000008"></line>
+                    <circle id="Oval" fill="#FFFFFF" cx="32.5198432" cy="34.7599998" r="7.56000017"></circle>
+                    <circle id="Oval" fill="#FFFFFF" cx="7.56000017" cy="51.5600002" r="7.56000017"></circle>
+                    <circle id="Oval" fill="#FFFFFF" cx="35.5600002" cy="7.56000017" r="7.56000017"></circle>
+                    <line x1="7.09999886" y1="158.000002" x2="7.09999886" y2="53.0628127" id="Path-4" stroke="#FFFFFF" stroke-width="3.36000008"></line>
+                    <polyline id="Path-46" stroke="#FFFFFF" stroke-width="3.36000008" points="7.31984261 53.0628127 33.3598413 34.7599998 67.5 51.5600002 67.7198438 147.73203"></polyline>
+                    <circle id="Oval" fill="#FFFFFF" cx="67.9198443" cy="90.9599994" r="7.56000017"></circle>
+                    <circle id="Oval" fill="#FFFFFF" cx="32.5198432" cy="74.7599998" r="7.56000017"></circle>
+                    <line x1="7.5" y1="147.5" x2="7.09999886" y2="93.0628127" id="Path-4" stroke="#FFFFFF" stroke-width="3.36000008"></line>
+                    <polyline id="Path-46" stroke="#FFFFFF" stroke-width="3.36000008" points="7.31984261 93.0628127 33.3598413 74.7599998 67.5 91.5600002 67.7198438 139.73203"></polyline>
+                    <polyline id="Path-47" stroke="#FFFFFF" stroke-width="3.36000008" stroke-linejoin="bevel" points="7.56000017 51.5600002 35.5198432 3.77109299 32.5198432 34.7599998"></polyline>
+                    <line x1="67.9198443" y1="51.5600002" x2="36.5999989" y2="3.77109299" id="Path-48" stroke="#FFFFFF" stroke-width="3.36000008" stroke-linejoin="bevel"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

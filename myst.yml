@@ -1,0 +1,90 @@
+version: 1
+project:
+  toc: 
+    - file: index.md
+    - file: getting-started.md
+      children:
+        - file: getting-started/scf-mission.md
+        - file: getting-started/computing-accounts.md
+        - file: getting-started/project-accounts.md
+        - file: getting-started/external-resources.md
+        - file: getting-started/contact-us.md
+    - file: software.md
+      children:
+        - file: software/install.md
+        - file: software/python.md
+        - file: software/R-packages.md
+        - file: software/rstudio.md
+        - file: software/jupyterhub.md
+        - file: software/julia.md
+        - file: software/mathematica.md
+        - file: software/ai-coding.md
+        - file: software/conda.md
+        - file: software/containers.md
+        - file: software/ssh.md
+        - file: software/zoom.md
+    - file: servers.md
+      children:
+        - file: servers/login-servers.md
+        - file: servers/monitoring.md
+        - file: servers/cluster.md
+          children:
+            - file: servers/cluster/quick-start.md
+            - file: servers/cluster/hardware.md
+            - file: servers/cluster/submitting.md
+            - file: servers/cluster/parallel.md
+            - file: servers/cluster/gpus.md
+            - file: servers/cluster/monitoring.md
+        - file: servers/gpu-servers.md
+        - file: servers/savio.md
+        - file: servers/dual-gpu-server.md
+    #- file: faqs.md
+    #  children:
+    #    - pattern: faqs/*
+    #      hidden: true
+    - file: kb.md
+    - file: tutorials.md
+    - file: training.md
+      children:
+        - file: training/tutorials.md
+        - file: training/workshops.md
+        - file: training/workshops/python-bootcamp.md
+        - file: training/workshops/r-bootcamp.md
+        - file: training/workshops/how-do-i-do-parallel-programming.md
+        - file: training/workshops/how-do-i-do-statistical-computation-gpu.md
+        - file: training/workshops/using-c-calling-c-r-and-creating-r-packages.md
+    - file: room-av.md
+      children:
+        - file: room-av/evans-330.md
+        - file: room-av/evans-340.md
+        - file: room-av/evans-342.md
+        - file: room-av/evans-422.md
+        - file: room-av/evans-443.md
+        - file: room-av/evans-1011.md
+        - file: room-av/using-ga.md
+    - file: tech-lending.md
+      children:
+        - file: tech-lending/ipad-pro-129-64gb.md
+        - file: tech-lending/ipad-user-guide.md
+        - file: tech-lending/wacom-tablet.md
+
+    - file: motd.md
+      children:
+        - pattern: motd/*.md
+          hidden: true
+    #- file: blog.md
+    #  children:
+    #    - pattern: blog/**/index.md
+  plugins:
+    - type: javascript
+      path: listing.mjs
+
+site:
+  template: book-theme
+  title: "Computing in the Department of Statistics"
+  domains:
+    - computing.stat.berkeley.edu
+  options:
+    #favicon: images/logo/favicon.ico
+    folders: true
+    logo: assets/img/svg_Vertical_No_Endorser.svg

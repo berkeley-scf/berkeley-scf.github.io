@@ -1,0 +1,55 @@
+---
+title: "View graphical UNIX programs on your computer"
+---
+This article describes the steps necessary to install X server software
+on your home computer. This will enable you to display windows and
+graphics created by applications running on remote UNIX systems.
+
+## Windows X11 Forwarding
+
+When you run an X server and an SSH client, you will launch programs
+from the SSH window and the X server will be display them See these
+<a href="/node/4180" data-entity-substitution="canonical"
+data-entity-type="node"
+data-entity-uuid="69b1aab6-045e-4b12-bd5d-918504c5f615">instructions</a>
+for information on downloading and installing SSH software.
+
+Your Windows SSH client must be configured to forward X Window System
+communication (i.e., graphical windows) from the machine you are
+connecting to to your PC's display. In Putty, click on the plus sign to
+the left of "SSH" in the left hand pane, then click "X11" and check the
+box labelled "Enable X11 Forwarding". With MobaXterm you can also easily
+forward graphical windows.
+
+## Windows: Xming
+
+Xming is the X Windows Software from [X.Org](http://www.x.org) ported to
+Microsoft Windows. It shares source code with Cygwin's X server (see
+below), but you do not need the full cygwin environment to run it. You
+can use this X server in much the same way you use eXceed, though it
+does not come with many of the features of eXceed. If, for some reason,
+eXceed becomes unavailable to you, try this software. It can be
+downloaded from <http://www.straightrunning.com/XmingNotes/>.
+
+## macOS XQuartz
+
+[XQuartz](https://www.xquartz.org/) is an open source version of the
+X11.app application that used to come preinstalled on macOS.
+
+### Mac X11 Forwarding
+
+For forwarding remote X sessions over ssh you can use either
+**Terminal.app** (also found in `/Applications/Utilities`) or **xterm**.
+If you are using the Mac OS X Terminal, you will need to set your
+DISPLAY variable. Enter this statement into the file `~/.bashrc`:
+
+    if [ -z $DISPLAY ]; then export DISPLAY=:0.0; fi
+
+and then start a new Terminal window. If you are using xterm, the
+variable should be set for you.
+
+On the Mac you should also use the -X and -Y options:
+
+    ssh -X -Y username@hostname
+
+ 
