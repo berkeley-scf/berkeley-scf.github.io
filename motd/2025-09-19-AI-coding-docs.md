@@ -1,6 +1,6 @@
 ---
 title: "Documentation on AI coding assistants"
-description: "We have upgraded Python and R following the OS upgrades."
+description: "New website page."
 thumbnail: ../images/ai-agent.svg
 author: "Chris Paciorek"
 date: "2025-09-19"
