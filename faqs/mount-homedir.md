@@ -1,21 +1,33 @@
 ---
-title: How can I mount my home directory remotely?
+title: Remotely Access Your Files
 ---
 
-There are a number of options for seamlessly accessing your SCF home directory from your personal computer. In the instructions below, username will be your SCF user name and the password will be this samba password.
+There are a number of options for seamlessly accessing your SCF home directory
+from your personal computer.
 
-Note: when accessing your Samba share from an off-campus network, you will need to use the campus VPN.
+## VS Code
+
+The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) VS Code extension lets you access your SCF files from within your local VS Code instance. Connect to any SCF login server, browse your files, and edit them directly within VS Code running on your device.
+
+[Remote Development using SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) describes this workflow in more detail.
 
 ## Setting up a Samba Account
+
+In the instructions below, `username` will be your SCF user name and the password will be this samba password.
+
+::: {note}
+When accessing your Samba share from an off-campus network, you will need to
+use the campus VPN.
+:::
 
 At present, we must manually setup a separate login credentials for you to
 access your files. Please contact manager@stat.berkeley.edu to facilitate
 setting your samba password.
 
-|                | Mac                             | Windows |
-|----------------|---------------------------------|---------|
-| Home Directory | smb://scf.berkeley.edu/username | \\scf.berkeley.edu\username |
-| Web Directory  | smb://scf.berkeley.edu/www      |\\scf.berkeley.edu\www |
+| Directory | Mac                             | Windows                        |
+|-----------|---------------------------------|--------------------------------|
+| Home      | smb://scf.berkeley.edu/username | \\\\scf.berkeley.edu\\username |
+| Web       | smb://scf.berkeley.edu/www      | \\\\scf.berkeley.edu\\www      |
 
 
 ## Microsoft Windows
