@@ -39,16 +39,12 @@ change the WiFi network:
     wish to open in notability.
 2.  Find and tap the "..." next to the file name to invoke the options
     list on the image below.  
-    <img src="/sites/default/files/uploads/ipad01.png"
-    style="width: 500px; height: 416px;" data-entity-type=""
-    data-entity-uuid="" />
+    <img src="/images/ipad01.png" style="width: 500px; height: 416px;" />
 3.  Tap "Open in", and then tap Notability on the applications
     list.  Notability works best with PDF files, or documents created
     with Google Docs, Google Sheets, or Google Slides.
 4.  When Notability opens, select "Create New Note".  
-    <img src="/sites/default/files/uploads/ipad4.png"
-    style="width: 400px; height: 463px;" data-entity-type=""
-    data-entity-uuid="" />
+    <img src="/images/ipad4.png" style="width: 400px; height: 463px;" />
 5.  If the document is multi-page, every page will be selected by
     default, You must unselect the pages that you don't need.
 6.  Tap "import".  If an additional dialog with the list of imported

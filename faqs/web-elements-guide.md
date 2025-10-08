@@ -113,11 +113,7 @@ test
 
 ## Inline Images
 
-<img
-src="/sites/default/files/styles/max_325x325/public/inline-images/Cumulus_clouds_panorama_0.jpg?itok=O24UwHsm"
-data-align="left" data-caption="FPO" data-entity-type="file"
-data-entity-uuid="b2c5654a-0bfd-4725-9046-4ec77583decf"
-data-image-style="max_325x325" width="325" height="97" alt="FPO" />
+<img src="/images/Cumulus_clouds_panorama_0.jpg" width="325" height="97" alt="FPO" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
 condimentum ullamcorper sem tristique volutpat. Ut eget efficitur nisl,
@@ -132,11 +128,7 @@ purus.
 
  
 
-<img
-src="/sites/default/files/styles/max_325x325/public/inline-images/cloud-418729_1280.jpg?itok=-RiUeDPt"
-data-align="right" data-caption="FPO" data-entity-type="file"
-data-entity-uuid="ee7e2bfa-45b3-4847-9a53-6270fa1e88a6"
-data-image-style="max_325x325" width="325" height="244" alt="FPO" />
+<img src="/images/cloud-418729_1280.jpg" width="325" height="244" alt="FPO" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
 condimentum ullamcorper sem tristique volutpat. Ut eget efficitur nisl,
