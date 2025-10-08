@@ -66,7 +66,7 @@ cases, Macs when using the command line.
 - [Installing R packages](/software/R-packages)
 - [C/C++ introduction, calling C/C++ from R, and creating R packages](/training/workshops/using-c-calling-c-r-and-creating-r-packages)
 - [Using code chunks (and LaTeX) in documents with RStudio/RMarkdown/knitr and Jupyter notebooks](https://berkeley-scf.github.io/tutorial-dynamic-docs)
-- [Installing MATLAB](/faqs/how-can-i-install-matlab-my-computer)
+- [Installing MATLAB](/software/matlab)
 - [Working with databases](/faqs/how-do-i-work-databases)
 - [Hosting Shiny apps](/faqs/hosting-shiny-app)
 
