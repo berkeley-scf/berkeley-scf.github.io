@@ -75,7 +75,7 @@ which is accessed separately from the other SCF resources.
 
 - 8 H200, each with 144 GB memory (lorax.stat.berkeley.edu).
 
-## <span id="software">Software</span>
+## Software
 
 We provide the following software that will help you in making use of
 the GPU:
@@ -111,7 +111,5 @@ code:
 - cuDNN: cuDNN is available on the GPU servers without needing to load
   any modules.
 
-<span style="line-height: 1.69231em;">If you have questions or would
-like additional GPU-related software installed, please contact
-</span><a href="mailto:consult@stat.berkeley.edu"
-style="line-height: 1.69231em;">consult@stat.berkeley.edu</a><span style="line-height: 1.69231em;">.</span>
+If you have questions or would like additional GPU-related software installed,
+please contact consult@stat.berkeley.edu.

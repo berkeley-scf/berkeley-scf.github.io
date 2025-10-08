@@ -18,23 +18,22 @@ for instructions on getting an account and submitting jobs, and email
 <consult@stat.berkeley.edu> if you have questions. When filling out the
 [account request
 form](http://research-it.berkeley.edu/services/high-performance-computing/getting-account#Getting-User-Accounts),
-please specify the 'co_stat' account.
+please specify the `co_stat` account.
 
 Let us know if you are interested in expanding the size of the
 departmental condo.
 
 ### Submitting Jobs
 
-When submitting jobs to the condo nodes, specify the 'co_stat' account
-and either the 'savio2' or 'savio2_gpu' partition. Note that the
-'savio2' partition is scheduled on a per-node basis, while the
-'savio2_gpu' partition is scheduled based on units of {1 GPU + 2 CPUs}.
+When submitting jobs to the condo nodes, specify the `co_stat` account
+and either the `savio2` or `savio2_gpu` partition. Note that the
+`savio2` partition is scheduled on a per-node basis, while the
+`savio2_gpu` partition is scheduled based on units of {1 GPU + 2 CPUs}.
 
 Examples:
 
-- sbatch -A co_stat -p savio2 my-job.sh
-
-- sbatch -A co_stat -p savio2_gpu -o log.txt --gres=gpu:1 --cpus-per-task 2 my-gpu-job.sh
+- `sbatch -A co_stat -p savio2 my-job.sh`
+- `sbatch -A co_stat -p savio2_gpu -o log.txt --gres=gpu:1 --cpus-per-task 2 my-gpu-job.sh`
 
 ### Bursting
 
