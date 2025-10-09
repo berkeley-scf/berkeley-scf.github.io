@@ -14,8 +14,8 @@ your Shiny app on the SCF.
     to let us know you'd like to use this service, as we need to set up
     your account to do this.
 2.  Once you hear back from us, create a directory in your web area,
-    /mirror/data/pub/shiny/{username}/{appname}, where '{username}' is
-    your SCF username and '{appname}' is the name you choose for your
+    `/mirror/data/pub/shiny/{username}/{appname}`, where `{username}` is
+    your SCF username and `{appname}` is the name you choose for your
     app. You can create multiple apps.
 3.  Put your server.R and ui.R in the app directory. Note that when a
     user uses the app, the server starts an R process running in your
@@ -24,11 +24,11 @@ your Shiny app on the SCF.
     system-installed packages). Your app will also have access to data
     stored in your SCF account.
 4.  Point your users to
-    https://scf.berkeley.edu/shiny/{username}/{appname} to use the app.
-    As an example, see <https://scf.berkeley.edu/shiny/paciorek/faith/>
+    `https://scf.berkeley.edu/shiny/{username}/{appname}` to use the app.
+    As an example, see https://scf.berkeley.edu/shiny/paciorek/faith/
     for a basic histogram/density app with the faithful dataset from R.
     You can see the underlying code in server.R and ui.R in
-    /mirror/data/pub/shiny/paciorek/faith.
+    `/mirror/data/pub/shiny/paciorek/faith`.
 
 ## Troubleshooting
 
