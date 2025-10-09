@@ -25,10 +25,9 @@ your Shiny app on the SCF.
     stored in your SCF account.
 4.  Point your users to
     `https://scf.berkeley.edu/shiny/{username}/{appname}` to use the app.
-    As an example, see https://scf.berkeley.edu/shiny/paciorek/faith/
-    for a basic histogram/density app with the faithful dataset from R.
-    You can see the underlying code in server.R and ui.R in
-    `/mirror/data/pub/shiny/paciorek/faith`.
+    See https://scf.berkeley.edu/shiny/paciorek/ for several examples.
+    You can see the underlying code in server.R and ui.R in subdirectories of
+    `/mirror/data/pub/shiny/paciorek/`.
 
 ## Troubleshooting
 
