@@ -1,12 +1,11 @@
 ---
-title: "Setting up a course website"
+title: "Course Websites"
 ---
-Starting in the Spring semester 2024, the department, through the SCF,
-is helping instructors create discoverable and modern class websites,
-with memorable URLs in the berkeley.edu domain.
 
-This page provides an overview and gives details to instructors on
-setting up a [class website](/faqs/course-website) using the system.
+The SCF can help course staff create discoverable and modern class websites,
+with memorable URLs in the `berkeley.edu` domain. This page provides an
+overview and gives details to instructors on setting up a class website using
+the system.
 
 The department strongly encourages instructors to set up a class
 website.
