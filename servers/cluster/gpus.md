@@ -307,9 +307,19 @@ rather than home or scratch directories. One can also put data into
 `/tmp` or `/var/tmp` temporarily for fast I/O, though the amount of
 space there is limited (80-100 GB total across all users).
 
+### preemptive_high
+
+Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
+
+```{code} shell
+sbatch -p songmei -q preemptive --gpus=1 job.sh
+```
+
+Such jobs will still preempt jobs run by non-group members, but the jobs can be preempted by jobs running in the `preemptive_high` QoS.
+
 Please contact SCF staff or group members for more details.
 
-## Berkeley NLP group  
+## Berkeley NLP group
 
 The Berkeley NLP group has priority access to the GPUs located on lorax
 (8 H200 GPUs). If you are in the group, simply submit jobs to the
@@ -328,5 +338,15 @@ I/O, it may speed things up to read and write from `/data` rather than
 home or scratch directories. One can also put data into `/tmp` or
 `/var/tmp` temporarily for fast I/O, though the amount of space there
 is limited (80-100 GB total across all users).
+
+### preemptive_high
+
+Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
+
+```{code} shell
+sbatch -p berkeleynlp -q preemptive --gpus=1 job.sh
+```
+
+Such jobs will still preempt jobs run by non-group members, but the jobs can be preempted by jobs running in the `preemptive_high` QoS.
 
 Please contact SCF staff or group members for more details.
