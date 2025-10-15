@@ -3,6 +3,7 @@ title: Basic Job Submission
 ---
 This page describes how to submit jobs to the cluster.
 
+(configuration)=
 ## Slurm Configuration and Job Restrictions  
 
 The cluster has multiple partitions, corresponding to groups of nodes.
@@ -272,8 +273,8 @@ job. You can also transfer files to the local disk of the cluster node.
 
 By default, to limit forgotten sessions, the time limit for interactive
 jobs is set to 1 day (24 hours). If you need less or more time (up to
-the [maximum time limits](#jump%5Baccordion%5D%5B1%5D%5B1%5D), you can
-use the -t (or --time) flag. For example to run for two days:
+the [maximum time limits](#configuration) you can
+use the `-t` (or `--time`) flag. For example to run for two days:
 
 ```{code} shell
 srun -t 2-00:00:00 --pty /bin/bash
