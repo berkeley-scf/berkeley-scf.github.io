@@ -58,9 +58,29 @@ meeting, rather than your laptop's webcam and mic. You will need to:
   from the Statistics main office, but consult the SCF in case of
   problems.
 
-|                                                          |                                                         |
-|:--------------------------------------------------------:|:-------------------------------------------------------:|
-| ![USB-A to USB-B connector](/images/AtoB_0.jpg){width="265" height="190"} | ![USB-C to USB-B connector](/images/CtoB.jpg){width="278" height="182"} |
+  ::::{grid} 2
+
+  ::: {card}
+  :header: USB-A to USB-B connector
+
+  ```{image} ../images/AtoB_0.jpg
+  :alt: USB-A to USB-B connector
+  :width: 265px
+  :height: 190px
+  ```
+  :::
+  
+  ::: {card}
+  :header: USB-C to USB-B connector
+  
+  ```{image} ../images/CtoB.jpg
+  :alt: USB-C to USB-B connector
+  :width: 278px
+  :height: 182px
+  ```
+  :::
+  
+  ::::
 
 - Make sure that the room camera, mic, and speakers are selected as the
   camera, mic, and speakers to be used by Zoom by selecting
