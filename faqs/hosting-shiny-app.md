@@ -35,7 +35,7 @@ You must be on the campus network to view shiny applications --
 CalVisitor does not work. If on wireless, connect to *eduroam* after
 [setting up your wireless passphrase](https://idc.berkeley.edu/mmk). For
 the username, eduroam uses your CalNet login while eduroam uses your
-CalNet login followed by "@berkeley.edu".
+CalNet login followed by "\@berkeley.edu".
 
 The [eduroam homepage](https://technology.berkeley.edu/wi-fi) contains
 information on how to connect to eduroam, links to general CSS IT
