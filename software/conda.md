@@ -304,30 +304,30 @@ or a minimal installation called Miniconda. 
 
 #### Miniconda
 
-1.  Download
-    [Miniconda](https://docs.conda.io/en/latest/miniconda.html). There
-    are installers for Linux, macOS, and Windows. Miniconda is a much
-    smaller version of Anaconda which includes more packages out of the
-    box as well as a graphical user interfaces to the installer.
-    Miniconda is better if you don't want to install too many
-    unnecessary packages right at the start.
+1. Download
+   [Miniconda](https://docs.conda.io/en/latest/miniconda.html). There
+   are installers for Linux, macOS, and Windows. Miniconda is a much
+   smaller version of Anaconda which includes more packages out of the
+   box as well as a graphical user interfaces to the installer.
+   Miniconda is better if you don't want to install too many
+   unnecessary packages right at the start.
 
-2.  Run the installer. This will prompt you a couple of times, and it is
-    usually sensible to accept the defaults. Conda alters your shell
-    initialization, and updates your executable path to find the base
-    installation. For example, Miniconda will be installed into
-    ~/miniconda3/ by default, so ~/miniconda3/bin/ will be added to your
-    PATH variable. Conda may update your shell prompt as well with
-    status information.
+1. Run the installer. This will prompt you a couple of times, and it is
+   usually sensible to accept the defaults. Conda alters your shell
+   initialization, and updates your executable path to find the base
+   installation. For example, Miniconda will be installed into
+   ~/miniconda3/ by default, so ~/miniconda3/bin/ will be added to your
+   PATH variable. Conda may update your shell prompt as well with
+   status information.
 
-3.  Open a new terminal window. This will start up a new shell which
-    will be aware of the new Conda tools. For example, on a Mac:
+1. Open a new terminal window. This will start up a new shell which
+   will be aware of the new Conda tools. For example, on a Mac:
 
-    ```{code} shell-session
-    (base) mylaptop:~$ type -a python
-    python is /Users/me/miniconda3/bin/python
-    python is /usr/bin/python
-    ```
+   ```{code} shell-session
+   (base) mylaptop:~$ type -a python
+   python is /Users/me/miniconda3/bin/python
+   python is /usr/bin/python
+   ```
 
 #### Anaconda for Mac ARM64-based machines (Apple Silicon M1 and M2 Macs)
 
