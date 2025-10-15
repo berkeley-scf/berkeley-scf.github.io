@@ -66,12 +66,11 @@ make the system-installed package available in your current project.
 
 ## Versions
 
-You can use Linux [environment
-modules](/faqs/using-environment-modules-scf) to switch between
-different Julia versions. This can be done on a one-time basis in a
-given terminal session or cluster submission script, or can be done in
-your .bashrc (after the stanza involving ~skel/std.bashrc) to set a
-default different than the system default. 
+You can use Linux [environment modules](/faqs/environment-modules) to
+switch between different Julia versions. This can be done on a one-time
+basis in a given terminal session or cluster submission script, or can be
+done in your `.bashrc` (after the stanza involving `~skel/std.bashrc`) to
+set a default different than the system default. 
 
 To switch from Julia 1.10.4 (the default) to Julia 1.8:
 

@@ -44,7 +44,7 @@ to keep up with useful new software as it becomes available.
 
 Note that access to some software (in particular machine learning and
 GPU-using software, and switching between versions of Python) is
-controlled via [Linux environment modules](/faqs/using-environment-modules-scf)
+controlled via [Linux environment modules](/faqs/environment-modules)
 
 ## Campus Distributed Software
 

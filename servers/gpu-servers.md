@@ -77,10 +77,10 @@ the GPU:
   as well as on gandalf and radagast among others.
 - We can install additional or upgrade current software as needed. 
 
-We use Linux environment [modules](/faqs/using-environment-modules-scf) to
+We use Linux environment [modules](/faqs/environment-modules) to
 manage the use of GPU-based software, as discussed next. Note that you
 could insert any of these commands in your .bashrc (after the stanza
-involving ~skel/std.bashrc) so they are always in effect or invoke them
+involving `~skel/std.bashrc`) so they are always in effect or invoke them
 as needed in a script (including a cluster submission script) or in a
 terminal session.
 
