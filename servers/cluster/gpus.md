@@ -1,14 +1,16 @@
 ---
 title: "GPU Jobs"
 ---
- The SCF hosts a number of GPUs, available only by submitting a job
+
+The SCF hosts a number of GPUs, available only by submitting a job
 through our SLURM scheduling software. The GPUs are quite varied in
 their hardware configurations (different generations of GPUS, with
 different speeds and GPU memory). We have [documented the GPU
 servers](/servers/gpu-servers) to guide you in selecting which GPU you may want
 to use.
 
-General job submission info  
+## General job submission info
+
 To use the GPUs, you need to submit a job via our SLURM scheduling
 software. In doing so, you need to specifically request that your job
 use the GPU as follows using the 'gpus' flag (the older `--gres=gpu:1`
@@ -68,7 +70,7 @@ GPUs to be on the same machine, which you can guarantee either by using
 `--gpus-per-node` in place of `--gpus` or by including the
 `--nodes=1` flag in addition to the `--gpus` flag.
 
-## Standard GPUs  
+## Standard GPUs
 
 One GPU is generally available to all SCF users; it is hosted on the
 server named *roo*. To submit a job that uses that GPU, you should
@@ -79,7 +81,7 @@ certain faculty groups.
 The GPUs formerly hosted on scf-sm20 and scf-sm21 have been retired, so
 there are no longer GPUs available through the `high` partition.
 
-## High-performance GPUs  
+## High-performance GPUs
 
 Additional GPUs have been obtained by the Steinhardt, Song, and Yu lab
 groups. Most of these GPUs have higher performance (either speed or GPU
@@ -136,7 +138,7 @@ Additionally, there are an another 40 A100 GPUs obtained by the
 Steinhardt lab group at a remote cluster located in Washington state.
 Details are given in the drop-down below.
 
-## Steinhardt group  
+## Steinhardt group
 
 The Steinhart group has priority access to the balrog, shadowfax, sunstone,
 rainbowquartz, smokyquartz (8 GPUs each), saruman (8, eventually 10, GPUs), and
@@ -213,7 +215,7 @@ start: 
 
  
 
-## Steinhardt group - remote cluster  
+## Steinhardt group - remote cluster
 
 In addition to the GPU resources listed above, an additional 40 A100
 GPUs (on 5 servers) are available at a remote cluster hosted in a
@@ -249,7 +251,7 @@ differences from running jobs on the SCF (local) cluster.
   group members can run at most three jobs in `preemptive_high` at a
   time. Non-group members only have access to the `normal` QoS.
 
-## Yu group  
+## Yu group
 The Yu group has priority access to GPUs located on merry (1 GTX GPU),
 morgoth (2 TITAN GPUs), and treebeard (1 A100 GPU) servers. If you are
 in the group, simply submit jobs to the *yugroup* partition and you will
@@ -271,7 +273,7 @@ to avoid contention between jobs for a given physical core. 
 
 Please contact SCF staff or group members for more details.
 
-## Yun Song group  
+## Yun Song group
 The Song group has priority access to the GPUs located on luthien  (4
 A100 GPUs) and beren (8 A100 GPUs). If you are in the group, simply
 submit jobs to the *yss* partition and you will automatically preempt
@@ -285,7 +287,7 @@ jobs for a given physical core. 
 
 Please contact SCF staff or group members for more details.
 
-## Song Mei group  
+## Song Mei group
 
 The Mei group has priority access to the GPUs located on feanor (8 H200
 GPUs). If you are in the group, simply submit jobs to the *songmei*
