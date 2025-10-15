@@ -26,7 +26,7 @@ reconnect to the VPN.
 
 Collaborators on project accounts that do not have access to the campus
 VPN and use the Remote Desktop Application to access the SCF can create
-an [SSH tunnel](/faqs/how-do-i-create-ssh-tunnel.md).
+an [SSH tunnel](/faqs/ssh-tunnel.md).
 
 ### Configuration
 
