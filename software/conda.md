@@ -3,8 +3,8 @@ title: "Conda and Mamba"
 ---
 Conda is a package management system which can be used to create Python
 and R development environments on many different platforms. You can
-[install it on your own device](#conda-own-machine), and it is
-often available at many High Performance Computing centers.
+install it on your own device, and it is often available at many High
+Performance Computing centers.
 
 It's common that installing packages using Conda is slow or fails
 because Conda is unable to resolve dependencies. To get around this,
