@@ -1,5 +1,5 @@
 ---
-title: "Linear algebra and parallelized linear algebra (using BLAS)"
+title: "Linear Algebra using BLAS"
 ---
 This documentation covers using fast parallelized linear algebra in R,
 Python, and Julia. All of these rely on the BLAS library for basic
