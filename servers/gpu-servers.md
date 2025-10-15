@@ -37,43 +37,28 @@ higher-priority jobs. These servers can be accessed by submitting to the
 *jsteinhardt*, *yugroup*, *yss,* or *songmei* partitions (details below)
 using the [SLURM scheduling software](/servers/cluster).
 
-#### Steinhardt lab group (*jsteinhardt* partition)
+| Partition     | Machine Name            | GPU Type            | GPU Memory |
+|---------------|-------------------------|---------------------|------------|
+| `jsteinhardt` | `balrog`                | A100                | 40 GB      |
+| `jsteinhardt` | `saruman`               | A100                | 80 GB      |
+| `jsteinhardt` | `rainbowquartz`         | A5000               | 24 GB      |
+| `jsteinhardt` | `smokyquartz`           | A4000               | 16 GB      |
+| `jsteinhardt` | `sunstone`              | A4000               | 16 GB      |
+| `jsteinhardt` | `smaug`                 | Quadro RTX 8000     | 48 GB      |
+| `jsteinhardt` | `shadowfax`             | GeForce RTX 2080 Ti | 11 GB      |
+| `lambda`      | Remote cluster[^lambda] | A100                | 80 GB      |
+| `yugroup`     | `treebeard`             | A100                | 40 GB      |
+| `yugroup`     | `merry`                 | GeForce GTX TITAN X | 12 GB      |
+| `yugroup`     | `morgoth`               | Titan Xp            | 12 GB      |
+| `yugroup`     | `morgoth`               | Titan X (Pascal)    | 12 GB      |
+| `yss`         | `luthien`               | A100                | 80 GB      |
+| `yss`         | `beren`                 | A100                | 80 GB      |
+| `songmei`     | `feanor`[^fqdn]         | H200                | 144 GB     |
+| `berkeleynlp` | `lorax`[^fqdn]          | H200                | 144 GB     |
 
-- 8 GeForce RTX 2080 Ti, each with 11 GB memory (shadowfax).
-- 2 Quadro RTX 8000, each with 48 GB memory (smaug).
-- 8 A100, each with 40 GB memory (balrog).
-- 10 A100, each with 80 GB memory (saruman).
-- 8 A4000, each with 16 GB memory (sunstone and smokyquartz).
-- 8 A5000, each with 24 GB memory (rainbowquartz).
-
-#### Steinhardt lab group remote cluster (lambda partition)
-
-- 8 A100, each with 80 GB memory (five machines at a remote co-location
-  facility in Texas)
-
-To use these machines, one must specifically [connect to the remote
-cluster](/servers/cluster/gpus#jump%5Baccordion%5D%5B1%5D%5B5%5D),
+[^lambda]: To use these machines, one must specifically [connect to the remote cluster](/servers/cluster/gpus#steinhardt-remote-cluster),
 which is accessed separately from the other SCF resources.
-
-#### Yu lab group (*yugroup* partition)
-
-- 1 A100 with 40 GB memory (treebeard).
-- 1 GeForce GTX TITAN X with 12 GB memory (merry).
-- 1 Titan Xp with 12 GB memory (morgoth).
-- 1 Titan X (Pascal) with 12 GB memory (morgoth).
-
-#### Yun Song lab group (*yss* partition)
-
-- 4 A100, each with 80 GB memory (luthien).
-- 8 A100, each with 80 GB memory (beren).
-
-#### Song Mei lab group (*songmei* partition)
-
-- 8 H200, each with 144 GB memory (feanor.stat.berkeley.edu).
-
-#### BerkeleyNLP lab group (*berkeleynlp* partition)
-
-- 8 H200, each with 144 GB memory (lorax.stat.berkeley.edu).
+[^fqdn]: Requires the fully qualified domain name, e.g. `{hostname}.stat.berkeley.edu`.
 
 ## Software
 
