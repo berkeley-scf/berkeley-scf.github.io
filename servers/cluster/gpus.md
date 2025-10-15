@@ -17,7 +17,7 @@ If you need more than one CPU, please request that using the
 `--cpus-per-task` flag. The value you specify actually requests that
 number of hardware threads, but with the caveat that a given job is
 allocated all the threads on a given core to avoid contention between
-jobs for a given physical core. So the default of "-c 1" allocates one
+jobs for a given physical core. So the default of `-c 1` allocates one
 physical core and two hardware threads. Your CPU usage will be
 restricted to the number of threads you request. 
 
@@ -45,15 +45,16 @@ Once it starts your job will have exclusive access to the GPU and its
 memory. If another user is using the GPU, your job will be queued until
 the current job finishes.
 
-Interactive jobs should use that same gpus flag with the usual srun
+Interactive jobs should use that same `--gpus` flag with the usual `srun`
 syntax for an interactive job.
 
 ```{code} shell
 srun --pty --partition=gpu --gpus=1 /bin/bash
 ```
 
-Given the heterogenity in the GPUs available, you may want to request use of a
-specific GPU type. To do so, you can add the type to the 'gpus' flag, e.g.,
+Given the heterogenity in the GPUs available on some partitions (`jsteinhardt` and `yugroup`), 
+you may want to request use of a
+specific GPU type. To do so, you can add the type to the `--gpus` flag, e.g.,
 requesting an A100 GPU:
 
 ```{code} shell
@@ -63,7 +64,7 @@ sbatch --partition=jsteinhardt --gpus=A100:1 job.sh
 If you don't care what partition a job runs on, you can specify multiple
 partitions. In some cases one might want to specify a particular GPU
 type as well. For example to request an A100 on any of the partitions
-with GPUs:
+with A100 GPUs:
 
 ```{code} shell
 sbatch --partition=yss,jsteinhardt,yugroup --gpus=A100:1 job.sh
@@ -73,13 +74,13 @@ If you want to interactively logon to the GPU node to check on compute
 or memory use of an sbatch job that uses the GPU, you can ssh directly
 to the node (this is only possible if you have a running job on the
 node). This will give you an shell running in the context of your
-original job and you can then use nvidia-smi commands, e.g.,
+original job and you can then use `nvidia-smi` commands, e.g.,
 
 ```{code} shell
 nvidia-smi -q -d UTILIZATION,MEMORY -l 1
 ```
 
-There are many ways to [set up your code to use the GPU](/gpu).
+There are many ways to [set up your code to use the GPU](/servers/gpu-servers).
 
 In partitions with more than one GPU (which does not include the `gpu`
 partition), you can request multiple GPUs by replacing the "1" above
@@ -96,22 +97,22 @@ submit to the `gpu` partition. See the other items below for other GPUs
 available on the SCF for which access is prioritized for members of
 certain faculty groups.
 
-The GPUs formerly hosted on scf-sm20 and scf-sm21 have been retired, so
+The GPUs formerly hosted on *scf-sm20* and *scf-sm21* have been retired, so
 there are no longer GPUs available through the `high` partition.
 
 ## High-performance GPUs
 
 Additional GPUs have been obtained by several faculty research groups.
-Most of these GPUs have higher performance (either speed or GPU
-memory) than our standard GPUs.
+Many of these GPUs have high performance (either in terms of speed or GPU
+memory).
 
 Members of each group have priority access to the GPUs of their group.
 Other SCF users can submit jobs that use these GPUs but those
 jobs will be preempted (killed) if higher-priority jobs need access to
 the GPUs. Jobs are cancelled when preemption happens. If you want your
 job to be automatically started again (i.e., started from the beginning)
-when the node becomes available you can add the "--requeue" flag when
-you submit via sbatch.
+when the node becomes available you can add the `--requeue` flag when
+you submit via `sbatch`.
 
 To submit jobs requesting access to these GPUs, you need to specify
 either the *jsteinhardt*, *yss* or *yugroup* partitions. Here's an
@@ -122,9 +123,8 @@ sbatch --partition=jsteinhardt --gpus=1 job.sh
 ```
 
 To use multiple GPUs for a job (only possible when using a server with
-more than one GPU, namely scf-sm21, smaug, shadowfax, balrog, saruman,
-sunstone, rainbowquartz, smokyquartz, treebeard, and morgoth), simply
-change the number 1 after *--gpus=* to the number desired.
+more than one GPU), simply
+change the number 1 after `--gpus=` to the number desired.
 
 To request a specific GPU type, you can add that to the gpus flag, e.g.,
 here requesting an A100:
@@ -148,28 +148,26 @@ the partitions.
 
 Additionally, there are an another 40 A100 GPUs obtained by the
 Steinhardt lab group at a remote cluster located in Washington state.
-Details are given in the drop-down below.
+Details are given below.
 
 ## Research Groups
 
 ### Steinhardt Group
 
-The Steinhart group has priority access to the balrog, shadowfax, sunstone,
-rainbowquartz, smokyquartz (8 GPUs each), saruman (8, eventually 10, GPUs), and
-smaug (2 GPUs) GPU servers.
+The Steinhart group has priority access to the various [GPU servers](/servers/gpu-servers/#steinhardt-lab-group-jsteinhardt-partition).
 
-If you are in the group, simply submit jobs to the jsteinhardt partition
+If you are in the group, simply submit jobs to the `jsteinhardt` partition
 and you will automatically preempt jobs by users not in the group if
 that is needed for your job to run.
 
-#### preemptive_high QOS
+#### preemptive_high QoS
 
 Group members can also prioritize their jobs with respect to other jobs
 by users in the Steinhardt group. By default jobs will run in the
-`preemptive_high` Slurm QoS. Each user in the group can use at most 8
+`preemptive_high` Slurm QoS (queue). Each user in the group can use at most 8
 GPUs at a time in that default `preemptive_high` QoS. Additional jobs
 will be queued. Group members can also submit to the `preemptive` QoS,
-with no limit on the number of running jobs (apart from hardware
+with no limit on the number of GPUs used (apart from hardware
 availability), using submission syntax like this:
 
 ```{code} shell
@@ -190,9 +188,9 @@ if shadowfax, sunstone, rainbowquartz, and smokyquartz are busy.
 
 By default, if you do not specify a GPU type or a particular GPU server,
 Slurm will try to run the job on shadowfax, sunstone, rainbowquartz, or
-smokyquartz , unless they are busy. 
+smokyquartz, unless they are busy. 
 
-To request a specific GPU type, you can add that to the gpus flag, e.g.,
+To request a specific GPU type, you can add that to the `--gpus` flag, e.g.,
 here requesting an A100:
 
 ```{code} shell
@@ -209,6 +207,12 @@ start: 
       1077240                 bash nikhil_ghosh  R 28-00:00:00    12:51:48 2021-11-01T     1     None      1               balrog 0.00196710997 normal   gpu:1
       1077248              jupyter         awei  R 28-00:00:00     1:40:55 2021-11-01T     1     None      1               balrog 0.00092315604 preempti gpu:1
       1077121             train.sh andyzou_jiam  R 28-00:00:00  2-17:32:41 2021-10-29T    48     None      1               balrog 0.00027842330 preempti gpu:2
+```
+
+We also have a wrapper script that gives back essentially the same information:
+
+```{code} shell-session
+    arwen:~> sjobs -p jsteinhardt
 ```
 
  
@@ -253,11 +257,11 @@ differences from running jobs on the SCF (local) cluster.
 
 The Yu group has priority access to GPUs located on merry (1 GTX GPU),
 morgoth (2 TITAN GPUs), and treebeard (1 A100 GPU) servers. If you are
-in the group, simply submit jobs to the *yugroup* partition and you will
+in the group, simply submit jobs to the `yugroup` partition and you will
 automatically preempt jobs by users not in the group if it is needed for
 your job to run.
 
-To request a specific GPU type, you can add that to the gpus flag, e.g.,
+To request a specific GPU type, you can add that to the `--gpus` flag, e.g.,
 here requesting an A100:
 
 ```{code} shell
@@ -268,13 +272,13 @@ sbatch -p yugroup --gpus=A100:1 job.sh
 
 The Song group has priority access to the GPUs located on luthien  (4
 A100 GPUs) and beren (8 A100 GPUs). If you are in the group, simply
-submit jobs to the *yss* partition and you will automatically preempt
+submit jobs to the `yss` partition and you will automatically preempt
 jobs by users not in the group if it is needed for your job to run.
 
 ### Song Mei Group
 
 The Mei group has priority access to the GPUs located on feanor (8 H200
-GPUs). If you are in the group, simply submit jobs to the *songmei*
+GPUs). If you are in the group, simply submit jobs to the `songmei`
 partition and you will automatically preempt jobs by users not in the
 group if it is needed for your job to run.
 
@@ -283,11 +287,11 @@ available to group members via the `/data` directory. For jobs that do
 a lot of I/O, it may speed things up to read and write from `/data`
 rather than home or scratch directories. One can also put data into
 `/tmp` or `/var/tmp` temporarily for fast I/O, though the amount of
-space there is limited (80-100 GB total across all users).
+space there is limited (less than 1 TB total across all users).
 
-#### preemptive_high QOS
+#### preemptive_high QoS
 
-Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
+Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. For less critical jobs, group members can also submit to the `preemptive` QoS, using submission syntax like this:
 
 ```{code} shell
 sbatch -p songmei -q preemptive --gpus=1 job.sh
@@ -307,11 +311,11 @@ group members via the `/data` directory. For jobs that do a lot of
 I/O, it may speed things up to read and write from `/data` rather than
 home or scratch directories. One can also put data into `/tmp` or
 `/var/tmp` temporarily for fast I/O, though the amount of space there
-is limited (80-100 GB total across all users).
+is limited (less than 1 TB total across all users).
 
-#### preemptive_high QOS
+#### preemptive_high QoS
 
-Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
+Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. For less critical jobs, group members can also submit to the `preemptive` QoS, using submission syntax like this:
 
 ```{code} shell
 sbatch -p berkeleynlp -q preemptive --gpus=1 job.sh
