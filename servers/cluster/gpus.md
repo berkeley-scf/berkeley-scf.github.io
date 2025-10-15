@@ -11,6 +11,24 @@ to use.
 
 ## General job submission info
 
+### CPUs Per Task
+
+If you need more than one CPU, please request that using the
+`--cpus-per-task` flag. The value you specify actually requests that
+number of hardware threads, but with the caveat that a given job is
+allocated all the threads on a given core to avoid contention between
+jobs for a given physical core. So the default of "-c 1" allocates one
+physical core and two hardware threads. Your CPU usage will be
+restricted to the number of threads you request. 
+
+As an example, if a machine had 48 CPUs (actually 48 threads and 24
+physical cores as discussed above) and 8 GPUs, there are 6 CPUs per GPU.
+You could request more than 6 CPUs per GPU for your job, but note that
+if other group members do the same, it's possible that the total number
+of CPUs may be fully used before all the GPUs are used.
+
+### Using GPUs
+
 To use the GPUs, you need to submit a job via our SLURM scheduling
 software. In doing so, you need to specifically request that your job
 use the GPU as follows using the 'gpus' flag (the older `--gres=gpu:1`
@@ -115,12 +133,6 @@ here requesting an A100:
 sbatch -p jsteinhardt --gpus=A100:1 job.sh
 ```
 
-If you need more than one CPU, please request that using the
---cpus-per-task flag. The value you specify actually requests that
-number of hardware threads, but with the caveat that a given job is
-allocated all the threads on a given core to avoid contention between
-jobs for a given physical core.
-
 Furthermore, you can specify multiple partitions in your job submission,
 which avoids the need to carefully determine which partition your job
 might start most quickly in. For example, to request an A100 from all of
@@ -138,7 +150,7 @@ Additionally, there are an another 40 A100 GPUs obtained by the
 Steinhardt lab group at a remote cluster located in Washington state.
 Details are given in the drop-down below.
 
-## Steinhardt group
+## Steinhardt Group
 
 The Steinhart group has priority access to the balrog, shadowfax, sunstone,
 rainbowquartz, smokyquartz (8 GPUs each), saruman (8, eventually 10, GPUs), and
@@ -147,6 +159,8 @@ smaug (2 GPUs) GPU servers.
 If you are in the group, simply submit jobs to the jsteinhardt partition
 and you will automatically preempt jobs by users not in the group if
 that is needed for your job to run.
+
+### preemptive_high QOS
 
 Group members can also prioritize their jobs with respect to other jobs
 by users in the Steinhardt group. By default jobs will run in the
@@ -183,24 +197,6 @@ here requesting an A100:
 sbatch -p jsteinhardt --gpus=A100:1 job.sh
 ```
 
-If you need more than one CPU, please request that using the
---cpus-per-task flag. The value you specify actually requests that
-number of hardware threads, but with the caveat that a given job is
-allocated all the threads on a given core to avoid contention between
-jobs for a given physical core. So the default of "-c 1" allocates one
-physical core and two hardware threads. Your CPU usage will be
-restricted to the number of threads you request. 
-
-As an example, since shadowfax has 48 CPUs (actually 48 threads and 24
-physical cores as discussed above) and 8 GPUs, there are 6 CPUs per GPU.
-You could request more than 6 CPUs per GPU for your job, but note that
-if other group members do the same, it's possible that the total number
-of CPUs may be fully used before all the GPUs are used. Similar
-considerations hold for balrog (96 CPUs and 8 GPUs), saruman (104 CPUs
-and 8 GPUs) and smaug (64 CPUs and 2 GPUs) as well as rainbowquartz,
-smokyquartz and sunstone (all with 64 CPUs and 8 GPUs). That said,
-that's probably a rather unlikely scenario.
-
 To see what jobs are running on particular machines, so that you can
 have a sense of when a job that requests a particular machine might
 start: 
@@ -215,7 +211,7 @@ start: 
 
  
 
-## Steinhardt group - remote cluster
+## Steinhardt Group Remote Cluster
 
 In addition to the GPU resources listed above, an additional 40 A100
 GPUs (on 5 servers) are available at a remote cluster hosted in a
@@ -234,8 +230,8 @@ but the filesystem is distinct. Here are the key similarities and
 differences from running jobs on the SCF (local) cluster.
 
 - One can login with your SCF credentials.
-- All software installed by the SCF is available and should be identical
-  to that on the SCF (local) cluster.
+- All software installed by the SCF is available and should be similar
+  to that on the SCF (local) cluster. Software updates trail those on the SCF.
 - The job submission process is the same as on the SCF (local) cluster.
 - The home directories (and other parts of the filesystem) on this
   remote cluster are **separate** from those on the SCF.
@@ -251,7 +247,8 @@ differences from running jobs on the SCF (local) cluster.
   group members can run at most three jobs in `preemptive_high` at a
   time. Non-group members only have access to the `normal` QoS.
 
-## Yu group
+## Yu Group
+
 The Yu group has priority access to GPUs located on merry (1 GTX GPU),
 morgoth (2 TITAN GPUs), and treebeard (1 A100 GPU) servers. If you are
 in the group, simply submit jobs to the *yugroup* partition and you will
@@ -265,40 +262,19 @@ here requesting an A100:
 sbatch -p yugroup --gpus=A100:1 job.sh
 ```
 
-If you need more than one CPU, please request that using the
---cpus-per-task flag, but note that merry only has four CPUs. The value
-you specify actually requests that number of hardware threads, but with
-the caveat that a given job is allocated all the threads on a given core
-to avoid contention between jobs for a given physical core. 
+## Yun Song Group
 
-Please contact SCF staff or group members for more details.
-
-## Yun Song group
 The Song group has priority access to the GPUs located on luthien  (4
 A100 GPUs) and beren (8 A100 GPUs). If you are in the group, simply
 submit jobs to the *yss* partition and you will automatically preempt
 jobs by users not in the group if it is needed for your job to run.
 
-If you need more than one CPU, please request that using the
---cpus-per-task flag. The value you specify actually requests that
-number of hardware threads, but with the caveat that a given job is
-allocated all the threads on a given core to avoid contention between
-jobs for a given physical core. 
-
-Please contact SCF staff or group members for more details.
-
-## Song Mei group
+## Song Mei Group
 
 The Mei group has priority access to the GPUs located on feanor (8 H200
 GPUs). If you are in the group, simply submit jobs to the *songmei*
 partition and you will automatically preempt jobs by users not in the
 group if it is needed for your job to run.
-
-If you need more than one CPU, please request that using the
---cpus-per-task flag. The value you specify actually requests that
-number of hardware threads, but with the caveat that a given job is
-allocated all the threads on a given core to avoid contention between
-jobs for a given physical core. 
 
 feanor has a very large, very fast (NVMe) disk with 6.6 TB of storage
 available to group members via the `/data` directory. For jobs that do
@@ -307,7 +283,7 @@ rather than home or scratch directories. One can also put data into
 `/tmp` or `/var/tmp` temporarily for fast I/O, though the amount of
 space there is limited (80-100 GB total across all users).
 
-### preemptive_high
+### preemptive_high QOS
 
 Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
 
@@ -317,20 +293,12 @@ sbatch -p songmei -q preemptive --gpus=1 job.sh
 
 Such jobs will still preempt jobs run by non-group members, but the jobs can be preempted by jobs running in the `preemptive_high` QoS.
 
-Please contact SCF staff or group members for more details.
-
-## Berkeley NLP group
+## Berkeley NLP Group
 
 The Berkeley NLP group has priority access to the GPUs located on lorax
 (8 H200 GPUs). If you are in the group, simply submit jobs to the
-*berkeleynlp* partition and you will automatically preempt jobs by users
+`berkeleynlp` partition and you will automatically preempt jobs by users
 not in the group if it is needed for your job to run.
-
-If you need more than one CPU, please request that using the
---cpus-per-task flag. The value you specify actually requests that
-number of hardware threads, but with the caveat that a given job is
-allocated all the threads on a given core to avoid contention between
-jobs for a given physical core. 
 
 lorax has a four very large, very fast (NVMe) 14TB disks available to
 group members via the `/data` directory. For jobs that do a lot of
@@ -339,7 +307,7 @@ home or scratch directories. One can also put data into `/tmp` or
 `/var/tmp` temporarily for fast I/O, though the amount of space there
 is limited (80-100 GB total across all users).
 
-### preemptive_high
+### preemptive_high QOS
 
 Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
 
@@ -348,5 +316,3 @@ sbatch -p berkeleynlp -q preemptive --gpus=1 job.sh
 ```
 
 Such jobs will still preempt jobs run by non-group members, but the jobs can be preempted by jobs running in the `preemptive_high` QoS.
-
-Please contact SCF staff or group members for more details.
