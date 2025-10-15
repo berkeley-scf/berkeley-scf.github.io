@@ -8,15 +8,15 @@ storage.
 
 ## Prepare Your Web Browser
 
-When you log in to any @berkeley.edu account using the standard CalNet
+When you log in to any \@berkeley.edu account using the standard CalNet
 login page, your web browser saves session information such as your
 CalNet ID. As a result, visiting any other CalNet-based site in the same
 browser session gives you automatic access without requiring logging in
 again. If you would like to be able to access your personal
-@berkeley.edu account in a web browser *while simultaneously accessing*
+\@berkeley.edu account in a web browser *while simultaneously accessing*
 the SPA account, you will need to do one of the following:
 
-- Use one web browser for your personal @berkeley.edu account and use
+- Use one web browser for your personal \@berkeley.edu account and use
   another browser for your SPA. For example you can use Chrome for your
   personal and Firefox for your SPA, or vice versa.
 - Use a private browsing session for the SPA.
@@ -28,9 +28,9 @@ the SPA account, you will need to do one of the following:
   associated with the SPA.
   - ​Chrome: Settings \> People \> Add person...
 
-​If you want to keep things simple and bypass the above, you can just log
+If you want to keep things simple and bypass the above, you can just log
 in to your SPA with the expectation that you will not be able to access
-your personal @berkeley.edu until you restart your browser.
+your personal \@berkeley.edu until you restart your browser.
 
 ## CalNet Authentication
 
@@ -54,5 +54,5 @@ name of the SPA)
 
 Anything you do in the browsing session such as accessing bmail or bcal
 or any other service which uses CalNet will be done as the SPA. If you
-need to login to a service as your personal @berkeley.edu account, use
+need to login to a service as your personal \@berkeley.edu account, use
 one of the techniques above.
