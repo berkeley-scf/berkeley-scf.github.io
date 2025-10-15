@@ -9,6 +9,7 @@ project:
         - file: getting-started/project-accounts.md
         - file: getting-started/external-resources.md
         - file: getting-started/contact-us.md
+        - file: getting-started/history.md
     - file: software.md
       children:
         - file: software/install.md

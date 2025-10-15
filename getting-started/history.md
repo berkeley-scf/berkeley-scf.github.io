@@ -1,19 +1,11 @@
 ---
-title: "What is the history of the Statical Computing Facility?"
+title: "History of the Statical Computing Facility"
 ---
-## What is the history of the Statical Computing Facility?
 
-[Origin of the Statistical Computing Facility](#overview)
+(origin)=
+## Origin of the Statistical Computing Facility
 
-[Hardware and Software Platforms](#history)
-
-[How UNIX Came to UC Berkeley and the Department of Statistics](#unix)
-
-[The Naming of the Workstations](#naming)
-
-## <span id="overview"></span>Origin of the Statistical Computing Facility
-
-written by Leo Breiman adapted by Rick Kawin
+written by Leo Breiman, adapted by Rick Kawin
 
 The Statistical Computing Facility (SCF) is an arm of the Statistics
 Department, but with separate budget and personnel, and functions
@@ -142,7 +134,8 @@ semester.
 The next step was a three year project to design and implement the
 instructional projects.
 
-## <span id="history"></span>Hardware and Software Platforms
+(hardware-software)=
+## Hardware and Software Platforms
 
 written by Mark Abrahams
 
@@ -154,20 +147,21 @@ built on the departmental knowledge and expertise acquired with the
 preceding wave. Here are the main waves of equipment and the dates that
 each arrived:
 
-    1974: PDP-11/45
-    1979: expanded PDP-11/45
-    1982: VAX 750s
-    1986: Sun3 Workstations
-    1990: Sun SPARCstations
-    1997: Sun Ultra workstations
-    2003: amd64 compute servers
-    2004: Sun Java workstations
-    2005: Apple iMacs
+ - 1974: PDP-11/45
+ - 1979: expanded PDP-11/45
+ - 1982: VAX 750s
+ - 1986: Sun3 Workstations
+ - 1990: Sun SPARCstations
+ - 1997: Sun Ultra workstations
+ - 2003: amd64 compute servers
+ - 2004: Sun Java workstations
+ - 2005: Apple iMacs
+ - 2010: Nvidia GPUs
 
 The first Departmental computer was a PDP 11/45 obtained in 1974 jointly
 by the Statistics, Mathematics, and CS Departments. Its early history is
-described in the following section, How UNIX Came to UC Berkeley and the
-Department of Statistics. For the first few years the 11/45 had limited
+described in the following section, [](#unix).
+For the first few years the 11/45 had limited
 capability in statistical computing. My understanding is that it was
 used mainly for running locally-written BASIC programs and for learning
 programming and computer software maintenance. Most serious statistical
@@ -182,7 +176,7 @@ about that time and, shortly after, an Able memory controller which
 allowed increased RAM. 7th Edition UNIX was installed in 1980. Two
 reasonably reliable Fortran compilers were available, as was a C
 compiler. The improvements in machine performance, system software, and
--- most significantly -- the 20-fold increase in disk space had marked
+—most significantly—the 20-fold increase in disk space had marked
 effects. Freestanding statistical programs could be written in Fortran
 or C (or a mixture) and an interactive statistical program (ISP)
 allowed, for the first time, easy to use interactive statistical
@@ -237,15 +231,15 @@ power. They also came with color video displays, replacing the greyscale
 displays of the SPARCstations (which had replaced the monochrome
 displays of the Sun3's).
 
-## <span id="unix"></span>How UNIX Came to UC Berkeley and the Department of Statistics
+(unix)=
+## How UNIX Came to UC Berkeley and the Department of Statistics
 
 written by Mark Abrahams
 
 (Excerpted and expanded from my dissertation, Design of BLSS Statistical
 Software, Chapter 1, Section 5, Copyright (c) 1996 by D. Mark Abrahams)
 
-In 1974, three departments--Mathematics, Statistics, and Computer
-Science-- obtained a minicomputer for joint use. It was purchased with
+In 1974, three departments—Mathematics, Statistics, and Computer Science—obtained a minicomputer for joint use. It was purchased with
 funds left over from the NSF grant used to construct the (then) new
 mathematical sciences tower, Evans Hall, which housed all three
 departments. A PDP-11/45 was purchased for about \$120,000 and installed
@@ -253,7 +247,7 @@ in June 1974. It was selected and overseen by a committee composed of
 Professors David Brillinger (the committee chair, of Statistics) Rene'
 Devogelaere (of Mathematics), and Martin Graham (of Computer Science).
 The committee considered several vendors, but Graham held firm for
-DEC.\[1\]
+DEC.[^1]
 
 The Math/Stat/CS PDP-11/45 was installed in Room 450 Evans Hall, which
 had been designed with air conditioning and a sunken machine-room floor
@@ -261,22 +255,24 @@ for the purpose of housing minicomputer equipment. From the first, the
 new machine ran a DEC operating system, RSTS. However, a new,
 little-known operating system was just then becoming available outside
 the research laboratory where it was developed: UNIX from Bell Telephone
-Laboratories. The PDP-11/45 logbook\[2\] indicates that RSTS was first
+Laboratories. The PDP-11/45 logbook[^2] indicates that RSTS was first
 booted on it on 3 June 1974, and UNIX on or before 6 June 1974.
 
 The push to run UNIX came from Professor Robert Fabry of Computer
 Science, who replaced Graham on the computer committee shortly after the
 purchase. David Brillinger believes that the machine may have been the
-first outside Bell Labs to run UNIX. The book by Salus\[3\] suggests
-otherwise--Salus says that UNIX was installed on some machines outside
-Bell Labs by the end of 1973. However, Salus is wrong on some dates--in
+first outside Bell Labs to run UNIX. The book by Salus[^3] suggests
+otherwise—Salus says that UNIX was installed on some machines outside
+Bell Labs by the end of 1973. However, Salus is wrong on some dates—in
 particular, he recounts the Math/Stat/CS PDP-11/45 but with incorrect
 dates. In any case, Room 450 was one of the first sites outside Bell
 Labs to run UNIX. The then-current version was Fifth Edition, dated June
 1974. The preface for its manual opened with the (now-famous) remark:
 
-> The number of UNIX installations is now above 50, and many more are
-> expected.
+:::{blockquote}
+The number of UNIX installations is now above 50, and many more are
+expected.
+:::
 
 Ken Thompson of Bell Labs, one of main UNIX authors and a UC Berkeley
 graduate, visited Computer Science in fall term 1974 and again in
@@ -303,33 +299,37 @@ UNIX full-time and withdrew from the joint agreement with Math and Stat.
 Use of minicomputers spread across the campus. The campus Computer
 Center Newsletter noted, in August 1976:
 
-> There are now 44 DEC (Digital Equipment Corporation) machines on
-> campus that we know of, probably some that we don't know of, and more
-> arriving all the time.\[4\]
+::: {blockquote}
+There are now 44 DEC (Digital Equipment Corporation) machines on
+campus that we know of, probably some that we don't know of, and more
+arriving all the time.[^4]
+:::
 
 It is likely that only a minority of those 44 machines ran UNIX. But its
 popularity spread, and the university computer center itself began to
 purchase PDP-11/70's to run UNIX. The first was announced in December
 1976:
 
-> Hardware to provide UNIX service has been obtained with University
-> funds under the joint auspices of the CC \[Computer Center\] and the
-> Faculty Committee for Interactive Instruction on the UNIX 11/70. The
-> system has a principal mission of providing interactive support for
-> instruction in the social sciences. However, any excess capacity is to
-> be made available to the general campus computing community with
-> emphasis placed on developing diverse uses. ....
->
-> We have a ferocious problem with allocating the existing resources and
-> planning future hardware configurations. In order to prevent system
-> overload, the applications will be reviewed by the committee to decide
-> what users should have access to UNIX in the near future.\[5\]
+::: {blockquote}
+Hardware to provide UNIX service has been obtained with University
+funds under the joint auspices of the CC \[Computer Center\] and the
+Faculty Committee for Interactive Instruction on the UNIX 11/70. The
+system has a principal mission of providing interactive support for
+instruction in the social sciences. However, any excess capacity is to
+be made available to the general campus computing community with
+emphasis placed on developing diverse uses. ....
+
+We have a ferocious problem with allocating the existing resources and
+planning future hardware configurations. In order to prevent system
+overload, the applications will be reviewed by the committee to decide
+what users should have access to UNIX in the near future.[^5]
+:::
 
 A gradually increasing number of PDP-11's running UNIX were installed on
 campus. By 1979, the computer center had five 11/70's, one of which was
 devoted to the School of Business Administration. In addition to
-Math/Stat and EECS, at least one other non-central unit--the Survey
-Research Center--had its own.
+Math/Stat and EECS, at least one other non-central unit—the Survey
+Research Center—had its own.
 
 About this time the Computer Science Division began a series of major
 enhancements to UNIX which resulted in Berkeley UNIX. Fabry became one
@@ -338,47 +338,42 @@ in these developments.
 
 Computer Science began obtaining VAXes in 1978; the Computer Center
 obtained its first VAX (an 11/780) in late 1980 and put it in general
-service on 1 April 1981.\[6\] Statistics obtained its first VAX, an
+service on 1 April 1981.[^6] Statistics obtained its first VAX, an
 11/750, in March 1982. The push came from Professor Leo Breiman, who
 wrote a successful ONR grant proposal in part for this purpose.
 
-NOTES:
+[^1]:  I am grateful to David Brillinger for supplying some of the early
+       history here, and for making available to me his old computer
+       committee notes from which I was able to derive more.
+[^2]:  Which I rescued from the trash some years ago.
+[^3]:  Peter H. Salus (1994), A Quarter Century of UNIX, Addison-Wesley.
+       Page 137 gives a somewhat incorrect recounting of the Math/Stat/CS
+       PDP-11/45.
+[^4]:  Vance Vaughan (1976), in University of California, Berkeley,
+       Computer Center Newsletter, Vol. XV, No. 8, 1976, p. 1.
+[^5]:  Vance Vaughan (1976), in University of California, Berkeley,
+       Computer Center Newsletter, Vol. XV, No. 12, 1976, p. 5.
+[^6]:  Jerome Smith (1981), in University of California, Berkeley,
+       Computing Services Newsletter, Vol. 4, No. 4, April 1981, p. 10.
 
-1.  I am grateful to David Brillinger for supplying some of the early
-    history here, and for making available to me his old computer
-    committee notes from which I was able to derive more.
-2.  Which I rescued from the trash some years ago.
-3.  Peter H. Salus (1994), A Quarter Century of UNIX, Addison-Wesley.
-    Page 137 gives a somewhat incorrect recounting of the Math/Stat/CS
-    PDP-11/45.
-4.  Vance Vaughan (1976), in University of California, Berkeley,
-    Computer Center Newsletter, Vol. XV, No. 8, 1976, p. 1.
-5.  Vance Vaughan (1976), in University of California, Berkeley,
-    Computer Center Newsletter, Vol. XV, No. 12, 1976, p. 5.
-6.  Jerome Smith (1981), in University of California, Berkeley,
-    Computing Services Newsletter, Vol. 4, No. 4, April 1981, p. 10.
-
-## <span id="naming"></span>The Naming of the Workstations
-
-written by Mark Abrahams
+## The Naming of Systems
 
 Once upon a time, Stat (and Math) used the names of great composers (How
-we got <span class="emphasis">*those*</span> is another story.). But Leo
-decided that with the Suns, we would use names of characters from
-classic children's stories. His reason was that he wanted something to
-express the excitment and wonder which go along with learning and
-discovery, and he felt that the classic children's story characters
-expressed it best. Leo chose the stories and the first few names.
-Originally he chose three stories, which gave these names:
+we got *those* is another story.). But Leo decided that with the Suns, we
+would use names of characters from classic children's stories. His reason
+was that he wanted something to express the excitment and wonder which go
+along with learning and discovery, and he felt that the classic children's
+story characters expressed it best. Leo chose the stories and the first
+few names. Originally he chose three stories, which gave these names:
 
-The Wind in the Willows
+### The Wind in the Willows
 
 - badger
 - mole
 - otter
 - toad
 
-Winnie the Pooh
+### Winnie the Pooh
 
 - eeyore
 - heffal(ump)
@@ -393,7 +388,7 @@ Winnie the Pooh
 - wol
 - woozle
 
-The Wizard of Oz
+### The Wizard of Oz
 
 - (scare)crow
 - dorothy
@@ -405,22 +400,42 @@ The Wizard of Oz
 - witch
 - wizard
 
+### The Lord of the Rings
+
 Later, Leo decided we should also use Tolkien names. That seems to have
 been the most popular; also it's very practical because there are so
 many Tolkien characters we'll never run out. So far we have:
 
 - aragorn
+- arwen
 - balrog
 - bilbo
+- bombadil
+- boromir
+- denethor
+- ea
+- eomer
+- eowyn
 - fangorn
+- faramir
+- feanor
 - frodo
 - gandalf
+- ghan
+- gimli
 - gollum
 - gorbag
+- grima
+- legolas
+- merry
+- morgoth
 - pippin
+- radagast
 - samwise
 - saruman
 - sauron
+- shadowfax
+- shagrat
 - shelob
 - smeagol
 - springer
@@ -429,42 +444,71 @@ many Tolkien characters we'll never run out. So far we have:
 - ugluk
 
 shagrat was also used for a while, but dropped because it turns out to
-be an offensive vulgarity in the Australian language (which is like
-English, but different :-).
+be an offensive vulgarity in the Australian language. (which is like
+English, but different ☺︎)
+
+### Harry Potter
+
+When names became scarce, Ryan Lovett added characters from the Harry
+Potter series.
+
+- bellatrix
+- dobby
+- dumbledore
+- ginny
+- gryffindor
+- hagrid
+- harry
+- hedwig
+- hermione
+- hufflepuff
+- luna
+- lupin
+- malfoy
+- quidditch
+- ravenclaw
+- ron
+- sirius
+- slytherin
+- snape
+- voldemort
 
 The other names also have stories. They are (or oringally were) faculty
 and staff workstations and named by their (original) main users. Some
 reflect the national origins of their choosers.
 
 antares  
-chosen by James Blakly because it's big and it's red and it's there.
+: chosen by James Blakly because it's big and it's red and it's there.
 
 arkle  
-chosen by Finbarr O'Sullivan; famous Irish racehorse.
+: chosen by Finbarr O'Sullivan; famous Irish racehorse.
 
 bunyip  
-chosen by Jim Pitman. Bunyip Bluegum is a famous Australian children's
+: chosen by Jim Pitman. Bunyip Bluegum is a famous Australian children's
 story character (note consistency with Leo's theme).
 
 calvin  
-chosen by Alex Liu from the comic strip Calvin and Hobbes. (He also used
+: chosen by Alex Liu from the comic strip Calvin and Hobbes. (He also used
 hobbes for awhile) (again note loose consistency with Leo's theme).
 
 kestrel  
-chosen by Deb Nolan.
+: chosen by Deb Nolan.
+
+lorax
+: chosen by Dan Ackerman, after a Dr. Seuss character.
 
 smiley  
-chosen by Andrew Gelman.
+: chosen by Andrew Gelman.
 
 springer  
-chosen by Steve Peters in honor of his springer spaniel, Benjamin.
+: chosen by Steve Peters in honor of his springer spaniel, Benjamin.
 
 vif  
-chosen by Kjell Doksum. Famous Norwegian soccer team (what else would
+: chosen by Kjell Doksum. Famous Norwegian soccer team (what else would
 you expect him to choose?)
 
 wanjina  
-chosen by Steve Evans (name used for an Australian shaman).
+: chosen by Steve Evans (name used for an Australian shaman).
 
 zardoz  
-chosen by Dave Donoho, after the science fiction movie of the same name.
+: chosen by Dave Donoho, after the science fiction movie of the same name.
