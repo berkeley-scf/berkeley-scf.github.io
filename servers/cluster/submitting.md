@@ -1,9 +1,9 @@
 ---
-title: "Basic Job Submission"
+title: Basic Job Submission
 ---
 This page describes how to submit jobs to the cluster.
 
-## Slurm Scheduler Setup and Job Restrictions  
+## Slurm Configuration and Job Restrictions  
 
 The cluster has multiple partitions, corresponding to groups of nodes.
 The different partitions have different hardware and job restrictions as
@@ -11,27 +11,26 @@ discussed here:
 
 | Partition     | Max \# cores per user (running) | Time limit  | Max memory per job                                                                     | Max cores per job |
 |---------------|---------------------------------|-------------|----------------------------------------------------------------------------------------|-------------------|
-| low           | 256                             | 28 days     | 256 GB                                                                                 | 32\*\*\*          |
-| high\*        | 36                              | 7 days      | 128 GB                                                                                 | 24\*\*\*          |
-| gpu\*         | 8 CPU cores                     | 28 days     | 6 GB (CPU)                                                                             | 8                 |
-| jsteinhardt\* | varied                          | 28 days\*\* | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various) (CPU) | varied            |
-| yugroup\*     | varied                          | 28 days\*\* | varied (CPU)                                                                           | varied            |
-| yss\*         | 32                              | 28 days\*\* | 528 GB (CPU)                                                                           | 32                |
-| epurdom\*     | 256                             | 28 days\*\* |                                                                                        | 128\*\*\*         |
-| lowmem        | 144                             | 28 days     | 12-16 GB                                                                               | 16\*\*\*          |
+| low           | 256                             | 28 days     | 256 GB                                                                                 | 32[^parallel]          |
+| high[^high]        | 36                              | 7 days      | 128 GB                                                                                 | 24[^parallel]          |
+| gpu[^high]         | 8 CPU cores                     | 28 days     | 6 GB (CPU)                                                                             | 8                 |
+| jsteinhardt[^high] | varied                          | 28 days[^preemptible] | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various) (CPU) | varied            |
+| yugroup[^high]     | varied                          | 28 days[^preemptible] | varied (CPU)                                                                           | varied            |
+| yss[^high]         | 32                              | 28 days[^preemptible] | 528 GB (CPU)                                                                           | 32                |
+| epurdom[^high]     | 256                             | 28 days[^preemptible] |                                                                                        | 128[^parallel]         |
+| lowmem        | 144                             | 28 days     | 12-16 GB                                                                               | 16[^parallel]          |
 
   
-\* See How to Submit Jobs to the High Partitions or How to Submit GPU
-Jobs.
+[^high]: See [](#high-performance-partitions) or [GPU Jobs](/servers/cluster/gpus).
 
-\*\* Preemptible
+[^preemptible]: Preemptible
 
-\*\*\* If you use software that can parallelize across multiple nodes
+[^parallel]: If you use software that can parallelize across multiple nodes
 (e.g., R packages that use MPI or the future package, Python's Dask or
 IPython Parallel, MATLAB, MPI), you can run individual jobs across more
-than one node. See How to Submit Parallel Jobs.
+than one node. See [](#parallel-jobs).
 
-## How to Submit Single-core jobs  
+## Single-core jobs  
 
 Prepare a shell script containing the instructions you would like the
 system to execute. 
@@ -46,23 +45,27 @@ automating the submission of multiple jobs.
 For example a simple script to run an R program called 'simulate.R'
 would contain these lines:
 
-    #!/bin/bash
-    R CMD BATCH --no-save simulate.R simulate.out
+:::{code} bash
+#!/bin/bash
+R CMD BATCH --no-save simulate.R simulate.out
+:::
 
 Once logged onto a submit host, navigate to a directory within your home
 or scratch directory (i.e., make sure your working directory is not in
-/tmp or /var/tmp) and use the sbatch command with the name of the shell
+`/tmp` or `/var/tmp`) and use the sbatch command with the name of the shell
 script (assumed to be job.sh here) to enter a job into the queue:
 
-    arwen:~/Desktop$ sbatch job.sh
-    Submitted batch job 380
+:::{code} shell-session
+arwen:~/Desktop$ sbatch job.sh
+Submitted batch job 380
+:::
 
 Here the job and assigned job ID 380. Results that would normally be
 printed to the screen via standard output and standard error will be
 written to a file called slurm-380.out.
 
-If you have many single-core jobs to run, there are [arious ways to
-automate submitting such jobs](/servers/cluster/parallel).
+If you have many single-core jobs to run, there are [various ways to
+automate submitting such jobs](/servers/cluster/parallel#automating-submission).
 
 Note that Slurm is configured such that single-core jobs will have
 access to a single physical core (including both hyperthreads on our new
@@ -73,35 +76,34 @@ throughput by modifying your workflow so that you can one run job per
 hyperthread rather than one job per physical core. You could do this by
 taking advantage of [parallelization strategies in R, Python, or MATLAB
 to distribute tasks across workers in a single
-job](https://berkeley-scf.github.io/tutorial-parallelization), or you
-could use <a
-href="/servers/cluster/parallel#jump%5Baccordion%5D%5B1%5D%5B4%5D%5Btab%5D%5B1%5D%5B2%5D"
-data-entity-substitution="canonical" data-entity-type="node"
-data-entity-uuid="05f8a161-0df8-450f-9191-fd43b142b03d">GNU parallel</a>
+job](https://computing.stat.berkeley.edu/tutorial-parallelization), or you
+could use [GNU parallel](/servers/cluster/parallel#gnu-parallel)
 or [srun within
-sbatch](/computing/servers/cluster/parallel#jump%5Baccordion%5D%5B1%5D%5B4%5D%5Btab%5D%5B1%5D%5B3%5D). 
+sbatch](/servers/cluster/parallel#srun).
 
 Slurm provides a number of additional flags to control what happens; you
 can see the man page for sbatch for help with these. Here are some
 examples, placed in the job script file, where we name the job, ask for
 email updates and name the output and error files:
 
-    #!/bin/bash
-    #SBATCH --job-name=myAnalysisName
-    #SBATCH --mail-type=ALL                       
-    #SBATCH --mail-user=blah@berkeley.edu
-    #SBATCH -o myAnalysisName.out #File to which standard out will be written
-    #SBATCH -e myAnalysisName.err #File to which standard err will be written
-    R CMD BATCH --no-save simulate.R simulate.Rout
-
+:::{code} bash
+#!/bin/bash
+#SBATCH --job-name=myAnalysisName
+#SBATCH --mail-type=ALL                       
+#SBATCH --mail-user=blah@berkeley.edu
+#SBATCH -o myAnalysisName.out #File to which standard out will be written
+#SBATCH -e myAnalysisName.err #File to which standard err will be written
+R CMD BATCH --no-save simulate.R simulate.Rout
+:::
  
-
-## How to Submit Parallel Jobs  
+(parallel-jobs)=
+## Parallel Jobs  
 
 One can use SLURM to [submit parallel code](/servers/cluster/parallel)
 of a variety of types.
 
-## Submitting Jobs to the High Performance Partitions  
+(high-performance-partitions)=
+## High Performance Partitions  
 
 ### High partition
 
@@ -109,8 +111,10 @@ To submit jobs to the faster nodes in the high partition, you must
 include either the '--partition=high' or '-p high' flag. By default jobs
 will be run in the low partition. For example:
 
-    arwen:~/Desktop$ sbatch -p high job.sh
-    Submitted batch job 380
+:::{code} shell-session
+arwen:~/Desktop$ sbatch -p high job.sh
+Submitted batch job 380
+:::
 
 You can also submit interactive jobs to the high partition, by simply
 adding the flag to specify that partition in your *srun* invocation.
@@ -121,7 +125,7 @@ than the machines in the partitions for specific lab groups and (on a
 per-core basis) than your laptop, particularly Apple Silicon Mac
 laptops.
 
-### epurdom partition for Purdom group members
+### epurdom partition
 
 The Purdom group has priority access to the two nodes (`frodo` and
 `samwise`) in the `epurdom` partition (128-core AMD EPYC machines
@@ -137,13 +141,13 @@ jobs for a given physical core.
 
 Please contact SCF staff or group members for more details.
 
-### Pre-emptible jobs using many cores, fast disk I/O, or large memory
+### Pre-emptible Jobs
 
 Pre-emptible jobs are requeued when preemption happens and should
 restart when the needed resources become available. If you see that your
 job is not being requeued, please contact us.
 
-#### Pre-emptible jobs in the epurdom partition
+#### epurdom partition
 
 The epurdom partition has two nodes with new CPUs and a lot of memory.
 These nodes are owned by a faculty member and are made available on a
@@ -154,13 +158,15 @@ all that often as the two nodes collectively have 256 cores.
 
 You can request use of these nodes as follows:
 
-    arwen:~/Desktop$ sbatch -p epurdom job.sh
-    Submitted batch job 380
+:::{code} shell-session
+arwen:~/Desktop$ sbatch -p epurdom job.sh
+Submitted batch job 380
+:::
 
-#### Pre-emptible jobs in the jsteinhardt partition
+#### jsteinhardt partition
 
 The jsteinhardt partition has various nodes with newer CPUs, a lot of
-memory, and very fast disk I/O to */tmp* and */var/tmp* using an NVMe
+memory, and very fast disk I/O to `/tmp` and `/var/tmp` using an NVMe
 SSD. These nodes are owned by a faculty member and are made available on
 a preemptible basis. Your job could be cancelled without warning at any
 time if researchers in the faculty member's group need to run a job
@@ -170,22 +176,24 @@ cores in the cases of balrog and saruman, respectively) that can be
 shared amongst jobs. For example to request use of one of these nodes,
 which are labelled as 'manycore' nodes:
 
-    arwen:~/Desktop$ sbatch -p jsteinhardt -C manycore job.sh
-    Submitted batch job 380
+:::{code} shell-session
+arwen:~/Desktop$ sbatch -p jsteinhardt -C manycore job.sh
+Submitted batch job 380
+:::
 
 You can request specific resources as follows:
 
-- "-C fasttmp" for access to fast disk I/O in */tmp* and */var/tmp*,
-- "-C manycore" for access to many (64 or more) cores,
-- "-C mem256g" for up to 256 GB CPU memory,
-- "-C mem768g" for up to 768 GB CPU memory, and
-- "-C mem1024g" for up to 1024 GB CPU memory.
+- `-C fasttmp` for access to fast disk I/O in `/tmp` and `/var/tmp`,
+- `-C manycore` for access to many (64 or more) cores,
+- `-C mem256g` for up to 256 GB CPU memory,
+- `-C mem768g` for up to 768 GB CPU memory, and
+- `-C mem1024g` for up to 1024 GB CPU memory.
 
 Also note that if you need more disk space on the NVMe SSD on some but
 not all of these nodes, we may be able to make available space on a much
 larger NVMe SSD if you request it.
 
-## When will my job run or why is it not starting?  
+## Job Not Starting
 
 The cluster is managed using the Slurm scheduling software. We configure
 Slurm to try to balance the needs of the various cluster users.

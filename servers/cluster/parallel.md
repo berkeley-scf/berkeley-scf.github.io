@@ -16,7 +16,7 @@ the [threaded BLAS](/blas), it's worth doing some testing to
 make sure that threading is giving an non-negligible speedup; see the
 notes above for more information.
 
-Threaded jobs  
+## Threaded jobs
 Here's an example job script to use multiple threads (4 in this case) in
 R (or with your own openMP-based program):
 
@@ -44,7 +44,7 @@ Matlab:
 matlab -nodesktop -nodisplay < simulate.m > simulate.out
 ```
 
-Multi-core (one node) jobs  
+## Multi-core (one node) jobs
 The following example job script files pertain to jobs that need to use
 multiple cores on a single node that do not fall under the
 threading/openMP context. This is relevant for parallel code in R that
@@ -107,7 +107,7 @@ c.NumThreads = str2num(getenv('SLURM_CPUS_PER_TASK'));
 c.parpool(str2num(getenv('SLURM_NTASKS')));
 ```
 
-### Multi-node (distributed memory) jobs  
+## Multi-node (distributed memory) jobs
 
 You can use MPI to run jobs across multiple nodes. Alternatively, there
 are ways to run software such as Python and R across multiple nodes.
@@ -160,17 +160,18 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 mpirun -x OMP_NUM_THREADS myMPIexecutable
 ```
 
-#### Running MATLAB across Multiple Nodes
+### Running MATLAB across Multiple Nodes
 
 You can run MATLAB across unlimited workers (except as constrained by
 the number of cores available on the system not used by other jobs) on
 one or more nodes. There are two ways you can do this. Please see [these
-instructions](http://eml.berkeley.edu/cluster#parallel-server) for how
+instructions](https://eml.berkeley.edu/cluster#parallel-server) for how
 this is done on the EML (Economics) cluster, also run by SCF. The same
 instructions will work on the SCF, but for 'Option 2', of course you
 should be running MATLAB on an SCF stand-alone server. 
 
-Parallelizing independent computations or jobs  
+## Parallelizing independent computations or jobs
+
 There are various ways to collect multiple computations or jobs and run
 them in parallel as one or more SLURM jobs.
 
@@ -182,27 +183,8 @@ them in parallel as one or more SLURM jobs.
 - Finally, you can use shell scripting to 'manually' automate job
   submission.
 
-<div class="bootstrap-tabs" tab-set-title="embarrassingly parallel">
-
-- <a href="#embarrassingly-parallel-tab-1-name" class="tab-link"
-  aria-controls="embarrassingly-parallel-tab-1-name" data-toggle="tab"
-  role="tab">SLURM job arrays</a>
-- <a href="#embarrassingly-parallel-tab-2-name" class="tab-link"
-  aria-controls="embarrassingly-parallel-tab-2-name" data-toggle="tab"
-  role="tab">GNU parallel</a>
-- <a href="#embarrassingly-parallel-tab-3-name" class="tab-link"
-  aria-controls="embarrassingly-parallel-tab-3-name" data-toggle="tab"
-  role="tab">SLURM tasks in parallel</a>
-- <a href="#embarrassingly-parallel-tab-4-name" class="tab-link"
-  aria-controls="embarrassingly-parallel-tab-4-name" data-toggle="tab"
-  role="tab">Automating job submission</a>
-
-<div class="tab-content">
-
-<div id="embarrassingly-parallel-tab-1-name" class="tab-pane"
-role="tabpanel">
-
-<div class="tab-pane-content">
+(slurm-job-arrays)=
+### Slurm job arrays
 
 Job array submissions are a nice way to submit multiple jobs in which
 you vary a parameter across the different jobs.
@@ -233,16 +215,8 @@ multiple input files (in this case, trans0.fq, trans1.fq, ...):
 tophat BowtieIndex trans$SLURM_ARRAY_TASK_ID.fq
 ```
 
- 
-
-</div>
-
-</div>
-
-<div id="embarrassingly-parallel-tab-2-name" class="tab-pane active"
-role="tabpanel">
-
-<div class="tab-pane-content">
+(gnu-parallel)=
+### GNU parallel 
 
 GNU Parallel is a shell tool for executing jobs in parallel on one or
 multiple computers. It’s a helpful tool for automating the
@@ -250,35 +224,19 @@ parallelization of multiple (often serial) jobs, in particular allowing
 one to group jobs into a single SLURM submission to take advantage of
 the multiple cores on a given node of the cluster.
 
-</div>
-
-<div class="tab-pane-content">
-
- 
-
-</div>
-
-<div class="tab-pane-content">
-
 For details, please see the Berkeley [Savio cluster documentation on
 using GNU
 parallel](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/running-your-jobs/gnu-parallel).
 
-</div>
-
-</div>
-
-<div id="embarrassingly-parallel-tab-3-name" class="tab-pane"
-role="tabpanel">
-
-<div class="tab-pane-content">
+(srun)=
+### Slurm tasks in parallel
 
 Here's how you would set up your job script if you want to run multiple
 instances (18 in this case) of the same code as part of a single job.
 
 ```{code} bash
 #!/bin/bash
-#SBATCH --ntasks 18 
+#SBATCH --ntasks 18
 srun myExecutable
 ```
 
@@ -286,14 +244,8 @@ To have each instance behave differently, you can make use of the
 SLURM_PROCID environment variable, which will be distinct (and have
 values 0, 1, 2, ...) between the different instances.
 
-</div>
-
-</div>
-
-<div id="embarrassingly-parallel-tab-4-name" class="tab-pane"
-role="tabpanel">
-
-<div class="tab-pane-content">
+(automating-submission)=
+### Automating job submission
 
 The above approaches are more elegant, but you can also use UNIX shell
 tools to submit multiple SLURM jobs. Here are some approaches and
@@ -310,11 +262,13 @@ Here is some example bash shell code (which could be placed in a shell
 script file) that loops over two variables (one numeric and the other a
 string):
 
-    for ((it = 1; it <= 10; it++)); do
-      for mode in short long; do
-        sbatch job.sh $it $mode
-      done
-    done
+:::{code} bash
+for ((it = 1; it <= 10; it++)); do
+  for mode in short long; do
+    sbatch job.sh $it $mode
+  done
+done
+:::
 
 You now have a couple options in terms of how job.sh is specified. This
 illustrates things for Matlab jobs, but it shouldn't be too hard to
@@ -322,34 +276,28 @@ modify for other types of jobs.
 
 ##### Option \#1
 
-    # contents of job.sh
-    echo "it = $1; mode = '$2'; myMatlabCode" > tmp-$1-$2.m
-    matlab -nodesktop -nodisplay -singleCompThread < tmp-$1-$2.m > tmp-$1-$2.out 2> tmp-$1-$2.err
-
 In this case myMatlabCode.m would use the variables 'it' and 'mode' but
 not define them.
+:::{code} bash
+# contents of job.sh
+echo "it = $1; mode = '$2'; myMatlabCode" > tmp-$1-$2.m
+matlab -nodesktop -nodisplay -singleCompThread < tmp-$1-$2.m > tmp-$1-$2.out 2> tmp-$1-$2.err
+:::
+
 
 ##### Option \#2
-
-    # contents of job.sh
-    export it=$1; export mode=$2;
-    matlab -nodesktop -nodisplay -singleCompThread < myMatlabCode.m > tmp-$1-$2.out 2> tmp-$1-$2.err
 
 In this case you need to insert the following Matlab code at the start
 of myMatlabCode.m so that Matlab correctly reads the values of 'it' and
 'mode' from the UNIX environment variables:
 
-    it = str2num(getenv('it'));
-    mode = getenv('mode');
+:::{code} bash
+# contents of job.sh
+export it=$1; export mode=$2;
+matlab -nodesktop -nodisplay -singleCompThread < myMatlabCode.m > tmp-$1-$2.out 2> tmp-$1-$2.err
+:::
 
- 
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
- 
+:::{code} matlab
+it = str2num(getenv('it'));
+mode = getenv('mode');
+:::
