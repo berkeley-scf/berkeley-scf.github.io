@@ -274,7 +274,7 @@ You now have a couple options in terms of how job.sh is specified. This
 illustrates things for Matlab jobs, but it shouldn't be too hard to
 modify for other types of jobs.
 
-##### Option \#1
+#### Option 1
 
 In this case myMatlabCode.m would use the variables 'it' and 'mode' but
 not define them.
@@ -285,7 +285,7 @@ matlab -nodesktop -nodisplay -singleCompThread < tmp-$1-$2.m > tmp-$1-$2.out 2> 
 :::
 
 
-##### Option \#2
+#### Option 2
 
 In this case you need to insert the following Matlab code at the start
 of myMatlabCode.m so that Matlab correctly reads the values of 'it' and
