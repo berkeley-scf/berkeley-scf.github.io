@@ -30,12 +30,12 @@ Please contact SCF staff for more information.
 ### Research Groups
 
 The SCF also operates the following GPUs. These GPUs are owned by
-individual faculty members, but anyone can run jobs on them. Note that
-if you are not a member of the lab group, your jobs will run on a
-preemptible basis, which means they can be cancelled at any time by a
-higher-priority jobs. These servers can be accessed by submitting to the
-*jsteinhardt*, *yugroup*, *yss,* or *songmei* partitions (details below)
-using the [SLURM scheduling software](/servers/cluster).
+individual faculty members, but anyone can run jobs on them. If you are
+not a member of the lab group, your jobs will run on a preemptible basis,
+which means they can be cancelled at any time by a higher-priority jobs.
+These servers can be accessed by submitting to the *jsteinhardt*,
+*yugroup*, *yss,* or *songmei* partitions using the [SLURM scheduling
+software](/servers/cluster).
 
 | Partition     | Machine Name            | GPU Type            | GPU Memory |
 |---------------|-------------------------|---------------------|------------|
@@ -56,7 +56,7 @@ using the [SLURM scheduling software](/servers/cluster).
 | `songmei`     | `feanor`[^fqdn]         | H200                | 144 GB     |
 | `berkeleynlp` | `lorax`[^fqdn]          | H200                | 144 GB     |
 
-[^lambda]: To use these machines, one must specifically [connect to the remote cluster](/servers/cluster/gpus#steinhardt-remote-cluster),
+[^lambda]: To use one of these five machines, one must specifically [connect to the remote cluster](/servers/cluster/gpus#steinhardt-remote-cluster),
 which is accessed separately from the other SCF resources.
 [^fqdn]: Requires the fully qualified domain name, e.g. `{hostname}.stat.berkeley.edu`.
 
@@ -77,7 +77,7 @@ the GPU:
   as well as on gandalf and radagast among others.
 - We can install additional or upgrade current software as needed. 
 
-We use Linux environment [modules](/faqs/environment-modules) to
+We use Linux [environment modules](/faqs/environment-modules) to
 manage the use of GPU-based software, as discussed next. Note that you
 could insert any of these commands in your .bashrc (after the stanza
 involving `~skel/std.bashrc`) so they are always in effect or invoke them
