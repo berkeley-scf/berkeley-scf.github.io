@@ -259,7 +259,9 @@ your job to run.
 To request a specific GPU type, you can add that to the gpus flag, e.g.,
 here requesting an A100:
 
-    sbatch -p yugroup --gpus=A100:1 job.sh
+```{code} shell
+sbatch -p yugroup --gpus=A100:1 job.sh
+```
 
 If you need more than one CPU, please request that using the
 --cpus-per-task flag, but note that merry only has four CPUs. The value
@@ -284,6 +286,7 @@ jobs for a given physical core. 
 Please contact SCF staff or group members for more details.
 
 ## Song Mei group  
+
 The Mei group has priority access to the GPUs located on feanor (8 H200
 GPUs). If you are in the group, simply submit jobs to the *songmei*
 partition and you will automatically preempt jobs by users not in the
