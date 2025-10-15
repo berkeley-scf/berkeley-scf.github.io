@@ -202,21 +202,20 @@ have a sense of when a job that requests a particular machine might
 start: 
 
 ```{code} shell-session
-    arwen:~> squeue -p jsteinhardt -o "%.9i %.20j %.12u %.2t %.11l %.11M %.11V %.5C %.8r %.6D %.20R %.13p %8q %b"
-        JOBID                 NAME         USER ST  TIME_LIMIT        TIME SUBMIT_TIME  CPUS   REASON  NODES     NODELIST(REASON)      PRIORITY QOS      TRES_PER_NODE
-      1077240                 bash nikhil_ghosh  R 28-00:00:00    12:51:48 2021-11-01T     1     None      1               balrog 0.00196710997 normal   gpu:1
-      1077248              jupyter         awei  R 28-00:00:00     1:40:55 2021-11-01T     1     None      1               balrog 0.00092315604 preempti gpu:1
-      1077121             train.sh andyzou_jiam  R 28-00:00:00  2-17:32:41 2021-10-29T    48     None      1               balrog 0.00027842330 preempti gpu:2
+arwen:~> squeue -p jsteinhardt -o "%.9i %.20j %.12u %.2t %.11l %.11M %.11V %.5C %.8r %.6D %.20R %.13p %8q %b"
+    JOBID                 NAME         USER ST  TIME_LIMIT        TIME SUBMIT_TIME  CPUS   REASON  NODES     NODELIST(REASON)      PRIORITY QOS      TRES_PER_NODE
+  1077240                 bash nikhil_ghosh  R 28-00:00:00    12:51:48 2021-11-01T     1     None      1               balrog 0.00196710997 normal   gpu:1
+  1077248              jupyter         awei  R 28-00:00:00     1:40:55 2021-11-01T     1     None      1               balrog 0.00092315604 preempti gpu:1
+  1077121             train.sh andyzou_jiam  R 28-00:00:00  2-17:32:41 2021-10-29T    48     None      1               balrog 0.00027842330 preempti gpu:2
 ```
 
 We also have a wrapper script that gives back essentially the same information:
 
 ```{code} shell-session
-    arwen:~> sjobs -p jsteinhardt
+arwen:~> sjobs -p jsteinhardt
 ```
 
- 
-
+(steinhardt-remote-cluster)=
 ### Steinhardt Group Remote Cluster
 
 In addition to the GPU resources listed above, an additional 40 A100
