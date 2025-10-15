@@ -19,7 +19,12 @@ change the WiFi network:
 
 1.  Open the "Settings" application.
 1.  Tap "Wi-Fi". If not already on, slide the control button next to "Wi-Fi".  
-    The color around the slider should be green. ![Wi-Fi Slider](../images/wifi-slider.png){width="57px" height="41px"}
+    The color around the slider should be green.
+    ```{image} ../images/wifi-slider.png
+    :alt: Wi-Fi Slider
+    :width: 57px
+    :height: 41px
+    ```
 1.  Choose a UC Berkeley wireless network, presumably the main
     network: eduroam.
 
