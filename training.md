@@ -6,8 +6,6 @@ The SCF periodically offers in-person
 self-study [tutorials](/training/tutorials) on topics related
 to statistical computing. A quick reference list is provided here.
 
-<div class="table-responsive">
-
 | Training | Topic                                                                                                                                         | Last Updated   |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 | Tutorial | [Basic introduction to the UNIX command line](https://computing.stat.berkeley.edu/tutorial-unix-basics)                                       | January 2025   |
@@ -32,5 +30,3 @@ to statistical computing. A quick reference list is provided here.
 | Workshop | [GPU computation](/gpu)                                                                                                             | February 2016  |
 | Workshop | [C++ and creating R packages](/cpp)                                                                                                 | May 2013       |
 | Tutorial | [Computing in the cloud](/cloud-computation)                                                                                        | March 2014     |
-
-</div>

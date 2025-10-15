@@ -45,7 +45,8 @@ simply  go [here](https://github.com/settings/tokens). If you're just
 interacting with repositories, you probably want to simply select 'repo'
 as the "scope". 
 
-### Saving your password or token to avoid entering it<span id="git-save-auth"></span>
+(git-save-auth)=
+### Saving your password or token to avoid entering it
 
 You can [save, or cache, your
 credentials](https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-git) so

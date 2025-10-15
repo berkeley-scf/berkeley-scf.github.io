@@ -1,13 +1,8 @@
 ---
 title: "Saving Plots in R"
 ---
-<div>
-
 Originally for Statistics 133, by
-<a href="http://www.stat.berkeley.edu/~spector" rel="author"
-title="Phil Spector">Phil Spector</a>
-
-</div>
+[Phil Spector](href="http://www.stat.berkeley.edu/~spector)
 
 Since R runs on so many different operating systems, and supports so
 many different graphics formats, it's not surprising that there are a
@@ -35,17 +30,17 @@ regardless of operating system or the way that you are connecting.
 
 1.  Choose the format that you want to use. In this example, I'll save a
     plot as a JPG file, so I'll use the `jpeg` driver.
-2.  The only argument that the device drivers need is the name of the
+1.  The only argument that the device drivers need is the name of the
     file that you will use to save your graph. Remember that your plot
     will be stored relative to the current directory. You can find the
     current directory by typing `getwd()` at the R prompt.
-3.  You may want to make adjustments to the size of the plot before
+1.  You may want to make adjustments to the size of the plot before
     saving it. Consult the help file for your selected driver to learn
     how.
-4.  Now enter your plotting commands as you normally would. You
+1.  Now enter your plotting commands as you normally would. You
     will **not** actually see the plot - the commands are being saved to
     a file instead.
-5.  When you're done with your plotting commands, enter
+1.  When you're done with your plotting commands, enter
     the `dev.off()` command. This is very important - without it you'll
     get a partial plot or nothing at all.
 

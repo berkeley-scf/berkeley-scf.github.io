@@ -283,7 +283,8 @@ conda-forge channel, a popular channel providing a wide variety of
 up-to-date packages. You can optionally have it use Mamba rather than
 Conda. 
 
-#### Mamba for Mac ARM64-based machines (Apple Silicon M1 and M2 Macs)<span id="m1-anaconda"></span>
+(m1-anaconda)=
+#### Mamba for Mac ARM64-based machines (Apple Silicon M1 and M2 Macs)
 
 With the M1 and M2 Macs, Apple is now using its own chips, referred to
 as *Apple Silicon*. These have a different architecture, ARM64, than

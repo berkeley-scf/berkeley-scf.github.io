@@ -24,8 +24,8 @@ For example, to run your R job in the background:
 
     nohup R CMD BATCH --no-save code.R code.log &
 
-<span style="letter-spacing: 0px;">With a Matlab job, where we redirect
-the output to outfile.txt and the error messages to error.txt:</span>
+With a Matlab job, where we redirect
+the output to outfile.txt and the error messages to error.txt:
 
     nohup matlab -nodesktop -nodisplay < infile.m > outfile.txt 2> error.txt &
 

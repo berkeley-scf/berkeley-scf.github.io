@@ -23,8 +23,7 @@ Research Computing's Savio campus cluster and NERSC:
 | nersc#edison                      | NERSC Edison                      |
 | nersc#hpss                        | NERSC HPSS                        |
 
-<a href="https://app.globus.org/" class="btn btn-default"><span
-class="text">Globus Web App</span></a>
+{button}`Globus Web App <https://app.globus.org/>`
 
 The first time you connect to the endpoint, you will be offered the
 option to "Link an identity from UC Berkeley Statistics OIDC Auth".

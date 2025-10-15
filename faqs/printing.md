@@ -49,23 +49,7 @@ bottom of the page to upload your document.
 
 ### From a non-departmental computer
 
-<div class="bootstrap-tabs" tab-set-title="Personal Computer">
-
-- <a href="#personal-computer-tab-1-name" class="tab-link"
-  aria-controls="personal-computer-tab-1-name" data-toggle="tab"
-  role="tab">Drivers</a>
-- <a href="#personal-computer-tab-2-name" class="tab-link"
-  aria-controls="personal-computer-tab-2-name" data-toggle="tab"
-  role="tab">Specify Your Copy Code</a>
-- <a href="#personal-computer-tab-3-name" class="tab-link"
-  aria-controls="personal-computer-tab-3-name" data-toggle="tab"
-  role="tab">Save Your Copy Code</a>
-
-<div class="tab-content">
-
-<div id="personal-computer-tab-1-name" class="tab-pane" role="tabpanel">
-
-<div class="tab-pane-content">
+#### Drivers
 
 If you want to print to the copiers from your personal computer by using
 the native print capability, you will need to [download and install
@@ -74,11 +58,11 @@ drivers](https://www.support.xerox.com/en-us/product/altalink-b8000-series/downl
 then create a print queue. On Windows, download the Xerox Smart Start
 application.
 
-<span style="letter-spacing: 0px;">When installing the driver, the
+When installing the driver, the
 installer may try to automatically find the Xerox copiers on the network
 and install the print queue for you. You can click on a button, usually
 the right-most of three large square buttons, to specify one of the
-Xeroxes above.</span>
+Xeroxes above.
 
 If the driver installer did not create the queue, you will need to do
 this manually. On a Mac visit System Preferences \> Print & Fax to add a
@@ -86,11 +70,19 @@ printer. Choose one of the printer addresses, and set the Protocol to
 "HP Jetdirect - Socket" and leave the Queue field blank. Specify the
 B8090 driver you just installed.
 
+:::{image} ../images/xerox-mac-setup.png
+:alt: Screenshot of Mac's System Settings
+:::
+
 When printing this way, make sure you are on campus ethernet or are on
 eduroam. Printing from CalVisitor will not work.
 
 The Mac may respond with, "Unable to verify the printer on your
 network," which is fine. 
+
+:::{image} ../images/xerox-windows.png
+:alt: Screenshot of Xerox Smart Start on Windows
+:::
 
 On a Windows computer, if the app doesn't discover the copiers, click
 "Don't See Your Printer?" and enter the network address manually -- one
@@ -99,14 +91,7 @@ of x1.stat.berkeley.edu or x2.stat.berkeley.edu.
 Once you have added the queue, you will need to configure it with your
 copier ID.
 
-</div>
-
-</div>
-
-<div id="personal-computer-tab-2-name" class="tab-pane active"
-role="tabpanel">
-
-<div class="tab-pane-content">
+#### Specify Your Copy Code
 
 You will need navigate to where you can enter your ID.
 
@@ -122,11 +107,19 @@ you must upload your document to the Xerox web pages linked above.
     first viewing) and select **Xerox Features** and then **Advanced**.
     The print dialog box should resemble what you see here:
 
+:::{image} ../images/xerox-accounting-1.png
+:alt: Screenshot of Xerox accounting on macOS
+:::
+
 Click the Accounting... button. In the new windows, set Accounting
 System to *Xerox Standard Accounting*. Set Default User ID to your
 copier user ID. Leave Default Account Type as "Default Group Account".
 If you have multiple codes, you can choose to have it prompt you for
 each print job. Here are the accounting settings:
+
+:::{image} ../images/xerox-accounting-2.png
+:alt: Screenshot of Xerox accounting code on macOS
+:::
 
 ### Windows
 
@@ -136,13 +129,7 @@ each print job. Here are the accounting settings:
 4.  Click "Print Queue Settings" on the left, then Accounting.
 5.  Under Default User ID, enter your copy code.
 
-</div>
-
-</div>
-
-<div id="personal-computer-tab-3-name" class="tab-pane" role="tabpanel">
-
-<div class="tab-pane-content">
+#### Save Your Copy Code
 
 If you frequently print to the Xerox copiers, you may find it
 inconvenient to have to enter the User ID and Account ID every time you
@@ -155,8 +142,6 @@ click **Print**, do the following:
 
 ### macOS
 
-<div class="tab-pane-content">
-
 1.  Click the pop-up menu next to **Presets**.
 2.  Choose **Save Current Settings as Preset...**.
 3.  In the dialog window that pops up, assign a name to the Preset such
@@ -166,17 +151,11 @@ click **Print**, do the following:
     your User and Account IDs, just make sure to select the preset in
     the **Presets** pop-up menu.
 
-![Xerox Preset Screenshot](../images/xerox_presets.png){width="640px" height="371px"}
- 
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+:::{image} ../images/xerox_presets.png
+:alt: Xerox Preset Screenshot
+:width: 640px
+:height: 371px
+:::
  
 
 ### Troubleshooting

@@ -1,52 +1,17 @@
 ---
 title: "How do I use the spellchecker in UNIX?"
 ---
-<div class="titlepage">
-
-<div>
-
-<div>
 
 This article contains information about how to spellcheck your files.
 
-<div class="section" lang="en">
-
-<div class="titlepage">
-
-<div>
-
-<div>
-
 ## General Information
-
-</div>
-
-</div>
-
-</div>
 
 There are several ways to spell check a text files. Most of the time,
 you can just launch **'ispell'** on the file that you want to check. In
 other cases, you may open the file using your favorite editor. Most
 editors have a hook for ispell that you can use within the program.
 
-</div>
-
-<div class="section" lang="en">
-
-<div class="titlepage">
-
-<div>
-
-<div>
-
 ## Using ispell
-
-</div>
-
-</div>
-
-</div>
 
 To spellcheck a file, just run it through ispell. For example, if the
 file that you want to be spellchecked is named `'mispel.txt'`, then you
@@ -61,8 +26,6 @@ you choose. Or you can use one of the following commands.
 
 Common commands are:
 
-<div class="itemizedlist">
-
 - R: Replace the misspelled word with one that you provide
 
 - Space: Accept this word this time
@@ -74,93 +37,17 @@ Common commands are:
 
 - ?: Show help
 
-</div>
-
-</div>
-
-<div class="section" lang="en">
-
-<div class="titlepage">
-
-<div>
-
-<div>
-
 ## Launch spellcheck within an editor
 
-</div>
-
-</div>
-
-</div>
-
-<div class="section" lang="en">
-
-<div class="titlepage">
-
-<div>
-
-<div>
-
 ### EMACS
-
-</div>
-
-</div>
-
-</div>
 
 **M-x ispell** will run ispell against the current buffer. **M-x
 ispell\<tab\>** to see more commands related to ispell
 
-</div>
-
-<div class="section" lang="en">
-
-<div class="titlepage">
-
-<div>
-
-<div>
-
 ### vi
-
-</div>
-
-</div>
-
-</div>
 
 **:!ispell \<`filename`\>**, then **:e!** after you are done
 
-</div>
-
-<div class="section" lang="en">
-
-<div class="titlepage">
-
-<div>
-
-<div>
-
-### pico
-
-</div>
-
-</div>
-
-</div>
+### nano
 
 **^T** will launch the built-in spellchecker
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
- 

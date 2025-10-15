@@ -65,7 +65,8 @@ install a lot of common software like Google Chrome, Cyberduck, and
 Dropbox on your computer since you can easily install them all through
 this one application. Contact SCF staff for assistance.
 
-## Software for Mac ARM64-based Machines (Apple Silicon M1 and M2 Macs)<span id="m1-software"></span>
+(m1-software)=
+## Software for Mac ARM64-based Machines (Apple Silicon M1 and M2 Macs)
 
 With the M1 and M2 Macs, Apple is now using its own chips, referred to
 as *Apple Silicon*. These have a different architecture, ARM64, than

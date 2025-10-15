@@ -101,7 +101,8 @@ in some way.
 All Python 3 and R packages installed on the system, as well as packages
 installed by users within their home directories, should be available.
 
-## Using a Custom Conda Environment<span id="#custom-kernel"></span>
+(custom-kernel)=
+## Using a Custom Conda Environment
 
 If you would like your jupyter notebook to leverage your own conda
 environment, you must prepare a custom Jupyter kernel (here we use

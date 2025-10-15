@@ -47,13 +47,12 @@ you can open a browser on that machine. In a terminal window:
     Execute the following on your machine:
         rclone authorize "dropbox"
 
-At this point you would run \`rclone authorize dropbox\` in a second
+At this point you would run `rclone authorize dropbox` in a second
 terminal. This will open a web browser where you log into Dropbox and
 permit rclone to access files. rclone will paste a long string into the
 second terminal. Copy that string and pasted it into the first terminal.
 
-<span style="font-family: &quot;Courier New&quot;, &quot;DejaVu Sans Mono&quot;, monospace, sans-serif; font-size: 1em; white-space: pre-wrap;">result\>
-**{"access_token":"abc1234...","token_type":"bearer","expiry":"0001-01-01T00:00:00Z"}**</span>
+    result> **{"access_token":"abc1234...","token_type":"bearer","expiry":"0001-01-01T00:00:00Z"}**
 
     --------------------
     [dropbox]
@@ -133,7 +132,7 @@ Sync a file/directory to/from dropbox:
     scf:~$ rclone sync dropbox:path-to-file-or-folder ~/place/i/want/to/sync/to/
     scf:~$ rclone sync some/dir/on/scf dropbox:
 
-Since *rclone sync* can drastically change the contents of the
+Since `rclone sync` can drastically change the contents of the
 destination location, you may want to append the --dry-run option to
 rclone at first, just to see what it would do before it does it. Then
 repeat without it to actually make changes.
