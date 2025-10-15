@@ -101,12 +101,12 @@ there are no longer GPUs available through the `high` partition.
 
 ## High-performance GPUs
 
-Additional GPUs have been obtained by the Steinhardt, Song, and Yu lab
-groups. Most of these GPUs have higher performance (either speed or GPU
+Additional GPUs have been obtained by several faculty research groups.
+Most of these GPUs have higher performance (either speed or GPU
 memory) than our standard GPUs.
 
-Members of the lab group have priority access to the GPUs of their
-group. Other SCF users can submit jobs that use these GPUs but those
+Members of each group have priority access to the GPUs of their group.
+Other SCF users can submit jobs that use these GPUs but those
 jobs will be preempted (killed) if higher-priority jobs need access to
 the GPUs. Jobs are cancelled when preemption happens. If you want your
 job to be automatically started again (i.e., started from the beginning)
@@ -150,7 +150,9 @@ Additionally, there are an another 40 A100 GPUs obtained by the
 Steinhardt lab group at a remote cluster located in Washington state.
 Details are given in the drop-down below.
 
-## Steinhardt Group
+## Research Groups
+
+### Steinhardt Group
 
 The Steinhart group has priority access to the balrog, shadowfax, sunstone,
 rainbowquartz, smokyquartz (8 GPUs each), saruman (8, eventually 10, GPUs), and
@@ -160,7 +162,7 @@ If you are in the group, simply submit jobs to the jsteinhardt partition
 and you will automatically preempt jobs by users not in the group if
 that is needed for your job to run.
 
-### preemptive_high QOS
+#### preemptive_high QOS
 
 Group members can also prioritize their jobs with respect to other jobs
 by users in the Steinhardt group. By default jobs will run in the
@@ -211,7 +213,7 @@ start: 
 
  
 
-## Steinhardt Group Remote Cluster
+### Steinhardt Group Remote Cluster
 
 In addition to the GPU resources listed above, an additional 40 A100
 GPUs (on 5 servers) are available at a remote cluster hosted in a
@@ -247,7 +249,7 @@ differences from running jobs on the SCF (local) cluster.
   group members can run at most three jobs in `preemptive_high` at a
   time. Non-group members only have access to the `normal` QoS.
 
-## Yu Group
+### Yu Group
 
 The Yu group has priority access to GPUs located on merry (1 GTX GPU),
 morgoth (2 TITAN GPUs), and treebeard (1 A100 GPU) servers. If you are
@@ -262,14 +264,14 @@ here requesting an A100:
 sbatch -p yugroup --gpus=A100:1 job.sh
 ```
 
-## Yun Song Group
+### Yun Song Group
 
 The Song group has priority access to the GPUs located on luthien  (4
 A100 GPUs) and beren (8 A100 GPUs). If you are in the group, simply
 submit jobs to the *yss* partition and you will automatically preempt
 jobs by users not in the group if it is needed for your job to run.
 
-## Song Mei Group
+### Song Mei Group
 
 The Mei group has priority access to the GPUs located on feanor (8 H200
 GPUs). If you are in the group, simply submit jobs to the *songmei*
@@ -283,7 +285,7 @@ rather than home or scratch directories. One can also put data into
 `/tmp` or `/var/tmp` temporarily for fast I/O, though the amount of
 space there is limited (80-100 GB total across all users).
 
-### preemptive_high QOS
+#### preemptive_high QOS
 
 Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
 
@@ -293,7 +295,7 @@ sbatch -p songmei -q preemptive --gpus=1 job.sh
 
 Such jobs will still preempt jobs run by non-group members, but the jobs can be preempted by jobs running in the `preemptive_high` QoS.
 
-## Berkeley NLP Group
+### Berkeley NLP Group
 
 The Berkeley NLP group has priority access to the GPUs located on lorax
 (8 H200 GPUs). If you are in the group, simply submit jobs to the
@@ -307,7 +309,7 @@ home or scratch directories. One can also put data into `/tmp` or
 `/var/tmp` temporarily for fast I/O, though the amount of space there
 is limited (80-100 GB total across all users).
 
-### preemptive_high QOS
+#### preemptive_high QOS
 
 Some group members can also prioritize their jobs with respect to other jobs by users in the group. By default jobs will run in the `preemptive_high` Slurm QoS. Each user in the group can use at most 8 GPUs at a time in that default `preemptive_high` QoS. Additional jobs will be queued. Group members can also submit to the `preemptive` QoS, with no limit on the number of running jobs (apart from hardware availability), using submission syntax like this:
 
