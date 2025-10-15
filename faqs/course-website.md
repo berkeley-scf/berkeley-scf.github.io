@@ -68,10 +68,9 @@ Class](https://kevinl.info/just-the-class/) framework.
 The department strongly encourages instructors to set up a class
 website. 
 
-While we encourage instructors to set up [websites with extensive
-materials](/faqs/course-website#full-featured-websites), we
-ask those who wish to continue to primarily use bCourses to set up a
-[minimal site](/faqs/course-website#minimal-websites) with
+While we encourage instructors to set up [](#full-featured-websites), we
+ask those who wish to continue to primarily use bCourses to set up
+[](#minimal-websites) with
 syllabus information. The minimal site could also include pointers to
 external resources (such as Ed, Gradescope, DataHub, etc.) and course
 staff. 
@@ -105,7 +104,8 @@ and [Statistics 151A](http://stat151a.berkeley.edu/spring-2024).
 SCF staff can provide assistance as needed, in person or via
 consult@stat.berkeley.edu.
 
-### Full-featured Websites<span id="full-featured-websites"></span>
+(full-featured-websites)=
+### Full-featured Websites
 
 For instructors wishing to provide a full website and course materials,
 the SCF provides both a [Quarto
@@ -136,6 +136,7 @@ Some features of the templates include the ability to:
   using functionality developed by Andrew Bray for Statistics 20.
 - Have the website be searchable.
 
+(minimal-websites)=
 ### Minimal Websites
 
 The SCF provides a [template for a minimal class
