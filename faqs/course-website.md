@@ -53,8 +53,8 @@ one-off websites set up by faculty include:
 
 ## Course Landing Pages
 
-The SCF will create “landing pages” for each course at
-statXYZ.berkeley.edu, e.g.,
+The SCF will create "landing pages" for each course at
+`statXYZ.berkeley.edu`, e.g.,
 [stat133.berkeley.edu](https://stat133.berkeley.edu) for Statistics 133.
 Each landing page will contain overview information about the course
 gathered from the academic guide. Most importantly, it will link to
@@ -94,7 +94,7 @@ structure of the site and point you to how/where you can start adding
 content.
 :::
 
-Course websites will be found at statXYZ.berkeley.edu/{semester-year},
+Course websites will be found at `statXYZ.berkeley.edu/{semester-year}`,
 e.g.,
 [stat133.berkeley.edu/spring-2024](http://stat133.berkeley.edu/spring-2024). 
 
