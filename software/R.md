@@ -1,6 +1,11 @@
 ---
-title: "Installing R packages"
+title: R
 ---
+
+We provide R, including a variety of popular libraries. You can request that
+we install additional libraries for you, or you can install them yourself in
+your own account.
+
 ## Installation by SCF staff
 
 First, note that in general, SCF staff will install an R package on the

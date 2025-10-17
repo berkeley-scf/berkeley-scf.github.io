@@ -105,5 +105,5 @@ environment!).
 Conda can actually be used to install R and R packages inside a Conda
 environment. You're welcome to do this, but most users make use of the R
 installation (and a wide range of R packages) that we provide at the
-system level and [nstall additional packages](/software/R-packages) for use
+system level and [nstall additional packages](/software/R) for use
 with the system R.

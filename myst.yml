@@ -13,15 +13,15 @@ project:
     - file: software.md
       children:
         - file: software/install.md
-        - file: software/vscode.md
         - file: software/python.md
-        - file: software/R-packages.md
+        - file: software/R.md
         - file: software/rstudio.md
         - file: software/julia.md
         - file: software/mathematica.md
-        - file: software/ai-coding.md
         - file: software/conda.md
+        - file: software/ai-coding.md
         - file: software/containers.md
+        - file: software/vscode.md
     - file: access.md
       children:
         - file: access/ssh.md

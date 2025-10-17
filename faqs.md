@@ -44,7 +44,6 @@ cases, Macs when using the command line.
 
 - [Installing software on ARM64-based Mac computers](/software) (Apple Silicon M1 and M2 Macs)
 - [Using LaTeX](/faqs/latex) and [the ucthesis LaTeX style](/faqs/how-do-i-use-ucthesis-latex-style)
-- [Installing R packages](/software/R-packages)
 - [C/C++ introduction, calling C/C++ from R, and creating R packages](/training/workshops/using-c-calling-c-r-and-creating-r-packages)
 - [Using code chunks (and LaTeX) in documents with RStudio/RMarkdown/knitr and Jupyter notebooks](https://berkeley-scf.github.io/tutorial-dynamic-docs)
 - [Installing MATLAB](/software/matlab)
