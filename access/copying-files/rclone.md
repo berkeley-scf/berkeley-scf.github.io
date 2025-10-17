@@ -1,5 +1,5 @@
 ---
-title: "Using rclone"
+title: "rclone"
 ---
 `rclone` is a command-line tool that can connect to Dropbox, Box, Google
 Drive, sftp servers, and a many other file services.

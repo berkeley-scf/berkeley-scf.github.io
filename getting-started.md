@@ -52,8 +52,7 @@ suitable for grant proposals.
 
 - [Overview for self-managed/private computers](/faqs/what-services-are-provided-self-maintained-computers)
   - Access your SCF home directory by
-    [manually copying files](/faqs/copying-files) or by
-    [mounting the directory](/access/remote-files)
+    [copying files or using network volumes](/access/copying-files)
   - Printing is done
     [via a web browser to our Xerox copiers and to a color printer](/faqs/printing), all located in the department mail/copy room. 
   - [Install software on your own computer](/software), including for newer ARM64-based Macs (Apple Silicon M1 and M2 Macs).

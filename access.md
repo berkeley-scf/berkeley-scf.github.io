@@ -25,7 +25,7 @@ There are a variety of ways you can access the SCF computers.
 - Running [VS (Visual Studio) Code](/software/vscode), an integrated development environment (IDE) on your
   personal machine, with VS Code connecting to an SCF machine to do
   remote development.
-- You can [copy files to and from the SCF filesystem](/faqs/copying-files) in a variety of ways.
+- You can [copy files to and from the SCF filesystem](/access/copying-files) in a variety of ways.
 
 ## What machines can I use?
 

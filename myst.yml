@@ -31,7 +31,14 @@ project:
         - file: access/jupyterhub.md
         - file: access/remote-desktop.md
         - file: access/X11.md
-        - file: access/remote-files.md
+        - file: access/copying-files.md
+          children:
+            - file: access/copying-files/sftp-scp.md
+            - file: access/copying-files/samba.md
+            - file: access/copying-files/globus.md
+            - file: access/copying-files/rclone.md
+            - file: access/copying-files/vscode-remote-ssh.md
+            - file: access/copying-files/sshfs.md
         - file: access/vpn.md
         - file: access/ethernet.md
     - file: servers.md

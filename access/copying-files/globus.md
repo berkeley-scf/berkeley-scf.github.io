@@ -1,6 +1,7 @@
 ---
-title: "Using Globus for file transfers"
+title: "Globus"
 ---
+
 [Globus](http://globus.org) is a data management service that allows you
 to easily transfer data (including fast transfers of extremely large
 datasets) between machines and share data with others. You logon and
