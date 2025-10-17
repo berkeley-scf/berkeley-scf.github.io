@@ -1,5 +1,5 @@
 ---
-title: "Statistical Computing Facility"
+title: Getting Started
 ---
 The Statistical Computing Facility (SCF) is a unit of the academic
 Department of Statistics, formally organized in 1986. We provide
