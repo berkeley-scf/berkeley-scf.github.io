@@ -31,11 +31,12 @@ some cluster nodes), you'll need to do one of the following.
   1.  Modify your  `~/.ssh/config` file on your local computer to
       include this new stanza:
 
-      ```{code}
+      :::{code} ini
+      :caption: ProxyJump ssh configuration
           Host scf-slurm
             HostName scf-sm20.berkeley.edu # This must be the cluster node that `salloc` gave you.
             ProxyJump gandalf.berkeley.edu # This must be the login server on which you ran `salloc`.
-      ```
+      :::
 
   1.  Now in VS Code on your personal machine, use the remote SSH
       extension to connect to the host `scf-slurm` by clicking on the
