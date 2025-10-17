@@ -13,18 +13,7 @@ cases, Macs when using the command line.
 ## Logging in, accessing machines, and moving files around
 
 - [Changing your password](/passwords)
-- [Connecting remotely to SCF machines](/access)
-- [Using SSH to access a remote machine](/access/ssh), [managing SSH
-  keys for password-less login](/access/ssh/ssh-keys), and [using SSH
-  tunnels](/faqs/how-do-i-create-ssh-tunnel)
 - [Using the UNIX command line and the bash shell](/unix)
-- [Copying files to and from your SCF account](/copying-files)
-- [Mounting your SCF home directory on your personal
-  machine](/mount-homedir)
-- Viewing grahical Linux programs on a Mac or PC via:
-  - [X11 forwarding](/access/X11)
-  - [remote desktop](/access/remote-desktop)
-- [Using the Globus browser-based data transfer service](/faqs/using-globus-file-transfers), particularly good for transferring a lot of data
 - [Authenticating to GitHub and other Git hosting services](/faqs/git-auth), including how to avoid re-entering your password
 
 ## Email tips
@@ -39,13 +28,6 @@ cases, Macs when using the command line.
 - [Editing your profile page on statistics.berkeley.edu](/faqs/how-edit-profile)
 - (for staff) See the [Website Guide](https://docs.google.com/document/d/1EEthArmbbj6HOZHDpIJwrC76t9MYJ7sfk8QNIwIKCa8) in the Statistics General Office shared drive
 
-## Networking
-
-- [Connecting your personal computer to the department network](/faqs/connecting-computer-wired-network)
-- [Getting Wi-Fi Guest Access](http://ist.berkeley.edu/airbears/calvisitor)
-- [How do I create a WiFi account for eduroam (the UC Berkeley Wi-Fi network)?](https://berkeley.service-now.com/kb_view.do?sysparm_article=KB0013807)
-- [Working with WiFi Accounts](https://berkeley.service-now.com/kb_view.do?sysparm_article=KB0013808)
-
 ## Printing
 
 - [Printing to the Xerox copiers and printers](/faqs/printing)
@@ -55,7 +37,6 @@ cases, Macs when using the command line.
 - [Common computational problems on the system](/faqs/common-computational-problems)
 - [Running a program in the background](/faqs/background-processes) (including the use of 'screen')
 - [Managing UNIX processes](/faqs/managing-processes)
-- [Running jobs on the Linux cluster](/servers/cluster)
 - [Useful information about linear algebra (the BLAS), including speeding up calculations on your personal Mac](/faqs/linear-algebra-and-parallelized-linear-algebra-using-blas)
 - [Parallel programming tips](/training/workshops/how-do-i-do-parallel-programming)
 
