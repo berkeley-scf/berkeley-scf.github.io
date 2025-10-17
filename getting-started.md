@@ -10,9 +10,9 @@ University's mission of teaching, research, and public service. It is
 staffed by a Director of Computing, a Statistical Computing Consultant,
 and a UNIX System Administrator.
 
-We have [this template text](/support/facilities) (i.e., "facilities
-statement") describing the SCF and other department resources that is
-suitable for grant proposals.
+We have [template text](https://statistics.berkeley.edu/support/facilities),
+i.e. a "facilities statement", describing the SCF and other department
+resources that is suitable for grant proposals.
 
 - [Do You Need Help?](/getting-started/contact-us)
 
