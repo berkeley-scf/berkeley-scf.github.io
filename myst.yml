@@ -8,8 +8,8 @@ project:
         - file: getting-started/computing-accounts.md
         - file: getting-started/project-accounts.md
         - file: getting-started/contact-us.md
-        - file: getting-started/campus-resources.md
         - file: getting-started/history.md
+        - file: getting-started/other-resources.md
     - file: software.md
       children:
         - file: software/install.md

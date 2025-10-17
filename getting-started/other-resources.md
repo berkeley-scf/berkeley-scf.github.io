@@ -1,6 +1,8 @@
 ---
-title: "Campus Resources"
+title: "Other Resources"
 ---
+
+## UC Berkeley
 
 Here are some other computing resources available on campus.
 
@@ -13,3 +15,8 @@ Here are some other computing resources available on campus.
 - [Open Computing Facility](https://www.ocf.berkeley.edu/)
 - [Kresge Engineering & Mathematical Sciences
   Library](https://www.lib.berkeley.edu/visit/engineering)
+
+## External
+
+- [NAIRR Pilot](https://nairrpilot.org)
+- [ACCESS](https://access-ci.org)
