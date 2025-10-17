@@ -25,19 +25,7 @@ suitable for grant proposals.
   computers in 432 Evans. Please click on the link above if you require
   an SCF account and fill out the requested information.
 
-- [Wireless Network Access](https://berkeley.service-now.com/kb_view.do?sysparm_article=KB0013807)
-
-  UC Berkeley offers a variety of [Wi-Fi network access
-  services](https://technology.berkeley.edu/wi-fi), with *eduroam* the
-  recommended service for most devices. To use eduroam you must [create a Wi-Fi
-  key](https://wifi-keys.berkeley.edu/) in order to connect as a member of
-  campus. [eduroam](https://eduroam.org/) is a cross-institution Wi-Fi access
-  service. If your device can connect to eduroam with any credentials at any
-  institution, it can connect at Berkeley, and vice versa.
-
-- [Wired Network](/access/ethernet)
-
-  Get your computer onto the wired network in Evans Hall.
+- [Wireless](/access/networking/wifi) and [Wired](/access/networking/ethernet) network access.
 
 - [Remote Access to SCF servers](/access)
 
