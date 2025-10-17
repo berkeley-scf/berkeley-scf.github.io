@@ -9,7 +9,8 @@ The cluster has multiple partitions, corresponding to groups of nodes.
 The different partitions have different hardware and job restrictions as
 discussed here:
 
-(configuration)=
+:::{table} Partition Restrictions
+:label: partition-restrictions
 | Partition     | Max \# cores per user (running) | Time limit  | Max memory per job                                                                     | Max cores per job |
 |---------------|---------------------------------|-------------|----------------------------------------------------------------------------------------|-------------------|
 | low           | 256                             | 28 days     | 256 GB                                                                                 | 32[^parallel]          |
@@ -21,6 +22,7 @@ discussed here:
 | epurdom[^high]     | 256                             | 28 days[^preemptible] |                                                                                        | 128[^parallel]         |
 | lowmem        | 144                             | 28 days     | 12-16 GB                                                                               | 16[^parallel]          |
 
+:::
   
 [^high]: See [](#high-performance-partitions) or [GPU Jobs](/servers/cluster/gpus).
 
@@ -273,7 +275,7 @@ job. You can also transfer files to the local disk of the cluster node.
 
 By default, to limit forgotten sessions, the time limit for interactive
 jobs is set to 1 day (24 hours). If you need less or more time (up to
-the [maximum time limits](#configuration) you can
+the [maximum time limits](#partition-restrictions)), you can
 use the `-t` (or `--time`) flag. For example to run for two days:
 
 ```{code} shell
