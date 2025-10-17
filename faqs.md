@@ -16,21 +16,11 @@ cases, Macs when using the command line.
 - [Using the UNIX command line and the bash shell](/unix)
 - [Authenticating to GitHub and other Git hosting services](/faqs/git-auth), including how to avoid re-entering your password
 
-## Email tips
-
-- [See the bMail knowledgebase for questions about bMail](https://berkeley.service-now.com/kb?id=kb_category&kb_category=b72aecaddb1d83849d81fcefbf961982) including forwarding and vacation responses.
-- [Departmental mailing lists](https://statistics.berkeley.edu/support/department-mailing-lists)
-
 ## Website tips
 
 - [Setting up and using your personal website](/faqs/how-do-i-set-and-use-my-personal-website)
 - [Setting up a course website](/faqs/course-website)
-- [Editing your profile page on statistics.berkeley.edu](/faqs/how-edit-profile)
 - (for staff) See the [Website Guide](https://docs.google.com/document/d/1EEthArmbbj6HOZHDpIJwrC76t9MYJ7sfk8QNIwIKCa8) in the Statistics General Office shared drive
-
-## Printing
-
-- [Printing to the Xerox copiers and printers](/faqs/printing)
 
 ## Computation
 
