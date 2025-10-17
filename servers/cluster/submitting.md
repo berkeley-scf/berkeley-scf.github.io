@@ -3,13 +3,13 @@ title: Basic Job Submission
 ---
 This page describes how to submit jobs to the cluster.
 
-(configuration)=
 ## Slurm Configuration and Job Restrictions  
 
 The cluster has multiple partitions, corresponding to groups of nodes.
 The different partitions have different hardware and job restrictions as
 discussed here:
 
+(configuration)=
 | Partition     | Max \# cores per user (running) | Time limit  | Max memory per job                                                                     | Max cores per job |
 |---------------|---------------------------------|-------------|----------------------------------------------------------------------------------------|-------------------|
 | low           | 256                             | 28 days     | 256 GB                                                                                 | 32[^parallel]          |

@@ -8,7 +8,7 @@ funds, please follow the instructions below.
 
 1.  Visit [BearBuy](https://bearbuy.is.berkeley.edu/). If you are
     connecting from an off-campus network, connect to the [campus
-    VPN](/faqs/using-campus-vpn) first.
+    VPN](/access/vpn) first.
 2.  Scroll down the BearBuy page and choose the store from which you
     will be making the purchases, for example, Apple or Dell.
 3.  Locate the items in the store you want to buy and add them to your

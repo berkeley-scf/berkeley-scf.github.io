@@ -14,16 +14,16 @@ cases, Macs when using the command line.
 
 - [Changing your password](/passwords)
 - [Connecting remotely to SCF machines](/access)
-- [Using SSH to access a remote machine](/software/ssh), [managing SSH
-  keys for password-less login](/faqs/ssh-keys), and [using SSH
+- [Using SSH to access a remote machine](/access/ssh), [managing SSH
+  keys for password-less login](/access/ssh/ssh-keys), and [using SSH
   tunnels](/faqs/how-do-i-create-ssh-tunnel)
 - [Using the UNIX command line and the bash shell](/unix)
 - [Copying files to and from your SCF account](/copying-files)
 - [Mounting your SCF home directory on your personal
   machine](/mount-homedir)
 - Viewing grahical Linux programs on a Mac or PC via:
-  - [X11 forwarding](/faqs/view-graphical-unix-programs-your-computer)
-  - [remote desktop](/faqs/remote-desktop)
+  - [X11 forwarding](/access/X11)
+  - [remote desktop](/access/remote-desktop)
 - [Using the Globus browser-based data transfer service](/faqs/using-globus-file-transfers), particularly good for transferring a lot of data
 - [Authenticating to GitHub and other Git hosting services](/faqs/git-auth), including how to avoid re-entering your password
 

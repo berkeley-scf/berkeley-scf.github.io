@@ -16,7 +16,7 @@ left corner and choose "Host", providing one of the
 If you want to access the cluster nodes (including GPUs available on
 some cluster nodes), you'll need to do one of the following.
 
-- Use VS Code through [JupyterHub](/software/jupyterhub),
+- Use VS Code through [JupyterHub](/access/jupyterhub),
   selecting the cluster partition when you start your Jupyter server.
   This uses `code-server` to run VS Code in a web browser. A downside
   is that the extensions available are not exactly as with VS Code

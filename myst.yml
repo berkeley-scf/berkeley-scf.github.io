@@ -17,13 +17,23 @@ project:
         - file: software/python.md
         - file: software/R-packages.md
         - file: software/rstudio.md
-        - file: software/jupyterhub.md
         - file: software/julia.md
         - file: software/mathematica.md
         - file: software/ai-coding.md
         - file: software/conda.md
         - file: software/containers.md
-        - file: software/ssh.md
+    - file: access.md
+      children:
+        - file: access/ssh.md
+          children:
+            - file: access/ssh/ssh-keys.md
+            - file: access/ssh/ssh-tunnel.md
+        - file: access/jupyterhub.md
+        - file: access/remote-desktop.md
+        - file: access/X11.md
+        - file: access/remote-files.md
+        - file: access/vpn.md
+        - file: access/ethernet.md
     - file: servers.md
       children:
         - file: servers/login-servers.md

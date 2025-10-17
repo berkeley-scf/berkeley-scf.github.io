@@ -1,6 +1,9 @@
 ---
-title: "Using the Campus VPN"
+title: "VPN"
 ---
+
+The campus provides VPN software for securely accessing university networks.
+
 1.  Download the VPN software from the [GlobalProtect
     portal](https://vpn.berkeley.edu/global-protect/getsoftwarepage.esp).
     There are platform-specific instructions on the [bSecure VPN
@@ -12,9 +15,9 @@ title: "Using the Campus VPN"
     - [Android](https://berkeley.service-now.com/kb_view.do?sysparm_article=KB0012483)
     - [Chrome
       OS](https://berkeley.service-now.com/kb_view.do?sysparm_article=KB0012484)
-2.  Run the software and enter *vpn.berkeley.edu* as the portal address.
-3.  Login via CalNet when prompted.
-4.  Choose a
+1.  Run the software and enter *vpn.berkeley.edu* as the portal address.
+1.  Login via CalNet when prompted.
+1.  Choose a
     [gateway](https://berkeley.service-now.com/kb_view.do?sys_kb_id=b903da461badb7880935caad1e4bcb63).
     - **Split Tunnel (Default)**: tunnel only campus traffic through the
       VPN

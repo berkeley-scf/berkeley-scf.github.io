@@ -35,11 +35,11 @@ suitable for grant proposals.
   service. If your device can connect to eduroam with any credentials at any
   institution, it can connect at Berkeley, and vice versa.
 
-- [Wired Network](/faqs/connecting-computer-wired-network)
+- [Wired Network](/access/ethernet)
 
   Get your computer onto the wired network in Evans Hall.
 
-- [Remote Access to SCF servers](/faqs/accessing-scf-machines-and-resources)
+- [Remote Access to SCF servers](/access)
 
   Connect to SCF machines and computing resources, including from home
   and while traveling. We also provide web browser-based access to
@@ -53,7 +53,7 @@ suitable for grant proposals.
 - [Overview for self-managed/private computers](/faqs/what-services-are-provided-self-maintained-computers)
   - Access your SCF home directory by
     [manually copying files](/faqs/copying-files) or by
-    [mounting the directory](/faqs/mount-homedir)
+    [mounting the directory](/access/remote-files)
   - Printing is done
     [via a web browser to our Xerox copiers and to a color printer](/faqs/printing), all located in the department mail/copy room. 
   - [Install software on your own computer](/software), including for newer ARM64-based Macs (Apple Silicon M1 and M2 Macs).

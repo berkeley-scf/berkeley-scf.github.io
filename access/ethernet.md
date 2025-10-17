@@ -1,5 +1,5 @@
 ---
-title: "Connecting a computer to the wired network"
+title: "Ethernet"
 ---
 The campus manages the newer wired network connections on the 3rd and
 4th floors of Evans Hall in addition to the eduroam and CalVisitor

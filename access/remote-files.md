@@ -11,7 +11,10 @@ The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode
 
 [Remote Development using SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) describes this workflow in more detail.
 
-## Setting up a Samba Account
+## Samba
+
+The SCF's Samba service enables you to access your files as a network volume
+on your computer.
 
 In the instructions below, `username` will be your SCF user name and the password will be this samba password.
 

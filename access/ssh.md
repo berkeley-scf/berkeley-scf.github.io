@@ -1,6 +1,7 @@
 ---
-title: "Using Secure Shell (SSH)"
+title: "Secure Shell (SSH)"
 ---
+
 ## Introduction
 
 SSH provides a secure means to access a UNIX command-line shell on a
@@ -84,4 +85,4 @@ on the blocked machine. You can also just connect to any other SCF
 machine where you are not blocked.
 
 You can reduce the number of unsuccessful SSH attempts by setting up
-[public key authentication with SSH keys](/faqs/ssh-keys).
+[public key authentication with SSH keys](/access/ssh/ssh-keys).

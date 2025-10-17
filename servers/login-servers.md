@@ -12,8 +12,8 @@ run jobs on these machines (see below).
 The stand-alone servers include arwen (16 cores), gandalf (8), ghan (4),
 gollum (4), hermione (6), quidditch (8), radagast (8), shelob (8).
 
-To connect to machines, please use [SSH](/software/ssh), [remote
-desktop](/remote-desktop), or [our JupyterHub](/software/jupyterhub) (which
+To connect to machines, please use [SSH](/access/ssh), [remote
+desktop](/access/remote-desktop), or [our JupyterHub](/access/jupyterhub) (which
 includes a Terminal application). When ssh'ing, you would enter their fully
 qualified names, e.g., `gandalf.berkeley.edu`.
 

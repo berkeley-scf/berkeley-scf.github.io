@@ -6,7 +6,7 @@ and from the SCF using variations on SFTP/SCP.
 
 Other options include:
 
-- You can also have your SCF home directory [represented on your personal computer as a local drive](/faqs/mount-homedir)
+- You can also have your SCF home directory [represented on your personal computer as a local drive](/access/remote-files)
 - You can use the [Globus data transfer service](/faqs/using-globus-file-transfers).
 - You can use [rclone](/faqs/using-rclone) to transfer files to and from bDrive
   (Google Drive), Box, and Dropbox, among other resources.

@@ -7,5 +7,5 @@ Campus maintains excellent cybersecurity resources. Among them:
   Provides information on how to identify phishing attacks, how to
   protect yourself from them, and highlights examples of phishing
   emails.
-- [Campus VPN](/faqs/using-campus-vpn)
+- [Campus VPN](/access/vpn)
   Enables you to securely connect to campus resources while off campus

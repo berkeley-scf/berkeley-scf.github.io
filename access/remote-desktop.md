@@ -1,5 +1,5 @@
 ---
-title: "Access servers via Remote Desktop"
+title: "Remote Desktop"
 ---
 Remote desktop software enables you to connect to a graphical Linux
 desktop running on SCF servers. You can start a desktop session,
@@ -26,7 +26,7 @@ reconnect to the VPN.
 
 Collaborators on project accounts that do not have access to the campus
 VPN and use the Remote Desktop Application to access the SCF can create
-an [SSH tunnel](/faqs/ssh-tunnel.md).
+an [SSH tunnel](/access/ssh/ssh-tunnel.md).
 
 ### Configuration
 

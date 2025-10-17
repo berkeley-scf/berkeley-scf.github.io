@@ -19,10 +19,10 @@ The primary computational software currently supported by SCF includes:
 
 - R (including an extensive set of packages from CRAN), RStudio, and [RStudio via a web browser](software/rstudio)
 - [Python](software/python) (the Miniforge distribution, including an extensive set of packages)
-- [Jupyter notebooks](software/jupyterhub) (IPython and R, among others)
+- [Jupyter notebooks](/access/jupyterhub) (IPython and R, among others)
 - [MATLAB](software/matlab) (including all Mathworks toolboxes)
 - [Julia](software/julia)
-- [Mathematica](software/mathematica), including *Wolfram Alpha Pro*
+- [Mathematica](/software/mathematica), including *Wolfram Alpha Pro*
 - Packages with [GPU support](/servers/gpu-servers#software),
   often used for machine learning, including PyTorch and Jax for Python.
 
