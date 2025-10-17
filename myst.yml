@@ -7,8 +7,8 @@ project:
         - file: getting-started/scf-mission.md
         - file: getting-started/computing-accounts.md
         - file: getting-started/project-accounts.md
-        - file: getting-started/external-resources.md
         - file: getting-started/contact-us.md
+        - file: getting-started/campus-resources.md
         - file: getting-started/history.md
     - file: software.md
       children:
