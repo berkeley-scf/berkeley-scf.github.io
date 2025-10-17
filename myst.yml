@@ -13,6 +13,7 @@ project:
     - file: software.md
       children:
         - file: software/install.md
+        - file: software/vscode.md
         - file: software/python.md
         - file: software/R-packages.md
         - file: software/rstudio.md
