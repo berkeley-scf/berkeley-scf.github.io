@@ -58,7 +58,6 @@ project:
             - file: servers/cluster/monitoring.md
         - file: servers/gpu-servers.md
         - file: servers/savio.md
-        - file: servers/dual-gpu-server.md
     #- file: faqs.md
     #  children:
     #    - pattern: faqs/*
