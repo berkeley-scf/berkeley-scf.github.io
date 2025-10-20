@@ -67,7 +67,7 @@ project:
       hidden: true
     - file: kb.md
     - file: tutorials.md
-    - file: training.md
+    - file: workshops.md
     - file: motd.md
       children:
         - pattern: motd/*.md
