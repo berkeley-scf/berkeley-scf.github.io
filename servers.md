@@ -1,5 +1,5 @@
 ---
-title: "Servers"
+title: "SCF Cluster and Servers"
 ---
 
 We operate a network of Linux and Macintosh computers. These include:
