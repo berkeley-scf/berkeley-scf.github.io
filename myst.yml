@@ -68,14 +68,6 @@ project:
     - file: kb.md
     - file: tutorials.md
     - file: training.md
-      children:
-        - file: training/tutorials.md
-        - file: training/workshops.md
-        - file: training/workshops/python-bootcamp.md
-        - file: training/workshops/r-bootcamp.md
-        - file: training/workshops/how-do-i-do-parallel-programming.md
-        - file: training/workshops/how-do-i-do-statistical-computation-gpu.md
-        - file: training/workshops/using-c-calling-c-r-and-creating-r-packages.md
     - file: motd.md
       children:
         - pattern: motd/*.md
