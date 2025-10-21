@@ -1,5 +1,5 @@
 ---
-title: "MOTD"
+title: Announcements
 ---
 
  - Report problems - trouble@stat.berkeley.edu
