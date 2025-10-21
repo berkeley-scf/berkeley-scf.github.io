@@ -1,19 +1,6 @@
 ---
 title: Getting Started
 ---
-The Statistical Computing Facility (SCF) is a unit of the academic
-Department of Statistics, formally organized in 1986. We provide
-computing, networking, and information resources to the community of
-students, faculty, and staff of the Statistics Department and the
-Econometrics Laboratory of the Department of Economics in support of the
-University's mission of teaching, research, and public service. It is
-staffed by a Director of Computing, a Statistical Computing Consultant,
-and a UNIX System Administrator.
-
-We have [template text](https://statistics.berkeley.edu/support/facilities),
-i.e. a "facilities statement", describing the SCF and other department
-resources that is suitable for grant proposals.
-
 - [Do You Need Help?](/getting-started/contact-us)
 
   Reach out to us for assistance.
@@ -51,3 +38,7 @@ resources that is suitable for grant proposals.
 - [Edit your profile page](/faqs/how-edit-profile) at statistics.berkeley.edu
 
 - [Questions about your \@berkeley.edu email](https://bconnected.berkeley.edu/account-information)
+
+- We have [template text](https://statistics.berkeley.edu/support/facilities),
+i.e. a "facilities statement", describing the SCF and other department
+resources that is suitable for grant proposals.
