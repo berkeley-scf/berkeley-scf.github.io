@@ -4,7 +4,6 @@ project:
     - file: index.md
     - file: getting-started.md
       children:
-        - file: getting-started/scf-mission.md
         - file: getting-started/computing-accounts.md
         - file: getting-started/project-accounts.md
         - file: getting-started/contact-us.md
