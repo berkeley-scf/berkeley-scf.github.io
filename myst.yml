@@ -81,6 +81,9 @@ project:
     NFS: Network File System
     GUI: Graphical User Interface
     SQL: Structured Query Language
+  github: https://github.com/berkeley-scf/berkeley-scf.github.io
+  license:
+    content: CC-BY-4.0
 site:
   template: book-theme
   title: "Computing in the Department of Statistics"
@@ -90,3 +93,4 @@ site:
     #favicon: images/logo/favicon.ico
     folders: true
     logo: images/svg_Vertical_No_Endorser.svg
+    analytics_google: G-X1NED2KST9
