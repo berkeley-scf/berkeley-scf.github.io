@@ -1,6 +1,6 @@
 version: 1
 project:
-  toc: 
+  toc:
     - file: index.md
     - file: getting-started.md
       children:
@@ -77,6 +77,13 @@ project:
     - type: javascript
       path: listing.mjs
 
+  abbreviations:
+    SCF: Statistical Computing Facility
+    EML: Econometrics Laboratory
+    SSH: Secure Shell
+    NFS: Network File System
+    GUI: Graphical User Interface
+    SQL: Structured Query Language
 site:
   template: book-theme
   title: "Computing in the Department of Statistics"
