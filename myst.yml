@@ -70,9 +70,6 @@ project:
       children:
         - pattern: motd/*.md
           hidden: true
-    #- file: blog.md
-    #  children:
-    #    - pattern: blog/**/index.md
   plugins:
     - type: javascript
       path: listing.mjs
