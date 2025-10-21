@@ -4,7 +4,7 @@ title: "Ethernet"
 The campus manages the newer wired network connections on the 3rd and
 4th floors of Evans Hall in addition to the eduroam and CalVisitor
 wireless networks. This article describes the steps necessary to connect
-your computer to the wired network. Please refer to the [rules](/faqs/connect-rules)
+your computer to the wired network. Please refer to the [rules](../../faqs/connect-rules.md)
 for accessing the network with a personal computer before proceeding.
 
 1.  Determine your ethernet address  
@@ -13,7 +13,7 @@ for accessing the network with a personal computer before proceeding.
     numbers, 0 - f, e.g. 01:23:45:67:89:ab. This identifier is often
     called a MAC, ethernet, or hardware address, and must be registered
     with campus before you can connect. Determine your MAC address using
-    either [our instructions](/faqs/finding-your-computers-wired-ethernet-mac-address) or
+    either [our instructions](../../faqs/finding-your-computers-wired-ethernet-mac-address.md) or
     [campus'](https://berkeley.service-now.com/kb_view.do?sysparm_article=KB0010261).
 
 2.  Register your ethernet address with campus

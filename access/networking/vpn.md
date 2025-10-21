@@ -21,9 +21,9 @@ The campus provides VPN software for securely accessing university networks.
     [gateway](https://berkeley.service-now.com/kb_view.do?sys_kb_id=b903da461badb7880935caad1e4bcb63).
     - **Split Tunnel (Default)**: tunnel only campus traffic through the
       VPN
-    - ****Library Access and Full Tunnel**:** tunnel all of your
+    - **Library Access and Full Tunnel**: tunnel all of your
       internet traffic through the VPN
-    - ****Restricted Tunnel****: the same as the library option, but
+    - **Restricted Tunnel**: the same as the library option, but
       with additional restrictions and monitoring
 
  

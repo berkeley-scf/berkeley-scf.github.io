@@ -35,7 +35,7 @@ where *REPO_NAME* is the name of the repository.
 
 ## Accessing the repository using SSH keypairs
 
-Collaborators should see [our instructions](/access/ssh/ssh-keys)
+Collaborators should see [our instructions](../access/ssh/ssh-keys.md)
 on creating SSH keypairs</a>. Once you send your public key to
 <manager@stat.berkeley.edu> , we can deposit it into the project
 account. You will then be able to begin working with the data by cloning
@@ -59,7 +59,7 @@ git clone ~PROJECT_NAME/REPO_NAME
 
 ## Using git
 
-The SCF has prepared some [documentation on using git](/faqs/git). A
+The SCF has prepared some [documentation on using git](git.md). A
 basic workflow, after you have cloned the repository, is:
 
 ```{code} shell-session

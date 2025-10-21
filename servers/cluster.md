@@ -22,8 +22,8 @@ have access by default, but instructors can email
 manager@stat.berkeley.edu to discuss access for their class.
 
 All jobs that you run on the cluster need to be
-[submitted via the Slurm scheduling software](/servers/cluster/submitting) from one of our
-[Linux servers](login-servers). Slurm sends each job to run on a machine (aka a *node*) (or
+[submitted via the Slurm scheduling software](./cluster/submitting.md) from one of our
+[Linux servers](login-servers.md). Slurm sends each job to run on a machine (aka a *node*) (or
 machines) on one of the partitions in the cluster. A *partition* is a
 collection of machines with similar hardware.
 

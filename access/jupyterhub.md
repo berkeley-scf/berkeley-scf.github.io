@@ -18,7 +18,7 @@ SCF Linux cluster, including nodes with GPUs.
 By default, your server will be spawned onto the first available
 standalone Linux machine, however you may optionally start your server
 on a cluster node in case you need access to more processing power. You
-can also pass [SBATCH options](/servers/cluster) to your
+can also pass [SBATCH options](../servers/cluster.md) to your
 server, and specify prologue commands that will run prior to your server
 startup. Please [let us
 know](mailto:consult@stat.berkeley.edu?subject=JupyterHub%20feedback) if
@@ -32,7 +32,7 @@ UIs, and then close your device, reconnect to another network, and
 re-open your browser. They will often work just fine, but there can be
 problems. If you need to run code that you expect to take a long time to
 complete, it would be best to run it as a batch job
-[on the cluster](/servers/cluster/submitting). You can submit the job from your Jupyter session or by
+[on the cluster](../servers/cluster/submitting.md). You can submit the job from your Jupyter session or by
 connecting with SSH to a login node.
 
 ## Stopping Your Server

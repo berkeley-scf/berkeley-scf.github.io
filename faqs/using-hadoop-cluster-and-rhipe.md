@@ -4,7 +4,7 @@ title: "Using the Hadoop cluster and Rhipe"
 
 ::: {warning}
 The SCF's test Hadoop cluster is now offline due to limited use.
-Please see our [page on Spark](/faqs/spark) or [contact
+Please see our [page on Spark](spark.md) or [contact
 us](mailto:consult@stat.berkeley.edu?subject=Hadoop%2FSpark%20interest)
 if you would like to try out Hadoop or Spark in cluster computing. The
 material below is now out of date, but preserved at the moment for
@@ -24,7 +24,7 @@ Note that the nodes are a set of our outdated compute servers and the
 amount of disk space is limited. The goal of the Hadoop cluster at this
 point is to serve as a testbed rather than for doing real analyses of
 large data. If you have need for more resources please [contact
-us](/getting-started/contact-us) and we can discuss how you might
+us](../getting-started/contact-us.md) and we can discuss how you might
 use cloud resources such as Amazon's EC2.
 
 Below is more detailed information about using the Hadoop cluster.
@@ -111,13 +111,12 @@ tasks be two times the number of slaves, so in R, you would specify
 where the ... indicate the various other arguments you are passing in.
 These can also be set via rhoptions().
 
-The <a href="http://www.datadr.org" data-package="" title="Rhipe">Rhipe
-package website</a> has some example code. Per the above comment, you'll
-need to change any HDFS file paths to point to your user directory on
-the HDFS. Also, note that the code has some bugs in it and the syntax is
-not fully up to date with Rhipe v. 0.71, which is the version we are
-currently using. Please email consult@stat.berkeley.edu for more
-information and updated code.
+The [Rhipe package website](http://www.datadr.org) has some example code.
+Per the above comment, you'll need to change any HDFS file paths to point
+to your user directory on the HDFS. Also, note that the code has some bugs
+in it and the syntax is not fully up to date with Rhipe v. 0.71, which is
+the version we are currently using. Please email consult@stat.berkeley.edu
+for more information and updated code.
 
 After you have created the MapReduce job using rhmr(), you can run it
 and monitor its status as follows:

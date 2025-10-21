@@ -48,7 +48,7 @@ remote username, you needn't specify it on the command line, e.g. '**ssh
 remotehost**'. **putty** uses a graphical user interface to set the
 username and remotehost.
 
-We have a [variety of servers](/servers/login-servers) that you can login to,
+We have a [variety of servers](../servers/login-servers.md) that you can login to,
 one of which is called `arwen.berkeley.edu`. Here's an example command-line
 login to arwen:
 
@@ -85,4 +85,4 @@ on the blocked machine. You can also just connect to any other SCF
 machine where you are not blocked.
 
 You can reduce the number of unsuccessful SSH attempts by setting up
-[public key authentication with SSH keys](/access/ssh/ssh-keys).
+[public key authentication with SSH keys](./ssh/ssh-keys.md).

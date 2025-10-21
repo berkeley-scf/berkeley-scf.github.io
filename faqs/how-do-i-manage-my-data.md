@@ -8,6 +8,9 @@ Each user is assigned a disk space quota, or allotment, when their account is cr
 
 The commands below can show you how disk space you are consuming. For additional information, consult the respective man pages.
 
+:::{table}
+:label: Disk space commands
+
 | Command    | Description |
 |------------|-------------------------------------------------|
 | bigfiles   | Recursively searches a directory for big files. |
@@ -16,6 +19,8 @@ The commands below can show you how disk space you are consuming. For additional
 | find ~ -ls | Most information: lists size of all files in all directories and subdirectories. |
 | quota      | Reports your disk quota and current disk use. |
 | dust       | Similar to `du`, but faster and more visual. |
+
+:::
  
 ## Temporary Disk Space
 

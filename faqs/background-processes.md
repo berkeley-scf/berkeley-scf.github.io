@@ -1,6 +1,7 @@
 ---
 title: "Background Processes"
 ---
+
 ## bash
 
 Unix has the ability to run your program in the background. This means
@@ -9,7 +10,9 @@ shell prompts you again and you can run other commands at the same time
 that the background process is running. To run the program `myprog` in
 background, type:
 
-    myprog &
+:::{code} bash
+myprog &
+:::
 
 The shell will respond with a number, its process identification number
 (or PID) and then return to the prompt.
@@ -18,16 +21,22 @@ More generally, you can use `nohup` to leave a big job running in the
 background even after you logout. For example, to keep the program
 `myprog` running in background, type:
 
-    nohup myprog &
+:::{code} bash
+nohup myprog &
+:::
 
 For example, to run your R job in the background:
 
-    nohup R CMD BATCH --no-save code.R code.log &
+:::{code} bash
+nohup R CMD BATCH --no-save code.R code.log &
+:::
 
 With a Matlab job, where we redirect
 the output to outfile.txt and the error messages to error.txt:
 
-    nohup matlab -nodesktop -nodisplay < infile.m > outfile.txt 2> error.txt &
+:::{code} bash
+nohup matlab -nodesktop -nodisplay < infile.m > outfile.txt 2> error.txt &
+:::
 
 ## screen
 

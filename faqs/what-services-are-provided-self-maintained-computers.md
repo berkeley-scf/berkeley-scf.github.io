@@ -1,9 +1,9 @@
 ---
 title: "What services are provided for self-maintained computers?"
 ---
-## [Files](/mount-homedir)
+## Files
 
-Users can directly read from and write to their UNIX home directories
+Users can [directly read from and write to](../copying-files) their UNIX home directories
 and web areas. This service is provided by Samba and may require that
 the user have the same account name on their computer as they do on the
 SCF.
@@ -11,7 +11,7 @@ SCF.
 ## Network
 
 Access to the internet is available either by a [wired connection
-through the department network](/connect-network) or by a
+through the department network](../access/networking.md) or by a
 [wireless connection to campus](https://technology.berkeley.edu/wi-fi).
 Personal computers can only be connected to the network using an SCF
 provided purple cable. You will first need to register the MAC address

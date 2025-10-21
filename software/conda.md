@@ -22,7 +22,7 @@ install pytorch".
 ## Installing software using Conda/Mamba
 
 We have information on
-[using Conda (and Mamba) to install software](/software/install) on the SCF.
+[using Conda (and Mamba) to install software](install.md) on the SCF.
 
 ## Using Conda/Mamba
 
@@ -164,7 +164,7 @@ of python:
 Note that under some situations, your environment might still make use
 of the default environment for the Python executable or certain packages
 already available in the default environment. We have
-[details and tips](/software/install#conda-isolate) on creating a completely isolated environment.
+[details and tips](install.md#conda-isolate) on creating a completely isolated environment.
 
 To enter into your newly created environment:
 

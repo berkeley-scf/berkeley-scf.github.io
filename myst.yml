@@ -16,6 +16,7 @@ project:
         - file: software/R.md
         - file: software/rstudio.md
         - file: software/julia.md
+        - file: software/matlab.md
         - file: software/mathematica.md
         - file: software/conda.md
         - file: software/ai-coding.md

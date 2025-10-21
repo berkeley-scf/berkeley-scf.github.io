@@ -16,12 +16,12 @@ files from the system.
 To facilitate shared workspaces without introducing such problems, we
 create project accounts. They are shared accounts that multiple people
 may access. All files in the account are owned by it and not by others.
-Typically access is configured through [SSH keys](../access/ssh/ssh-keys). You
+Typically access is configured through [SSH keys](../access/ssh/ssh-keys.md). You
 cannot transfer files directly from your own account via `cp` -- you will
 need to use `scp` or some other network transfer program.
 
 We can also enable users to access these shared account
-through [JupyterHub](../access/jupyterhub). 
+through [JupyterHub](../access/jupyterhub.md). 
 
 Please contact manager@stat.berkeley.edu if you would like to create a project account. Let us know:
 

@@ -21,5 +21,5 @@ servers and cluster and some solutions or workarounds.
 - **R hangs when using profiling**
   - This is likely a conflict between's Rprof() and the threaded BLAS
     used by R for linear algebra. Solutions include (1) disabling
-    threading ([see here for more details](/blas)) and (2) not
+    threading ([see here for more details](./linear-algebra-using-blas.md)) and (2) not
     using profiling.

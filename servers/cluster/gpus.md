@@ -6,7 +6,7 @@ The SCF hosts a number of GPUs, available only by submitting a job
 through our SLURM scheduling software. The GPUs are quite varied in
 their hardware configurations (different generations of GPUS, with
 different speeds and GPU memory). We have [documented the GPU
-servers](/servers/gpu-servers) to guide you in selecting which GPU you may want
+servers](../gpu-servers) to guide you in selecting which GPU you may want
 to use.
 
 ## General job submission info

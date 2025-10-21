@@ -26,11 +26,11 @@ reconnect to the VPN.
 
 Collaborators on project accounts that do not have access to the campus
 VPN and use the Remote Desktop Application to access the SCF can create
-an [SSH tunnel](/access/ssh/ssh-tunnel.md).
+an [SSH tunnel](./ssh/ssh-tunnel.md).
 
 ### Configuration
 
-Choose an [SCF server](/computing/servers), and specify your username in your
+Choose an [SCF server](../computing/servers.md), and specify your username in your
 RDP program. You may want to also change the defaults for sound output
 and whether you want the application to run in fullscreen.
 
@@ -52,7 +52,7 @@ are where I overrode the default values:
   - Host: *machine-name.berkeley.edu*
   - Login: *YOUR SCF LOGIN*
   - Enable "*Try auto login (ssh-agent or default ssh key)*" if you use
-    ssh-agent to connect to the SCF [without your password](/faqs/ssh-keys).
+    ssh-agent to connect to the SCF [without your password](../faqs/ssh-keys.md).
     If you do not enable this you will be prompted to enter your SCF
     password when connecting.
   - Session type: *XFCE*

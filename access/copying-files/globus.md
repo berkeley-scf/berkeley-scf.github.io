@@ -14,9 +14,11 @@ that are already registered with Globus as Globus endpoints. Some
 endpoints that may be useful for Berkeley affiliates include Berkeley
 Research Computing's Savio campus cluster and NERSC:
 
-|                                   |                                   |
-|-----------------------------------|-----------------------------------|
+:::{table}
+:label: Globus endpoints
+
 | Endpoint                          | Display Name                      |
+|-----------------------------------|-----------------------------------|
 | UC Berkeley Statistics Department | UC Berkeley Statistics Department |
 | UC Berkeley Economics Department  | UC Berkeley Economics Department  |
 | ucb#brc                           |                                   |
@@ -24,7 +26,9 @@ Research Computing's Savio campus cluster and NERSC:
 | nersc#edison                      | NERSC Edison                      |
 | nersc#hpss                        | NERSC HPSS                        |
 
-{button}`Globus Web App <https://app.globus.org/>`
+:::
+
+{button}`Launch Globus Web App <https://app.globus.org/>`
 
 The first time you connect to the endpoint, you will be offered the
 option to "Link an identity from UC Berkeley Statistics OIDC Auth".

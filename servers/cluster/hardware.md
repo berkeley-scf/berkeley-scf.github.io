@@ -56,5 +56,5 @@ Here are the details of the nodes in the various partitions.
     feel free to request an entire node for jobs needing more memory,
     even if your code will only use one or a few cores.
 
-We have a number of [GPU servers](/servers/gpu-servers) that are part of the
+We have a number of [GPU servers](../gpu-servers) that are part of the
 cluster.

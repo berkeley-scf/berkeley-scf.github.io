@@ -3,14 +3,14 @@ title: "Computing Accounts"
 ---
 
 SCF account holders have access to computing resources, such as a
-[network of compute servers and workstations](/servers) equipped with [R,
-Python, Matlab, and other development environments](/software). Please read the
+[network of compute servers and workstations](../servers.md) equipped with [R,
+Python, Matlab, and other development environments](../software.md). Please read the
 Statistical Computing Facility (SCF) account policies below and the
 descriptions of the various account types before submitting your
 request.
 
 Once you have an account, please see our [information for new
-users](/getting-started).
+users](../getting-started.md).
 
 ## Policies
 
@@ -83,7 +83,7 @@ paying a small campus fee.
 
 ### Project  
 
-[Project accounts](project-accounts) are created to
+[Project accounts](project-accounts.md) are created to
 facilitate shared workspaces where multiple people can read and write to
 shared data or code. They exist to avoid problems introduced when
 relaxing filesystem permissions on one's own account. Please contact

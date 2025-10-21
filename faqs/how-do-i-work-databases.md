@@ -20,7 +20,9 @@ as an SQLite database at /account/web/public/scf/cis.db.
 To open a database (the same command will create a new database if one
 of the given name doesn't exist) from the command line in UNIX:
 
-\$ sqlite3 /account/web/public/scf/cis.db
+:::{code} shell
+sqlite3 /account/web/public/scf/cis.db
+:::
 
 This opens up the command-line tool. Here are some example operations to
 find the tables in the database, get metadata on the tables and then do

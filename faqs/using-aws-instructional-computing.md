@@ -15,7 +15,7 @@ Some potential instructional uses for AWS include:
 1.  Working with cloud-based virtual machines
 1.  Running parallelized computational tasks that scale to many cores
     using cloud-based virtual clusters
-1.  Using [Spark](/faqs/spark) to
+1.  Using [Spark](spark.md) to
     carry out distributed computation, including MapReduce computations
 1.  Using Amazon's MapReduce service for distributed computation
 

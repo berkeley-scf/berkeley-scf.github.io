@@ -7,7 +7,7 @@ title: "GPU Servers"
 The SCF can help with access to several GPU resources:
 
 The SCF operates one GPU available to all SCF users. You need to [use
-the SLURM scheduling software](/servers/cluster/gpus) to run
+the SLURM scheduling software](cluster/gpus.md) to run
 any job making use of the GPU. You may want to use an interactive
 session to develop and test your GPU code. That same link also has
 information on monitoring GPU usage of your job.
@@ -35,7 +35,7 @@ not a member of the lab group, your jobs will run on a preemptible basis,
 which means they can be cancelled at any time by a higher-priority jobs.
 These servers can be accessed by submitting to the *jsteinhardt*,
 *yugroup*, *yss,* or *songmei* partitions using the [SLURM scheduling
-software](/servers/cluster).
+software](cluster.md).
 
 | Partition     | Machine Name            | GPU Type            | GPU Memory |
 |---------------|-------------------------|---------------------|------------|
@@ -56,7 +56,7 @@ software](/servers/cluster).
 | `songmei`     | `feanor`[^fqdn]         | H200                | 144 GB     |
 | `berkeleynlp` | `lorax`[^fqdn]          | H200                | 144 GB     |
 
-[^lambda]: To use one of these five machines, one must specifically [connect to the remote cluster](/servers/cluster/gpus#steinhardt-remote-cluster),
+[^lambda]: To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster),
 which is accessed separately from the other SCF resources.
 [^fqdn]: Requires the fully qualified domain name, e.g. `{hostname}.stat.berkeley.edu`.
 
@@ -77,7 +77,7 @@ the GPU:
   as well as on gandalf and radagast among others.
 - We can install additional or upgrade current software as needed. 
 
-We use Linux [environment modules](/faqs/environment-modules) to
+We use Linux [environment modules](../faqs/environment-modules.md) to
 manage the use of GPU-based software, as discussed next. Note that you
 could insert any of these commands in your .bashrc (after the stanza
 involving `~skel/std.bashrc`) so they are always in effect or invoke them

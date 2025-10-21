@@ -69,4 +69,4 @@ For help in getting PostScript output into your TeX or LaTeX document,
 see `help psfig`.
 
 For infomation on the style file `ucthesis` (e.g.
-documentclass{ucthesis} ) refer to [ucthesis](computing/ucthesis-latex).
+documentclass{ucthesis} ) refer to [ucthesis](ucthesis-latex.md).

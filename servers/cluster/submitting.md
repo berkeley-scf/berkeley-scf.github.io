@@ -24,7 +24,7 @@ discussed here:
 
 :::
   
-[^high]: See [](#high-performance-partitions) or [GPU Jobs](/servers/cluster/gpus).
+[^high]: See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
 
 [^preemptible]: Preemptible
 
@@ -42,7 +42,7 @@ The instructions here are for the simple case of submitting a job
 without any parallelization; i.e., a job using a single core (CPU). When
 submitted using the instructions in this section, such jobs will have
 access to only a single core at a time. We also have [extensive
-instructions](/servers/cluster/parallel) for submitting parallelized jobs and
+instructions](parallel.md) for submitting parallelized jobs and
 automating the submission of multiple jobs.
 
 For example a simple script to run an R program called 'simulate.R'
@@ -59,7 +59,7 @@ or scratch directory (i.e., make sure your working directory is not in
 script (assumed to be job.sh here) to enter a job into the queue:
 
 :::{code} shell-session
-arwen:~/Desktop$ sbatch job.sh
+$ sbatch job.sh
 Submitted batch job 380
 :::
 
@@ -315,8 +315,8 @@ Note that if that specific node has all its cores in use by other users,
 you will need to wait until resources become available on that node
 before your interactive session will start.
 
-Finally, you can request multiple cores using -c, as with batch jobs. As
-with batch jobs, you can change OMP_NUM_THREADS from its default of one,
+Finally, you can request multiple cores using `-c`, as with batch jobs. As
+with batch jobs, you can change `OMP_NUM_THREADS` from its default of one,
 provided you make sure that that the total number of cores used (number
 of processes your code starts multiplied by threads per process) does
 not exceed the number of cores you request.

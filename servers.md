@@ -4,10 +4,11 @@ title: "SCF Cluster and Servers"
 
 We operate a network of Linux and Macintosh computers. These include:
 
-- stand-alone <a href="/servers/login-servers">Linux servers</a> (used primarily for logging in, file manipulation, and the
-  like),
-- a <a href="/servers/cluster">Linux cluster</a>,
-- access to and assistance with the <a href="/servers/savio">campus Savio Linux cluster</a>, and
-- a number of <a href="/servers/gpu-servers">GPUs</a>.
+- stand-alone [login servers](./servers/login-servers.md) (used primarily for
+  logging in, file manipulation, and the like),
+- a [Linux cluster](./servers/cluster.md),
+- access to and assistance with the [campus Savio Linux
+  cluster](./servers/savio.md) and
+- a number of [GPUs](./servers/gpu-servers.md)
 
-Our <a href="/monitoring">dashboards</a> can show you information about what resources are in use and available.
+Our [dashboards](./servers/monitoring.md) can show you information about what resources are in use and available.

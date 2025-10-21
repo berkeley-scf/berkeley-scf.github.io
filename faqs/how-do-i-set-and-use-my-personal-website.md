@@ -69,15 +69,14 @@ Other approaches to creating HTML include:
 
 ## Setting up the web area
 
-You will need to [deposit your HTML files](/copying-files)
-into a user-specific directory, /accounts/web/public/*username*/, on the
-SCF. View your site at the address https://www.stat.berkeley.edu
-appended with /~*username*/. Your files will be available immediately on
-the website, though you may need to reload your browser to see the
-changes. Make sure that your files are readable, e.g. "chmod go+r
-filename.html", otherwise the public will not be able to view them. You
-can make use of this to hide content as well, e.g. "chmod go-r
-filename.html".
+You will need to [deposit your HTML files](../access/copying-files.md) into a
+user-specific directory, `/accounts/web/public/username/`, on the SCF.
+View your site at the address `https://www.stat.berkeley.edu/~username/`.
+Your files will be available immediately on the website, though you may
+need to reload your browser to see the changes. Make sure that your files
+are readable, e.g. `chmod go+r filename.html`, otherwise the public will
+not be able to view them. You can make use of this to hide content as
+well, e.g. `chmod go-r filename.html`.
 
 ## Redirecting to Another Web Page
 
@@ -85,12 +84,14 @@ If you want to migrate your website to another provider and redirect
 people to the new site, you can create an index.html file of the form
 below, replacing the example URL with your own:
 
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta http-equiv="refresh" content="0; url='https://example.com'" />
-      </head>
-    </html>
+:::{code} html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url='https://example.com'" />
+  </head>
+</html>
+:::
 
 ## Password protected web areas
 

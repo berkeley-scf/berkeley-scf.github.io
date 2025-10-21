@@ -10,14 +10,9 @@ Please observe the following policies:
   familiar with running batch jobs in a UNIX/Linux environment. If you
   are not familiar with running jobs in this way, you can contact
   consult@stat.berkeley.edu.
-- Jobs must be [nice'd to a value of 19](/faqs/nicing-jobs). In
-  general, jobs on the compute servers are nice'd by default, but if you
-  notice your job is not nice'd, please nice it. Any job that is running
-  on a compute server with a lower priority (without prior
-  authorization) may be terminated.
 - Any compute server should have at most as many jobs (across all users)
   as CPUs on the machine. The number of CPUs on a machine can be seen on
-  the [grafana dashboards](/servers/monitoring). If you see that all CPUs
+  the [grafana dashboards](../servers/monitoring.md). If you see that all CPUs
   are busy, do not run/start a job on that server until resources become
   available.
 - A user should not run so many simultaneous jobs on a compute server

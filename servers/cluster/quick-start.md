@@ -8,7 +8,7 @@ detailed documentation on the SCF cluster.
 
 ### Connecting to the SCF
 
-First, [ssh to one of the SCF's standalone Linux servers](/access/ssh).
+First, [ssh to one of the SCF's standalone Linux servers](../access/ssh.md).
 For example from a terminal on your Mac or Linux machine:
 
 ```{code} shell
@@ -19,7 +19,7 @@ ssh gandalf.berkeley.edu
 Or use Putty or MobaXTerm from your Windows machine.
 
 You can also start a terminal on an SCF machine via the
-[SCF JupyterHub](/access/jupyterhub).
+[SCF JupyterHub](../access/jupyterhub.md).
 
 All jobs that you run on the cluster need to be submitted via the Slurm
 scheduling software from one of our Linux servers. Slurm sends each job

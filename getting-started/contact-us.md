@@ -46,8 +46,7 @@ account.
 :::{card}
 :header: Self help  
 
-Search for [online documentation](/faqs) on a variety of topics.
+Search for [online documentation](../kb.md) on a variety of topics.
 
-Browse a list of [common computational problems](/faqs/common-computational-problems)
- 
+Browse a list of [common computational problems](../faqs/common-computational-problems.md)
 ::::

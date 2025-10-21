@@ -21,23 +21,33 @@ modifications override any modules set by default on the system).
 
 To see the software (and versions) available via the modules system:
 
-     module avail
+:::{code} shell
+module avail
+:::
 
 To see what modules are currently loaded:
 
-     module list
+:::{code} shell
+module list
+:::
 
 To unload a module:
 
-     module unload python/3.13
+:::{code} shell
+module unload python/3.13
+:::
 
 To load a module:
 
-     module load python/3.12
+:::{code} shell
+module load python/3.12
+:::
 
 To switch between different versions:
 
-     module switch python/3.13 python/3.12
+:::{code} shell
+module switch python/3.13 python/3.12
+:::
 
 ### Modules in Slurm sessions
 

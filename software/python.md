@@ -10,9 +10,9 @@ the Anaconda distribution.
 
 On our Linux servers, we provide Python 3.11 . We can also help you
 access older versions of Python if needed, by using a [Conda
-environment](/software/conda).
+environment](conda.md).
 
-Note that in what follows we use [mamba](/software/install), a
+Note that in what follows we use [mamba](install.md), a
 drop-in replacement for conda.
 
 ## Packages

@@ -2,7 +2,7 @@
 title: "Saving Plots in R"
 ---
 Originally for Statistics 133, by
-[Phil Spector](href="http://www.stat.berkeley.edu/~spector)
+[Phil Spector](http://www.stat.berkeley.edu/~spector)
 
 Since R runs on so many different operating systems, and supports so
 many different graphics formats, it's not surprising that there are a

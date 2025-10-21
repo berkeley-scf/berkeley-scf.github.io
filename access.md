@@ -6,31 +6,31 @@ title: "Accessing Machines and Resources"
 There are a variety of ways you can access the SCF computers.
 
 - Using SSH: The most basic access to SCF computers is
-  [via SSH](/access/ssh) to get to a [command line](/faqs/unix)
+  [via SSH](./access/ssh.md) to get to a [command line](./faqs/unix.md)
   on the machine of your choosing.
   - Example: to SSH to the SCF Linux server named arwen, you'll need to
     connect to arwen.berkeley.edu. From there you can see your home
     directory, connect to other SCF machines without using a password,
     and start jobs on the SCF Linux cluster. 
-- Using your web browser: You can use our [JupyterHub](/access/jupyterhub)
+- Using your web browser: You can use our [JupyterHub](./access/jupyterhub.md)
   to access
   - Jupyter notebooks (IPython, R, and Julia notebooks as well as
     others)
   - Terminal sessions (similar to SSH command-line sessions, but from
     within your browser)
-  - [RStudio](/software/rstudio)
-  - [VS (Visual Studio) Code](/software/vscode) sessions
+  - [RStudio](./software/rstudio.md)
+  - [VS (Visual Studio) Code](./software/vscode.md) sessions
   - Linux desktop sessions
-- Using [Remote Desktop](/access/remote-desktop) to get a graphical Linux desktop
-- Running [VS (Visual Studio) Code](/software/vscode), an integrated development environment (IDE) on your
+- Using [Remote Desktop](./access/remote-desktop.md) to get a graphical Linux desktop
+- Running [VS (Visual Studio) Code](./software/vscode.md), an integrated development environment (IDE) on your
   personal machine, with VS Code connecting to an SCF machine to do
   remote development.
-- You can [copy files to and from the SCF filesystem](/access/copying-files) in a variety of ways.
+- You can [copy files to and from the SCF filesystem](./access/copying-files.md) in a variety of ways.
 
 ## What machines can I use?
 
 You can browse the list of the SCF computers on our
-[Grafana dashboards](/servers/monitoring) (SCF login required), including a
+[Grafana dashboards](./servers/monitoring.md) (SCF login required), including a
 [general
 overview](https://grafana.stat.berkeley.edu/d/overview/1-overview?orgId=1)
 of most machines. Once you are on an SCF machine (e.g., you can
@@ -43,11 +43,11 @@ You can remotely run GUI-based programs on the SCF machines, displaying
 the GUI on your local machine. This works for all graphical programs on
 our Linux machines and for X-windows based programs on our Macs but not
 for Cocoa-based programs on the Macs.
-[These instructions](/access/X11) will tell you how to view such programs on your own
+[These instructions](./access/X11.md) will tell you how to view such programs on your own
 Windows or Mac machine.
 
 Note that our JupyterHub provides more responsive access to RStudio and
-VS Code sessions, and [Remote Desktop](/access/remote-desktop) may be a better option for displaying GUIs.
+VS Code sessions, and [Remote Desktop](./access/remote-desktop.md) may be a better option for displaying GUIs.
 
 ## Other ways to access the SCF filesystem
 
@@ -56,7 +56,7 @@ tedious and requires you to have to deal with the possibility of
 different file versions on your personal computer and on the SCF
 filesystem.
 
-- You can [mount your SCF home directory as a directory on your personal machine](/access/remote-files) (available
+- You can [mount your SCF home directory as a directory on your personal machine](./access/remote-files.md) (available
   for any of Windows, MacOS, or Linux).
 - If you have a Mac or Linux desktop that you keep in your office in
   Evans, the SCF can maintain that computer for you as an
