@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 24" width="24" height="24"
+     fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Lightning bolt -->
+  <polyline points="14,4 10,12 16,12 12,20"/>
+  <!-- Optional plug / power symbol -->
+  <circle cx="22" cy="7" r="2.5"/>
+  <line x1="22" y1="6" x2="22" y2="7.5"/>
+  <circle cx="22" cy="8.5" r="0.4" fill="currentColor" stroke="none"/>
+</svg>
+

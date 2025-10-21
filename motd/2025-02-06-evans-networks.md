@@ -1,7 +1,7 @@
 ---
 title: "Unexpected downtime: Evans Hall networks down"
 description: "A brief network outage hit Evans Hall."
-thumbnail: ../images/logo.svg
+thumbnail: ../images/network.svg
 author: "Ryan Lovett"
 date: "2025-02-06"
 options:
