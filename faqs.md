@@ -28,14 +28,12 @@ cases, Macs when using the command line.
 - [Running a program in the background](/faqs/background-processes) (including the use of 'screen')
 - [Managing UNIX processes](/faqs/managing-processes)
 - [Useful information about linear algebra (the BLAS), including speeding up calculations on your personal Mac](/faqs/linear-algebra-and-parallelized-linear-algebra-using-blas)
-- [Parallel programming tips](/training/workshops/how-do-i-do-parallel-programming)
 
 ## Software
 
 - [Installing software on ARM64-based Mac computers](/software) (Apple Silicon M1 and M2 Macs)
 - [Using LaTeX](/faqs/latex) and [the ucthesis LaTeX style](/faqs/how-do-i-use-ucthesis-latex-style)
-- [C/C++ introduction, calling C/C++ from R, and creating R packages](/training/workshops/using-c-calling-c-r-and-creating-r-packages)
-- [Using code chunks (and LaTeX) in documents with RStudio/RMarkdown/knitr and Jupyter notebooks](https://berkeley-scf.github.io/tutorial-dynamic-docs)
+- [Using code chunks (and LaTeX) in documents with RStudio/RMarkdown/knitr and Jupyter notebooks](https://computing.stat.berkeley.edu/tutorial-dynamic-docs)
 - [Installing MATLAB](/software/matlab)
 - [Working with databases](/faqs/how-do-i-work-databases)
 - [Hosting Shiny apps](/faqs/hosting-shiny-app)

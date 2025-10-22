@@ -32,7 +32,7 @@ supported resources include:
 
 - standard compilers for C, C++, Fortran, and other languages,
 - [fast, threaded linear algebra libraries](./faqs/linear-algebra-and-parallelized-linear-algebra-using-blas.md) (OpenBLAS and ACML)
-- support for [parallel programming](./training/workshops/how-do-i-do-parallel-programming.md), including MPI and openMP,
+- support for [parallel programming](https://computing.stat.berkeley.edu/tutorial-parallelization), including MPI and openMP,
 - other computational software, including JAGS and Stan.
 - [hosting of Shiny repositories](./faqs/hosting-shiny-app.md)
 - [Running Docker containers via enroot](./software/containers.md) (or possibly udocker).
