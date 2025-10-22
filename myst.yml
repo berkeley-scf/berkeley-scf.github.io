@@ -25,11 +25,7 @@ project:
             - file: access/copying-files/rclone.md
             - file: access/copying-files/vscode-remote-ssh.md
             - file: access/copying-files/sshfs.md
-        - file: access/networking.md
-          children:
-            - file: access/networking/vpn.md
-            - file: access/networking/ethernet.md
-            - file: access/networking/wifi.md
+        - file: networking.md
     - file: software.md
       children:
         - file: software/install.md
