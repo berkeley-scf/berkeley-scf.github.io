@@ -31,7 +31,7 @@ of most machines.
 You can run jobs on the stand-alone servers, but in most cases you are
 better off submitting jobs to the cluster. To run jobs on these machines,
 you do not need to use Slurm. Also, please read [the
-policies](../faqs/policies-using-compute-servers.md) on running jobs on
+policies](../kb/policies-using-compute-servers.md) on running jobs on
 the compute servers. Of the machines, gollum, hermione, quidditch, and
 shelob have the fastest CPUs, while gandalf and radagast have the most
 memory (132 GB).

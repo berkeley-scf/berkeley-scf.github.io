@@ -28,13 +28,13 @@ title: Getting Started
   - [Quick start guide](./servers/cluster/quick-start.md)
   - [Full details about the cluster](./servers/cluster.md)
 
-- [Overview for self-managed/private computers](./faqs/what-services-are-provided-self-maintained-computers.md)
+- [Overview for self-managed/private computers](./kb/what-services-are-provided-self-maintained-computers.md)
   - Access your SCF home directory by
     [copying files or using network volumes](./access/copying-files.md)
   - [Install software on your own computer](./software.md)
 
-- [Set up your personal webpage](./faqs/how-do-i-set-and-use-my-personal-website.md) or
-  [set up a course website](./faqs/course-website.md)
+- [Set up your personal webpage](./kb/how-do-i-set-and-use-my-personal-website.md) or
+  [set up a course website](./kb/course-website.md)
 
 - [Questions about your \@berkeley.edu email](https://bconnected.berkeley.edu/account-information)
 

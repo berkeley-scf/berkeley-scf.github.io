@@ -6,7 +6,7 @@ title: "Accessing Machines and Resources"
 There are a variety of ways you can access the SCF computers.
 
 - Using SSH: The most basic access to SCF computers is
-  [via SSH](./access/ssh.md) to get to a [command line](./faqs/unix.md)
+  [via SSH](./access/ssh.md) to get to a [command line](./kb/unix.md)
   on the machine of your choosing.
   - Example: to SSH to the SCF Linux server named arwen, you'll need to
     connect to arwen.berkeley.edu. From there you can see your home

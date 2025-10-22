@@ -48,5 +48,5 @@ account.
 
 Search for [online documentation](../kb.md) on a variety of topics.
 
-Browse a list of [common computational problems](../faqs/common-computational-problems.md)
+Browse a list of [common computational problems](../kb/common-computational-problems.md)
 ::::

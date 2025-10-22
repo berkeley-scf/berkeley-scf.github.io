@@ -53,13 +53,10 @@ project:
             - file: servers/cluster/monitoring.md
         - file: servers/gpu-servers.md
         - file: servers/savio.md
-    #- file: faqs.md
-    #  children:
-    #    - pattern: faqs/*
-    #      hidden: true
-    - pattern: faqs/*
-      hidden: true
     - file: kb.md
+      children:
+        - pattern: kb/*
+          hidden: true
     - file: tutorials.md
     - file: workshops.md
     - pattern: training/workshops/*
