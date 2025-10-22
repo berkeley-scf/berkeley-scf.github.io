@@ -23,7 +23,7 @@ machine and software involved in the problem.
 :link: mailto:consult@stat.berkeley.edu
 
 Contact the SCF statistical computing consultant to get help with software
-or statistical computing topics, or request software installation, by email `consult@stat.berkeley.edu`.
+or statistical computing topics, or request software installation, by emailing `consult@stat.berkeley.edu`.
 :::
 
 :::{card}
