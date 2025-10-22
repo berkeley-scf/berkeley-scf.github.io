@@ -1,11 +1,11 @@
 ---
 title: Getting Started
 ---
-- [Do You Need Help?](/contact-us)
+- [Do You Need Help?](./contact-us.md)
 
   Reach out to us for assistance.
 
-- [Get a Computing Account](../computing-accounts.md)
+- [Get a Computing Account](./computing-accounts.md)
 
   SCF accounts grant access to the
   [SCF computing cluster](./computing/servers/cluster.md), compute servers, and
@@ -31,7 +31,7 @@ title: Getting Started
 - [Overview for self-managed/private computers](./faqs/what-services-are-provided-self-maintained-computers.md)
   - Access your SCF home directory by
     [copying files or using network volumes](./access/copying-files.md)
-  - [Install software on your own computer](./software.md), including for newer ARM64-based Macs (Apple Silicon M1 and M2 Macs).
+  - [Install software on your own computer](./software.md)
 
 - [Set up your personal webpage](./faqs/how-do-i-set-and-use-my-personal-website.md) or
   [set up a course website](./faqs/course-website.md)
