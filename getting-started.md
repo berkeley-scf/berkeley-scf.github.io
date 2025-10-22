@@ -1,11 +1,11 @@
 ---
 title: Getting Started
 ---
-- [Do You Need Help?](./getting-started/contact-us.md)
+- [Do You Need Help?](/contact-us.md)
 
   Reach out to us for assistance.
 
-- [Get a Computing Account](./getting-started/computing-accounts.md)
+- [Get a Computing Account](../getting-started/computing-accounts.md)
 
   SCF accounts grant access to the
   [SCF computing cluster](./computing/servers/cluster.md), compute servers, and
