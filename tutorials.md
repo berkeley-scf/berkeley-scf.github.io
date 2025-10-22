@@ -7,7 +7,7 @@ The SCF and partners have prepared a number of online self-study tutorials. Anyo
 Most of the tutorials come as websites hosted on GitHub Pages with the content living in a GitHub repository. For some of the older tutorials that have not been updated recently, there is only a GitHub repository.
 
 
-::::{grid} 1 1 1 1
+::::{grid} 1 2 2 2
 
 :::{card}
 :header: The basics of UNIX and the command line
