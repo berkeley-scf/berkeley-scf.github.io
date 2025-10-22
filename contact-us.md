@@ -12,7 +12,7 @@ We are located on the fourth floor of Evans Hall, Rooms 495-499. Feel free to dr
 :link: mailto:trouble@stat.berkeley.edu
 
 Get help with hardware, printing, networking, disk space, and other general
-system questions. Please describe the problem, when, and (if relevant) the
+system questions by emailing `trouble@stat.berkeley.edu`. Please describe the problem, when, and (if relevant) the
 machine and software involved in the problem.
 :::
 
@@ -23,14 +23,14 @@ machine and software involved in the problem.
 :link: mailto:consult@stat.berkeley.edu
 
 Contact the SCF statistical computing consultant to get help with software
-or statistical computing topics, or request software installation.
+or statistical computing topics, or request software installation, by email `consult@stat.berkeley.edu`.
 :::
 
 :::{card}
 :header: Account/administrative support  
 :link: mailto:manager@stat.berkeley.edu)
 
-Contact the SCF manager about account or administrative issues.
+Contact the SCF manager by email at `manager@stat.berkeley.edu` about account or administrative issues.
 :::
 
 :::{card}

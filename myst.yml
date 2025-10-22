@@ -6,7 +6,6 @@ project:
       children:
         - file: getting-started/computing-accounts.md
         - file: getting-started/project-accounts.md
-        - file: getting-started/contact-us.md
         - file: getting-started/history.md
         - file: getting-started/other-resources.md
     - file: access.md
@@ -73,6 +72,7 @@ project:
       children:
         - pattern: motd/*.md
           hidden: true
+    - file: contact-us.md
   plugins:
     - type: javascript
       path: listing.mjs
