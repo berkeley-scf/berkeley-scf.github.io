@@ -1,5 +1,5 @@
 ---
-title: "Using Julia on the SCF"
+title: "Julia"
 ---
 
 

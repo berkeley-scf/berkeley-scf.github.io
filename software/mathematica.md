@@ -1,5 +1,5 @@
 ---
-title: "Using Mathematica"
+title: "Mathematica"
 ---
 Campus documents licensing information for Mathematica at [Software
 Central](https://software.berkeley.edu/mathematica). Faculty, staff, and
