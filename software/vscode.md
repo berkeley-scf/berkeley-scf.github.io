@@ -11,7 +11,7 @@ directory) on the SCF.
 
 To connect to the SCF using VS Code,  you'll need to have installed the
 'Remote Development' extension pack on your local VS Code.  Then to
-connect to the SCF, click on the blue icon labelled `\>\<` in the lower
+connect to the SCF, click on the blue icon labelled `><` in the lower
 left corner and choose "Host", providing one of the
 [SCF login nodes](../servers/login-servers.md).
 
