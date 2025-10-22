@@ -9,19 +9,6 @@ project:
         - file: getting-started/contact-us.md
         - file: getting-started/history.md
         - file: getting-started/other-resources.md
-    - file: software.md
-      children:
-        - file: software/install.md
-        - file: software/python.md
-        - file: software/R.md
-        - file: software/rstudio.md
-        - file: software/julia.md
-        - file: software/matlab.md
-        - file: software/mathematica.md
-        - file: software/conda.md
-        - file: software/ai-coding.md
-        - file: software/containers.md
-        - file: software/vscode.md
     - file: access.md
       children:
         - file: access/ssh.md
@@ -44,6 +31,19 @@ project:
             - file: access/networking/vpn.md
             - file: access/networking/ethernet.md
             - file: access/networking/wifi.md
+    - file: software.md
+      children:
+        - file: software/install.md
+        - file: software/python.md
+        - file: software/R.md
+        - file: software/rstudio.md
+        - file: software/julia.md
+        - file: software/matlab.md
+        - file: software/mathematica.md
+        - file: software/conda.md
+        - file: software/ai-coding.md
+        - file: software/containers.md
+        - file: software/vscode.md
     - file: servers.md
       children:
         - file: servers/login-servers.md
