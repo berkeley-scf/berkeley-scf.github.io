@@ -118,8 +118,9 @@ not apply to class accounts.)
 
 ## Account Request Form
 
-If you have a CalNet ID, complete our [account request
-form](https://scf.berkeley.edu/account).
+If you have a CalNet ID:
+
+{button}`Complete our account request form <https://scf.berkeley.edu/account>`
 
 If you do not have a CalNet ID, please have your sponsor create a
 [Sponsored CalNet

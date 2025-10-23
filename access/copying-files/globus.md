@@ -22,12 +22,13 @@ Research Computing's Savio campus cluster and NERSC:
 | UC Berkeley Statistics Department | UC Berkeley Statistics Department |
 | UC Berkeley Economics Department  | UC Berkeley Economics Department  |
 | ucb#brc                           |                                   |
-| nersc#cori                        | NERSC Cori                        |
-| nersc#edison                      | NERSC Edison                      |
+| nersc#perlmutter                  | NERSC Perlmutter                  |
 | nersc#hpss                        | NERSC HPSS                        |
 
 :::
 
+```{grid} 1
+:class: centered
 {button}`Launch Globus Web App <https://app.globus.org/>`
 
 The first time you connect to the endpoint, you will be offered the

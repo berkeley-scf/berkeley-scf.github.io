@@ -8,7 +8,7 @@ title: Getting Started
 - [Get a Computing Account](./getting-started/computing-accounts.md)
 
   SCF accounts grant access to the
-  SCF computing cluster], compute servers, and
+  SCF computing cluster, compute servers, and
   departmental file server. Please click on the link above if you require
   an SCF account and fill out the requested information.
 
