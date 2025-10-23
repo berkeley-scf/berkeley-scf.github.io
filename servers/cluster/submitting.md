@@ -115,7 +115,7 @@ include either the '--partition=high' or '-p high' flag. By default jobs
 will be run in the low partition. For example:
 
 :::{code} shell-session
-arwen:~/Desktop$ sbatch -p high job.sh
+arwen:~$ sbatch -p high job.sh
 Submitted batch job 380
 :::
 
@@ -162,7 +162,7 @@ all that often as the two nodes collectively have 256 cores.
 You can request use of these nodes as follows:
 
 :::{code} shell-session
-arwen:~/Desktop$ sbatch -p epurdom job.sh
+arwen:~$ sbatch -p epurdom job.sh
 Submitted batch job 380
 :::
 
@@ -180,7 +180,7 @@ shared amongst jobs. For example to request use of one of these nodes,
 which are labelled as 'manycore' nodes:
 
 :::{code} shell-session
-arwen:~/Desktop$ sbatch -p jsteinhardt -C manycore job.sh
+arwen:~$ sbatch -p jsteinhardt -C manycore job.sh
 Submitted batch job 380
 :::
 
