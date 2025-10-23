@@ -12,10 +12,7 @@ title: Getting Started
   departmental file server. Please click on the link above if you require
   an SCF account and fill out the requested information.
 
-- [Internet Access](./access/networking.md)
-
-  [Wireless](./access/networking/wifi.md) and [Wired](./access/networking/ethernet.md)
-  networking.
+- [Getting Online](./access/networking.md)
 
 - [Remote Access to SCF servers](./access.md)
 

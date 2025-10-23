@@ -25,7 +25,7 @@ project:
             - file: access/copying-files/rclone.md
             - file: access/copying-files/vscode-remote-ssh.md
             - file: access/copying-files/sshfs.md
-        - file: networking.md
+        - file: access/networking.md
     - file: software.md
       children:
         - file: software/install.md
