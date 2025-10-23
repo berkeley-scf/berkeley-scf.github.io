@@ -8,7 +8,7 @@ detailed documentation on the SCF cluster.
 
 ### Connecting to the SCF
 
-First, [ssh to one of the SCF's standalone Linux servers](../access/ssh.md).
+First, [ssh to one of the SCF's standalone Linux servers](../../access/ssh.md).
 For example from a terminal on your Mac or Linux machine:
 
 ```{code} shell
@@ -19,7 +19,7 @@ ssh gandalf.berkeley.edu
 Or use Putty or MobaXTerm from your Windows machine.
 
 You can also start a terminal on an SCF machine via the
-[SCF JupyterHub](../access/jupyterhub.md).
+[SCF JupyterHub](../../access/jupyterhub.md).
 
 All jobs that you run on the cluster need to be submitted via the Slurm
 scheduling software from one of our Linux servers. Slurm sends each job
@@ -103,7 +103,7 @@ srun -p high --pty bash
 ```
 
 And we can start a job that needs four cores on a single machine using
-the *cpus-per-task* (-c) flag:
+the *cpus-per-task* (`-c`) flag:
 
 ```{code} shell
 srun -c 4 --pty bash
@@ -207,7 +207,7 @@ paciorek@gandalf:~> shist -S 2022-10-01   # using our wrapper
 Use the `-c` flag if you need all the cores on a single node.
 
 In some cases your code may be able to parallelize across the cores on
-multiple nodes. In this case you should use the *--ntasks* (-n) flag.
+multiple nodes. In this case you should use the *--ntasks* (`-n`) flag.
 Here's a job script in which we ask for 20 cores, which may be provided
 by Slurm on one or more machines:
 
