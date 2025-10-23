@@ -21,15 +21,15 @@ Research Computing's Savio campus cluster and NERSC:
 |-----------------------------------|-----------------------------------|
 | UC Berkeley Statistics Department | UC Berkeley Statistics Department |
 | UC Berkeley Economics Department  | UC Berkeley Economics Department  |
-| ucb#brc                           |                                   |
+| ucb#brc (Berkeley Savio cluster)  |                                   |
 | nersc#perlmutter                  | NERSC Perlmutter                  |
 | nersc#hpss                        | NERSC HPSS                        |
 
 :::
 
-```{grid} 1
-:class: centered
+<div style="text-align: center;">
 {button}`Launch Globus Web App <https://app.globus.org/>`
+</div>
 
 The first time you connect to the endpoint, you will be offered the
 option to "Link an identity from UC Berkeley Statistics OIDC Auth".
