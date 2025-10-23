@@ -5,10 +5,10 @@ title: Getting Started
 
   Reach out to us for assistance.
 
-- [Get a Computing Account](./computing-accounts.md)
+- [Get a Computing Account](./getting-started/computing-accounts.md)
 
   SCF accounts grant access to the
-  [SCF computing cluster](./computing/servers/cluster.md), compute servers, and
+  SCF computing cluster], compute servers, and
   departmental file server. Please click on the link above if you require
   an SCF account and fill out the requested information.
 
@@ -27,7 +27,7 @@ title: Getting Started
 
 - [Overview for self-managed/private computers](./kb/what-services-are-provided-self-maintained-computers.md)
   - Access your SCF home directory by
-    [copying files or using network volumes](./access/copying-files.md)
+    [copying files](./access/copying-files/sftp-scf) or [using network volumes](./access/copying-files/samba.md).
   - [Install software on your own computer](./software.md)
 
 - [Set up your personal webpage](./kb/how-do-i-set-and-use-my-personal-website.md) or
