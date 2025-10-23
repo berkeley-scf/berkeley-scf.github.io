@@ -126,7 +126,7 @@ python code.py > code.pyout
 ```
 
 When you submit the job, it will show you the job id. Here we assume the
-code above is in a file *job.sh*:
+code above is in a file `job.sh`:
 
 ```{code} shell-session
 paciorek@gandalf:~> sbatch job.sh

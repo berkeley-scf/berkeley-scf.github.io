@@ -270,7 +270,7 @@ for ((it = 1; it <= 10; it++)); do
 done
 :::
 
-You now have a couple options in terms of how job.sh is specified. This
+You now have a couple options in terms of how `job.sh` is specified. This
 illustrates things for Matlab jobs, but it shouldn't be too hard to
 modify for other types of jobs.
 

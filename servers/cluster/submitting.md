@@ -56,7 +56,7 @@ R CMD BATCH --no-save simulate.R simulate.out
 Once logged onto a submit host, navigate to a directory within your home
 or scratch directory (i.e., make sure your working directory is not in
 `/tmp` or `/var/tmp`) and use the sbatch command with the name of the shell
-script (assumed to be job.sh here) to enter a job into the queue:
+script (assumed to be `job.sh` here) to enter a job into the queue:
 
 :::{code} shell-session
 $ sbatch job.sh
