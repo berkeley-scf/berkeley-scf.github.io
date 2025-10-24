@@ -12,3 +12,9 @@ at the top right of this site.
 :type: table
 :sort: title
 :::
+
+:::{listing}
+:contents: */*/*.md
+:type: table
+:sort: title
+:::
