@@ -18,7 +18,7 @@ SCF Linux cluster, including nodes with GPUs.
 By default, your server will be spawned onto the first available
 standalone Linux machine, however you may optionally start your server
 on a cluster node in case you need access to more processing power. You
-can also pass [SBATCH options](../servers/cluster.md) to your
+can also pass [Slurm job submission options](../servers/cluster/submitting.md) to your
 server, and specify prologue commands that will run prior to your server
 startup. Please [let us
 know](mailto:consult@stat.berkeley.edu?subject=JupyterHub%20feedback) if

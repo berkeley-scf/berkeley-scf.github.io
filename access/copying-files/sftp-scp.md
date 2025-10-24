@@ -2,7 +2,7 @@
 title: Secure File Transfer / Secure Copy
 ---
 
-SFTP is the standard way of securly copying user files.
+SFTP is the standard way of securely copying user files.
 
 ## Mac or Windows: Cyberduck
 
