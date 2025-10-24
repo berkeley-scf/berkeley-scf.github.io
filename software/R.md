@@ -20,7 +20,7 @@ locally.
 
 By default, user-installed packages are installed in the \`R\`
 subdirectory in your home directory, in
-`~/R/x86_64-pc-linux-gnu-library/4.2`. However, if that directory does
+`~/R/x86_64-pc-linux-gnu-library/4.5`. However, if that directory does
 not exist, you may get an error message like this:
 
 ``` programlisting
@@ -29,17 +29,17 @@ mkdir: cannot create directory  '/server/linux/lib/R/site-library/00LOCK': Permi
 
 The simplest solution is to create the directory:
 
-    mkdir -p ~/R/x86_64-pc-linux-gnu/4.2
+    mkdir -p ~/R/x86_64-pc-linux-gnu/4.5
 
 You can use `.libPaths()` to check that the user-level directory is the
 default location (it should be the first result printed, as seen below)
 where R will install packages.
 
     > .libPaths()
-    [1] "/accounts/grad/username/R/x86_64-pc-linux-gnu-library/4.2"
-    [2] "/system/linux/lib/R-20.04/4.2.2/x86_64/site-library"     
-    [3] "/usr/lib/R/site-library"                                 
-    [4] "/usr/lib/R/library"                                      
+    [1] "/accounts/grad/username/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/4.5"
+    [2] "/system/linux/lib/R-24.04/4.5.0/x86_64/site-library"                  
+    [3] "/usr/lib/R/site-library"                                              
+    [4] "/usr/lib/R/library"                                                   
 
 ### Library path management
 

@@ -42,10 +42,10 @@ the name of the primary program that implements the protocol.
 ## Basic usage
 
 The most common way of logging into a remote site from the command-line
-is with '**ssh username@remotehost**'. An alternative is '**ssh -l
-username remotehost**'. If your local username is the same as your
-remote username, you needn't specify it on the command line, e.g. '**ssh
-remotehost**'. **putty** uses a graphical user interface to set the
+is with `ssh username@remotehost`. An alternative is `ssh -l
+username remotehost`. If your local username is the same as your
+remote username, you needn't specify it on the command line, e.g. `ssh
+remotehost`. **putty** uses a graphical user interface to set the
 username and remotehost.
 
 We have a [variety of servers](../servers/login-servers.md) that you can login to,
@@ -58,7 +58,6 @@ login to arwen:
     Are you sure you want to continue connecting (yes/no)? yes
     Warning: Permanently added 'arwen.berkeley.edu,128.32.135.115' (RSA) to the list of known hosts.
     myusername@arwen.berkeley.edu's password: 
-    You have mail.
     ...
     arwen:~$ 
 

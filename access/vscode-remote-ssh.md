@@ -6,7 +6,7 @@ title: VS Code Remote SSH
 
 
 To connect to the SCF using VS Code,  you'll need to have installed the
-[Remote Development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) (which includes the [Remote SSH extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) for your local VS Code.  Then to
+[Remote Development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) (which includes the [Remote SSH extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)) for your local VS Code.  Then to
 connect to the SCF, click on the blue icon labelled `><` in the lower
 left corner and choose "Host", providing one of the
 [SCF login nodes](../servers/login-servers.md). You can then access your SCF files from within your local VS Code instance. 
