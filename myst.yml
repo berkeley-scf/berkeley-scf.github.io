@@ -90,3 +90,4 @@ site:
     folders: true
     logo: images/svg_Vertical_No_Endorser.svg
     analytics_google: G-X1NED2KST9
+    style: _static/custom.css
