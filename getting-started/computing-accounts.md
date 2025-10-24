@@ -120,9 +120,9 @@ not apply to class accounts.)
 
 ### For CalNet ID holders
 
-:::div center-button-container
++++ {"class": "center-button-container"}
 {button}`Complete our account request form <https://scf.berkeley.edu/account>`
-::: 
++++ 
 
 ### For those without a CalNet ID
 

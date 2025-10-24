@@ -27,9 +27,9 @@ Research Computing's Savio campus cluster and NERSC:
 
 :::
 
-:::{div} center-button-container
++++ {"class": "center-button-container"}
 {button}`Launch Globus Web App <https://app.globus.org/>`
-:::
++++
 
 The first time you connect to the endpoint, you will be offered the
 option to "Link an identity from UC Berkeley Statistics OIDC Auth".
