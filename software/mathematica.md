@@ -1,12 +1,19 @@
 ---
 title: "Mathematica"
 ---
+
+## Mathematica on the SCF
+
+Mathematica is available to anyone using any of the SCF machines, either invoking `mathematica` (for the GUI) or `math` for a simple command-line interface (CLI).
+
+
+## Mathematica on a personal machine
 Campus documents licensing information for Mathematica at [Software
 Central](https://software.berkeley.edu/mathematica). Faculty, staff, and
 students must complete a form linked there to request licenses for their
 devices.
 
-## Wolfram Alpha Pro
+## Wolfram Alpha Pro (Mathematica on the web)
 
 [Wolfram Alpha Pro](http://www.wolframalpha.com) provides web access to
 the kinds of computations you might do in the Mathematica application.

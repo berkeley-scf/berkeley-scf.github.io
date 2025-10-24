@@ -11,7 +11,7 @@ JupyterHub.
   processing power. You can also pass [Slurm job submission options](../servers/cluster/submitting.md) to your server and specify prologue
   commands that will run prior to your RStudio startup.
 - Once your Jupyter session is active, click RStudio from the Jupyter
-  Lab launcher. If you don't see the launcher, click `File \> New
+  Lab launcher. If you don't see the launcher, click `File > New
   Launcher`. All R packages installed on the system, as well as packages
   installed by users within their home directories should be available.
 

@@ -1,6 +1,14 @@
 ---
 title: MATLAB
 ---
+
+## MATLAB on the SCF
+
+MATLAB is available to anyone using any of the SCF machines.
+
+## MATLAB on a personal machine
+
+
 Campus has a site license that allows UC Berkeley faculty, researchers,
 and students to install and use Matlab on University-owned and
 personally-owned devices. Visitors can use MATLAB on University-owned
