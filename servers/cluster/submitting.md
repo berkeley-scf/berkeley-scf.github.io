@@ -11,15 +11,15 @@ discussed here:
 
 :::{table} Partition Restrictions
 :label: partition-restrictions
-| Partition      | Max \# cores per user (running) | Time limit            | Max CPU memory per job | Max cores per job |   |                    |        |                       |                                                                                        |        |
-|----------------|---------------------------------|-----------------------|--------------------|-------------------|---|--------------------|--------|-----------------------|----------------------------------------------------------------------------------------|--------|
-| low            | 256                             | 28 days               | 256 GB             | 32<sup>1</sup>     |   |                    |        |                       |                                                                                        |        |
-| high<sup>2</sup>    | 96                              | 7 days                | 128 GB             | 24<sup>1</sup>     |   |                    |        |                       |                                                                                        |        |
-| gpu<sup>2</sup>     | 8 CPU cores                     | 28 days               | 6 GB          | 8                 |   |                    |        |                       |                                                                                        |        |
-| epurdom<sup>2</sup> | 256                             | 28 days<sup>3</sup> |  528 GB             | 128<sup>1</sup>    |   | jsteinhardt<sup>2</sup> | varied | 28 days<sup>3</sup> | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)  | varied |
-| yugroup<sup>2</sup> | varied                          | 28 days<sup>3</sup> | varied        | varied            |   |                    |        |                       |                                                                                        |        |
-| yss<sup>2</sup>     | 32                              | 28 days<sup>3</sup> | 528 GB       | varied<sup>1</sup>     |   |                    |        |                       |                                                                                        |        |
-
+| Partition      | Max \# cores per user (running) | Time limit            | Max CPU memory per job | Max cores per job |
+|----------------|---------------------------------|-----------------------|--------------------|-------------------|
+| low            | 256                             | 28 days               | 256 GB             | 32<sup>1</sup>     |
+| high<sup>2</sup>    | 96                              | 7 days                | 128 GB             | 24<sup>1</sup>     |
+| gpu<sup>2</sup>     | 8 CPU cores                     | 28 days               | 6 GB          | 8                 |
+| epurdom<sup>2</sup> | 256                             | 28 days<sup>3</sup> |  528 GB             | 128<sup>1</sup>    | 
+| jsteinhardt<sup>2</sup> | varied | 28 days<sup>3</sup> | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)  | varied |
+| yugroup<sup>2</sup> | varied                          | 28 days<sup>3</sup> | varied        | varied            | 
+| yss<sup>2</sup>     | 224                            | 28 days<sup>3</sup> | 528 GB       | varied<sup>1</sup>     |
 
 :::
   
@@ -111,7 +111,7 @@ of a variety of types.
 ### High partition
 
 To submit jobs to the faster nodes in the high partition, you must
-include either the '--partition=high' or '-p high' flag. By default jobs
+include either the `--partition=high` or `-p high` flag. By default jobs
 will be run in the low partition. For example:
 
 :::{code} shell-session
@@ -177,7 +177,7 @@ using the cores/memory your job is using. However we don't expect this
 to happen too often given that the nodes have 64 cores (96 cores and 104
 cores in the cases of balrog and saruman, respectively) that can be
 shared amongst jobs. For example to request use of one of these nodes,
-which are labelled as 'manycore' nodes:
+which are labelled as `manycore` nodes:
 
 :::{code} shell-session
 arwen:~$ sbatch -p jsteinhardt -C manycore job.sh
@@ -290,7 +290,7 @@ So you could directly run Matlab, e.g., as follows:
 srun --pty --x11 matlab
 ```
 
-or you could add the --x11 flag when requesting an interactive shell
+or you could add the `--x11` flag when requesting an interactive shell
 session and then subsequently start a program that has a graphical
 interface.
 
@@ -301,7 +301,7 @@ cores, do the following (here we request 4 cores for our use):
 srun --pty --cpus-per-task 4 /bin/bash
 ```
 
-Note that "-c" is a shorthand for "--cpus-per-task".
+Note that `-c` is a shorthand for `--cpus-per-task`.
 
 To transfer files to the local disk of a specific node, you need to
 request that your interactive session be started on the node of interest
