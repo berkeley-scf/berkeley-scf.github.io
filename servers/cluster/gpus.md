@@ -31,7 +31,7 @@ of CPUs may be fully used before all the GPUs are used.
 
 To use the GPUs, you need to submit a job via our Slurm scheduling
 software. In doing so, you need to specifically request that your job
-use the GPU as follows using the 'gpus' flag (the older `--gres=gpu:1`
+use the GPU as follows using the `--gpus` flag (the older `--gres=gpu:1`
 syntax also works):
 
 ```{code} shell
@@ -80,7 +80,7 @@ original job and you can then use `nvidia-smi` commands, e.g.,
 nvidia-smi -q -d UTILIZATION,MEMORY -l 1
 ```
 
-There are many ways to [set up your code to use the GPU](/servers/gpu-servers).
+There are many ways to [set up your code to use the GPU](/servers/gpu-servers#software).
 
 In partitions with more than one GPU (which does not include the `gpu`
 partition), you can request multiple GPUs by replacing the "1" above
@@ -102,7 +102,7 @@ there are no longer GPUs available through the `high` partition.
 
 ## High-performance GPUs
 
-Additional GPUs have been obtained by several faculty research groups.
+Many additional GPUs have been obtained by several faculty research groups.
 Many of these GPUs have high performance (either in terms of speed or GPU
 memory).
 
