@@ -11,27 +11,27 @@ discussed here:
 
 :::{table} Partition Restrictions
 :label: partition-restrictions
-| Partition     | Max \# cores per user (running) | Time limit  | Max memory per job                                                                     | Max cores per job |
-|---------------|---------------------------------|-------------|----------------------------------------------------------------------------------------|-------------------|
-| low           | 256                             | 28 days     | 256 GB                                                                                 | 32[^parallel]          |
-| high[^high]        | 36                              | 7 days      | 128 GB                                                                                 | 24[^parallel]          |
-| gpu[^high]         | 8 CPU cores                     | 28 days     | 6 GB (CPU)                                                                             | 8                 |
-| jsteinhardt[^high] | varied                          | 28 days[^preemptible] | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various) (CPU) | varied            |
-| yugroup[^high]     | varied                          | 28 days[^preemptible] | varied (CPU)                                                                           | varied            |
-| yss[^high]         | 32                              | 28 days[^preemptible] | 528 GB (CPU)                                                                           | 32                |
-| epurdom[^high]     | 256                             | 28 days[^preemptible] |                                                                                        | 128[^parallel]         |
-| lowmem        | 144                             | 28 days     | 12-16 GB                                                                               | 16[^parallel]          |
+| Partition      | Max \# cores per user (running) | Time limit            | Max CPU memory per job | Max cores per job |   |                    |        |                       |                                                                                        |        |
+|----------------|---------------------------------|-----------------------|--------------------|-------------------|---|--------------------|--------|-----------------------|----------------------------------------------------------------------------------------|--------|
+| low            | 256                             | 28 days               | 256 GB             | 32<sup>1</sup>     |   |                    |        |                       |                                                                                        |        |
+| high<sup>2</sup>    | 96                              | 7 days                | 128 GB             | 24<sup>1</sup>     |   |                    |        |                       |                                                                                        |        |
+| gpu<sup>2</sup>     | 8 CPU cores                     | 28 days               | 6 GB          | 8                 |   |                    |        |                       |                                                                                        |        |
+| epurdom<sup>2</sup> | 256                             | 28 days<sup>3</sup> |  528 GB             | 128<sup>1</sup>    |   | jsteinhardt<sup>2</sup> | varied | 28 days<sup>3</sup> | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)  | varied |
+| yugroup<sup>2</sup> | varied                          | 28 days<sup>3</sup> | varied        | varied            |   |                    |        |                       |                                                                                        |        |
+| yss<sup>2</sup>     | 32                              | 28 days<sup>3</sup> | 528 GB       | varied<sup>1</sup>     |   |                    |        |                       |                                                                                        |        |
+
 
 :::
   
-[^high]: See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
-
-[^preemptible]: Preemptible
-
-[^parallel]: If you use software that can parallelize across multiple nodes
+[1] If you use software that can parallelize across multiple nodes
 (e.g., R packages that use MPI or the future package, Python's Dask or
 IPython Parallel, MATLAB, MPI), you can run individual jobs across more
 than one node. See [](#parallel-jobs).
+
+[2] See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
+
+[3] Preemptible when run at normal priority, as occurs for non-group members.
+
 
 ## Single-core jobs  
 

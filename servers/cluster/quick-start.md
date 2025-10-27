@@ -79,13 +79,13 @@ node. 
 
 We can start an interactive job with *srun*. This will start an
 interactive session that can use a single core (aka CPU) on one of the
-machines in our (default) low partition, which contains older machines.
+machines in our (default) high partition, which contains older machines.
 You'll see the prompt change, indicating you're now running on one of
-the cluster machines (a machine named *scf-sm10* in this case). 
+the cluster machines (a machine named *scf-sm20* in this case). 
 
 ```{code} shell-session
 paciorek@gandalf:~> srun --pty bash
-paciorek@scf-sm10:~> 
+paciorek@scf-sm20:~> 
 ```
 
 When you're done with your computation, make sure to exit out of the
@@ -95,11 +95,11 @@ interactive session
 exit
 ```
 
-We can instead start a job on the newer machines in the *high*
+We can instead start a job on our oldest machines in the *low*
 partition:
 
 ```{code} shell
-srun -p high --pty bash
+srun -p low --pty bash
 ```
 
 And we can start a job that needs four cores on a single machine using
