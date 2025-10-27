@@ -9,10 +9,9 @@ the cluster in a few ways:
 
 ## The Statistics Condo
 
-We have two regular and two GPU nodes (with a total of 8 GPUs, four per
-node) that serve as a beachhead onto the larger system. The nodes are
+We have two regular nodes that serve as a beachhead onto the larger system. The nodes are
 freely available to all members of the department and there is no yearly
-core-hour time limit. Please see the [Savio
+core-hour time limit. Note that they were purchased some years ago and are not fast. Please see the [Savio
 webpage](http://research-it.berkeley.edu/services/high-performance-computing)
 for instructions on getting an account and submitting jobs, and email
 <consult@stat.berkeley.edu> if you have questions. When filling out the
@@ -26,14 +25,12 @@ departmental condo.
 ### Submitting Jobs
 
 When submitting jobs to the condo nodes, specify the `co_stat` account
-and either the `savio2` or `savio2_gpu` partition. Note that the
-`savio2` partition is scheduled on a per-node basis, while the
-`savio2_gpu` partition is scheduled based on units of {1 GPU + 2 CPUs}.
+and the `savio2` partition. Note that the
+`savio2` partition is scheduled on a per-node basis.
 
-Examples:
+Example:
 
 - `sbatch -A co_stat -p savio2 my-job.sh`
-- `sbatch -A co_stat -p savio2_gpu -o log.txt --gres=gpu:1 --cpus-per-task 2 my-gpu-job.sh`
 
 ### Bursting
 
@@ -66,8 +63,7 @@ machine being used). If your job only utilizes 4 cores on the same
 exclusive access to the node, unless run in either the savio2_htc or
 savio2_gpu pools, which are scheduled on a per-core basis.
 
-Faculty members can request an FCA
-[here](https://research-it.berkeley.edu/services/high-performance-computing/faculty-computing-allowance).
+Faculty members can [request an FCA](https://research-it.berkeley.edu/services/high-performance-computing/faculty-computing-allowance).
 Once the FCA is created, researchers working with the faculty member
 (including graduate and undergraduate students, postdocs, and colleagues
 outside of Berkeley) can [request
@@ -81,7 +77,7 @@ at \$0.01/hour, e.g. \$2,000 for an additional 200,000 core hours.
 
 ## Storage
 
-Your Savio account has access to a 10 GB home directory, 200 GB of
+Your Savio account has access to a 50 GB home directory, 200 GB of
 shared project space (shared amongst all department members), and a
 large scratch area. You can purchase more if needed, including large
 amounts of disk space through the [condo storage
