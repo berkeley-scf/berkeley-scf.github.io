@@ -13,24 +13,22 @@ discussed here:
 :label: partition-restrictions
 | Partition      | Max \# cores per user (running) | Time limit            | Max CPU memory per job | Max cores per job |
 |----------------|---------------------------------|-----------------------|--------------------|-------------------|
+| high (default) | 96                              | 7 days                | 128 GB             | 24<sup>1</sup>     |
 | low            | 256                             | 28 days               | 256 GB             | 32<sup>1</sup>     |
-| high<sup>2</sup>    | 96                              | 7 days                | 128 GB             | 24<sup>1</sup>     |
 | gpu<sup>2</sup>     | 8 CPU cores                     | 28 days               | 6 GB          | 8                 |
 | epurdom<sup>2</sup> | 256                             | 28 days<sup>3</sup> |  528 GB             | 128<sup>1</sup>    | 
-| jsteinhardt<sup>2</sup> | varied | 28 days<sup>3</sup> | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)  | varied |
+| jsteinhardt<sup>2</sup> | varied | 28 days<sup>3</sup> | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)  | varied<sup>1</sup> |
 | yugroup<sup>2</sup> | varied                          | 28 days<sup>3</sup> | varied        | varied            | 
 | yss<sup>2</sup>     | 224                            | 28 days<sup>3</sup> | 528 GB       | varied<sup>1</sup>     |
 
 :::
   
-[1] If you use software that can parallelize across multiple nodes
+ - [1] If you use software that can parallelize across multiple nodes
 (e.g., R packages that use MPI or the future package, Python's Dask or
 IPython Parallel, MATLAB, MPI), you can run individual jobs across more
 than one node. See [](#parallel-jobs).
-
-[2] See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
-
-[3] Preemptible when run at normal priority, as occurs for non-group members.
+ - [2] See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
+ - [3] Preemptible when run at normal priority, as occurs for non-group members.
 
 
 ## Single-core jobs  
@@ -108,22 +106,12 @@ of a variety of types.
 (high-performance-partitions)=
 ## High Performance Partitions  
 
-### High partition
+### High partition vs. low partition
 
-To submit jobs to the faster nodes in the high partition, you must
-include either the `--partition=high` or `-p high` flag. By default jobs
-will be run in the low partition. For example:
+Both of these partitions have quite old machines.
 
-:::{code} shell-session
-arwen:~$ sbatch -p high job.sh
-Submitted batch job 380
-:::
-
-You can also submit interactive jobs to the high partition, by simply
-adding the flag to specify that partition in your *srun* invocation.
-
-Note that while these nodes are faster than the machines in the low
-partition, these nodes are also quite old and will generally be slower
+While the machines in the high partition are faster than the machines in the low
+partition, these machines are also quite old and will generally be slower
 than the machines in the partitions for specific lab groups and (on a
 per-core basis) than your laptop, particularly Apple Silicon Mac
 laptops.
