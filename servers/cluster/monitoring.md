@@ -7,7 +7,7 @@ commonly-needed information.
 
 ## How to Monitor Jobs  
 
-The SLURM command squeue provides info on job status:
+The Slurm command squeue provides info on job status:
 
     arwen:~$ squeue
                  JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)

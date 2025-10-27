@@ -4,9 +4,9 @@ title: "Linux Cluster"
 The SCF operates a Linux cluster as our primary resource for users for
 computational jobs.
 
-The cluster is managed by the SLURM queueing software. SLURM provides a
+The cluster is managed by the Slurm queueing software. Slurm provides a
 standard batch queueing system through which users submit jobs to the
-cluster. Jobs are typically submitted to SLURM using a user-defined
+cluster. Jobs are typically submitted to Slurm using a user-defined
 shell script that executes one's application code. Interactive use is
 also an option. Users may also query the cluster to see job status. As
 currently set up, the cluster is designed for processing single-core and

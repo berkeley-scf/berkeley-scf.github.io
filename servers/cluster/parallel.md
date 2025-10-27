@@ -1,7 +1,7 @@
 ---
 title: "Submitting Parallel Jobs"
 ---
-One can use SLURM to submit a variety of types of parallel code. Here is
+One can use Slurm to submit a variety of types of parallel code. Here is
 a set of potentially useful templates that we expect will account for
 most user needs. If you have a situation that does not fall into these
 categories or have questions about parallel programming, submitting jobs
@@ -173,12 +173,12 @@ should be running MATLAB on an SCF stand-alone server. 
 ## Parallelizing independent computations or jobs
 
 There are various ways to collect multiple computations or jobs and run
-them in parallel as one or more SLURM jobs.
+them in parallel as one or more Slurm jobs.
 
-- SLURM job arrays allow you to submit multiple jobs at once.
+- Slurm job arrays allow you to submit multiple jobs at once.
 - GNU parallel allows you to run multiple tasks in parallel within a
   job.
-- SLURM allows you to start multiple tasks in parallel in a job via
+- Slurm allows you to start multiple tasks in parallel in a job via
   srun.
 - Finally, you can use shell scripting to 'manually' automate job
   submission.
@@ -221,7 +221,7 @@ tophat BowtieIndex trans$SLURM_ARRAY_TASK_ID.fq
 GNU Parallel is a shell tool for executing jobs in parallel on one or
 multiple computers. It’s a helpful tool for automating the
 parallelization of multiple (often serial) jobs, in particular allowing
-one to group jobs into a single SLURM submission to take advantage of
+one to group jobs into a single Slurm submission to take advantage of
 the multiple cores on a given node of the cluster.
 
 For details, please see the Berkeley [Savio cluster documentation on
@@ -248,7 +248,7 @@ values 0, 1, 2, ...) between the different instances.
 ### Automating job submission
 
 The above approaches are more elegant, but you can also use UNIX shell
-tools to submit multiple SLURM jobs. Here are some approaches and
+tools to submit multiple Slurm jobs. Here are some approaches and
 example syntax. We've tested these a bit but email us if you have
 problems or find a better way to do this. (Of course you can also
 manually create lots of individual job submission scripts, each of which

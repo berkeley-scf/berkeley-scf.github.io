@@ -244,7 +244,7 @@ your parallelized code. 
 Here are a few that can be useful:
 
 ```{code} shell-session
-env | grep SLURM
+env | grep Slurm
 <snip>
 SLURM_CPUS_PER_TASK=4
 SLURM_NTASKS=3

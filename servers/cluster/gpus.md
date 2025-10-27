@@ -3,7 +3,7 @@ title: "GPU Jobs"
 ---
 
 The SCF hosts a number of GPUs, available only by submitting a job
-through our SLURM scheduling software. The GPUs are quite varied in
+through our Slurm scheduling software. The GPUs are quite varied in
 their hardware configurations (different generations of GPUS, with
 different speeds and GPU memory). We have [documented the GPU
 servers](../gpu-servers) to guide you in selecting which GPU you may want
@@ -29,7 +29,7 @@ of CPUs may be fully used before all the GPUs are used.
 
 ### Using GPUs
 
-To use the GPUs, you need to submit a job via our SLURM scheduling
+To use the GPUs, you need to submit a job via our Slurm scheduling
 software. In doing so, you need to specifically request that your job
 use the GPU as follows using the 'gpus' flag (the older `--gres=gpu:1`
 syntax also works):

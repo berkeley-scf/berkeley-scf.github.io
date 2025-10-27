@@ -11,11 +11,11 @@ servers and cluster and some solutions or workarounds.
 - **Your cluster job is stuck at the top of the queue and other jobs
   start before it**
   - Jobs requesting multiple cores may not start because not enough
-    cores become available at once. The SLURM scheduler will try to
+    cores become available at once. The Slurm scheduler will try to
     accumulate sufficient cores for your job to start, but other smaller
     jobs may start before yours if the scheduler determines that doing
     so will not delay the start of your job. Unfortunately, because we
-    don't require time limits, SLURM has limited information with which
+    don't require time limits, Slurm has limited information with which
     to make this determination. So particularly for jobs requesting many
     cores, this may happen. 
 - **R hangs when using profiling**

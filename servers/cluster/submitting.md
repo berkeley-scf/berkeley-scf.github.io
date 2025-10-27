@@ -102,7 +102,7 @@ R CMD BATCH --no-save simulate.R simulate.Rout
 (parallel-jobs)=
 ## Parallel Jobs  
 
-One can use SLURM to [submit parallel code](/servers/cluster/parallel)
+One can use Slurm to [submit parallel code](/servers/cluster/parallel)
 of a variety of types.
 
 (high-performance-partitions)=
