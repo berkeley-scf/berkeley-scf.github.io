@@ -6,13 +6,15 @@ title: "GPU Servers"
 
 The SCF can help with access to several GPU resources:
 
-The SCF operates one GPU available to all SCF users. You need to [use
+The SCF operates one GPU available to all SCF users on an equal basis and many other GPUs purchased by research groups available to non-group members at lower priorty. 
+
+You need to [use
 the SLURM scheduling software](cluster/gpus.md) to run
 any job making use of the GPU. You may want to use an interactive
 session to develop and test your GPU code. That same link also has
 information on monitoring GPU usage of your job.
 
-### General Access
+### General Access GPUs
 
 #### *GPU* partition
 
@@ -27,7 +29,7 @@ computing
 allowance](http://research-it.berkeley.edu/services/high-performance-computing/faculty-computing-allowance).
 Please contact SCF staff for more information.
 
-### Research Groups
+### Research Group GPUs
 
 The SCF also operates the following GPUs. These GPUs are owned by
 individual faculty members, but anyone can run jobs on them. If you are
@@ -37,28 +39,28 @@ These servers can be accessed by submitting to the *jsteinhardt*,
 *yugroup*, *yss,* or *songmei* partitions using the [SLURM scheduling
 software](cluster.md).
 
-| Partition     | Machine Name            | GPU Type            | GPU Memory |
-|---------------|-------------------------|---------------------|------------|
-| `jsteinhardt` | `balrog`                | A100                | 40 GB      |
-| `jsteinhardt` | `saruman`               | A100                | 80 GB      |
-| `jsteinhardt` | `rainbowquartz`         | A5000               | 24 GB      |
-| `jsteinhardt` | `smokyquartz`           | A4000               | 16 GB      |
-| `jsteinhardt` | `sunstone`              | A4000               | 16 GB      |
-| `jsteinhardt` | `smaug`                 | Quadro RTX 8000     | 48 GB      |
-| `jsteinhardt` | `shadowfax`             | GeForce RTX 2080 Ti | 11 GB      |
-| `lambda`      | Remote cluster[^lambda] | A100                | 80 GB      |
-| `yugroup`     | `treebeard`             | A100                | 40 GB      |
-| `yugroup`     | `merry`                 | GeForce GTX TITAN X | 12 GB      |
-| `yugroup`     | `morgoth`               | Titan Xp            | 12 GB      |
-| `yugroup`     | `morgoth`               | Titan X (Pascal)    | 12 GB      |
-| `yss`         | `luthien`               | A100                | 80 GB      |
-| `yss`         | `beren`                 | A100                | 80 GB      |
-| `songmei`     | `feanor`[^fqdn]         | H200                | 144 GB     |
-| `berkeleynlp` | `lorax`[^fqdn]          | H200                | 144 GB     |
+| Partition     | Machine Name            | GPU Type (Number)    | GPU Memory |
+|---------------|-------------------------|----------------------|------------|
+| `jsteinhardt` | `balrog`                | A100 (8)             | 40 GB      |
+| `jsteinhardt` | `saruman`               | A100 (10)            | 80 GB      |
+| `jsteinhardt` | `rainbowquartz`         | A5000 (8)            | 24 GB      |
+| `jsteinhardt` | `smokyquartz`           | A4000 (8)            | 16 GB      |
+| `jsteinhardt` | `sunstone`              | A4000 (8)            | 16 GB      |
+| `jsteinhardt` | `smaug`                 | Quadro RTX 8000      | 48 GB      |
+| `jsteinhardt` | `shadowfax`             | GeForce RTX2080Ti (8)| 11 GB      |
+| `lambda`      | Remote cluster [1]      | A100 (40)            | 80 GB      |
+| `yugroup`     | `treebeard`             | A100 (1)             | 40 GB      |
+| `yugroup`     | `merry`                 | GeForce GTX TITANX(1)| 12 GB      |
+| `yugroup`     | `morgoth`               | Titan Xp (1)         | 12 GB      |
+| `yugroup`     | `morgoth`               | Titan X (Pascal) (1) | 12 GB      |
+| `yss`         | `luthien`               | A100 (4)             | 80 GB      |
+| `yss`         | `beren`                 | A100 (8)             | 80 GB      |
+| `songmei`     | `feanor`[2]             | H200 (8)             | 144 GB     |
+| `berkeleynlp` | `lorax`[2]              | H200 (8)             | 144 GB     |
 
-[^lambda]: To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster),
+[1]: To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster),
 which is accessed separately from the other SCF resources.
-[^fqdn]: Requires the fully qualified domain name, e.g. `{hostname}.stat.berkeley.edu`.
+[2]: Requires the fully qualified domain name, e.g. `{hostname}.stat.berkeley.edu`.
 
 ## Software
 
@@ -78,11 +80,7 @@ the GPU:
 - We can install additional or upgrade current software as needed. 
 
 We use Linux [environment modules](../kb/environment-modules.md) to
-manage the use of GPU-based software, as discussed next. Note that you
-could insert any of these commands in your .bashrc (after the stanza
-involving `~skel/std.bashrc`) so they are always in effect or invoke them
-as needed in a script (including a cluster submission script) or in a
-terminal session.
+manage the use of some GPU-based software, as seen below. 
 
 For use Python packages that use the GPU for back-end computations,
 simply import the package in Python.

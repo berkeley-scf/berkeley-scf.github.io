@@ -13,9 +13,9 @@ The stand-alone servers include arwen (16 cores), gandalf (8), ghan (4),
 gollum (4), hermione (6), quidditch (8), radagast (8), shelob (8).
 
 To connect to machines, please use [SSH](../access/ssh.md), [remote
-desktop](../access/remote-desktop.md), or our
+desktop](../access/remote-desktop.md), [VS Code](../access/vscode-remote-ssh.md), or our
 [JupyterHub](../access/jupyterhub.md) (which includes a Terminal
-application). When ssh'ing, you would enter their fully qualified names,
+application). When ssh'ing from outside campus, you would enter their fully qualified names,
 e.g., `gandalf.berkeley.edu`.
 
 Their names can be listed on any SCF machine by typing `sitehosts
