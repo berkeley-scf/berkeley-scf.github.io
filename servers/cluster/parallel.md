@@ -9,9 +9,8 @@ to use more than one core, or are not sure how to follow these rules,
 please email <consult@stat.berkeley.edu>.
 
 For additional details, please see [our tutorial on the basics of
-parallel programming in R, Python, Matlab and
-C](https://berkeley-scf.github.io/tutorial-parallelization), with some
-additional details on using the cluster. If you're making use of
+parallel programming in R, Python, MATLAB and
+C](https://computing.stat.berkeley.edu/tutorial-parallelization) or [our tutorial on the Dask package in Python and the futurep package in R](https://computing.stat.berkeley.edu/tutorial-dask-future). If you're making use of
 the [threaded BLAS](/blas), it's worth doing some testing to
 make sure that threading is giving an non-negligible speedup; see the
 notes above for more information.
@@ -28,15 +27,15 @@ R CMD BATCH --no-save simulate.R simulate.Rout
 ```
 
 This will allow your R code to use the system's threaded BLAS and LAPACK
-routines. Note that in R you can instead use the omp_set_num_threads()
-function in the RhpcBLASctl package, again making use of the
-SLURM_CPUS_PER_TASK environment variable. The same syntax in your job
+routines. Note that in R you can instead use the `omp_set_num_threads()`
+function in the `RhpcBLASctl` package, again making use of the
+`SLURM_CPUS_PER_TASK` environment variable. The same syntax in your job
 script will work if you've compiled a C/C++/Fortran program that makes
-use of openMP for threading. Just replace the R CMD BATCH line with the
+use of openMP for threading. Just replace the `R CMD BATCH` line with the
 line calling your program.
 
 Here's an example job script to use multiple threads (4 in this case) in
-Matlab:
+MATLAB:
 
 ```{code} bash
 #!/bin/bash
@@ -47,9 +46,7 @@ matlab -nodesktop -nodisplay < simulate.m > simulate.out
 ## Multi-core (one node) jobs
 The following example job script files pertain to jobs that need to use
 multiple cores on a single node that do not fall under the
-threading/openMP context. This is relevant for parallel code in R that
-starts multiple R process (e.g., foreach, mclapply, parLapply), for
-parfor in Matlab, and for Pool.map and pp.Server in Python.
+threading/openMP context. This is includes most packages for parallelization in Python and R, as well as `parfor` in MATLAB.
 
 Note that because we have enabled hyperthreading on the machines, each
 core is actually a virtual core (hardware thread), and so code may not
@@ -66,10 +63,10 @@ R CMD BATCH --no-save simulate.R simulate.Rout
 
 In general, in your R, Python, or any other code, you wouldn't want to
 have more worker processes than the number of total cores requested (4
-in this case). You can use the SLURM_CPUS_PER_TASK environment variable
+in this case). You can use the `SLURM_CPUS_PER_TASK` environment variable
 to programmatically control this.
 
-Note that in R, you should not use the \`detectCores()\` function (from
+Note that in R, you should not use the `detectCores()` function (from
 the parallel package) as this detects the number of cores physically on
 the node, not the number available via Slurm for your job. You will end
 up starting too many processes (more than the number of cores
@@ -109,9 +106,7 @@ c.parpool(str2num(getenv('SLURM_NTASKS')));
 
 ## Multi-node (distributed memory) jobs
 
-You can use MPI to run jobs across multiple nodes. Alternatively, there
-are ways to run software such as Python and R across multiple nodes.
-This is useful in two ways. First, it allows you to use more cores for a
+There are ways to run software such as Python and R across multiple nodes (in particular using the Dask and future packages, respectively), as well as Julia and MATLAB. One can also use MPI to run a job across multiple nodes. This is useful in two ways. First, it allows you to use more cores for a
 single job than are available on a single node. Second, if you need
 fewer cores but the free cores are scattered across the nodes and there
 are not sufficient cores on any one node, this allows you to make use of
@@ -173,7 +168,7 @@ should be running MATLAB on an SCF stand-alone server. 
 ## Parallelizing independent computations or jobs
 
 There are various ways to collect multiple computations or jobs and run
-them in parallel as one or more Slurm jobs.
+them in parallel as one or more Slurm jobs. See the subsections below for more details on each of these options.
 
 - Slurm job arrays allow you to submit multiple jobs at once.
 - GNU parallel allows you to run multiple tasks in parallel within a
@@ -200,9 +195,8 @@ myExecutable
 
 Your program should then make use of the SLURM_ARRAY_TASK_ID environment
 variable, which for a given job will contain one of the values from the
-set given with the -a flag (in this case from {0,1,2,5,7}). You could,
-for example, read SLURM_ARRAY_TASK_ID into your R, Python, Matlab, or C
-code.
+set given with the `-a` flag (in this case from {0,1,2,5,7}). You could,
+for example, read `SLURM_ARRAY_TASK_ID` into your R, Python, etc. code.
 
 Here's a concrete example where it's sufficient to use
 SLURM_ARRAY_TASK_ID to distinguish different input files if you need to
@@ -241,7 +235,7 @@ srun myExecutable
 ```
 
 To have each instance behave differently, you can make use of the
-SLURM_PROCID environment variable, which will be distinct (and have
+`SLURM_PROCID` environment variable, which will be distinct (and have
 values 0, 1, 2, ...) between the different instances.
 
 (automating-submission)=
@@ -271,30 +265,30 @@ done
 :::
 
 You now have a couple options in terms of how `job.sh` is specified. This
-illustrates things for Matlab jobs, but it shouldn't be too hard to
+illustrates things for MATLAB jobs, but it shouldn't be too hard to
 modify for other types of jobs.
 
 #### Option 1
 
-In this case myMatlabCode.m would use the variables 'it' and 'mode' but
+In this case `myMATLABCode.m` would use the variables `it` and `mode` but
 not define them.
 :::{code} bash
 # contents of job.sh
-echo "it = $1; mode = '$2'; myMatlabCode" > tmp-$1-$2.m
+echo "it = $1; mode = '$2'; myMATLABCode" > tmp-$1-$2.m
 matlab -nodesktop -nodisplay -singleCompThread < tmp-$1-$2.m > tmp-$1-$2.out 2> tmp-$1-$2.err
 :::
 
 
 #### Option 2
 
-In this case you need to insert the following Matlab code at the start
-of myMatlabCode.m so that Matlab correctly reads the values of 'it' and
-'mode' from the UNIX environment variables:
+In this case you need to insert the following MATLAB code at the start
+of myMATLABCode.m so that MATLAB correctly reads the values of `it` and
+`mode` from the UNIX environment variables:
 
 :::{code} bash
 # contents of job.sh
 export it=$1; export mode=$2;
-matlab -nodesktop -nodisplay -singleCompThread < myMatlabCode.m > tmp-$1-$2.out 2> tmp-$1-$2.err
+matlab -nodesktop -nodisplay -singleCompThread < myMATLABCode.m > tmp-$1-$2.out 2> tmp-$1-$2.err
 :::
 
 :::{code} matlab

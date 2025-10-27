@@ -272,7 +272,7 @@ srun -t 2-00:00:00 --pty /bin/bash
 
 If you want to run a program that involves a graphical interface
 (requiring an X11 window), you need to add --x11 to your srun command.
-So you could directly run Matlab, e.g., as follows:
+So you could directly run MATLAB, e.g., as follows:
 
 ```{code} shell
 srun --pty --x11 matlab

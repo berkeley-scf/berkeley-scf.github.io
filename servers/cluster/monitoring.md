@@ -3,11 +3,12 @@ title: Job Monitoring
 ---
 You can monitor jobs on the cluster and usage of the different
 partitions. We also provide several useful commands that give
-commonly-needed information.
+commonly-needed information. You can also use [our Grafana dashboard](https://grafana.stat.berkeley.edu/d/bX7jn6dZk/6-slurm)
+.
 
 ## How to Monitor Jobs  
 
-The Slurm command squeue provides info on job status:
+The Slurm command `squeue` provides info on job status:
 
     arwen:~$ squeue
                  JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
@@ -31,7 +32,7 @@ pending (PD). The latter occurs when there are not yet enough resources
 on the system for your job to run.
 
 Job output that would normally appear in your terminal session will be
-sent to a file named slurm-{jobid}.out where {jobid} will be the
+sent to a file named `slurm-<jobid>.out` where `<jobid>` will be the
 number of the job (visible via squeue as above).
 
 If you would like to login to the node on which your job is running in
@@ -53,7 +54,7 @@ squeue and insert that in place of {jobid} in the following command:
 
     arwen:~$ srun --pty --jobid=<jobid> /bin/bash
 
-In either case, you can then run top and other tools. 
+In either case, you can then run `top` and other tools. 
 
 To see a history of your jobs (within a time range), including reasons
 they might have failed:
@@ -61,7 +62,7 @@ they might have failed:
     sacct  --starttime=2021-04-01 --endtime=2021-04-30 \
     --format JobID,JobName,Partition,Account,AllocCPUS,State%30,ExitCode,Submit,Start,End,NodeList,MaxRSS
 
-The MaxRSS column indicates memory usage, which can be very useful.
+The `MaxRSS` column indicates memory usage, which can be very useful.
 
 ## How to Monitor Cluster Usage  
 
@@ -117,7 +118,16 @@ To see GPU availability, you can use `sgpus`, which is an alias for
     merry          yugroup       GTX:1     GTX:1        
     treebeard      yugroup       A100:1    A100:1       
 
-## Useful Slurm commands  
+## Historical Utilization
+
+Faculty (or perhaps other) hoping to understand aggregate use of a partition over time can use our `susage` utility. Here are examples of using over the first six months of 2025 in the `epurdom` partition or of GPU usage in the `yss` partition.
+
+:::{code} bash
+susage -p epurdom -S 2025-01-01 -E 2025-06-30 --mode cpu
+susage -p jsteinhardt -S 2025-01-01 -E 2025-06-30 --mode gpu
+:::
+
+## Useful Slurm Commands  
 
 We've prepared a set of shortcut commands that wrap around `srun`,
 `squeue`, `sinfo`, and `sacct` with some commonly-used options:
@@ -127,7 +137,8 @@ We've prepared a set of shortcut commands that wrap around `srun`,
  - `sjobs`: lists running jobs on the cluster
  - `shist`: provides information about completed (including failed) jobs
  - `sassoc`: gives information about user access to cluster partitions
- - `sgpus`: gives information about GPU availability.
+ - `sgpus`: gives information about GPU availability
+ - `susage`: gives information about historical aggregate usage in a partition
 
 For each of these commands, you can add the `-h` flag to see how to
 use them. For example:
