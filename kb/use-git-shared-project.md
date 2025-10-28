@@ -35,7 +35,7 @@ where *REPO_NAME* is the name of the repository.
 
 ## Accessing the repository using SSH keypairs
 
-Collaborators should see [our instructions](../access/ssh/ssh-keys.md)
+Collaborators should see [our instructions](./kb/ssh-keys.md)
 on creating SSH keypairs</a>. Once you send your public key to
 <manager@stat.berkeley.edu> , we can deposit it into the project
 account. You will then be able to begin working with the data by cloning

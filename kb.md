@@ -8,7 +8,7 @@ see a topic that you are interested in, please enter some search terms
 at the top right of this site.
 
 :::{listing}
-:contents: {kb,servers/cluster,access/copying-files,access/ssh}/*.md
+:contents: kb/*.md
 :type: table
 :sort: title
 :::
