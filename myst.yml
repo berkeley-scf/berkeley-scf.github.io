@@ -1,5 +1,7 @@
 version: 1
 project:
+  id: b4e4b462-8a5e-486e-8151-c80725d15ab0
+  title: Computing in Statistics at Berkeley
   toc:
     - file: index.md
     - file: getting-started.md
@@ -77,14 +79,17 @@ project:
   github: https://github.com/berkeley-scf/berkeley-scf.github.io
   license:
     content: CC-BY-4.0
+
 site:
   template: book-theme
-  title: "Computing in the Department of Statistics"
-  domains:
-    - computing.stat.berkeley.edu
+  title: Computing in Statistics at Berkeley
   options:
-    #favicon: images/logo/favicon.ico
-    folders: true
     logo: images/svg_Vertical_No_Endorser.svg
     analytics_google: G-X1NED2KST9
     style: _static/custom.css
+    folders: true
+  domains:
+    - computing.stat.berkeley.edu
+
+  parts:
+    footer: footer.md

@@ -1,3 +1,32 @@
 .center-button-container {
   text-align: center;
 }
+
+.footer {
+  flex-shrink: 0;
+  background: #2c5873;
+  color: white;
+
+  padding-top: 0.1em;
+
+  list-style: none;
+
+  /* Heading colours */
+  a, h1, h2 {
+    color: white;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-top: 1em;
+  }
+
+  .logo {
+    padding-top: 0;
+  }
+}
+
+.small {
+  font-size: 0.85em;
+}
