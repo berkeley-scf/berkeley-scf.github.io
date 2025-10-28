@@ -52,7 +52,7 @@ are where I overrode the default values:
   - Host: *machine-name.berkeley.edu*
   - Login: *YOUR SCF LOGIN*
   - Enable "*Try auto login (ssh-agent or default ssh key)*" if you use
-    ssh-agent to connect to the SCF [without your password](/kb/ssh-keys.md).
+    ssh-agent to connect to the SCF [without your password](/kb/ssh-keys).
     If you do not enable this you will be prompted to enter your SCF
     password when connecting.
   - Session type: *XFCE*
