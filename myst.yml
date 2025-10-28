@@ -11,9 +11,6 @@ project:
     - file: access.md
       children:
         - file: access/ssh.md
-          children:
-            - file: kb/ssh-keys.md
-            - file: kb/ssh-tunnel.md
         - file: access/jupyterhub.md
         - file: access/vscode-remote-ssh.md
         - file: access/remote-desktop.md
