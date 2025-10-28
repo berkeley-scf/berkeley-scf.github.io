@@ -84,4 +84,4 @@ on the blocked machine. You can also just connect to any other SCF
 machine where you are not blocked.
 
 You can reduce the number of unsuccessful SSH attempts by setting up
-[public key authentication with SSH keys](./kb/ssh-keys.md).
+[public key authentication with SSH keys](/kb/ssh-keys).

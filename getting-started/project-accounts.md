@@ -16,7 +16,7 @@ files from the system.
 To facilitate shared workspaces without introducing such problems, we
 create project accounts. They are shared accounts that multiple people
 may access. All files in the account are owned by it and not by others.
-Typically access is configured through [SSH keys](./kb/ssh-keys.md). You
+Typically access is configured through [SSH keys](/kb/ssh-keys). You
 cannot transfer files directly from your own account via `cp` -- you will
 need to use `scp` or some other network transfer program.
 
