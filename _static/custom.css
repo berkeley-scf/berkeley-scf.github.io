@@ -4,29 +4,68 @@
 
 .footer {
   flex-shrink: 0;
-
-  /* https://brand.berkeley.edu/visual-identity/colors/ */
-  background: #010133;
-  color: white;
-
   padding-top: 0.1em;
+}
 
-  list-style: none;
+.footer .logo {
+  padding-top: 0;
+}
 
-  /* Heading colours */
-  a, h1, h2 {
-    color: white;
-  }
-
-  h1 {
+.footer h1 {
     font-size: 1.25rem;
     font-weight: bold;
     padding-top: 1em;
-  }
+}
 
-  .logo {
-    padding-top: 0;
-  }
+/* https://brand.berkeley.edu/visual-identity/colors/ */
+
+/* Light mode links outside of nav */
+html:not(.dark) body a {
+  color: #004AAE; /* Blue Medium */
+  text-decoration: underline;
+}
+
+/* Then override links inside nav back to default */
+html:not(.dark) nav a {
+  color: inherit;  /* keep nav text color (usually black) */
+  text-decoration: none; /* optional */
+}
+
+/* Dark mode links outside of nav */
+html.dark body a {
+  color: #FC9313;  /* Gold Dark */
+  text-decoration: underline;
+}
+
+/* Override links inside nav back to default */
+html.dark nav a {
+  color: inherit;  /* keep nav text color (usually white) */
+  text-decoration: none;
+}
+
+
+/* Light mode */
+html:not(.dark) .footer {
+  background: #010133; /* Berkeley navy */
+  color: white;
+}
+
+html:not(.dark) .footer a,
+html:not(.dark) .footer h1,
+html:not(.dark) .footer h2 {
+  color: white;
+}
+
+/* Dark mode */
+html.dark .footer {
+  background: #004AAE; /* light gray background for dark mode */
+  color: #f2f2f2;       /* dark navy text */
+}
+
+html.dark .footer a,
+html.dark .footer h1,
+html.dark .footer h2 {
+  color: #fc9313;
 }
 
 .small {
