@@ -4,37 +4,50 @@
 
 /* https://brand.berkeley.edu/visual-identity/colors/ */
 
-/* Light mode links outside of nav */
-html:not(.dark) body a {
+/* ================================
+   LINK COLORS
+   ================================ */
+
+/* ---------- LIGHT MODE ---------- */
+
+/* Links outside nav and not buttons */
+html:not(.dark) body a:not(.button) {
   color: #004AAE; /* Blue Medium */
   text-decoration: underline;
 }
-html:not(.dark) body a:visited {
-  color: #431170; /* Purple Dark — distinct but accessible */
+html:not(.dark) body a:not(.button):visited {
+  color: #431170; /* Purple Dark */
 }
 
-/* Exclude nav links (visited and unvisited) */
-html:not(.dark) nav a,
-html:not(.dark) nav a:visited {
-  color: inherit;       /* keep nav text color (usually black) */
-  text-decoration: none; /* optional */
+/* Explicitly override nav links */
+html:not(.dark) body nav a,
+html:not(.dark) body nav a:visited {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
-/* Dark mode links outside of nav */
-html.dark body a {
+
+/* ---------- DARK MODE ---------- */
+
+/* Links outside nav and not buttons */
+html.dark body a:not(.button) {
   color: #FC9313; /* Gold Dark */
   text-decoration: underline;
 }
-html.dark body a:visited {
+html.dark body a:not(.button):visited {
   color: #FFC31B; /* Gold Medium */
 }
 
-/* Exclude nav links (visited and unvisited) */
-html.dark nav a,
-html.dark nav a:visited {
-  color: inherit;       /* keep nav text color (usually white) */
-  text-decoration: none;
+/* Explicitly override nav links */
+html.dark body nav a,
+html.dark body nav a:visited {
+  color: inherit !important;
+  text-decoration: none !important;
 }
+
+/* ================================
+   FOOTER STYLES
+   ================================ */
 
 .footer {
   flex-shrink: 0;
