@@ -13,6 +13,12 @@
 :align: left
 ```
 
+:::{div .small}
+[Accessibility](https://dap.berkeley.edu/get-help/report-web-accessibility-issue) |
+[Nondiscrimination](https://ophd.berkeley.edu/policies-and-procedures/nondiscrimination-policy-statement) |
+[Privacy](https://statistics.berkeley.edu/privacy-statement)
+:::
+
 ::::
 
 ::::{div}
@@ -21,12 +27,6 @@
 367 Evans Hall, University of California  
 Berkeley, CA 94720-3860  
 T 510-642-2781 | F 510-642-7892  
-
-:::{div .small}
-[Accessibility](https://dap.berkeley.edu/get-help/report-web-accessibility-issue) |
-[Nondiscrimination](https://ophd.berkeley.edu/policies-and-procedures/nondiscrimination-policy-statement) |
-[Privacy](https://statistics.berkeley.edu/privacy-statement)
-:::
 
 ::::
 
