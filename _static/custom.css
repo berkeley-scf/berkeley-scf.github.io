@@ -25,6 +25,11 @@ html:not(.dark) body a {
   text-decoration: underline;
 }
 
+/* Light mode visited links */
+html:not(.dark) body a:visited {
+  color: #431170; /* Purple Dark – distinct but on-brand */
+}
+
 /* Then override links inside nav back to default */
 html:not(.dark) nav a {
   color: inherit;  /* keep nav text color (usually black) */
@@ -35,6 +40,11 @@ html:not(.dark) nav a {
 html.dark body a {
   color: #FC9313;  /* Gold Dark */
   text-decoration: underline;
+}
+
+/* Dark mode visited links */
+html.dark body a:visited {
+  color: #FFC31B;  /* Gold Medium – slightly lighter, accessible */
 }
 
 /* Override links inside nav back to default */
@@ -58,8 +68,8 @@ html:not(.dark) .footer h2 {
 
 /* Dark mode */
 html.dark .footer {
-  background: #004AAE; /* light gray background for dark mode */
-  color: #f2f2f2;       /* dark navy text */
+  background: #004AAE; /* Blue Medium - contrats with black content */
+  color: #f2f2f2;      /* Light grey for readability */
 }
 
 html.dark .footer a,
