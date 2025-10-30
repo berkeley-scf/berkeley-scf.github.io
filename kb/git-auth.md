@@ -41,7 +41,7 @@ will no longer allow usage of a password alone.
 
 You can create a token using [these
 instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) or
-simply  go [here](https://github.com/settings/tokens). If you're just
+simply  go [to the GitHub tokens page](https://github.com/settings/tokens). If you're just
 interacting with repositories, you probably want to simply select 'repo'
 as the "scope". 
 
@@ -80,11 +80,11 @@ To check if the credential helper is set up:
 
 ## SSH keys
 
-To use SSH, you need to put your SSH public key in your GitHub account.
-Your public key file is found in the ~/.ssh directory on a Mac or Linux
-machine and will generally be a file ending in .pub. Go to
+To use SSH, you need to put [your SSH public key](/kb/ssh-keys) in your GitHub account.
+Your public key file is found in the `~/.ssh` directory on a Mac or Linux
+machine (or Windows via Git bash or the Windows Subsystem for Linux) and will generally be a file ending in `.pub`. Go to
 <https://github.com/settings/keys> and copy/paste your public key from
-the public key file.
+the public key file. 
 
 You can then clone a repository using syntax of either of the following
 types:

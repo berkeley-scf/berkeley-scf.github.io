@@ -10,7 +10,7 @@ please email <consult@stat.berkeley.edu>.
 
 For additional details, please see [our tutorial on the basics of
 parallel programming in R, Python, MATLAB and
-C](https://computing.stat.berkeley.edu/tutorial-parallelization) or [our tutorial on the Dask package in Python and the futurep package in R](https://computing.stat.berkeley.edu/tutorial-dask-future). If you're making use of
+C](https://computing.stat.berkeley.edu/tutorial-parallelization) or [our tutorial on the Dask package in Python and the future package in R](https://computing.stat.berkeley.edu/tutorial-dask-future). If you're making use of
 the [threaded BLAS](/blas), it's worth doing some testing to
 make sure that threading is giving an non-negligible speedup; see the
 notes above for more information.
@@ -141,7 +141,7 @@ this case):
 mpirun myMPIexecutable
 ```
 
-"myMPIexecutable" could be C/C++/Fortran code you've written that uses
+`myMPIexecutable` could be C/C++/Fortran code you've written that uses
 MPI, or R or Python code that makes use of MPI. More details are
 available [here](/parallel).
 
