@@ -8,7 +8,7 @@
 
 ::::{div .logo}
 
-```{image} ./images/BERK_FOOTER.svg
+```{image} ./images/logo-uc-berkeley.svg
 :width: 200px
 :align: left
 ```
