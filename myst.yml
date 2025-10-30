@@ -84,7 +84,7 @@ site:
   template: book-theme
   title: Computing in Statistics at Berkeley
   options:
-    logo: images/svg_Vertical_No_Endorser.svg
+    logo: images/lockup-blue-medium-on-white-small.svg
     #logo_text: Computing in Statistics at Berkeley
     analytics_google: G-X1NED2KST9
     style: _static/custom.css
