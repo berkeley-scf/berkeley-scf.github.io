@@ -2,21 +2,6 @@
   text-align: center;
 }
 
-.footer {
-  flex-shrink: 0;
-  padding-top: 0.1em;
-}
-
-.footer .logo {
-  padding-top: 0;
-}
-
-.footer h1 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-top: 1em;
-}
-
 /* https://brand.berkeley.edu/visual-identity/colors/ */
 
 /* Light mode links outside of nav */
@@ -24,41 +9,48 @@ html:not(.dark) body a {
   color: #004AAE; /* Blue Medium */
   text-decoration: underline;
 }
-
-/* Light mode visited links */
 html:not(.dark) body a:visited {
-  color: #431170; /* Purple Dark – distinct but on-brand */
+  color: #431170; /* Purple Dark — distinct but accessible */
 }
 
-/* Then override links inside nav back to default */
-html:not(.dark) nav a {
-  color: inherit;  /* keep nav text color (usually black) */
+/* Exclude nav links (visited and unvisited) */
+html:not(.dark) nav a,
+html:not(.dark) nav a:visited {
+  color: inherit;       /* keep nav text color (usually black) */
   text-decoration: none; /* optional */
 }
 
 /* Dark mode links outside of nav */
 html.dark body a {
-  color: #FC9313;  /* Gold Dark */
+  color: #FC9313; /* Gold Dark */
   text-decoration: underline;
 }
-
-/* Dark mode visited links */
 html.dark body a:visited {
-  color: #FFC31B;  /* Gold Medium – slightly lighter, accessible */
+  color: #FFC31B; /* Gold Medium */
 }
 
-/* Override links inside nav back to default */
-html.dark nav a {
-  color: inherit;  /* keep nav text color (usually white) */
+/* Exclude nav links (visited and unvisited) */
+html.dark nav a,
+html.dark nav a:visited {
+  color: inherit;       /* keep nav text color (usually white) */
   text-decoration: none;
 }
 
+.footer {
+  flex-shrink: 0;
+  padding-top: 0.1em;
 
-/* Light mode */
-html:not(.dark) .footer {
-  background: #010133; /* Berkeley navy */
-  color: white;
+  h1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-top: 1em;
+  }
+
+  .logo {
+    padding-top: 0;
+  }
 }
+
 
 html:not(.dark) .footer a,
 html:not(.dark) .footer h1,
