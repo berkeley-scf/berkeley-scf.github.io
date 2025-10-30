@@ -4,7 +4,9 @@
 
 .footer {
   flex-shrink: 0;
-  background: #2c5873;
+
+  /* https://brand.berkeley.edu/visual-identity/colors/ */
+  background: #010133;
   color: white;
 
   padding-top: 0.1em;
