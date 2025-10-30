@@ -35,17 +35,18 @@
 
 /* Change the background of the top region. */
 
+/*
 body > div:nth-child(2) {
-  /* background color */
   background-color: #9FD1FF !important;
 
-  /* drop shadow */
   box-shadow: 0 6px 9px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 
   padding: 1em 1em 3.5em 1em;
 }
+*/
 
 /* Target the main header/navbar */
+
 /*
 header, .header, nav {
   background-color: #00FF00 !important;
