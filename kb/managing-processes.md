@@ -43,17 +43,21 @@ If the first form does not kill your process, try
 kill -9 PID
 :::
 
-To kill all your background processes, execute:
+To kill all processes in your current process group (including your shell
+session), execute:
 
 :::{code} shell-session
 kill 0
 :::
 
+Note: This is rarely needed and will terminate your shell session. To kill
+only background jobs, use `jobs -p | xargs kill` instead.
+
 ## Input and Output
 
 Most programs initially inherit the current terminal or pseudo-terminal
 for doing input and output. This means that these programs have a
-'controlling terminal'. The controlling terminal', and therefore all
+'controlling terminal'. The 'controlling terminal', and therefore all
 output, is lost if you logout before your background job completes. To
 avoid this loss, you should either code your program to read all input
 and write all output to specific files, or your should redirect input
@@ -64,7 +68,7 @@ It is recommended that you redirect standard output and standard error
 to a log file for all programs run in the background. For example:
 
 :::{code} shell-session
-myprog >& logfile &
+myprog > logfile 2>&1 &
 :::
 
 will run `myprog` in the background, redirecting all output to the file
@@ -85,10 +89,10 @@ running time? and How do I capture the program output which would
 normally go to the screen?. Here is one simple way to do both (as:
 
 :::{code} shell-session
-% nice -n 19 /usr/bin/time program-name >& ouput-filename
+nice -n 19 /usr/bin/time program-name > output-filename 2>&1
 :::
 
-Where program-name is the name of your program and ouput-filename is the
+Where program-name is the name of your program and output-filename is the
 name of the file in which you want to capture output. The running time
 will be the last line of the output file, formatted like this:
 
@@ -107,33 +111,34 @@ If your programs are 'prog1', 'prog2' and 'prog3', you can run them in
 background via the shell command:
 
 :::{code} shell-session
-(prog1 ; prog2 ; prog3) >& log &
+(prog1 ; prog2 ; prog3) > log 2>&1 &
 :::
 
 Another way is to use a semicolon:
 
 :::{code} shell-session
-run1 >& run1.log ; run2 >& run2.log
+run1 > run1.log 2>&1 ; run2 > run2.log 2>&1
 :::
 
 where run1 and run2 are the programs you wish to run and run1.log and
 run2.log are the logfiles.
 
-Yet annother way is to set up a shell script file, for example
-'`run_all`', containing:
+Yet another way is to set up a shell script file, for example
+`run_all`, containing:
 
 :::{code} shell-session
-#!/bin/sh run1 >& run1.log run2 >& run2.log
+#!/bin/bash
+run1 > run1.log 2>&1
+run2 > run2.log 2>&1
 :::
 
-By specifying the \> sign, you save the output from run1 into file
-run1.log. By also including the & sign, it also saves any error message
-output into run1.log.
+The `> file 2>&1` syntax redirects both standard output and standard error
+to the specified file.
 
 Then from the unix prompt:
 
 :::{code} shell-session
-% chmod +x run_all
+chmod +x run_all
 :::
 
 to allow the script to be executable, and then type:
@@ -212,14 +217,14 @@ This would cause the program 'proga' to take its input from the file
 
 To find out the status of your jobs, type the command:
 
-:::{code} shell
+:::{code} shell-session
 at -l
 :::
 
 This will report both 'batch' and 'at' jobs. If 'N' is the job number
 reported by 'at -l' then the command:
 
-:::{code} shell
+:::{code} shell-session
 at -r N
 :::
 
