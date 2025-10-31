@@ -20,6 +20,7 @@ project:
         - file: access/copying-files.md
           children:
             - file: access/copying-files/sftp-scp.md
+            - file: access/copying-files/rsync.md
             - file: access/copying-files/globus.md
             - file: access/copying-files/rclone.md
             - file: access/copying-files/samba.md
