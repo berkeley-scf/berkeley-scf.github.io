@@ -78,24 +78,45 @@ gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dQUIET \
     -f input.pdf
 :::
 
-## Merge PDFs
+## Convert PDF to PostScript
+
+You can convert PDF files to PostScript format using either Poppler's
+`pdftops` or Ghostscript's `pdf2ps`:
+
+:::{code} shell-session
+pdftops input.pdf output.ps
+:::
+
+or
+
+:::{code} shell-session
+pdf2ps input.pdf output.ps
+:::
+
+Both commands will create a PostScript file from the PDF input.
+
+## Using qpdf
 
 `qpdf` is another powerful tool for PDF manipulation with a more
-user-friendly syntax.
+user-friendly syntax. Install via conda-forge if needed:
+
+:::{code} shell-session
+conda install -c conda-forge qpdf
+:::
+
+Merge PDFs:
 
 :::{code} shell-session
 qpdf --empty --pages input1.pdf input2.pdf input3.pdf -- output.pdf
 :::
 
-## Extract pages
-
-For example, pages 5-10:
+Extract pages (e.g., pages 5-10):
 
 :::{code} shell-session
 qpdf input.pdf --pages . 5-10 -- output.pdf
 :::
 
-## Compress/optimize:
+Compress/optimize:
 
 :::{code} shell-session
 qpdf --compress-streams=y --recompress-flate input.pdf output.pdf
