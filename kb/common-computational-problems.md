@@ -84,15 +84,14 @@ servers and cluster and some solutions or workarounds.
 
 - **R hangs when using profiling**
   - This is likely a conflict between Rprof() and the threaded BLAS
-    used by R for linear algebra. Solutions include (1) disabling
-    threading ([see here for more details](./linear-algebra-using-blas.md)) and (2) not
+    used by R for linear algebra. Solutions include [disabling
+    threading](./linear-algebra-using-blas.md) and (2) not
     using profiling.
 
 ## File and Permission Issues
 
 - **"Permission denied" when accessing files**
-  - Check file permissions: `ls -l filename`.
-  - Verify you own the file: `ls -l filename` (look at owner/group).
+  - Check file permissions and verify ownership: `ls -l filename`.
   - If it's a directory, ensure it has execute permission: `chmod u+x dirname`.
   - For group-shared files, check that group permissions are set correctly.
   - See [File Permissions](./file-access.md) for more details.
@@ -145,7 +144,7 @@ servers and cluster and some solutions or workarounds.
 
 - **SSH connection times out or is very slow**
   - Check your network connection.
-  - Try a different login server (e.g., arwen vs. gandalf).
+  - Too many failed password attempts will cause you to be blocked. Try a different login server (e.g., arwen vs. gandalf).
   - See [SSH](../access/ssh.md) for connection tips.
   - If using X11 forwarding, try without it: `ssh -X` can be slow.
 
@@ -154,12 +153,6 @@ servers and cluster and some solutions or workarounds.
   - Check that X11 is installed on your local machine.
   - Try `echo $DISPLAY` to verify it's set.
   - See [X11 Forwarding](../access/X11.md) for troubleshooting.
-
-- **Cannot connect to JupyterHub**
-  - Clear your browser cache and cookies for the JupyterHub site.
-  - Try a different browser.
-  - Check if your account has access to JupyterHub.
-  - See [JupyterHub](../access/jupyterhub.md) for more information.
 
 ## Data and File Transfer Issues
 
