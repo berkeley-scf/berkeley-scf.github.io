@@ -1,12 +1,16 @@
 ---
-title: "How do I set up and use my personal website?"
+title: Set up and use a personal website
 ---
-Department members can publish documents and data on the web by
-uploading files to their [computing accounts](/getting-started/computing-accounts). Note that
-this website will be available at https://www.stat.berkeley.edu appended
-with /~*username*/ (as opposed to this departmental site,
-statistics.berkeley.edu). Alternatives include [Github
-Pages](https://pages.github.com/), and [bCourses
+
+Department members can publish documents and data on the web by uploading
+files to their [computing
+accounts](../getting-started/computing-accounts.md). Note that this
+website will be available at `https://www.stat.berkeley.edu` appended with
+`/~username/` (as opposed to this departmental site,
+`statistics.berkeley.edu`).
+
+Alternatives include [Github Pages](https://pages.github.com/),
+and [bCourses
 sites](https://bcourses.berkeley.edu/courses/1336779/pages/2-dot-3-create-your-course-site).
 [Google
 Sites](https://bconnected.berkeley.edu/collaboration-services/google/sites) and
@@ -31,10 +35,10 @@ guidelines:
   examples of the type of information that is appropriate for the top
   level home page:
   1.  Biographical information (including the student's photograph).
-  2.  Dissertation abstract.
-  3.  Technical reports (with the signed approval of faculty advisor).
-  4.  Data sets (with the signed approval of faculty advisor).
-  5.  Links to other professionally relevant sites.
+  1.  Dissertation abstract.
+  1.  Technical reports (with the signed approval of faculty advisor).
+  1.  Data sets (with the signed approval of faculty advisor).
+  1.  Links to other professionally relevant sites.
 - Personal information can be included in a sub-level home page that is
   clearly identified as containing personal information. This area can
   include links to sites that are not related to to the individual's
@@ -61,7 +65,7 @@ Other approaches to creating HTML include:
     latex2htmlExample" on any SCF machine. If you want to have all the
     LaTeX section in a single HTML rather than separate HTML files for
     each section, do "latex2html -split 0 latex2htmlExample".
-2.  You can use the knitr package in R to convert from R Markdown (.Rmd)
+1.  You can use the knitr package in R to convert from R Markdown (.Rmd)
     and Sweave (.Rnw/.Rtex) files with embedded R code to HTML. Load the
     knitr package in R and then run "knit2html file.Rmd", replacing
     "Rmd" with the appropriate extension, as necessary. Contact
