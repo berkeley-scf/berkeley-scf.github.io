@@ -1,5 +1,5 @@
 ---
-title: "How do I change my password?"
+title: Changing Your Password
 ---
 
 Your password serves as a security check to protect your account from
@@ -16,10 +16,10 @@ your choice. Passwords must observe the following restrictions:
 1.  Must contain at least one lowercase letter.
 1.  Must contain at least one digit, e.g. 0-9.
 1.  Must contain at least one special character, e.g.,
-    !@#\$%^&\*()\_+\|~- =\\{}\[\]:";'\<\>?,./).
+    `!@#\$%^&\*()\_+\|~- =\\{}\[\]:";'\<\>?,./)`.
 1.  Cannot contain common words from various languages, popular names,
     and frequently used passwords, or their variations, e.g.
-    \`p@ssw0rd\`.
+    `p@ssw0rd`.
 
 When you respond to the system's prompts for your old and new passwords,
 what you type will not be displayed on the screen.
