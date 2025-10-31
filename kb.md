@@ -11,5 +11,6 @@ at the top right of this site.
 :contents: kb/*.md
 :type: table
 :sort: title
+:table-columns: title
 :::
 
