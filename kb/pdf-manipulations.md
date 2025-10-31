@@ -9,7 +9,7 @@ already available.
 
 ## Merge
 
-You can merge multiple PDFs as follows:
+You can merge multiple PDFs using `gs`:
 
 :::{code} shell-session
 gs -dNOPAUSE -sDEVICE=pdfwrite -sOutputFile=output.pdf -dBATCH \
@@ -24,10 +24,16 @@ Alternatively, using `pdfunite` (simpler syntax):
 pdfunite input1.pdf input2.pdf input3.pdf output.pdf
 :::
 
+Or using `qpdf`:
+
+:::{code} shell-session
+qpdf --empty --pages input1.pdf input2.pdf input3.pdf -- output.pdf
+:::
+
 ## Subsetting
 
-You can also create a new PDF from a subset of the pages in an original
-PDF, where m and n are the first and last page numbers to extract:
+You can create a new PDF from a subset of the pages in an original
+PDF using `gs`, where m and n are the first and last page numbers to extract:
 
 :::{code} shell-session
 gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dFirstPage=m -dLastPage=n \
@@ -39,6 +45,12 @@ For example, to extract pages 5-10:
 :::{code} shell-session
 gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dFirstPage=5 -dLastPage=10 \
     -sOutputFile=output.pdf input.pdf
+:::
+
+Or using `qpdf` (e.g., pages 5-10):
+
+:::{code} shell-session
+qpdf input.pdf --pages . 5-10 -- output.pdf
 :::
 
 ## Compress / Reduce File Size
@@ -56,6 +68,12 @@ Quality options (from lowest to highest quality, smallest to largest file):
 - `/ebook` - moderate quality (150 dpi)
 - `/printer` - high quality (300 dpi)
 - `/prepress` - highest quality, largest file (300 dpi, preserves color)
+
+Or using `qpdf` for compression/optimization:
+
+:::{code} shell-session
+qpdf --compress-streams=y --recompress-flate input.pdf output.pdf
+:::
 
 ## Convert to Grayscale
 
@@ -95,29 +113,11 @@ pdf2ps input.pdf output.ps
 
 Both commands will create a PostScript file from the PDF input.
 
-## Using qpdf
+## Installing Tools
 
-`qpdf` is another powerful tool for PDF manipulation with a more
-user-friendly syntax. Install via conda-forge if needed:
-
-:::{code} shell-session
-conda install -c conda-forge qpdf
-:::
-
-Merge PDFs:
+Most tools mentioned above are available on SCF Linux systems. If you need
+to install them locally, you can use conda-forge:
 
 :::{code} shell-session
-qpdf --empty --pages input1.pdf input2.pdf input3.pdf -- output.pdf
-:::
-
-Extract pages (e.g., pages 5-10):
-
-:::{code} shell-session
-qpdf input.pdf --pages . 5-10 -- output.pdf
-:::
-
-Compress/optimize:
-
-:::{code} shell-session
-qpdf --compress-streams=y --recompress-flate input.pdf output.pdf
+conda install -c conda-forge qpdf poppler
 :::
