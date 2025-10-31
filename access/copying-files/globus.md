@@ -9,6 +9,8 @@ specify the transfer to be made, and Globus takes care of it in a robust
 manner without you having to monitor the transfer or worry about the
 connection between the machines being lost.
 
+## Notable Endpoints
+
 The easiest thing you can do is transfer files between machines/systems
 that are already registered with Globus as Globus endpoints. Some
 endpoints that may be useful for Berkeley affiliates include Berkeley
@@ -31,6 +33,8 @@ Research Computing's Savio campus cluster and NERSC:
 {button}`Launch Globus Web App <https://app.globus.org/>`
 +++
 
+## Connecting
+
 The first time you connect to the endpoint, you will be offered the
 option to "Link an identity from UC Berkeley Statistics OIDC Auth".
 Selecting this link will take you to a login page where you will be
@@ -49,6 +53,8 @@ Enter the name of the endpoint and authenticate to the resource by
 following the directions given. Once both endpoints are authenticated,
 it's straightforward to drag and drop to transfer files. Globus will
 email you when the transfer is complete.
+
+## Your Personal Endpoint
 
 You can also transfer to/from your own machine. To do so, first get the
 [Globus Connect
