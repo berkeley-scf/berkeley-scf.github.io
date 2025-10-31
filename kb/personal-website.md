@@ -4,20 +4,23 @@ title: Set up and use a personal website
 
 Department members can publish documents and data on the web by uploading
 files to their [computing
-accounts](../getting-started/computing-accounts.md). Note that this
-website will be available at `https://www.stat.berkeley.edu` appended with
-`/~username/` (as opposed to this departmental site,
-`statistics.berkeley.edu`).
+accounts](../getting-started/computing-accounts.md).
+
+:::{note}
+Your personal website will be available at `https://www.stat.berkeley.edu`,
+and not the departmental site, `https://statistics.berkeley.edu`.
+:::
 
 Alternatives include [Github Pages](https://pages.github.com/),
-and [bCourses
+[Netlify](https://netlify.com), and [bCourses
 sites](https://bcourses.berkeley.edu/courses/1336779/pages/2-dot-3-create-your-course-site).
+
+If you are faculty and choose to publish your site on an external hosting provider, we can create an domain name alias for you in the .stat.berkeley.edu subdomain, e.g. `yourname.stat.berkeley.edu`.
+
 [Google
 Sites](https://bconnected.berkeley.edu/collaboration-services/google/sites) and
 other web platforms where one cannot adjust the underlying HTML have
-been deprecated for accessibility considerations. If you choose an
-external hosting provider, we can create an alias for you in the
-.stat.berkeley.edu subdomain.
+been deprecated for accessibility considerations.
 
 ## Guidelines
 
@@ -56,15 +59,16 @@ SeaMonkey](http://www.seamonkey-project.org/) are good places to start.
 
 Other approaches to creating HTML include:
 
+1.  Modern markdown-based tools such as [MyST](https://mystmd.org) and [Quarto](https://quarto.org).
 1.  latex2html will convert a LaTeX document to HTML. Here is a
     [template tex
     file](https://www.stat.berkeley.edu/~scf/latex2htmlExample.tex) and
     here is the [accompanying jpeg
     figure](https://www.stat.berkeley.edu/~scf/escher-stars.jpg) that is
-    used in the tex file. To create the HTML, run "latex2html
-    latex2htmlExample" on any SCF machine. If you want to have all the
+    used in the tex file. To create the HTML, run `latex2html
+    latex2htmlExample` on any SCF machine. If you want to have all the
     LaTeX section in a single HTML rather than separate HTML files for
-    each section, do "latex2html -split 0 latex2htmlExample".
+    each section, do `latex2html -split 0 latex2htmlExample`.
 1.  You can use the knitr package in R to convert from R Markdown (.Rmd)
     and Sweave (.Rnw/.Rtex) files with embedded R code to HTML. Load the
     knitr package in R and then run "knit2html file.Rmd", replacing
