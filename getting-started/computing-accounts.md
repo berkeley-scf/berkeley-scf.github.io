@@ -116,16 +116,17 @@ been closed. Upon request, mail messages can be forwarded to another
 account for up to 60 days after an account has been closed. (This does
 not apply to class accounts.)
 
-## Account Request Form
+## Account Requests
 
-### For CalNet ID holders
+:::: {grid} 2 2
 
-+++ {"class": "center-button-container"}
-{button}`Complete our account request form <https://scf.berkeley.edu/account>`
-+++ 
+:::{card} CalNet ID Holders
 
-### For those without a CalNet ID
+If you do have a CalNet ID, complete our [account request form](https://scf.berkeley.edu/account).
 
+:::
+
+:::{card} No CalNet ID
 If you do not have a CalNet ID, please have your sponsor create a
 [Sponsored CalNet
 Guest](https://calnetweb.berkeley.edu/calnet-departments/calnet-sponsored-guests)
@@ -133,3 +134,6 @@ account for you. Visit the [Cirrus Identity
 site](https://apps.cirrusidentity.com/console/auth/index) to get
 started. Once that is complete you can fill out the account request
 form.
+:::
+
+::::
