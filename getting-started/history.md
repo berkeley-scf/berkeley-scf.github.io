@@ -5,7 +5,7 @@ title: "History of the Statical Computing Facility"
 (origin)=
 ## Origin of the Statistical Computing Facility
 
-written by Leo Breiman, adapted by Rick Kawin
+written by Leo Breiman, adapted by Rick Kawin in the 1990s
 
 The Statistical Computing Facility (SCF) is an arm of the Statistics
 Department, but with separate budget and personnel, and functions
@@ -137,7 +137,7 @@ instructional projects.
 (hardware-software)=
 ## Hardware and Software Platforms
 
-written by Mark Abrahams
+written by Mark Abrahams, updated by Ryan Lovett
 
 Computing in the Department may be divided into several eras, according
 to the main type of computer equipment used. Each successive wave, or
