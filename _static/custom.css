@@ -4,6 +4,10 @@
 
 /* https://brand.berkeley.edu/visual-identity/colors/ */
 
+.center-button-container {
+  text-align: center;
+}
+
 /* ================================
    LINK COLORS
    ================================ */
@@ -25,7 +29,6 @@ html:not(.dark) body nav a:visited {
   color: inherit !important;
   text-decoration: none !important;
 }
-
 
 /* ---------- DARK MODE ---------- */
 
@@ -49,43 +52,61 @@ html.dark body nav a:visited {
    FOOTER STYLES
    ================================ */
 
-.footer {
-  flex-shrink: 0;
-  padding-top: 0.1em;
-
-  h1 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-top: 1em;
-  }
-
-  .logo {
-    padding-top: 0;
-  }
+/* Light mode footer */
+html:not(.dark) .footer {
+  background: #010133 !important; /* Berkeley Navy */
+  color: white !important;
 }
-
 
 html:not(.dark) .footer a,
 html:not(.dark) .footer h1,
 html:not(.dark) .footer h2 {
-  color: white;
+  color: white !important;
 }
 
-/* Dark mode */
+/* Dark mode footer */
 html.dark .footer {
-  background: #004AAE; /* Blue Medium - contrats with black content */
-  color: #f2f2f2;      /* Light grey for readability */
+  background: #000000 !important; /* Black for dark theme */
+  color: #f2f2f2 !important;      /* Light gray text */
 }
 
 html.dark .footer a,
 html.dark .footer h1,
 html.dark .footer h2 {
-  color: #fc9313;
+  color: #FC9313 !important;      /* Berkeley Gold Dark */
 }
+
+.footer {
+  flex-shrink: 0;
+  padding-top: 0.1em;
+  list-style: none;
+}
+
+.footer h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+.footer .logo {
+  padding-top: 0;
+}
+
+/* ================================
+   MISC
+   ================================ */
 
 .small {
   font-size: 0.85em;
 }
+
+/* Example: switch footer SVGs if needed */
+/*
+.footer .logo.light-only { display: inline; }
+html.dark .footer .logo.light-only { display: none; }
+.footer .logo.dark-only { display: none; }
+html.dark .footer .logo.dark-only { display: inline; }
+*/
 
 /* Change the background of the top region. */
 
