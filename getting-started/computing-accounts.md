@@ -91,7 +91,29 @@ manager@stat.berkeley.edu if you would like to create a project account.
 Let us know which local accounts need access and suggest a project
 account name.
 
-### Account Closure
+## Account Requests
+
+:::: {grid} 2 2
+
+:::{card} CalNet ID Holders
+
+If you do have a CalNet ID, complete our [account request form](https://scf.berkeley.edu/account).
+
+:::
+
+:::{card} No CalNet ID
+If you do not have a CalNet ID, please have your sponsor create a
+[Sponsored CalNet
+Guest](https://calnetweb.berkeley.edu/calnet-departments/calnet-sponsored-guests)
+account for you. Visit the [Cirrus Identity
+site](https://apps.cirrusidentity.com/console/auth/index) to get
+started. Once that is complete you can fill out the account request
+form.
+:::
+
+::::
+
+## Account Closure
 
 Accounts issued to students, alumni, and visitors that are due for
 termination will be closed on January 1 and July 1 of each year.
@@ -115,25 +137,3 @@ account files before the accounts are closed. There will be a \$20 fee
 been closed. Upon request, mail messages can be forwarded to another
 account for up to 60 days after an account has been closed. (This does
 not apply to class accounts.)
-
-## Account Requests
-
-:::: {grid} 2 2
-
-:::{card} CalNet ID Holders
-
-If you do have a CalNet ID, complete our [account request form](https://scf.berkeley.edu/account).
-
-:::
-
-:::{card} No CalNet ID
-If you do not have a CalNet ID, please have your sponsor create a
-[Sponsored CalNet
-Guest](https://calnetweb.berkeley.edu/calnet-departments/calnet-sponsored-guests)
-account for you. Visit the [Cirrus Identity
-site](https://apps.cirrusidentity.com/console/auth/index) to get
-started. Once that is complete you can fill out the account request
-form.
-:::
-
-::::
