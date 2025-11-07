@@ -13,23 +13,20 @@ discussed here:
 :label: partition-restrictions
 | Partition      | Max \# cores per user (running) | Time limit            | Max CPU memory per job | Max cores per job |
 |----------------|---------------------------------|-----------------------|--------------------|-------------------|
-| high (default) | 96                              | 7 days                | 128 GB             | 24<sup>1</sup>     |
-| low            | 256                             | 28 days               | 256 GB             | 32<sup>1</sup>     |
-| gpu<sup>2</sup>     | 8 CPU cores                     | 28 days               | 6 GB          | 8                 |
-| epurdom<sup>2</sup> | 256                             | 28 days<sup>3</sup> |  528 GB             | 128<sup>1</sup>    | 
-| jsteinhardt<sup>2</sup> | varied | 28 days<sup>3</sup> | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)  | varied<sup>1</sup> |
-| yugroup<sup>2</sup> | varied                          | 28 days<sup>3</sup> | varied        | varied            | 
-| yss<sup>2</sup>     | 224                            | 28 days<sup>3</sup> | 528 GB       | varied<sup>1</sup>     |
-
+| high (default) | 96                              | 7 days                | 128 GB             | 24[^parallel]     |
+| low            | 256                             | 28 days               | 256 GB             | 32[^parallel]     |
+| gpu[^high]        | 8 CPU cores                     | 28 days               | 6 GB               | 8           |
+| epurdom[^high]    | 256                             | 28 days[^preemptible]           | 528 GB             | 128[^parallel]     |
+| jsteinhardt[^high] | varied                         | 28 days[^preemptible]           | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various) | varied[^parallel] |
+| yugroup[^high]    | varied                          | 28 days[^preemptible]           | varied             | varied      |
+| yss[^high]        | 224                             | 28 days[^preemptible]           | 528 GB             | varied[^parallel]  |
 :::
-  
- - [1] If you use software that can parallelize across multiple nodes
-(e.g., R packages that use MPI or the future package, Python's Dask or
-IPython Parallel, MATLAB, MPI), you can run individual jobs across more
-than one node. See [](#parallel-jobs).
- - [2] See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
- - [3] Preemptible when run at normal priority, as occurs for non-group members.
 
+[^parallel]: If you use software that can parallelize across multiple nodes (e.g., R packages that use MPI or the future package, Python's Dask or IPython Parallel, MATLAB, MPI), you can run individual jobs across more than one node. See [](#parallel-jobs).
+
+[^high]: See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
+
+[^preemptible]: Preemptible when run at normal priority, as occurs for non-group members.
 
 ## Single-core jobs  
 
