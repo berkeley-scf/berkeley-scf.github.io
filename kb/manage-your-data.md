@@ -11,14 +11,14 @@ The commands below can show you how disk space you are consuming. For additional
 :::{table}
 :label: Disk space commands
 
-| Command    | Description |
-|------------|-------------------------------------------------|
-| bigfiles   | Recursively searches a directory for big files. |
-| du -h      | Recursive summary of disk use. Gives disk use for each directory and all its subdirectories. |
-| ls -l      | Lists size of all files in the current directory. |
-| find ~ -ls | Most information: lists size of all files in all directories and subdirectories. |
-| quota      | Reports your disk quota and current disk use. |
-| dust       | Similar to `du`, but faster and more visual. |
+| Command      | Description |
+|--------------|------------------------------------------------------------|
+| `ls -l`      | Lists size of all files in the current directory.          |
+| `bigfiles`   | Recursively searches a directory for big files.            |
+| `quota`      | Reports your disk quota and current disk use.              |
+| `du -h .`    | Recursive summary of disk use for the current directory.   |
+| `dust`       | Similar to `du`, but faster and more visual.               |
+| `find . -ls` | Recursively lists all file sizes in the current directory. |
 
 :::
  
