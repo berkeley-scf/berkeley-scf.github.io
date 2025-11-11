@@ -21,7 +21,7 @@ The commands below can show you how disk space you are consuming. For additional
 | `find . -ls` | Recursively lists all file sizes in the current directory. |
 
 :::
- 
+
 ## Temporary Disk Space
 
 There are several places where users can temporarily store data. These
@@ -48,7 +48,7 @@ how much space is available in `/tmp` on your system, type `df -k /tmp`. Do
 not use `/tmp` if less than 30% of the space is available. Remove files when
 they are no longer needed.
 
-### /var/tmp, /Users/Shared
+### /var/tmp
 
 The `/var/tmp` directory functions similarly to `/tmp`, however, files are
 not automatically removed after the machine is rebooted. This directory
@@ -56,15 +56,11 @@ does get erased, however, whenever the workstation needs to be reinstalled
 or reconfigured. Otherwise, the same policies that apply to `/tmp` apply
 to `/var/tmp`.
 
-The `/Users/Shared` directory functions identically to `/var/tmp`, except it
-is only found on Macintosh computers.
+### /data
 
-### /var/tmp/scratch
-
-The `/var/tmp/scratch` directory exists on some workstations that have
-secondary disks. This directory functions similarly to `/var/tmp`,
-however, it does not get erased when the computer is reinstalled or
-reconfigured.
+The `/data` directory exists on some systems that have secondary disks.
+This directory functions similarly to `/var/tmp`, however, it does not get
+erased when the computer is reinstalled or reconfigured.
 
 ### /scratch
 
@@ -80,26 +76,34 @@ should be compressed if possible.
 
 Infrequently accessed files may be compressed to save disk space.
 
-  gunzip file.gz                         Uncompresses file.gz to file
-  gzip file                              Compresses file to file.gz
-  tar xzf file.tar.gz                    Uncompresses file.tar.gz to the contents of file.tar
-  tar czf file.tar.gz file1 [file2...]   Compresses one or more files into file.tar.gz
-  unzip file.zip                         Uncompresses file.zip
-  zip file.zip file1 [file2...]          Compresses one or more files to file.zip
-  uncompress x y ...                     Uncompresses x.Z, y.Z, ... to x, y, ...
-  compress x y file1 [file2...]          Compresses x, y, ... to x.Z, y.Z, ...
-  zcat x.Z y.Z ...                       Prints the compressed file(s) to the terminal
-  
+:::{table}
+:label: File compression commands
+
+| Command                                | Description |
+|----------------------------------------|------------------------------------------------------------|
+| `gunzip file.gz`                       | Uncompresses file.gz to file
+| `gzip file`                            | Compresses file to file.gz
+| `tar xzf file.tar.gz`                  | Extract the contents of file.tar.gz
+| `tar czf file.tar.gz file1 [file2...]` | Compresses files into file.tar.gz
+| `unzip file.zip`                       | Uncompresses file.zip
+| `zip file.zip file1 [file2...]`        | Compresses one or more files to file.zip
+| `zcat x.Z y.Z ...`                     | Prints the compressed file(s) to the terminal
+
 See the UNIX manual pages for the above programs by using the 'man', for example 'man gzip'.
 
 ## Deleting Files
 
 To remove files and directories type:
 
-rm file         Removes 'file' provided you have write permission on it. 
-rm -f file      Removes 'file' if you have write permission in the directory containing it. 
-rmdir dir       Removes the empty directory 'dir'. 
-rm -rf dir      Recursively remove dir including every file and subdirectory. Use with caution.
+:::{table}
+:label: File deletion commands
+
+| Command         | Description |
+|-----------------|------------------------------------------------------------|
+| `rm file`       | Removes 'file' if you have write permission on it.
+| `rm -f file`    | Removes 'file' if you have write permission in the directory containing it.
+| `rmdir dir`     | Removes the empty directory 'dir'.
+| `rm -rf dir`    | Recursively remove dir including every file and subdirectory. Use with caution.
 
 Some applications leave behind files that may be removed without adversely
 affecting the program.
@@ -123,8 +127,8 @@ to use for several more days, they should be removed. (They can easily be
 recreated if you need them.) The size of '.out' files which you do need
 can be reduced somewhat by stripping them. Type:
 
-    strip a.out     Strips an already existing 'a.out'. 
-    f77 -s ...      Creates a pre-stripped '.out' file when using f77. 
+    strip a.out     Strips an already existing 'a.out'.
+    f77 -s ...      Creates a pre-stripped '.out' file when using f77.
     cc -s ...       Similarly for cc.
 
 When programs crash, they sometimes report 'Core dumped' indicating that a
