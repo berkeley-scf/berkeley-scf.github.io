@@ -4,13 +4,13 @@ title: "Python"
 
 We provide Python including a variety of packages (including numpy,
 scipy, pandas, scikit-learn, and other computational packages) through
-the Anaconda distribution.
+the Miniforge installer and the community-driven `conda-forge` channel.
 
 ## Python versions
 
-On our Linux servers, we provide Python 3.11 . We can also help you
+On our Linux servers, we provide Python 3.13. We can also help you
 access older versions of Python if needed, by using a [Conda
-environment](conda.md).
+environment](conda.md). 
 
 Note that in what follows we use [mamba](install.md), a
 drop-in replacement for conda.

@@ -61,7 +61,7 @@ software](cluster.md).
 [1] To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster),
 which is accessed separately from the other SCF resources.
 
-[2] Requires the fully qualified domain name, i.e., `{hostname}.stat.berkeley.edu`.
+[2] Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
 
 ## Software
 
