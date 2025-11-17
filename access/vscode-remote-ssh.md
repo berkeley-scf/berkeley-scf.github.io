@@ -56,5 +56,16 @@ scf-srun -c 4 -t 1:00:00
 
 ::: {note}
 The script will modify the configuration in your `~/.ssh` directory (slightly
-modifying `~/.ssh/config` and adding a new file `~/.ssh/config.d/scf-slurm`.
+modifying `~/.ssh/config` and adding a new file `~/.ssh/config.d/scf-slurm`).
 :::
+
+## Port forwarding (e.g., for web services such as dashboards)
+
+VS Code can forward ports to your local machine. This is particularly helpful if software you are using has started a web service on the SCF machine you are accessing. One example is that the Python Dask.distributed package will start a dashboard on (by default) port 8787. You can view that service in the browser **on your own machine** as follows.
+
+1. Determine the port being used by the web service (e.g., port 8787).
+2. If not already open, open the Panel toolbar. You can do this via `Ctrl-backtick` or by opening a Terminal.
+3. Click on the `PORTS` tab in the toolbar (it will be next to the `TERMINAL` tab).
+4. Enter the port from #1 above as the port to forward. 
+5. You should see a URL in the `Forwarded Address` column, which will be something like `localhost:8787`. Go to that URL in the browser on your machine (or click on the browser icon in that column). 
+
