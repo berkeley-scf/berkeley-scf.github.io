@@ -39,6 +39,7 @@ project:
         - file: software/ai-coding.md
         - file: software/containers.md
         - file: software/vscode.md
+        - file: software/environment-modules.md
     - file: servers.md
       children:
         - file: servers/login-servers.md
