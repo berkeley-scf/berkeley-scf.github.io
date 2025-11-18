@@ -46,11 +46,11 @@ software](cluster.md).
 | `jsteinhardt` | `rainbowquartz`         | A5000 (8)                 | 24 GB      |
 | `jsteinhardt` | `smokyquartz`           | A4000 (8)                 | 16 GB      |
 | `jsteinhardt` | `sunstone`              | A4000 (8)                 | 16 GB      |
-| `jsteinhardt` | `smaug`                 | Quadro RTX 8000           | 48 GB      |
+| `jsteinhardt` | `smaug`                 | Quadro RTX 8000 (1)       | 48 GB      |
 | `jsteinhardt` | `shadowfax`             | GeForce RTX 2080 Ti (8)   | 11 GB      |
 | `lambda`      | Remote cluster [1]      | A100 (40)                 | 80 GB      |
 | `yugroup`     | `treebeard`             | A100 (1)                  | 40 GB      |
-| `yugroup`     | `merry`                 | GeForce GTX TITAN X(1)    | 12 GB      |
+| `yugroup`     | `merry`                 | GeForce GTX TITAN X (1)   | 12 GB      |
 | `yugroup`     | `morgoth`               | Titan Xp (1)              | 12 GB      |
 | `yugroup`     | `morgoth`               | Titan X (Pascal) (1)      | 12 GB      |
 | `yss`         | `luthien`               | A100 (4)                  | 80 GB      |

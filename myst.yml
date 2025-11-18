@@ -30,6 +30,7 @@ project:
       children:
         - file: software/install.md
         - file: software/python.md
+        - file: software/gpu-software.md
         - file: software/conda.md
         - file: software/R.md
         - file: software/rstudio.md
