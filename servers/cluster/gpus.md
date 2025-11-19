@@ -6,7 +6,7 @@ The SCF hosts a number of GPUs, available only by submitting a job
 through our Slurm scheduling software. The GPUs are quite varied in
 their hardware configurations (different generations of GPUS, with
 different speeds and GPU memory). We have [documented the GPU
-servers](../gpu-servers) to guide you in selecting which GPU you may want
+servers](../gpu-servers#research-group-gpus) to guide you in selecting which GPU you may want
 to use. One GPU is available to all SCF users on an equal basis and 
 many other GPUs purchased by research groups that are available to group members at 
 regular priority and to other SCF users at lower (preemptible) priority. 
@@ -14,7 +14,7 @@ regular priority and to other SCF users at lower (preemptible) priority.
 ## Preemption
 
 Members of each research  group have priority access to the GPUs of their group.
-Other SCF users can submit jobs that use these GPUs but those
+Other SCF users can submit jobs that use these GPUs, but those
 jobs will be preempted (killed) if higher-priority jobs need access to
 the GPUs. Jobs are cancelled when preemption happens. If you want your
 job to be automatically started again (i.e., started from the beginning)
@@ -43,7 +43,7 @@ Once it starts your job will have exclusive access to the GPU and its
 memory. If another user is using the GPU, your job will be queued until
 the current job finishes.
 
-Interactive jobs should use that same `--gpus` flag with the usual `srun`
+[Interactive jobs](./submitting.md#interactive-jobs) should use that same `--gpus` flag with the usual `srun`
 syntax for an interactive job.
 
 ```{code} shell
@@ -95,7 +95,7 @@ type as well. For example to request an A100 on any of the partitions
 with A100 GPUs:
 
 ```{code} shell
-sbatch --partition=yss,jsteinhardt,yugroup --gpus=1 job.sh
+sbatch --partition=yss,jsteinhardt,yugroup --gpus=A100:1 job.sh
 ```
 
 In partitions with more than one GPU (which does not include the `gpu`
@@ -116,10 +116,12 @@ and in other groups some group members can only use `preemptive`.
 By default, jobs will run under the highest priority QoS available
 to a user.
 
-Jobs submitted to `preemptive_high` and `preemptive` can kill
+Jobs submitted to `preemptive_high` and `preemptive` can preempt
 jobs running by non-group members if there are not enough resources to run
-the submitted job. In turn, jobs submitted to `preemptive_high` can preempt (kill) jobs running
-in `preemptive`. Users of  `preemptive_high` can use at most 8
+the submitted job. In turn, jobs submitted to `preemptive_high` can preempt jobs running
+in `preemptive`. 
+
+Users of  `preemptive_high` can use at most 8
 GPUs at a time in the `preemptive_high` QoS. Additional jobs
 will be queued. Such users can also submit to the `preemptive` QoS,
 (which has  no limit on the number of GPUs used, apart from hardware
@@ -129,8 +131,6 @@ availability), using submission syntax like this:
 sbatch -p jsteinhardt -q preemptive --gpus=1 job.sh
 ```
 
-Such jobs will still preempt jobs run by non-group members, but the jobs
-can be preempted by jobs running in the `preemptive_high` QoS. 
 
 ### CPUs Per Task
 
@@ -214,7 +214,7 @@ differences from running jobs on the SCF (local) cluster.
 - As on the SCF (local) cluster, jobs submitted to the default
   `preemptive_high` QoS can preempt jobs in the `preemptive` QoS,
   which can in turm preempt jobs in the `normal` partition. Individual
-  group members can run at most three jobs in `preemptive_high` at a
+  group members can run at most 8 GPUs in `preemptive_high` at a
   time. Non-group members only have access to the `normal` QoS.
 
 
@@ -233,18 +233,18 @@ In addition to the notes below, more details on optimal use of these
 servers can be obtained from the guide prepared by Steinhardt group
 members and the SCF and available by contacting one of us.
 
-The smaug, saruman, and balrog GPUs have a lot of GPU memory and are
+The `smaug`, `saruman`, and `balrog` GPUs have a lot of GPU memory and are
 primarily intended for training very large models (e.g., ImageNet not
 CIFAR10 or MNIST), but it is fine to use these GPUs for smaller problems
-if shadowfax, sunstone, rainbowquartz, and smokyquartz are busy.
+if `shadowfax`, `sunstone`, `rainbowquartz`, and `smokyquartz` are busy.
 
 By default, if you do not specify a GPU type or a particular GPU server,
-Slurm will try to run the job on shadowfax, sunstone, rainbowquartz, or
-smokyquartz, unless they are busy. 
+Slurm will try to run the job on `shadowfax`, `sunstone`, `rainbowquartz`, or
+`smokyquartz`, unless they are busy. 
 
 ### Song Mei Group
 
-feanor has a very large, very fast (NVMe) disk with 6.6 TB of storage
+`feanor` has a very large, very fast (NVMe) disk with 6.6 TB of storage
 available to group members via the `/data` directory. For jobs that do
 a lot of I/O, it may speed things up to read and write from `/data`
 rather than home or scratch directories. One can also put data into
@@ -255,7 +255,7 @@ Some group members have access to [tiered preemption](#tiered-qos).
 
 ### Berkeley NLP Group
 
-lorax has a four very large, very fast (NVMe) 14TB disks available to
+`lorax` has a four very large, very fast (NVMe) 14TB disks available to
 group members via the `/data` directory. For jobs that do a lot of
 I/O, it may speed things up to read and write from `/data` rather than
 home or scratch directories. One can also put data into `/tmp` or

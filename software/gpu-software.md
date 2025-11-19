@@ -1,5 +1,5 @@
 ---
-title: "GPU Software
+title: "GPU Software"
 ---
 
 We provide the following software that will help you in making use of
@@ -20,7 +20,7 @@ the GPU:
 We use Linux [environment modules](./environment-modules.md) to
 manage the use of some GPU-based software, as seen below. 
 
-For use Python packages that use the GPU for back-end computations,
+To use Python packages that use the GPU for back-end computations,
 simply import the package in Python.
 
 To program with CUDA and related packages directly, you'll need

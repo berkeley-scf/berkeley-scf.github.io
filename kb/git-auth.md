@@ -120,7 +120,7 @@ git config --get remote.origin.url
 If you see either of the following, you know you're using SSH to
 interact with the repository.
 
-:::{code}
+:::{code} shell-session
 git@github.com:paciorek/test-auth.git
 ssh://github.com/paciorek/test-auth
 :::

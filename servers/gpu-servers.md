@@ -54,7 +54,7 @@ software](cluster.md).
 | `songmei`     | `feanor`[^fqdn]             | H200 (8)                  | 144 GB     |
 | `berkeleynlp` | `lorax`[^fqdn]              | H200 (8)                  | 144 GB     |
 
-[^lambda] To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster), which is accessed separately from the other SCF resources.
+[^lambda]: To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster), which is accessed separately from the other SCF resources.
 
-[^fqdn] Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
+[^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
 
