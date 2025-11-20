@@ -17,6 +17,10 @@ our Grafana dashboards. You must login with your SCF account.
 - [All General
   dashboards](https://grafana.stat.berkeley.edu/d/xfpJB9FGz/5-kitchen-sink?orgId=1&search=open&folder=current)
 
+```{image} ../images/grafana-load_0.png
+:alt: Grafana dashboard showing CPU load averages
+```
+
 ## Slurm Job Monitoring
 
-In addition to monitoring Slurm activity via the dashboard above, you can [use Slurm monitoring tools](./servers/cluster/mointoring.md)
+In addition to monitoring Slurm activity via the dashboard above, you can [use Slurm monitoring tools](./servers/cluster/mointoring.md).
