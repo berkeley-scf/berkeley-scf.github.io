@@ -16,10 +16,10 @@ regular priority and to other SCF users at lower (preemptible) priority.
 Members of each research  group have priority access to the GPUs of their group.
 Other SCF users can submit jobs that use these GPUs, but those
 jobs will be preempted (killed) if higher-priority jobs need access to
-the GPUs. Jobs are cancelled when preemption happens. If you want your
-job to be automatically started again (i.e., started from the beginning)
-when the node becomes available you can add the `--requeue` flag when
-you submit via `sbatch`.
+the GPUs. Jobs are cancelled when preemption happens, but they will be
+requeued and should
+restart when the needed resources become available. If you see that your
+job is not being requeued, please contact us.
 
 ## General GPU job submission info
 

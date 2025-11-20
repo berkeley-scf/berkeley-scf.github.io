@@ -3,7 +3,7 @@ title: Basic Job Submission
 ---
 This page describes how to submit jobs to the cluster.
 
-## Slurm Configuration and Job Restrictions  
+## Slurm configuration and job restrictions  
 
 The cluster has multiple partitions, corresponding to groups of nodes.
 The different partitions have different hardware and job restrictions as
@@ -101,7 +101,7 @@ One can use Slurm to [submit parallel code](/servers/cluster/parallel)
 of a variety of types.
 
 (high-performance-partitions)=
-## High Performance Partitions  
+## High performance (CPU) aprtitions  
 
 ### High partition vs. low partition
 
@@ -115,35 +115,10 @@ laptops.
 
 ### epurdom partition
 
-The Purdom group has priority access to the two nodes (`frodo` and
-`samwise`) in the `epurdom` partition (128-core AMD EPYC machines
-with 528 GB memory each). If you are in the group, simply submit jobs to
-the epurdom partition and you will automatically preempt jobs by users
-not in the group if it is needed for your job to run.
-
-If you need more than one CPU, please request that using the
---cpus-per-task flag. The value you specify actually requests that
-number of hardware threads, but with the caveat that a given job is
-allocated all the threads on a given core to avoid contention between
-jobs for a given physical core.
-
-Please contact SCF staff or group members for more details.
-
-### Pre-emptible Jobs
-
-Pre-emptible jobs are requeued when preemption happens and should
-restart when the needed resources become available. If you see that your
-job is not being requeued, please contact us.
-
-#### epurdom partition
-
-The epurdom partition has two nodes with new CPUs and a lot of memory.
-These nodes are owned by a faculty member and are made available on a
-preemptible basis. Your job could be cancelled without warning at any
-time if researchers in the faculty member's group need to run a job
-using the cores/memory your job is using. However, this may not happen
-all that often as the two nodes collectively have 256 cores.
-
+The `epurdom` partition has two nodes (`frodo` and
+`samwise`) with  recent CPUs (128-core AMD EPYC) and 
+ 528 GB memory each.
+ 
 You can request use of these nodes as follows:
 
 :::{code} shell-session
@@ -151,17 +126,39 @@ arwen:~$ sbatch -p epurdom job.sh
 Submitted batch job 380
 :::
 
+
+Purdom group members have priority access to these nodes. 
+If you are in the group, simply submit jobs t
+the epurdom partition and you will automatically preempt jobs by users
+not in the group if it is needed for your job to run.
+
+Non-group members can submit jobs as well, but jobs may be preempted (killed)
+without warning if group member jobs need the resources being used. 
+Pre-emptible jobs are requeued when preemption happens and should
+restart when the needed resources become available. If you see that your
+job is not being requeued, please contact us.
+
+If you need more than one CPU, please request that using the
+`--cpus-per-task` flag. The value you specify actually requests that
+number of hardware threads, but with the caveat that a given job is
+allocated all the threads on a given core to avoid contention between
+jobs for a given physical core.
+
+
 #### jsteinhardt partition
 
-The jsteinhardt partition has various nodes with newer CPUs, a lot of
+The jsteinhardt partition has various nodes. While these nodes are 
+primarily intended for use for their GPUs, many of them have newer CPUs, a lot of
 memory, and very fast disk I/O to `/tmp` and `/var/tmp` using an NVMe
-SSD. These nodes are owned by a faculty member and are made available on
-a preemptible basis. Your job could be cancelled without warning at any
-time if researchers in the faculty member's group need to run a job
-using the cores/memory your job is using. However we don't expect this
-to happen too often given that the nodes have 64 cores (96 cores and 104
-cores in the cases of balrog and saruman, respectively) that can be
-shared amongst jobs. For example to request use of one of these nodes,
+SSD. 
+
+Non-group members can submit jobs as well, but jobs may be preempted (killed)
+without warning if group member jobs need the resources being used. 
+Pre-emptible jobs are requeued when preemption happens and should
+restart when the needed resources become available. If you see that your
+job is not being requeued, please contact us.
+
+ For example to request use of one of these nodes,
 which are labelled as `manycore` nodes:
 
 :::{code} shell-session
@@ -181,7 +178,7 @@ Also note that if you need more disk space on the NVMe SSD on some but
 not all of these nodes, we may be able to make available space on a much
 larger NVMe SSD if you request it.
 
-## Job Not Starting
+## Job not starting
 
 The cluster is managed using the Slurm scheduling software. We configure
 Slurm to try to balance the needs of the various cluster users.
@@ -231,7 +228,7 @@ month ago will count half as much as a job that ran yesterday. Apart
 from this prioritization based on recent use, all users are treated
 equally.
 
-## Node Maintenance and Reservations
+## Node maintenance and reservations
 
 Periodically, we perform maintenance on cluster nodes, such as OS upgrades
 or hardware repairs. During these times, we place a reservation on the
@@ -255,7 +252,7 @@ The scheduler will launch your job on nodes that can complete it in time,
 or on nodes without reservations. You can check the status of nodes using
 `sinfo`. During maintenance, affected nodes will have a status of `maint`.
 
-## How to Kill a Job  
+## How to kill a job  
 First, find the job-id of the job, by typing squeue at the command line
 of a submit host (see How to Monitor Jobs).
 
@@ -265,7 +262,7 @@ Then use scancel to delete the job (with id 380 in this case):
 scancel 380
 ```
 
-## Interactive Jobs  
+## Interactive jobs  
 
 You can work interactively on a node from the Linux shell command line
 by starting a job in the interactive queue.
