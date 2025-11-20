@@ -231,6 +231,30 @@ month ago will count half as much as a job that ran yesterday. Apart
 from this prioritization based on recent use, all users are treated
 equally.
 
+## Node Maintenance and Reservations
+
+Periodically, we perform maintenance on cluster nodes, such as OS upgrades
+or hardware repairs. During these times, we place a reservation on the
+affected nodes in the SLURM scheduler.
+
+When a reservation is active, you can still submit jobs as usual. The
+scheduler will automatically choose an available node for your job in the
+partition you specify. However, if you want to run the job on a node (via
+the `-w` flag) with a reservation, and you want it to start before the
+maintenance window, you must specify a time limit that ensures your job
+will complete before the maintenance begins.
+
+For example, if maintenance is scheduled in 48 hours:
+
+:::{code} shell-session
+$ sbatch -t 48:00:00 myjob.sh   # 48 hours
+$ sbatch -t 1-6 myjobs.sh       # 1 day, 6 hours
+:::
+
+The scheduler will launch your job on nodes that can complete it in time,
+or on nodes without reservations. You can check the status of nodes using
+`sinfo`. During maintenance, affected nodes will have a status of `maint`.
+
 ## How to Kill a Job  
 First, find the job-id of the job, by typing squeue at the command line
 of a submit host (see How to Monitor Jobs).

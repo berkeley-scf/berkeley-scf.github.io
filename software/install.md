@@ -107,3 +107,36 @@ environment. You're welcome to do this, but most users make use of the R
 installation (and a wide range of R packages) that we provide at the
 system level and [install additional packages](R.md) for use
 with the system R.
+
+### OS Upgrades and Self-Installed Packages
+
+When we upgrade the operating system on SCF machines (including cluster
+nodes), your home directory and any files you've installed remain intact.
+However, **compiled packages may need to be reinstalled** because they
+link against system libraries from the old OS, which may not exist or have
+different versions on the new OS.
+
+#### R Packages
+
+If you have installed your own R packages, you will need to reinstall them
+after an OS upgrade or request that we install them system-wide.
+
+User-installed R packages are typically stored in versioned subdirectories
+under `~/R/x86_64-pc-linux-gnu-library/`. After an upgrade, R will look for
+packages in a new directory that reflects the new OS version (e.g.,
+`~/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/` on Ubuntu 24.04).
+
+To request system-wide installation of R packages, please contact us at
+[consult@stat.berkeley.edu](mailto:consult@stat.berkeley.edu).
+
+#### Python and Other Compiled Software
+
+Similar considerations apply to Python packages installed with pip
+(especially those with compiled extensions) and other compiled software
+installed in your home directory. After an OS upgrade, you may need to
+reinstall these packages in a new environment or rebuild from source if
+they are dynamically linked to system files.
+
+Using [Conda/Mamba environments](#using-the-condamba-package-manager) or
+containers can help manage these transitions, as you can create new
+environments targeting the new OS version.
