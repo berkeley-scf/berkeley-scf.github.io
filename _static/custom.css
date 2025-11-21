@@ -9,46 +9,6 @@
 }
 
 /* ================================
-   LINK COLORS
-   ================================ */
-
-/* ---------- LIGHT MODE ---------- */
-
-/* Links outside nav and not buttons */
-html:not(.dark) body a:not(.button) {
-  color: #004AAE; /* Blue Medium */
-  text-decoration: underline;
-}
-html:not(.dark) body a:not(.button):visited {
-  color: #431170; /* Purple Dark */
-}
-
-/* Explicitly override nav links */
-html:not(.dark) body nav a,
-html:not(.dark) body nav a:visited {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-/* ---------- DARK MODE ---------- */
-
-/* Links outside nav and not buttons */
-html.dark body a:not(.button) {
-  color: #FC9313; /* Gold Dark */
-  text-decoration: underline;
-}
-html.dark body a:not(.button):visited {
-  color: #FFC31B; /* Gold Medium */
-}
-
-/* Explicitly override nav links */
-html.dark body nav a,
-html.dark body nav a:visited {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-/* ================================
    FOOTER STYLES
    ================================ */
 
