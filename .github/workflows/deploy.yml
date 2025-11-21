@@ -39,10 +39,13 @@ jobs:
           npm install myst-parser
           npm install js-yaml
           npm install glob
+          npm install commander
       - name: Build HTML Assets
         run: myst build --html
       - name: Inject Siteimprove analytics
         run: node inject-siteimprove.js
+      - name: Generate motd feed
+        run: ./myst-plugin-driver.mjs --file motd.md --directive listing --type rss --baseUrl https://computing.stat.berkeley.edu > ./_build/html/motd.rss
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

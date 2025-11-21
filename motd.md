@@ -5,7 +5,7 @@ title: Announcements
  - Report problems - trouble@stat.berkeley.edu
  - Read our docs   - https://statistics.berkeley.edu/computing
 
-:::{document-listing}
+:::{listing}
 :contents: motd
 :type: grid
 :grid-columns: 1
