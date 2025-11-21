@@ -23,7 +23,7 @@ The primary computational software currently supported by SCF includes:
 - [MATLAB](./software/matlab.md) (including all Mathworks toolboxes)
 - [Julia](./software/julia.md)
 - [Mathematica](./software/mathematica.md), including *Wolfram Alpha Pro*
-- Packages with [GPU support](./servers/gpu-servers.md#software),
+- Packages with [GPU support](./software/gpu-software.md),
   often used for machine learning, including PyTorch and Jax for Python.
 
 In addition, we support standard software used in research and teaching,
@@ -66,16 +66,16 @@ Dropbox on your computer since you can easily install them all through
 this one application. Contact SCF staff for assistance.
 
 (m1-software)=
-## Software for Mac ARM64-based Machines (Apple Silicon M1 and M2 Macs)
+## Software for Mac ARM64-based Machines (Apple silicon M-series Macs)
 
-With the M1 and M2 Macs, Apple is now using its own chips, referred to
-as *Apple Silicon*. These have a different architecture, ARM64, than
+Apple is now using its own (M-series) chips, referred to
+as *Apple silicon* for Macs. These have a different architecture, ARM64, than
 standard x86-64 chips, such as those produced by Intel and AMD.
 
 Some software is now available to run natively on the new architecture.
 In particular:
 
-- You can use [Anaconda with ARM64 support to run Python](./software/conda.md#m1-anaconda)
+- You can use [Anaconda with ARM64 support to run Python](./software/conda.md#m-series-anaconda)
 - You can install the [ARM64 version of R from CRAN](https://cran.r-project.org/bin/macosx/).
 
 Non-ARM64 programs will work on the new Apple Silicon-based machines by

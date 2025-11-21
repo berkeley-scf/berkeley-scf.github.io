@@ -1,10 +1,14 @@
 ---
 title: "Conda and Mamba"
 ---
-Conda is a package management system which can be used to create Python
-and R development environments on many different platforms. You can
-install it on your own device, and it is often available at many High
+Conda is a package management system that can be used to 
+install software and create Python (and R) development environments on many different platforms. You can
+install it on your own device, and it is available at many High
 Performance Computing centers.
+
+`conda` (and `mamba`) are command-line tools run from the terminal (shell).
+
+## Mamba
 
 It's common that installing packages using Conda is slow or fails
 because Conda is unable to resolve dependencies. To get around this,
@@ -14,126 +18,10 @@ because Conda is unable to resolve dependencies. To get around this,
 replacement for Conda that is generally faster and better at resolving
 dependencies.
 
-In the examples below, we show the syntax for Conda, but you can simply
-replace "conda" with "mamba" on the SCF (or if you've installed Mamba on
-your own machine), e.g., "mamba install pytorch" rather than "conda
-install pytorch".
+In the examples below, we show the syntax for Mamba, but you can simply
+replace `mamba` with `conda` if for some reason you prefer that
+(e.g., if you haven't installed `mamba` on your own machine).
 
-## Installing software using Conda/Mamba
-
-We have information on
-[using Conda (and Mamba) to install software](install.md) on the SCF.
-
-## Using Conda/Mamba
-
-Once conda is installed, you can use it to search for and install other
-things.
-
-```{code} shell-session
-(base) mylaptop:~$ conda search pytorch
-Loading channels: done
-# Name                       Version           Build  Channel
-pytorch                        1.3.1 cpu_py27h0c87eb2_0  pkgs/main
-pytorch                        1.3.1 cpu_py36h0c87eb2_0  pkgs/main
-pytorch                        1.3.1 cpu_py37h0c87eb2_0  pkgs/main
-pytorch                        1.4.0 cpu_py36hf9bb1df_0  pkgs/main
-pytorch                        1.4.0 cpu_py37hf9bb1df_0  pkgs/main
-pytorch                        1.4.0 cpu_py38hf9bb1df_0  pkgs/main
-pytorch                        1.6.0 cpu_py37hd70000b_0  pkgs/main
-pytorch                        1.6.0 cpu_py38hd70000b_0  pkgs/main
-```
-
-Here we have searched for `pytorch` and conda has found several
-versions of it. There are also multiple build per version. For example
-above you can see that the latest version is 1.6.0 and there are builds
-for python3.7 and python3.8. If we ask conda to install version 1.6.0,
-it will check to make sure that it can proceed, and will tell you what
-it will do:
-
-```{code} shell-session
-(base) mylaptop:~$ conda install pytorch=1.6.0
-Collecting package metadata (current_repodata.json): done
-Solving environment: done
-
-## Package Plan ##
-
-  environment location: /Users/me/miniconda3
-
-  added / updated specs:
-    - pytorch=1.6.0
-
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    _pytorch_select-0.1        |            cpu_0         169 KB
-    blas-1.0                   |              mkl           6 KB
-    ca-certificates-2020.6.24  |                0         125 KB
-    certifi-2020.6.20          |           py38_0         156 KB
-    conda-4.8.4                |           py38_0         2.9 MB
-    intel-openmp-2019.4        |              233         887 KB
-    libmklml-2019.0.5          |                0        16.2 MB
-    llvm-openmp-10.0.0         |       h28b9765_0         236 KB
-    mkl-2019.4                 |              233       101.9 MB
-    mkl-service-2.3.0          |   py38hfbe908c_0          42 KB
-    mkl_fft-1.1.0              |   py38hc64f4ea_0         138 KB
-    mkl_random-1.1.1           |   py38h959d312_0         290 KB
-    ninja-1.10.0               |   py38h879752b_0         102 KB
-    numpy-1.19.1               |   py38h3b9f5b6_0          21 KB
-    numpy-base-1.19.1          |   py38hcfb5961_0         4.1 MB
-    pytorch-1.6.0              |cpu_py38hd70000b_0        34.0 MB
-    ------------------------------------------------------------
-                                           Total:       161.2 MB
-
-The following NEW packages will be INSTALLED:
-
-  _pytorch_select    pkgs/main/osx-64::_pytorch_select-0.1-cpu_0
-  blas               pkgs/main/osx-64::blas-1.0-mkl
-  intel-openmp       pkgs/main/osx-64::intel-openmp-2019.4-233
-  libmklml           pkgs/main/osx-64::libmklml-2019.0.5-0
-  llvm-openmp        pkgs/main/osx-64::llvm-openmp-10.0.0-h28b9765_0
-  mkl                pkgs/main/osx-64::mkl-2019.4-233
-  mkl-service        pkgs/main/osx-64::mkl-service-2.3.0-py38hfbe908c_0
-  mkl_fft            pkgs/main/osx-64::mkl_fft-1.1.0-py38hc64f4ea_0
-  mkl_random         pkgs/main/osx-64::mkl_random-1.1.1-py38h959d312_0
-  ninja              pkgs/main/osx-64::ninja-1.10.0-py38h879752b_0
-  numpy              pkgs/main/osx-64::numpy-1.19.1-py38h3b9f5b6_0
-  numpy-base         pkgs/main/osx-64::numpy-base-1.19.1-py38hcfb5961_0
-  pytorch            pkgs/main/osx-64::pytorch-1.6.0-cpu_py38hd70000b_0
-
-The following packages will be UPDATED:
-
-  ca-certificates                                2020.1.1-0 --> 2020.6.24-0
-  certifi                                 2020.4.5.1-py38_0 --> 2020.6.20-py38_0
-  conda                                        4.8.3-py38_0 --> 4.8.4-py38_0
-
-
-Proceed ([y]/n)?
-
-Typing `y`, or accepting the default choice (surrounded by brackets
-\[\]) of `y` by pressing return, will let conda proceed.
-
-Downloading and Extracting Packages
-certifi-2020.6.20    | 156 KB    | ##################################### | 100%
-blas-1.0             | 6 KB      | ##################################### | 100%
-...
-[snip]
-...
-pytorch-1.6.0        | 34.0 MB   | ##################################### | 100%
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-
-You can then start using the installed library.
-
-(base) mylaptop:~$ python
-Python 3.8.3 (default, May 19 2020, 13:54:14)
-[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import torch
->>>
-```
 
 ## Environments
 
@@ -150,166 +38,339 @@ conflict with others in your default environment.
 
 To create a new environment:
 
-```{code} shell-session
-(base) mylaptop:~$ conda create --name myproject2
+```{code} bash
+mamba create --name myproject2
 ```
 
 You can also create new environments with an entirely different version
 of python:
 
-```{code} shell-session
-(base) mylaptop:~$ conda create --name myproject2 python=3.8
+```{code} bash
+mamba create --name myproject2 python=3.12
 ```
 
-Note that under some situations, your environment might still make use
-of the default environment for the Python executable or certain packages
-already available in the default environment. We have
-[details and tips](install.md#conda-isolate) on creating a completely isolated environment.
+Note that under some situations your environment might
+make use of the Python executable or some Python packages from outside the environment.
+We have [details and tips](#conda-isolate) on when this happens and how to create
+a completely isolated environment.
 
-To enter into your newly created environment:
+### Activating
 
-```{code} shell-session
-(base) mylaptop:~$ source activate myproject2
+To enter into (activate) your newly created environment, you can use
+`source activate` or `mamba activate`.  
+
+Here we illustrate using `source` as that is recommended on the SCF as discussed below.
+
+```{code} shell-sessionbash
+gandalf:~$ source activate myproject2
 ```
 
 The shell prompt will be updated to reflect the active environment name.
 
-You can also activate an environment with `conda activate myproject2`,
-but see below for some cautionary notes before doing that.
-
 ```{code} shell-session
-(myproject2) mylaptop:~$ 
+(myproject2) gandalf:~$ 
 ```
 
-Also, note that your previously installed libraries are not in your new
-environment.
+To deactivate the environment:
 
 ```{code} shell-session
-(myproject2) mylaptop:~$ python -m torch
-/Users/me/miniconda3/envs/myproject2/bin/python: No module named torch
+(myproject2) gandalf:~$ source deactivate
+gandalf:~$ 
 ```
 
-We will install a completely different version of pytorch into this
-environment.
+In some cases you may default to the `base` environment so you might see:
 
 ```{code} shell-session
-(myproject2) mylaptop:~$ conda install pytorch=1.4.0
-Collecting package metadata (current_repodata.json): done
-...
-[snip]
-...
-Downloading and Extracting Packages
-pycparser-2.20       | 94 KB     | ##################################### | 100%
-six-1.15.0           | 13 KB     | ##################################### | 100%
-cffi-1.14.1          | 219 KB    | ##################################### | 100%
-pytorch-1.4.0        | 26.3 MB   | ##################################### | 100%
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-(myproject2) mylaptop:~$ python
-Python 3.8.5 (default, Aug  5 2020, 03:39:04)
-[Clang 10.0.0 ] :: Anaconda, Inc. on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> import torch
->>> torch.__version__
-'1.4.0'
+(myproject2) gandalf:~$ source deactivate
+(base) gandalf:~$ 
 ```
 
-You can invoke the `activate` and `deactivate` conda commands to
-switch between the environments. The shell prompt is updated to reflect
-the activate environment.
+#### mamba/conda activate versus source activate
 
-```{code} shell-session
-(myproject2) mylaptop:~$ conda deactivate
-(base) mylaptop:~$ 
-```
+You can also use `mamba activate` and `mamba deactivate`, but there
+are some issues to be aware of.
 
-#### Environment locations
-
-If you have a scratch directory on the SCF, your Conda environments by
-default will be stored in `/scratch/users/\<username\>/conda/envs`. If
-you don't have a scratch directory, they will be in the usual
-`~/.conda/envs` directory. The purpose of this is to reduce backup
-sizes, as scratch it not backed up and Conda environments can be
-reproduced based on saving an environment recipe using `conda env
-export`.
-
-Source packages that Conda caches for later use will be stored in
-`/tmp/pkgs` on each machine.
-
-### Conda activate versus source activate
-
-When you first try to use `conda activate`, Conda will prompt you to
-run `conda init` to initialize conda for the shell you are using. You
-can do this, but note that it will modify your `.bashrc` so that Conda
-commands are available whenever you log in. As part of this, Conda will
-put you in the base Conda environment automatically when a new shell
-starts. Note that on the SCF, this will prevent you from accessing the
+When you first try to use `mamba activate`, Mamba will prompt you to
+run `mamba init` to initialize Mamba for the shell you are using. You
+can do this, but note that it will modify your `.bashrc` so that Mamba
+commands are available whenever you log in. As part of this, Mamba will
+put you in the `base` Mamba environment automatically when a new shell
+starts. On the SCF, this will prevent you from accessing the
 Python version and related packages that the SCF provides. To avoid
-this, we recommend running `conda config --set auto_activate_base
-False` after running `conda init` on the SCF.
+this, we recommend running `mamba config --set auto_activate_base
+False` if you run `mamba init` on the SCF.
 
 Using `source activate` (and `source deactivate`) instead of `conda
 activate` (and `conda deactivate`) are deprecated but still work, and
 you may wish to use them in some situations (such as on the SCF) to
 avoid the behavior discussed above.
 
+
+(conda-python-installer)=
+### Installing packages
+
+In general, you'll need to install all the packages you need in 
+your environment, though in [some cases your environment might
+make use of packages from outside the environment](#conda-isolate).
+
+You can search for available packages.
+
+```{code} shell-session
+(myproject2) gandalf:~> mamba search jax
+Getting repodata from channels...
+
+conda-forge/linux-64                                        Using cache
+conda-forge/noarch                                          Using cache
+ Name Version Build                     Channel     Subdir
+───────────────────────────────────────────────────────────
+ jax  0.7.2   pyhd8ed1ab_0              conda-forge noarch
+ jax  0.7.1   pyhd8ed1ab_0              conda-forge noarch
+ jax  0.7.0   pyhd8ed1ab_0              conda-forge noarch
+ jax  0.6.2   pyhd8ed1ab_0              conda-forge noarch
+ jax  0.6.0   pyhd8ed1ab_0              conda-forge noarch
+<snip>
+```
+
+Here we have searched for `jax` and mamba found several
+versions of it. 
+
+You can now install packages you need, including specific versions if desired.
+
+If we ask mamba to install version 0.6.2,
+it will check to make sure that it can proceed, and will tell you what
+it will do:
+
+```{code} shell-session
+(myproject) gandalf:~$ mamba install jax=0.6.2
+Pinned packages:
+
+  - python=3.13
+
+
+Transaction
+
+  Prefix: /scratch/users/paciorek/conda/envs/myproject2
+
+  Updating specs:
+
+   - jax=0.6.2
+
+
+  Package                  Version  Build                Channel          Size
+────────────────────────────────────────────────────────────────────────────────
+  Install:
+────────────────────────────────────────────────────────────────────────────────
+
+  + c-ares                  1.34.5  hb9d3cd8_0           conda-forge     207kB
+  + importlib-metadata       8.7.0  pyhe01879c_1         conda-forge      35kB
+  + jax                      0.6.2  pyhd8ed1ab_0         conda-forge       2MB
+  + jaxlib                   0.6.2  cpu_py313h9430eff_1  conda-forge      67MB
+  + libabseil           20250127.1  cxx17_hbbce691_0     conda-forge       1MB
+  + libblas                 3.11.0  1_h4a7cf45_openblas  conda-forge      18kB
+  + libcblas                3.11.0  1_h0358290_openblas  conda-forge      18kB
+  + libgfortran             15.2.0  h69a702a_7           conda-forge      29kB
+  + libgfortran5            15.2.0  hcd61629_7           conda-forge       2MB
+  + libgrpc                 1.71.0  h8e591d7_1           conda-forge       8MB
+  + liblapack               3.11.0  1_h47877c9_openblas  conda-forge      18kB
+  + libopenblas             0.3.30  pthreads_h94d23a6_4  conda-forge       6MB
+  + libprotobuf             5.29.3  h7460b1f_2           conda-forge       3MB
+  + libre2-11           2025.06.26  hba17884_0           conda-forge     212kB
+  + ml_dtypes                0.5.1  py313h08cd8bf_1      conda-forge     294kB
+  + numpy                    2.3.5  py313hf6604e3_0      conda-forge       9MB
+  + opt_einsum               3.4.0  pyhd8ed1ab_1         conda-forge      62kB
+  + re2                 2025.06.26  h9925aae_0           conda-forge      27kB
+  + scipy                   1.16.3  py313h11c21cd_1      conda-forge      17MB
+  + zipp                    3.23.0  pyhd8ed1ab_0         conda-forge      23kB
+
+  Summary:
+
+  Install: 20 packages
+
+  Total download: 115MB
+
+────────────────────────────────────────────────────────────────────────────────
+
+
+Confirm changes: [Y/n] 
+```
+
+Typing `Y` will let mamba proceed.
+
+You could also avoid the interactivity and let mamba proceed without asking by
+including `-y` in your `mamba install` invocation.
+
+You can list installed packages like this:
+
+```{code} shell-session
+(myproject2) gandalf:~> mamba list jax
+List of packages in environment: "/scratch/users/paciorek/conda/envs/myproject2"
+
+  Name    Version  Build                Channel    
+─────────────────────────────────────────────────────
+  jax     0.6.2    pyhd8ed1ab_0         conda-forge
+  jaxlib  0.6.2    cpu_py313h9430eff_1  conda-forge
+```
+
+:::{tip} Using pip within an environment is tricky
+
+You can use pip within a Conda environment, but this can cause issues because conda doesn't consider pip-installed packages when installing additional packages, so proceed with caution as follows:
+
+ - Use pip only after conda.
+ - If Conda changes are needed after using pip, create a new environment.
+ - Don't use `--user` when calling `pip install`.
+ - Always run pip with `--upgrade-strategy only-if-needed` (the default).
+
+:::
+
+### Environment locations
+
+If you have a scratch directory on the SCF, your Conda environments by
+default will be stored in `/scratch/users/<username>/conda/envs`. If
+you don't have a scratch directory, they will be in the usual
+`~/.conda/envs` directory. The purpose of this is to reduce backup
+sizes, as scratch it not backed up and Conda environments can be
+reproduced based on saving an environment recipe using `mamba env
+export`.
+
+Source packages that Conda caches for later use will be stored in
+`/tmp/pkgs` on each machine.
+
+
 ### Reproducing an environment
 
-You can create a snapshot of your current environment which can then be
+You can create a snapshot of your current environment that can then be
 reproduced by collaborators, or even just yourself if you want to setup
 the same environment on another device. To export an environment:
 
-```{code} shell-session
-(base) mylaptop:~$ source activate myproject2
-(myproject2) mylaptop:~$ conda env export --from-history > environment.yml
+```{code} bash
+source activate myproject2
+mamba env export --from-history > environment.yml
 ```
 
 Transmit the `environment.yml` file to the other person or device. One
 can then create a new environment from that file:
 
-```{code} shell-session
-(base) mylaptop:~$ conda env create -f environment.yml
+```{code} bash
+mamba env create -f environment.yml
 ```
+
+Note that installing on a different operating system can easily fail because the requirements file includes build-specific versioning that only works on the specific operating system, so using on a different OS can require one to pass additional flags, such as the `--from-history` flag above.
+
+(conda-isolate)=
+### Isolating your environment from the SCF Python installation
+
+When creating a Conda environment, if you do not specify the version of
+Python, your environment will use our default Python version via the SCF
+default Python executable, and with all the SCF-installed Python packages
+available to you. That has the advantage that you may not need to
+install a bunch of packages. 
+
+```{code} shell-session
+gandalf:~$ mamba create -y -n myenv
+gandalf:~$source activate myenv
+(myenv) gandalf:~$ type python
+python is /usr/local/linux/miniforge-3.13/bin/python
+(myenv) gandalf:~$ python -c "import numpy; print(numpy.__version__)"
+2.1.3
+```
+
+The downside is that your environment is tied to our defaults and is
+harder to reproduce. Also, in many cases, when you install a package in
+the environment, updated versions of dependencies (potentially including
+Python itself) may be installed.
+
+To isolate your environment, be sure to specify the Python version you
+want, even if it is the same as the SCF's default Python version. Of course
+as a result you'll need to install all the packages you need.
+
+```{code} shell-session
+gandalf:~$ mamba create -y -n myenv python=3.13
+gandalf:~$ source activate myenv
+gandalf:~$ type python
+python is /accounts/vis/paciorek/.conda/envs/myenv/bin/python
+gandalf:~$ python -c "import numpy; print(numpy.__version__)"
+ModuleNotFoundError: No module named 'numpy'
+```
+
+One additional complication is that if you have packages installed via
+pip (which will be located in `~/.local` in your home directory), your
+environment will try to use those packages, which means your environment
+is not fully isolated and can be hard to reproduce. In addition, if you
+choose to install packages for your environment via pip, you'll
+generally want to install without using the `--user` flag. Omitting
+that flag will cause packages to be installed within the environment's
+directory, while including the flag will cause them to be installed in
+`~/.local` (and risk affecting your use of packages outside the
+environment!).
+
+### Jupyter kernels
+
+You can [create a Jupyter kernel associated with your environment](/access/jupyterhub#custom-kernel) for use with Jupyter notebooks.
+
+
+(conda-general-installer)=
+## Using Mamba/Conda as a general installer
+
+Conda is a general package manager. Many users use it just to install
+Python packages, but it can be used to install software more generally,
+including packages that would otherwise require installation from source
+(e.g., using `make` or `cmake`) and potentially have complicated additional
+dependencies. A good option for installing a piece of software is to check if there is
+a Conda package for it, before you try to install from source code.
+Executables installed when you install a Conda package will be placed in
+the `bin` subdirectory of the active Conda environment.
+
+### R and Conda
+
+Conda can actually be used to install R and R packages inside a Conda
+environment. You're welcome to do this, but most SCF users make use of the R
+installation (and a wide range of R packages) that we provide at the
+system level and [install additional packages](R.md) for use
+with the system R.
+
 
 ## Installing Mamba/Conda on your own computer
 
-On the SCF, we use Mamba as a drop-in replacement for Conda.
+(install-miniforge)=
+### Using Miniforge (recommended)
 
 For your own computer, we recommend using the [Miniforge
 distribution](https://github.com/conda-forge/miniforge) as your Python
 installation rather than Anaconda. Miniforge by default uses the
-conda-forge channel, a popular channel providing a wide variety of
+`conda-forge` channel, a popular channel providing a wide variety of
 up-to-date packages. You can optionally have it use Mamba rather than
 Conda. 
 
-(m1-anaconda)=
-#### Mamba for Mac ARM64-based machines (Apple Silicon M1 and M2 Macs)
+(m-series-anaconda)=
+### Conda/Mamba for Mac ARM64-based machines (Apple silicon M-series chips)
 
-With the M1 and M2 Macs, Apple is now using its own chips, referred to
-as *Apple Silicon*. These have a different architecture, ARM64, than
+With the M-series Macs, Apple is now using its own chips, referred to
+as *Apple silicon*. These have a different architecture, ARM64, than
 standard x86-64 chips, such as those produced by Intel and AMD.
 
-To take full advantage of the new chips, you can use Miniforge as it
-provides versions for ARM64. 
+To take full advantage of the new chips, you can use Miniforge, as it
+provides versions for ARM64.  You can also use [Anaconda/Miniconda with
+ARM64 support](https://www.anaconda.com/blog/new-release-anaconda-distribution-now-supporting-m1),
+installing with the  [64-Bit (Apple silicon) installer](https://www.anaconda.com/products/distribution#Downloads)
 
 Non-ARM64 programs, including non-ARM64 Miniforge installations, will
 work on the new Apple Silicon-based machines by automatically making use
 of Apple's Rosetta2 system to translate machine code from ARM64 to
 x86_64, but you can expect some decrease in performance. 
 
+
 ### Using Anaconda/Miniconda
 
-While we recommend installing Miniforge, you can also install Anaconda
+While we recommend [installing Miniforge](#install-miniforge), you can also install Anaconda
 or a minimal installation called Miniconda. 
 
-#### Miniconda
+To install Miniconda:
 
 1. Download
    [Miniconda](https://docs.conda.io/en/latest/miniconda.html). There
    are installers for Linux, macOS, and Windows. Miniconda is a much
-   smaller version of Anaconda which includes more packages out of the
-   box as well as a graphical user interfaces to the installer.
+   smaller version of Anaconda that includes more packages out of the
+   box as well as a graphical user interface to the installer.
    Miniconda is better if you don't want to install too many
    unnecessary packages right at the start.
 
@@ -317,11 +378,11 @@ or a minimal installation called Miniconda. 
    usually sensible to accept the defaults. Conda alters your shell
    initialization, and updates your executable path to find the base
    installation. For example, Miniconda will be installed into
-   ~/miniconda3/ by default, so ~/miniconda3/bin/ will be added to your
-   PATH variable. Conda may update your shell prompt as well with
+   `~/miniconda3/` by default, so `~/miniconda3/bin/` will be added to your
+   `PATH` variable. Conda may update your shell prompt as well with
    status information.
 
-1. Open a new terminal window. This will start up a new shell which
+1. Open a new terminal window. This will start up a new shell that
    will be aware of the new Conda tools. For example, on a Mac:
 
    ```{code} shell-session
@@ -330,25 +391,5 @@ or a minimal installation called Miniconda. 
    python is /usr/bin/python
    ```
 
-#### Anaconda for Mac ARM64-based machines (Apple Silicon M1 and M2 Macs)
 
-With the M1 and M2 Macs, Apple is now using its own chips, referred to
-as *Apple Silicon*. These have a different architecture, ARM64, than
-standard x86-64 chips, such as those produced by Intel and AMD.
 
-To take full advantage of the new chips, you can use [Anaconda with
-ARM64
-support](https://www.anaconda.com/blog/new-release-anaconda-distribution-now-supporting-m1).
-You can either install Anaconda using the [64 -Bit (M1)
-installer](https://www.anaconda.com/products/distribution#Downloads), or
-update your existing conda installation:
-
-```{code} bash
-conda install anaconda=2022.05
-```
-
-Non-ARM64 programs, including standard Miniconda and Anaconda
-installations, will work on the new Apple Silicon-based machines by
-automatically making use of Apple's Rosetta2 system to translate machine
-code from ARM64 to x86_64, but you can expect some decrease in
-performance. 
