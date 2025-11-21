@@ -32,4 +32,3 @@ Conda is a general package manager. While it is best known for
 [installing Python packages](conda.md#conda-python-installer), you can also use it to 
 [install other software](conda.md#conda-general-installer), including executables with
 complicated dependencies that would otherwise need to be installed using admin privileges.
-
