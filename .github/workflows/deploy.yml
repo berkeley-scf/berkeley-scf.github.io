@@ -45,7 +45,7 @@ jobs:
       - name: Inject Siteimprove analytics
         run: node inject-siteimprove.js
       - name: Generate motd feed
-        run: ./myst-plugin-driver.mjs --file motd.md --directive listing --type rss --baseUrl https://computing.stat.berkeley.edu > ./_build/html/motd.rss
+        run: ./myst-plugin-driver.mjs --file motd.md --directive listing --type rss --rssBaseUrl https://computing.stat.berkeley.edu > ./_build/html/motd.rss
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
