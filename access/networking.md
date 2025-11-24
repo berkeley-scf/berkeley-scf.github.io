@@ -4,6 +4,30 @@ title: "Getting Online"
 
 You can get online in the following ways:
 
- - You can [connect to the campus Wi-Fi](https://statistics.berkeley.edu/computing/faqs/wi-fi).
- - You can [connect to the wired (Ethernet) network](https://statistics.berkeley.edu/computing/faqs/connecting-computer-wired-network) in department space in Evans.
- - You can [connect to university networks securely via VPN](https://statistics.berkeley.edu/computing/faqs/using-campus-vpn).
+::::{grid} 1 2 3 3
+
+:::{card}
+:header: Wi-Fi
+:link: https://statistics.berkeley.edu/computing/faqs/wi-fi
+
+Connect to the campus Wi-Fi.
+
+:::
+
+:::{card}
+:header: Wired Network
+:link: https://statistics.berkeley.edu/computing/faqs/connecting-computer-wired-network
+
+Connect to the wired (ethernet) network.
+
+:::
+
+:::{card}
+:header: VPN
+:link: https://statistics.berkeley.edu/computing/faqs/using-campus-vpn
+
+Connect to the university networks securely via VPN.
+
+:::
+
+::::
