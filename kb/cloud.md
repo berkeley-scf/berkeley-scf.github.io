@@ -21,5 +21,22 @@ and other methods of support. We encourage people to leverage this
 service to ease various administrative burdens involved with using the
 cloud.
 
- - [bCloud Service](https://technology.berkeley.edu/services/cloud)
- - [bCloud Request Form](href="https://forms.gle/N6is1jFzsfXyJxaW8)
+::::{grid} 1 2 2 2
+
+:::{card}
+:header: bCloud Service
+:link: https://technology.berkeley.edu/services/cloud
+
+Berkeley IT's bCloud Service Introduction
+
+:::
+
+:::{card}
+:header: bCloud Request Form
+:link: https://forms.gle/N6is1jFzsfXyJxaW8
+
+Fill out the bCloud Central (AWS/GCP/Azure) Request Form to request access to the bCloud Central Service.
+
+:::
+
+::::
