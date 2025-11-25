@@ -87,6 +87,7 @@ site:
   title: Computing in Statistics at Berkeley
   options:
     logo: images/lockup-blue-medium-on-white-small.svg
+    favicon: images/B-favicon.png
     #logo_text: Computing in Statistics at Berkeley
     analytics_google: G-X1NED2KST9
     style: _static/custom.css
