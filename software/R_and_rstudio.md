@@ -21,7 +21,7 @@ The primary access to RStudio is through a web browser using [our JupyterHub](..
 
 In contrast with running RStudio directly on SCF machines and forwarding
 the display over X11, this should be much more responsive.
-## Installation by SCF staff
+
 
 ## R package installation
 
