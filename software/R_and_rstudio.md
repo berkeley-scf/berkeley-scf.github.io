@@ -1,17 +1,34 @@
 ---
-title: R
+title: R and RStudio
 ---
 
-We provide R, including a variety of popular libraries. You can request that
-we install additional libraries for you, or you can install them yourself in
-your own account.
+We provide R and RStudio, including a variety of popular libraries. 
 
-## Installation by SCF staff
+## RStudio
+
+The primary access to RStudio is through a web browser using [our JupyterHub](../access/jupyterhub.md).
+
+- Visit https://jupyter.stat.berkeley.edu and use your SCF username and
+  password to login. By default, your RStudio session will be spawned onto
+  the first available standalone Linux server, however you may optionally
+  start your session on a cluster node in case you need access to more
+  processing power. You can also pass [Slurm job submission options](../servers/cluster/submitting.md) to your server and specify prologue
+  commands that will run prior to your RStudio startup.
+- Once your Jupyter session is active, click RStudio from the Jupyter
+  Lab launcher. If you don't see the launcher, click `File > New
+  Launcher`. All R packages installed on the system, as well as packages
+  installed by users within their home directories should be available.
+
+In contrast with running RStudio directly on SCF machines and forwarding
+the display over X11, this should be much more responsive.
+
+
+## R package installation
 
 First, note that in general, SCF staff will install an R package on the
 system on [request](mailto:consult@stat.berkeley.edu).
 
-## User installation
+### User installation
 
 However, you can also install packages locally within your home
 directory. So if you need a package quickly or on a one-time basis, or
@@ -20,7 +37,7 @@ locally.
 
 By default, user-installed packages are installed in the \`R\`
 subdirectory in your home directory, in
-`~/R/x86_64-pc-linux-gnu-library/4.5`. However, if that directory does
+`~/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/4.5`. However, if that directory does
 not exist, you may get an error message like this:
 
 ``` programlisting
@@ -29,7 +46,7 @@ mkdir: cannot create directory  '/server/linux/lib/R/site-library/00LOCK': Permi
 
 The simplest solution is to create the directory:
 
-    mkdir -p ~/R/x86_64-pc-linux-gnu/4.5
+    mkdir -p ~/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/4.5
 
 You can use `.libPaths()` to check that the user-level directory is the
 default location (it should be the first result printed, as seen below)
