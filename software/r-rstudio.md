@@ -6,12 +6,10 @@ We provide R and RStudio, including a variety of popular libraries.
 
 ## RStudio
 
-The primary access to RStudio is through a web browser using [our JupyterHub](../access/jupyterhub.md).
+The primary access to RStudio is through a web browser using [our JupyterHub](../access/jupyterhub.md). You can use your SCF username and password to login, or you can login to a
+[shared project account](../access/jupyterhub.md#shared-project-accounts).
 
-Visit [our JupyterHub](https://jupyter.stat.berkeley.edu). You can use
-your SCF username and password to login, or you can login to a [shared
-project account](../access/jupyterhub.md#shared-project-accounts). By
-default, your RStudio session will be spawned onto the first available
+By default, your RStudio session will be spawned onto the first available
 standalone Linux server, however you may optionally start your session
 on a cluster node in case you need access to more processing power. You
 can also pass [Slurm job submission
