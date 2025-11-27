@@ -31,7 +31,7 @@ project:
         - file: software/install.md
         - file: software/python.md
         - file: software/conda.md
-        - file: software/R_and_rstudio.md
+        - file: software/r-rstudio.md
         - file: software/julia.md
         - file: software/matlab.md
         - file: software/mathematica.md

@@ -40,7 +40,7 @@ subdirectory in your home directory, in
 `~/R/x86_64-pc-linux-gnu-library-ubuntu-24.04/4.5`. However, if that directory does
 not exist, you may get an error message like this:
 
-``` programlisting
+``` {code} shell-session
 mkdir: cannot create directory  '/server/linux/lib/R/site-library/00LOCK': Permission denied ERROR: failed to lock directory  '/server/linux/lib/R/site-library' for modifying
 ```
 
@@ -104,7 +104,7 @@ colon-separated string of directories to search. Since it's always set
 inside of an R session, the easiest way to get a starting point for it
 is to use `Sys.getenv()`:
 
-``` programlisting
+``` {code} R
 > Sys.getenv('R_LIBS')                          
 [1] "/usr/local/linux/lib/R/site-library:/usr/local/lib/R/site-library:/usr/lib/R/site-library:/usr/lib/R/library"
 ```
