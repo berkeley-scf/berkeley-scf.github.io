@@ -50,10 +50,17 @@ syntax for an interactive job.
 srun --pty --partition=<partition> --gpus=1 /bin/bash
 ```
 
-To use multiple GPUs for a job (only possible when using a server with
-more than one GPU), simply
-change the number 1 after `--gpus=` to the number desired.
 
+### Requesting multiple GPUs
+
+In partitions with more than one GPU (see next section; this does not include the `gpu`
+partition), you can request multiple GPUs by replacing the "1" after `--gpus=`
+with the number needed. 
+
+Note that in most cases you would want all the
+GPUs to be on the same machine, which you can guarantee either by using
+`--gpus-per-node` in place of `--gpus` or by including the
+`--nodes=1` flag in addition to the `--gpus` flag.
 
 ### GPU partitions
 
@@ -98,12 +105,6 @@ with A100 GPUs:
 sbatch --partition=yss,jsteinhardt,yugroup --gpus=A100:1 job.sh
 ```
 
-In partitions with more than one GPU (which does not include the `gpu`
-partition), you can request multiple GPUs by replacing the "1" above
-with the number needed. Note that in most cases you would want all the
-GPUs to be on the same machine, which you can guarantee either by using
-`--gpus-per-node` in place of `--gpus` or by including the
-`--nodes=1` flag in addition to the `--gpus` flag.
 
 (tiered-qos)=
 ### Tiered priority and preemption (QoS)
