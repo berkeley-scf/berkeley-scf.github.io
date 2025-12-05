@@ -341,22 +341,6 @@ installation rather than Anaconda. Miniforge by default uses the
 up-to-date packages. You can optionally have it use Mamba rather than
 Conda. 
 
-(m-series-anaconda)=
-### Conda/Mamba for Mac ARM64-based machines (Apple silicon M-series chips)
-
-With the M-series Macs, Apple is now using its own chips, referred to
-as *Apple silicon*. These have a different architecture, ARM64, than
-standard x86-64 chips, such as those produced by Intel and AMD.
-
-To take full advantage of the new chips, you can use Miniforge, as it
-provides versions for ARM64.  You can also use [Anaconda/Miniconda with
-ARM64 support](https://www.anaconda.com/blog/new-release-anaconda-distribution-now-supporting-m1),
-installing with the  [64-Bit (Apple silicon) installer](https://www.anaconda.com/products/distribution#Downloads)
-
-Non-ARM64 programs, including non-ARM64 Miniforge installations, will
-work on the new Apple Silicon-based machines by automatically making use
-of Apple's Rosetta2 system to translate machine code from ARM64 to
-x86_64, but you can expect some decrease in performance. 
 
 
 ### Using Anaconda/Miniconda

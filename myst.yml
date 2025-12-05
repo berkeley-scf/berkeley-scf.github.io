@@ -36,6 +36,7 @@ project:
         - file: software/matlab.md
         - file: software/mathematica.md
         - file: software/gpu-software.md
+        - file: software/mac.md
         - file: software/ai-coding.md
         - file: software/containers.md
         - file: software/vscode.md
