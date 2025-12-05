@@ -155,18 +155,18 @@ Manual](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#BLAS).
 
 With MacOS, CRAN's R binary comes with a default BLAS that the R
 developers recommend (but which is **very** slow) and a fast, threaded BLAS from Apple's Accelerate
-framework. See
-[here](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html#Which-BLAS-is-used-and-how-can-it-be-changed_003f)
-for information on how to enable the latter on your own Mac. You'll need
+framework. You can [enable the Accelerate vecLib BLAS for R](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html#Which-BLAS-is-used-and-how-can-it-be-changed_003f)
+on your own Mac. You'll need
 administrative privileges. 
 
-If you install R via Conda on MacOS, it will by default use openBLAS ans show good performance, but you can use the Accelerate vecLib BLAS by running `conda -c conda-forge install libblas=*=*_newaccelerate`.
+If you install R via Conda on MacOS, it will by default use openBLAS and show good performance, but you can use the Accelerate vecLib BLAS by running `conda -c conda-forge install libblas=*=*_newaccelerate`.
 
-[On Windows, enable OpenBLAS with R](https://www.r-bloggers.com/2022/01/building-r-4-2-for-windows-with-openblas/).
+[On Windows, you can enable OpenBLAS with R](https://www.r-bloggers.com/2022/01/building-r-4-2-for-windows-with-openblas/) (or search for more up-to-date instructions online).
 
 :::
 
 :::{tab-item} Python
+
 If you install numpy using Conda or Mamba, numpy will generally use
 OpenBLAS (if using the `conda-forge` channel) or MKL (if using the
 Anaconda default channel). While installing numpy, in the list of
