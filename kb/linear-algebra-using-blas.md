@@ -64,7 +64,7 @@ BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3
 LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.20.so;  LAPACK version 3.10.0
 ```
 
-On MacOS, if you are using the Accelerate vecLib BLAS, you should see something like this (note the path indicating "vecLib"):
+On MacOS, if you are using the Accelerate vecLib BLAS, you should see something like this (note the path for BLAS indicating "Accelerate" and "vecLib"):
 
 ```{code} R
 > sessionInfo()
@@ -81,8 +81,8 @@ BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/ve
 LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 ```
 
-Alternatively,  if you look at the files in the directory containing the BLAS
-and LAPACK dylib files, you should be able to see if `libRblas.dylib`
+Alternatively (this would potentially be the case with older versions of R), there may be cases where if you look at the files in the directory containing the BLAS
+and LAPACK dylib files, you can  see that `libRblas.dylib`
 is symbolically linked to the Accelerate (vecLib) BLAS dylib file, as is seen here:
 
 
@@ -153,13 +153,13 @@ Julia uses OpenBLAS for its basic linear algebra calculations.
 For Linux, enable OpenBLAS by following [Section A.3 of the R Installation and Administration
 Manual](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#BLAS).
 
-With MacOS, CRAN's R binary comes with a default BLAS that the R
-developers recommend (but which is **very** slow) and a fast, threaded BLAS from Apple's Accelerate
-framework. You can [enable the Accelerate vecLib BLAS for R](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html#Which-BLAS-is-used-and-how-can-it-be-changed_003f)
+With MacOS, CRAN's R binary now comes with the 
+comes the fast, threaded vecLib BLAS from Apple's Accelerate framework.
+In the event this is not the case, you can [enable the Accelerate vecLib BLAS for R](https://cran.r-project.org/bin/macosx/RMacOSX-FAQ.html#Which-BLAS-is-used-and-how-can-it-be-changed_003f)
 on your own Mac. You'll need
 administrative privileges. 
 
-If you install R via Conda on MacOS, it will by default use openBLAS and show good performance, but you can use the Accelerate vecLib BLAS by running `conda -c conda-forge install libblas=*=*_newaccelerate`.
+If you install R via Conda on MacOS, it will by default use openBLAS and show reasonably good performance, but youwill probably want to use the Accelerate vecLib BLAS by running `conda -c conda-forge install libblas=*=*_newaccelerate`.
 
 [On Windows, you can enable OpenBLAS with R](https://www.r-bloggers.com/2022/01/building-r-4-2-for-windows-with-openblas/) (or search for more up-to-date instructions online).
 
@@ -175,9 +175,9 @@ package(s) also being installed.
 
 If you install numpy using pip, numpy will generally use OpenBLAS.
 
-With MacOS, openBLAS should show good performance including on the M-series (Apple silicon) chips.
-However you might also wish to use Accelerate vecLib BLAS, which can be done 
-by running `conda install -c conda-forge numpy "libblas=*=*accelerate"`.
+With MacOS, openBLAS should show reasonably good performance including on the M-series (Apple silicon) chips.
+However you  will probably want use the fast, threaded vecLib BLAS from Apple's Accelerate framework.
+which can be done by running `conda install -c conda-forge numpy "libblas=*=*accelerate"`.
 
 :::
 

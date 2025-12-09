@@ -28,7 +28,7 @@ You can also use [Anaconda/Miniconda with
 ARM64 support](https://www.anaconda.com/blog/new-release-anaconda-distribution-now-supporting-m1),
 installing with the  [64-Bit (Apple silicon) installer](https://www.anaconda.com/products/distribution#Downloads)
 
-In addition you may want to [set up numpy to use Apple's Accelerate vecLib BLAS](https://computing.stat.berkeley.edu/kb/linear-algebra-using-blas/#configuring-use-of-a-fast-blas) rather than openBLAS (although numpy with openBLAS performs quite well).
+In addition you will probably want to [set up numpy to use Apple's Accelerate vecLib BLAS](../kb/linear-algebra-using-blas/#configuring-use-of-a-fast-blas) rather than openBLAS (although numpy with openBLAS performs reasonably well).
 
 ### Using the Mac GPU (MPS) with Python packages
 
@@ -42,6 +42,6 @@ Torch should automatically provide support for the Mac GPU. You may need to expl
 (m-series-r)=
 ### R for Mac ARM64-based machines
 
-[CRAN provides versions for Apple silicon](https://cran.r-project.org/bin/macosx/)
+[CRAN provides versions for Apple silicon](https://cran.r-project.org/bin/macosx/).
 
-In addition you will want to [set up R to use Apple's Accelerate vecLib BLAS](https://computing.stat.berkeley.edu/kb/linear-algebra-using-blas/#configuring-use-of-a-fast-blas) rather than the very slow default BLAS provided with R.
+As of recent R versions, installation from CRAN will [automatically use Apple's Accelerate vecLib BLAS](./kb/linear-algebra-using-blas/#configuring-use-of-a-fast-blas) rather than the very slow default BLAS provided with R, but you may want to [check that vecLib BLAS is being used](./kb/linear-algebra-using-blas/#checking-use-of-a-fast-blas).
