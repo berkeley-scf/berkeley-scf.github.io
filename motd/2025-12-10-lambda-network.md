@@ -13,3 +13,5 @@ keywords:
 The Lambda cluster headnode is currently unavailable due to network issues.
 A remote tech has been contacted to restore connectivity. We apologize for the
 disruption.
+
+UPDATE: The headnode is back online.
