@@ -10,9 +10,11 @@ To connect to the SCF using VS Code,  you'll need to have installed the
 connect to the SCF, click on the green Remote "Quick Access" status bar button
 labelled `><` in the lower left corner:
 
-```{image} ../images/vscode-brackets.png
-:alt: VS Code remote quick access button
+```{image} ../../images/vscode.png
+:alt: JupyterHub control panel page
 ```
+
+
 
 and choose "Host", providing one of the [SCF login nodes](../servers/login-servers.md). You can then access your SCF files from within your local VS Code instance.
 
