@@ -18,5 +18,7 @@ Here are some other computing resources available on campus.
 
 ## External
 
+NAIRR and ACCESS provide free computing resources to US-based researchers. The SCF can help in applying for these resources. One use case is for providing GPU resources for student coursework/projects.
+
 - [NAIRR Pilot](https://nairrpilot.org)
 - [ACCESS](https://access-ci.org)
