@@ -48,6 +48,7 @@ including: 
   and code completion using GitHub Copilot. In the future, one will
   likely be able to use GitHub Copilot for chat-based assistance with
   Positron. 
+- One can configure Opencode to use GitHub Copilot for LLM access.
 
 The free version of GitHub Copilot has various limits on requests. You
 can use the GitHub Copilot Pro version (which has no limits on the use
@@ -64,8 +65,8 @@ your GitHub account. 
 ## Ways to use AI assistants with the SCF 
 
 - Run VS Code with GitHub Copilot (or other VS Code extensions providing
-  AI assistants such as Gemini Code Assist or Continue) on your personal
-  machine and connect to the SCF using the remote SSH extension. 
+  AI assistants such as Cursor, Windsurf, Gemini Code Assist or Continue) on your personal
+  machine and connect to the SCF standalone servers using the remote SSH extension. 
   - With some additional configuration, you can connect to one of the
     SCF cluster machines from your local VS Code application. 
 - We expect to support the use of Jupyter AI on the SCF JupyterHub (in
@@ -75,10 +76,6 @@ your GitHub account. 
   JupyterHub. This can be helpful, as it allows you to do a variety of
   things all couched as code completions, but it doesn’t have the full
   AI assistance of other tools. 
-- Tools such as Cursor that are built on top of VS Code likely support
-  remote SSH access in similar fashion to VS Code. SCF staff can help
-  with this if needed, although we haven’t explored this ourselves yet
-  (hence the lack of detail here). 
 - There are various AI assistants available through a command line
   interface (CLI), including OpenAI CLI, Claude CLI, or Gemini CLI with
   which one can chat with AI models, generate code, or get explanations
