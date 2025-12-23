@@ -33,6 +33,11 @@ Research Computing's Savio campus cluster and NERSC:
 {button}`Launch Globus Web App <https://app.globus.org/>`
 +++
 
+```{image} ../../images/globus.png
+:alt: Globus web interface with two panels
+```
+
+
 ## Connecting
 
 The first time you connect to the endpoint, you will be offered the
