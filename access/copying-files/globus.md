@@ -33,9 +33,6 @@ Research Computing's Savio campus cluster and NERSC:
 {button}`Launch Globus Web App <https://app.globus.org/>`
 +++
 
-```{image} ../../images/globus.png
-:alt: Globus web interface with two panels
-```
 
 
 ## Connecting
@@ -58,6 +55,11 @@ Enter the name of the endpoint and authenticate to the resource by
 following the directions given. Once both endpoints are authenticated,
 it's straightforward to drag and drop to transfer files. Globus will
 email you when the transfer is complete.
+
+```{image} ../../images/globus.png
+:alt: Globus web interface with two panels
+```
+
 
 ## Your Personal Endpoint
 

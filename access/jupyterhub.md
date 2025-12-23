@@ -24,6 +24,11 @@ startup. Please [let us
 know](mailto:consult@stat.berkeley.edu?subject=JupyterHub%20feedback) if
 you have any difficulties or if you need us to add features to it.
 
+```{image} ../../images/jh-login.png
+:alt: JupyterHub startup page
+```
+
+
 ## Long Running Code
 
 Interactive programs like Jupyter Lab, RStudio, or VS Code might not
@@ -43,6 +48,11 @@ selecting File \> Hub Control Panel from within Jupyter Lab. Then click
 "Stop My Server". Note that selecting "Logout" does not free up
 resources for other users as it keeps your server running.
 
+```{image} ../../images/jh-stop.png
+:alt: JupyterHub control panel page
+```
+
+
 ## Named Servers
 
 It is possible to start up multiple servers on the cluster, analogously
@@ -53,7 +63,7 @@ account and want to let each user run a different jupyter server.
 
 After you login, do not click Start on the Server Options page. Instead,
 visit the control panel at <https://jupyter.stat.berkeley.edu/hub/home>.
-You can get there by clicking the Home button at the top-left. Specify
+You can get there by clicking the Home button at the top-left (see image above). Specify
 an arbitrary name in the "Name your server" field, then click "Add New
 Server". You will then be prompted to specify spawning options.
 
