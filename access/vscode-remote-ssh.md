@@ -10,8 +10,8 @@ To connect to the SCF using VS Code,  you'll need to have installed the
 connect to the SCF, click on the green Remote "Quick Access" status bar button
 labelled `><` in the lower left corner:
 
-```{image} ../../images/vscode.png
-:alt: JupyterHub control panel page
+```{image} ../images/vscode.png
+:alt: VS Code GUI
 ```
 
 

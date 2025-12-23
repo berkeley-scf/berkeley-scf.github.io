@@ -24,7 +24,7 @@ startup. Please [let us
 know](mailto:consult@stat.berkeley.edu?subject=JupyterHub%20feedback) if
 you have any difficulties or if you need us to add features to it.
 
-```{image} ../../images/jh-login.png
+```{image} ../images/jh-login.png
 :alt: JupyterHub startup page
 ```
 
@@ -48,7 +48,7 @@ selecting File \> Hub Control Panel from within Jupyter Lab. Then click
 "Stop My Server". Note that selecting "Logout" does not free up
 resources for other users as it keeps your server running.
 
-```{image} ../../images/jh-stop.png
+```{image} ../images/jh-stop.png
 :alt: JupyterHub control panel page
 ```
 
