@@ -62,6 +62,18 @@ on your Card, so long as you have set up multi-factor authentication
 with GitHub and your name on your Card matches the name associated with
 your GitHub account. 
 
+### Enabling GitHub Copilot in VS Code
+
+To enable Copilot in your VS Code app with your GitHub for Education access, you'll need to login in to your GitHub account. As shown in the screenshot below, you should be able to login by going to one of the areas marked in the red ovals. 
+
+```{image} ../images/vscode-gh-copilot.png
+:alt: VS Code GUI with GitHub copilot icons
+```
+
+
+Once you are logged in, you should see the GitHub Copilot icon in the top toolbar (see the green oval in the screenshot). Clicking there should allow you to open the Chat window (or do `Cmd+Alt+I` on MacOs or `Ctrl+Alt+I` on Windows). You can also start inline chat in a code file with `Cmd+I` on MacOS or `Ctrl+I` on Windows.
+
+
 ## Ways to use AI assistants with the SCF 
 
 - Run VS Code with GitHub Copilot (or other VS Code extensions providing

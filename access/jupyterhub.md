@@ -64,7 +64,7 @@ account and want to let each user run a different jupyter server.
 After you login, do not click Start on the Server Options page. Instead,
 visit the control panel at <https://jupyter.stat.berkeley.edu/hub/home>.
 You can get there by clicking the Home button at the top-left (see image above). Specify
-an arbitrary name in the "Name your server" field, then click "Add New
+an arbitrary name in the "Server name" field, then click "Add New
 Server". You will then be prompted to specify spawning options.
 
 If you have multiple named servers running, just navigate to the hub
