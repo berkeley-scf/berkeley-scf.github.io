@@ -7,7 +7,7 @@ title: VS Code Remote SSH
 
 To connect to the SCF using VS Code,  you'll need to have installed the
 [Remote Development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) (which includes the [Remote SSH extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)) for your local VS Code.  Then to
-connect to the SCF, click on the green Remote "Quick Access" status bar button
+connect to the SCF, click on the Remote "Quick Access" status bar button
 labelled `><` in the lower left corner:
 
 ```{image} ../images/vscode.png
@@ -67,7 +67,10 @@ VS Code can forward ports to your local machine. This is particularly helpful if
 
 1. Determine the port being used by the web service (e.g., port 8787).
 2. If not already open, open the Panel toolbar. You can do this via `Ctrl-backtick` or by opening a Terminal.
-3. Click on the `PORTS` tab in the toolbar (it will be next to the `TERMINAL` tab).
+3. Click on the `PORTS` tab in the toolbar (it will be next to the `TERMINAL` tab, as shown in the screenshot below).
 4. Enter the port from #1 above as the port to forward. 
 5. You should see a URL in the `Forwarded Address` column, which will be something like `localhost:8787`. Go to that URL in the browser on your machine (or click on the browser icon in that column). 
 
+```{image} ../images/vscode-port.png
+:alt: VS Code GUI port forwarding panel area
+```
