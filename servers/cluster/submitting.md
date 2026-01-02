@@ -125,10 +125,9 @@ laptops.
 
 ### epurdom partition
 
-The `epurdom` partition has two nodes (`frodo` and
-`samwise`) with  recent CPUs (128-core AMD EPYC) and 
- 528 GB memory each.
- 
+The `epurdom` partition has two nodes (`frodo` and `samwise`) with  recent CPUs
+(128-core AMD EPYC) and 528 GB memory each.
+
 You can request use of these nodes as follows:
 
 :::{code} shell-session
@@ -137,13 +136,12 @@ Submitted batch job 380
 :::
 
 
-Purdom group members have priority access to these nodes. 
-If you are in the group, simply submit jobs t
-the epurdom partition and you will automatically preempt jobs by users
-not in the group if it is needed for your job to run.
+Purdom group members have priority access to these nodes. If you are in the
+group, simply submit jobs to the epurdom partition and you will automatically
+preempt jobs by users not in the group if it is needed for your job to run.
 
 Non-group members can submit jobs as well, but jobs may be preempted (killed)
-without warning if group member jobs need the resources being used. 
+without warning if group member jobs need the resources being used.
 Pre-emptible jobs are requeued when preemption happens and should
 restart when the needed resources become available. If you see that your
 job is not being requeued, please contact us.
@@ -155,21 +153,20 @@ allocated all the threads on a given core to avoid contention between
 jobs for a given physical core.
 
 
-#### jsteinhardt partition
+### jsteinhardt partition
 
-The jsteinhardt partition has various nodes. While these nodes are 
-primarily intended for use for their GPUs, many of them have newer CPUs, a lot of
-memory, and very fast disk I/O to `/tmp` and `/var/tmp` using an NVMe
-SSD. 
+While the various nodes of the `jsteinhardt` partition are primarily intended
+for use for their GPUs, many of them have newer CPUs, a lot of memory, and very
+fast disk I/O to `/tmp` and `/var/tmp` using an NVMe SSD.
 
 Non-group members can submit jobs as well, but jobs may be preempted (killed)
-without warning if group member jobs need the resources being used. 
+without warning if group member jobs need the resources being used.
 Pre-emptible jobs are requeued when preemption happens and should
 restart when the needed resources become available. If you see that your
 job is not being requeued, please contact us.
 
- For example to request use of one of these nodes,
-which are labelled as `manycore` nodes:
+For example to request use of one of these nodes, which are labelled as
+`manycore` nodes:
 
 :::{code} shell-session
 arwen:~$ sbatch -p jsteinhardt -C manycore job.sh
