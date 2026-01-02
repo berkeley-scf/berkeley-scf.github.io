@@ -11,33 +11,28 @@ discussed here:
 
 :::{table} Partition Restrictions
 :label: partition-restrictions
-| Partition      | Max cores<br>per user (running) | Max cores<br>per job | Max CPU memory<br>per job | Time limit | Preembtible |
-|----------------|----------------------------|-------------------|----------------------|------------|-------------|
-| high (default)     | 96                     | 24     | 128 GB           | 7 days     | No          |
-| low                | 256                    | 32     | 256 GB           | 28 days    | No          |
-| gpu[^perf]         | 8                      | 8      | 6 GB             | 28 days    | No          |
-| berkeleynlp[^perf] | 384                    | 128    | 1.5 TB | 28 days[^bnlp-i]     | Yes[^pe] |
-| epurdom[^perf]     | 256                    | 128    | 528 GB           | 28 days    | Yes[^pe]    |
-| jsteinhardt[^perf] | varied                 | varied | varied[^js-mem]  | 28 days    | Yes[^pe]    |
-| yugroup[^perf]     | varied                 | varied | varied           | 28 days    | Yes[^pe]    |
-| yss[^perf]         | 224                    | varied | 528 GB           | 28 days    | Yes[^pe]    |
+| Partition      | Max cores<br>per user (running) | Max cores<br>per job | Max CPU memory<br>per job | Time limit | Preembtible[^pe] |
+|----------------|---------------------------------|----------------------|---------------------------|------------|------------------|
+| high (default) | 96                     | 24     | 128 GB           | 7 days     | No  |
+| low            | 256                    | 32     | 256 GB           | 28 days    | No  |
+| gpu            | 8                      | 8      | 6 GB             | 28 days    | No  |
+| berkeleynlp    | 384                    | 128    | 1.5 TB | 28 days[^bnlp-i]     | Yes |
+| epurdom        | 256                    | 128    | 528 GB           | 28 days    | Yes |
+| jsteinhardt    | varied                 | varied | varied[^js-mem]  | 28 days    | Yes |
+| yugroup        | varied                 | varied | varied           | 28 days    | Yes |
+| yss            | 224                    | varied | 528 GB           | 28 days    | Yes |
 :::
 
 :::{note} About cores per job
 If you use software that can parallelize across multiple nodes (e.g., R packages that use MPI or the future package, Python's Dask or IPython Parallel, MATLAB, MPI), you can run individual jobs across more than one node. See [](#parallel-jobs).
 :::
 
-[^perf]: See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
+[^pe]: [Preemptible](gpus.md#preemption) jobs from non-group members run at normal priority.
 
-[^pe]: Preemptible when run at normal priority, as occurs for non-group members.
+[^bnlp-i]: The `berkeleynlp` partition has a 24 hour time limit on interactive jobs, including those launched on JupyterHub.
 
-[^bnlp-i]: The berkeleynlp partition has a 24 hour time limit on interactive jobs, including those launched on JupyterHub.
+[^js-mem]: 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)
 
-[^js-mem]: Max CPU memory:
-    - 288 GB (smaug)
-    - 792 GB (balrog, rainbowquartz)
-    - 1 TB (saruman)
-    - 128 GB (various)
 ## Single-core jobs
 
 Prepare a shell script containing the instructions you would like the
@@ -113,17 +108,16 @@ of a variety of types.
 (high-performance-partitions)=
 ## High performance (CPU) partitions
 
-### High partition vs. low partition
+### high and low
 
-Both of these partitions have quite old machines.
+Both `high` and `low` partitions have very old machines, although machines in
+`high` are somewhat faster.
 
-While the machines in the high partition are faster than the machines in the low
-partition, these machines are also quite old and will generally be slower
-than the machines in the partitions for specific lab groups and (on a
-per-core basis) than your laptop, particularly Apple Silicon Mac
-laptops.
+They will all be generally slower than the machines in specific lab group
+partitions as well as modern laptops (on a per-core basis), particularly Apple
+Silicon Mac laptops.
 
-### epurdom partition
+### epurdom
 
 The `epurdom` partition has two nodes (`frodo` and `samwise`) with  recent CPUs
 (128-core AMD EPYC) and 528 GB memory each.
@@ -153,7 +147,7 @@ allocated all the threads on a given core to avoid contention between
 jobs for a given physical core.
 
 
-### jsteinhardt partition
+### jsteinhardt
 
 While the various nodes of the `jsteinhardt` partition are primarily intended
 for use for their GPUs, many of them have newer CPUs, a lot of memory, and very
@@ -185,7 +179,7 @@ Also note that if you need more disk space on the NVMe SSD on some but
 not all of these nodes, we may be able to make available space on a much
 larger NVMe SSD if you request it.
 
-## Job not starting
+## Troubleshooting
 
 The cluster is managed using the Slurm scheduling software. We configure
 Slurm to try to balance the needs of the various cluster users.
