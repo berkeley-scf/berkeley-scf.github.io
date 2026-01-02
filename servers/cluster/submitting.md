@@ -3,7 +3,7 @@ title: Basic Job Submission
 ---
 This page describes how to submit jobs to the cluster.
 
-## Slurm configuration and job restrictions  
+## Slurm configuration and job restrictions
 
 The cluster has multiple partitions, corresponding to groups of nodes.
 The different partitions have different hardware and job restrictions as
@@ -11,27 +11,34 @@ discussed here:
 
 :::{table} Partition Restrictions
 :label: partition-restrictions
-| Partition      | Max \# cores per user (running) | Time limit            | Max CPU memory per job | Max cores per job |
-|----------------|---------------------------------|-----------------------|--------------------|-------------------|
-| high (default) | 96                              | 7 days                | 128 GB             | 24[^parallel]     |
-| low            | 256                             | 28 days               | 256 GB             | 32[^parallel]     |
-| gpu[^high]     | 8 CPU cores                     | 28 days               | 6 GB               | 8                 |
-| berkeleynlp[^high]    | 384                      | 28 days[^preemptible][^berkeleynlp] | 1.5 TB | 128[^parallel]  |
-| epurdom[^high] | 256                             | 28 days[^preemptible] | 528 GB             | 128[^parallel]    |
-| jsteinhardt[^high] | varied                      | 28 days[^preemptible] | 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various) | varied[^parallel] |
-| yugroup[^high] | varied                          | 28 days[^preemptible] | varied             | varied            |
-| yss[^high]     | 224                             | 28 days[^preemptible] | 528 GB             | varied[^parallel] |
+| Partition      | Max cores<br>per user (running) | Max cores<br>per job | Max CPU memory<br>per job | Time limit | Preembtible |
+|----------------|----------------------------|-------------------|----------------------|------------|-------------|
+| high (default)     | 96                     | 24     | 128 GB           | 7 days     | No          |
+| low                | 256                    | 32     | 256 GB           | 28 days    | No          |
+| gpu[^perf]         | 8                      | 8      | 6 GB             | 28 days    | No          |
+| berkeleynlp[^perf] | 384                    | 128    | 1.5 TB | 28 days[^bnlp-i]     | Yes[^pe] |
+| epurdom[^perf]     | 256                    | 128    | 528 GB           | 28 days    | Yes[^pe]    |
+| jsteinhardt[^perf] | varied                 | varied | varied[^js-mem]  | 28 days    | Yes[^pe]    |
+| yugroup[^perf]     | varied                 | varied | varied           | 28 days    | Yes[^pe]    |
+| yss[^perf]         | 224                    | varied | 528 GB           | 28 days    | Yes[^pe]    |
 :::
 
-[^parallel]: If you use software that can parallelize across multiple nodes (e.g., R packages that use MPI or the future package, Python's Dask or IPython Parallel, MATLAB, MPI), you can run individual jobs across more than one node. See [](#parallel-jobs).
+:::{note} About cores per job
+If you use software that can parallelize across multiple nodes (e.g., R packages that use MPI or the future package, Python's Dask or IPython Parallel, MATLAB, MPI), you can run individual jobs across more than one node. See [](#parallel-jobs).
+:::
 
-[^high]: See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
+[^perf]: See [](#high-performance-partitions) or [GPU Jobs](gpus.md).
 
-[^preemptible]: Preemptible when run at normal priority, as occurs for non-group members.
+[^pe]: Preemptible when run at normal priority, as occurs for non-group members.
 
-[^berkeleynlp]: The berkeleynlp partition has a 24 hour time limit on interactive jobs, including those launched on JupyterHub.
+[^bnlp-i]: The berkeleynlp partition has a 24 hour time limit on interactive jobs, including those launched on JupyterHub.
 
-## Single-core jobs  
+[^js-mem]: Max CPU memory:
+    - 288 GB (smaug)
+    - 792 GB (balrog, rainbowquartz)
+    - 1 TB (saruman)
+    - 128 GB (various)
+## Single-core jobs
 
 Prepare a shell script containing the instructions you would like the
 system to execute. 
@@ -98,13 +105,13 @@ R CMD BATCH --no-save simulate.R simulate.Rout
 :::
  
 (parallel-jobs)=
-## Parallel Jobs  
+## Parallel Jobs
 
 One can use Slurm to [submit parallel code](/servers/cluster/parallel)
 of a variety of types.
 
 (high-performance-partitions)=
-## High performance (CPU) aprtitions  
+## High performance (CPU) partitions
 
 ### High partition vs. low partition
 
@@ -255,7 +262,7 @@ The scheduler will launch your job on nodes that can complete it in time,
 or on nodes without reservations. You can check the status of nodes using
 `sinfo`. During maintenance, affected nodes will have a status of `maint`.
 
-## How to kill a job  
+## How to kill a job
 First, find the job-id of the job, by typing squeue at the command line
 of a submit host (see How to Monitor Jobs).
 
@@ -265,7 +272,7 @@ Then use scancel to delete the job (with id 380 in this case):
 scancel 380
 ```
 
-## Interactive jobs  
+## Interactive jobs
 
 You can work interactively on a node from the Linux shell command line
 by starting a job in the interactive queue.
