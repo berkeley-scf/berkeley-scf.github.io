@@ -89,10 +89,10 @@ running time? and How do I capture the program output which would
 normally go to the screen?. Here is one simple way to do both (as:
 
 :::{code} shell-session
-nice -n 19 /usr/bin/time program-name > output-filename 2>&1
+/usr/bin/time program-name > output-filename 2>&1
 :::
 
-Where program-name is the name of your program and output-filename is the
+Where `program-name` is the name of your program and `output-filename` is the
 name of the file in which you want to capture output. The running time
 will be the last line of the output file, formatted like this:
 

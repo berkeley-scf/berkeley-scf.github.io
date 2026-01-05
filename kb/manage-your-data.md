@@ -91,7 +91,7 @@ Infrequently accessed files may be compressed to save disk space.
 
 :::
 
-See the UNIX manual pages for the above programs by using the 'man', for example 'man gzip'.
+See the UNIX manual pages for the above programs by using the `man`, for example `man gzip`.
 
 ## Deleting Files
 
@@ -137,8 +137,8 @@ can be reduced somewhat by stripping them. Type:
 
 When programs crash, they sometimes report 'Core dumped' indicating that a
 large file called 'core' has been created in the program's current working
-directory. A user may disable core dumps by adding "ulimit -c 0" to
-~/.bashrc.
+directory. A user may disable core dumps by adding `ulimit -c 0` to
+`~/.bashrc`.
 
 ## Best Practices
 

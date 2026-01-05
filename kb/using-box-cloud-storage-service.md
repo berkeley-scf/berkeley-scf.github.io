@@ -7,13 +7,14 @@ Campus has an agreement with Box to provide storage for Berkeley
 faculty, staff, and students. This enables to freely upload your
 documents and data sets to Box and share those files with collaborators.
 According to the [bConnected project
-page](http://bconnected-project.berkeley.edu/collaboration-tools/box/),
+page](https://bconnected.berkeley.edu/services/box),
 this service provides:
 
-- Unlimited (as of August 2015) free, secured, and encrypted content
-  storage of files with a maximum file size of 15 Gb (However other
+- Free, secured, and encrypted content
+  storage of files with a maximum file size of 50 GB (However other
   information provided by campus indicates a maximum upload size of 5 GB
   using the Web and 200 MB when using smart phones)
+- Up to 50 GB storage, with the possibility to request more.
 - Encrypted storage of all files
 - File preview for many formats (i.e., PDF, Word, Excel, etc.)
 - Access to content via desktop and laptop browsers, and through mobile
