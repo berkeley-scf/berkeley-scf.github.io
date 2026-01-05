@@ -82,4 +82,4 @@ shared project space (shared amongst all department members), and a
 large scratch area. You can purchase more if needed, including large
 amounts of disk space through the [condo storage
 program](https://research-it.berkeley.edu/services/high-performance-computing/brc-condo-storage-service-savio),
-which costs about \$6200 per 42 TB, good for five years.
+which costs about \$5000 per 112 TB, good for five years.

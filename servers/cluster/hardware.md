@@ -39,13 +39,13 @@ Here are the details of the nodes in the various partitions.
   - Jobs are subject to preemption at any time and will be cancelled in
     that case without warning (more details below).
 - 1280 cores are available on a preemptible basis in the 'lambda'
-  partition on a remote cluster located in Texas.
+  partition on a remote cluster located in Washington state.
   - 5 servers each with 256 cores (128 physical cores) and 1 TB RAM.
   - Newer and faster cores than in the 'high' partition.
   - Very fast disk I/O (using NVMe SSDs) to files located in /data.
   - Jobs are subject to preemption at any time and will be cancelled in
     that case without warning (more details below).
-- Additional GPU servers in the 'yugroup', 'yss', and 'songmei'
+- Additional GPU servers in the 'yugroup', 'yss', 'songmei', and 'berkeleynlp'
   partitions.
 
 We have a number of [GPU servers](../gpu-servers) that are part of the

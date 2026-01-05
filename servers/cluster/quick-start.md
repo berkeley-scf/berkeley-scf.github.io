@@ -75,17 +75,20 @@ Here 'A' is for 'active' (i.e., in use), 'I' is for 'idle' (i.e., not in
 use), and 'T' is for the 'total' number of CPUs (aka *cores*) on the
 node. 
 
-### Interactive Jobs with srun
+### Interactive Jobs with srun (or slogin)
 
-We can start an interactive job with *srun*. This will start an
+We can start an interactive job with `srun` (or our `slogin` wrapper command). 
+This will start an
 interactive session that can use a single core (aka CPU) on one of the
 machines in our (default) high partition, which contains older machines.
 You'll see the prompt change, indicating you're now running on one of
-the cluster machines (a machine named *scf-sm20* in this case). 
+the cluster machines (a machine named `scf-sm20` in this case). 
 
 ```{code} shell-session
 paciorek@gandalf:~> srun --pty bash
 paciorek@scf-sm20:~> 
+paciorek@gandalf:~> slogin # convenient wrapper for `srun --pty bash`
+paciorek@scf-sm20:~>
 ```
 
 When you're done with your computation, make sure to exit out of the
@@ -162,9 +165,9 @@ the node the job is running on and then use commands like *top* and
 *ps*:
 
 ```{code} shell-session
-paciorek@gandalf:~> srun --jobid 47139 --pty bash
-paciorek@scf-sm10:~> top    # use Ctrl-C to exit top
-paciorek@scf-sm10:~> exit
+paciorek@gandalf:~> ssh scf-sm11  
+paciorek@scf-sm11:~> top    # use Ctrl-C to exit top
+paciorek@scf-sm11:~> exit
 ```
 
 To cancel a running job:

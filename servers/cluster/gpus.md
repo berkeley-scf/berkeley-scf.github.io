@@ -133,9 +133,9 @@ sbatch -p jsteinhardt -q preemptive --gpus=1 job.sh
 ```
 
 
-### CPUs Per Task
+### CPUs per task
 
-If you need more than one CPU, please request that using the
+If you need more than one CPU for your GPU-using job, please request that using the
 `--cpus-per-task` flag. The value you specify actually requests that
 number of hardware threads, but with the caveat that a given job is
 allocated all the threads on a given core to avoid contention between

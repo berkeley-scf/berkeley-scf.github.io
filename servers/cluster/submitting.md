@@ -274,6 +274,9 @@ The syntax for requesting an interactive (bash) shell session is:
 srun --pty /bin/bash
 ```
 
+Alternatively, you can simply run `slogin`, which is a wrapper for the 
+syntax above.
+
 This will start a shell on one of the four nodes. You can then act as
 you would on any SCF Linux compute server. For example, you might use
 top to assess the status of one of your non-interactive (i.e., batch)

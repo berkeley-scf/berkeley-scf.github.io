@@ -89,6 +89,8 @@ Infrequently accessed files may be compressed to save disk space.
 | `zip file.zip file1 [file2...]`        | Compresses one or more files to file.zip
 | `zcat x.Z y.Z ...`                     | Prints the compressed file(s) to the terminal
 
+:::
+
 See the UNIX manual pages for the above programs by using the 'man', for example 'man gzip'.
 
 ## Deleting Files
@@ -104,6 +106,8 @@ To remove files and directories type:
 | `rm -f file`    | Removes 'file' if you have write permission in the directory containing it.
 | `rmdir dir`     | Removes the empty directory 'dir'.
 | `rm -rf dir`    | Recursively remove dir including every file and subdirectory. Use with caution.
+
+:::
 
 Some applications leave behind files that may be removed without adversely
 affecting the program.
