@@ -24,9 +24,10 @@ and choose "Host", providing one of the [SCF login nodes](../servers/login-serve
 
 
   1.  On [one of the SCF login servers](../servers/login-servers.md), request a
-      Slurm "allocation" using with `salloc`, e.g., `salloc -c 4 -t 1:00:00`
+      Slurm "allocation" using with `salloc`, e.g., `salloc --no-shell -c 4 -t 1:00:00 &`
       for one hour on four cores on the high (default) partition. The flags are
-      the same flags one uses with `srun` and `sbatch`.
+      the same flags one uses with `srun` and `sbatch` and the `--no-shell` avoids
+      creating a subshell that, if closed, would cause the allocation to be cancelled.
 
   1.  Modify your  `~/.ssh/config` file on your local computer to
       include this new stanza:
@@ -39,11 +40,27 @@ and choose "Host", providing one of the [SCF login nodes](../servers/login-serve
             # This must be the login server on which you ran `salloc`.
             ProxyJump gandalf.berkeley.edu
       :::
+      
+      If you regularly use the same login node and compute node,
+      then you won't need to modify your `.ssh/config` file.
+      
+      ::: {tip}
+      If you run jobs on various compute nodes, you can avoid having to modify `.ssh/config` by
+      specifying all the compute nodes you use in the `Host` line, like this:
+      
+      :::{code} ini
+      :caption: ProxyJump ssh configuration
+          Host saruman balrog
+            HostName %h
+            # This must be the login server on which you ran `salloc`.
+            ProxyJump gandalf.berkeley.edu
+      :::
+      
 
   1.  Now in VS Code on your personal machine, use the remote SSH
       extension to connect to the host `scf-slurm` by clicking on the
       blue icon labelled '\>\<' in the lower left corner and setting
-      "Host" to `scf-slurm`.
+      "Host" to `scf-slurm` (or to `saruman` or `balrog` if following the tip above).
 
 ### scf-run script
 
