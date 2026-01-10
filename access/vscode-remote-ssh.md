@@ -24,8 +24,11 @@ and choose "Host", providing one of the [SCF login nodes](../servers/login-serve
 
 
   1.  On [one of the SCF login servers](../servers/login-servers.md), request a
-      Slurm "allocation" using with `salloc`, e.g., `salloc --no-shell -c 4 -t 1:00:00 &`
-      for one hour on four cores on the high (default) partition. The flags are
+      Slurm "allocation" using with `salloc`, e.g., 
+      :::{code} shell
+      salloc --no-shell -c 4 -t 1:00:00
+      :::
+      to request one hour on four cores on the high (default) partition. The flags are
       the same flags one uses with `srun` and `sbatch` and the `--no-shell` avoids
       creating a subshell that, if closed, would cause the allocation to be cancelled.
 
@@ -49,7 +52,7 @@ and choose "Host", providing one of the [SCF login nodes](../servers/login-serve
       specifying all the compute nodes you use in the `Host` line, like this:
       
       :::{code} ini
-      :caption: ProxyJump ssh configuration
+      :caption: ProxyJump ssh alternative configuration
           Host saruman balrog
             HostName %h
             # This must be the login server on which you ran `salloc`.
