@@ -272,6 +272,7 @@ modify for other types of jobs.
 Set up your Python code to use the `argparse` module to extract the arguments provided on the command line:
 
 :::{code} python
+:caption: contents of `code.py`
 if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
@@ -285,7 +286,7 @@ if __name__ == '__main__':
 Use the arguments passed into `job.sh` in invoking Python:
 
 :::{code} bash
-# contents of job.sh
+:caption: contents of `job.sh`
 #!/bin/bash
 python code.py -i $1 -m $2 > code-$1-$2.pyout
 :::
@@ -296,7 +297,7 @@ python code.py -i $1 -m $2 > code-$1-$2.pyout
 Set up your R code to extract the arguments provided on the command line:
 
 :::{code} R
-# contents of code.R
+:caption: contents of `code.R`
 args = commandArgs(trailingOnly = TRUE)
 it <- as.numeric(args[1])
 mode <- args[2]
@@ -305,7 +306,7 @@ mode <- args[2]
 Use the arguments passed into `job.sh` in invoking R:
 
 :::{code} bash
-# contents of job.sh
+:caption: contents of `job.sh`
 #!/bin/bash
 R CMD BATCH "--args $1 $2" code.R code-$1-$2.Rout
 # Alternatively: `Rscript code.R $1 $2 > code-$1-$2.Rout`
