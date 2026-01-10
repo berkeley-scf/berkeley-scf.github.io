@@ -243,7 +243,7 @@ values 0, 1, 2, ...) between the different instances.
 
 The above approaches are more elegant, but you can also use UNIX shell
 tools to submit multiple Slurm jobs. Here are some approaches and
-example syntax. We've tested these a bit but email us if you have
+example syntax. We've tested these a bit, but email us if you have
 problems or find a better way to do this. (Of course you can also
 manually create lots of individual job submission scripts, each of which
 calls a different script.)
@@ -264,34 +264,50 @@ for ((it = 1; it <= 10; it++)); do
 done
 :::
 
-You now have a couple options in terms of how `job.sh` is specified. This
-illustrates things for MATLAB jobs, but it shouldn't be too hard to
+We'll illustrate how to specify `job.sh` and the underlying code for Python and R jobs, but it shouldn't be too hard to
 modify for other types of jobs.
 
-#### Option 1
+#### Python
 
-In this case `myMATLABCode.m` would use the variables `it` and `mode` but
-not define them.
+Set up your Python code to use the `argparse` module to extract the arguments provided on the command line:
+
+:::{code} python
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-i', '--iter', default=1, help = "iteration number")
+    parser.add_argument('-m', '--mode', default='short', help='type of simulation')
+    args = parser.parse_args()
+
+    print(args.iter)
+:::
+
+Use the arguments passed into `job.sh` in invoking Python:
+
 :::{code} bash
 # contents of job.sh
-echo "it = $1; mode = '$2'; myMATLABCode" > tmp-$1-$2.m
-matlab -nodesktop -nodisplay -singleCompThread < tmp-$1-$2.m > tmp-$1-$2.out 2> tmp-$1-$2.err
+#!/bin/bash
+python code.py -i $1 -m $2 > code-$1-$2.pyout
 :::
 
 
-#### Option 2
+#### R
 
-In this case you need to insert the following MATLAB code at the start
-of myMATLABCode.m so that MATLAB correctly reads the values of `it` and
-`mode` from the UNIX environment variables:
+Set up your R code to extract the arguments provided on the command line:
+
+:::{code} R
+# contents of code.R
+args = commandArgs(trailingOnly = TRUE)
+it <- as.numeric(args[1])
+mode <- args[2]
+:::
+
+Use the arguments passed into `job.sh` in invoking R:
 
 :::{code} bash
 # contents of job.sh
-export it=$1; export mode=$2;
-matlab -nodesktop -nodisplay -singleCompThread < myMATLABCode.m > tmp-$1-$2.out 2> tmp-$1-$2.err
+#!/bin/bash
+R CMD BATCH "--args $1 $2" code.R code-$1-$2.Rout
+# Alternatively: `Rscript code.R $1 $2 > code-$1-$2.Rout`
 :::
 
-:::{code} matlab
-it = str2num(getenv('it'));
-mode = getenv('mode');
-:::
