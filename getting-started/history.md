@@ -494,8 +494,8 @@ hobbes for awhile) (again note loose consistency with Leo's theme).
 kestrel  
 : chosen by Deb Nolan.
 
-lorax
-: chosen by Dan Ackerman, after a Dr. Seuss character.
+lorax and horton
+: chosen by Dan Ackerman, after Dr. Seuss characters.
 
 smiley  
 : chosen by Andrew Gelman.

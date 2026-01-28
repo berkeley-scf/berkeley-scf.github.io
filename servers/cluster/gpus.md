@@ -80,6 +80,7 @@ We have a helper script, `sgpus`, that will give overall GPU usage:
 paciorek@gandalf:~> sgpus
 NODELIST       PARTITION     GPUs      GPUs_USED               
 lorax          berkeleynlp   H200:8    H200:6 
+horton         berkeleynlp   H200:8    H200:0
 roo            gpu           TITAN:1   TITAN:1      
 sunstone       jsteinhardt   A4000:8   A4000:0    
 smokyquartz    jsteinhardt   A4000:8   A4000:5  
@@ -256,12 +257,12 @@ Some group members have access to [tiered preemption](#tiered-qos).
 
 ### Berkeley NLP Group
 
-`lorax` has a four very large, very fast (NVMe) 14TB disks available to
-group members via the `/data` directory. For jobs that do a lot of
-I/O, it may speed things up to read and write from `/data` rather than
-home or scratch directories. One can also put data into `/tmp` or
-`/var/tmp` temporarily for fast I/O, though the amount of space there
-is limited (less than 1 TB total across all users).
+`lorax` and `horton` have four very large and fast 14TB NVMe disks
+available to group members via the `/data` directory. For jobs that do a
+lot of I/O, it may speed things up to read and write from `/data` rather
+than home or scratch directories. One can also put data into `/tmp` or
+`/var/tmp` temporarily for fast I/O, though the amount of space there is
+limited (less than 1 TB total across all users).
 
 Some group members have access to [tiered preemption](#tiered-qos).
 

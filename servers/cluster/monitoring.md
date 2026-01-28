@@ -38,15 +38,14 @@ number of the job (visible via squeue as above).
 If you would like to login to the node on which your job is running in
 order to assess CPU or memory use, you have two options.
 
-The easiest is that if (and only if) you have a job running on a node,
-you can ssh directly to the node (from one of the SCF login servers).
-The resulting ssh session will be associated with your existing job on
-the node. One important caveat is that if your terminal on the login
-server is through JupyterHub, you'll need to run `ssh -F none
-{name_of_node}` rather than just `ssh {name_of_node}`. Note that
-to ssh to the `feanor` and `lorax` GPU servers, you'll need to use
-the full name, e.g. `feanor.stat.berkeley.edu`, and not just
-`feanor`, unlike the other nodes.
+The easiest is that if (and only if) you have a job running on a node, you
+can ssh directly to the node (from one of the SCF login servers). The
+resulting ssh session will be associated with your existing job on the
+node. One important caveat is that if your terminal on the login server is
+through JupyterHub, you'll need to run `ssh -F none {name_of_node}` rather
+than just `ssh {name_of_node}`. Note that to ssh to the `feanor`,
+`horton`, and `lorax` GPU servers, you'll need to use the full name, e.g.
+`feanor.stat.berkeley.edu`, and not just `feanor`, unlike the other nodes.
 
 Alternatively, you can run an interactive job within the context of your
 existing job. First determine the job ID of your running job using

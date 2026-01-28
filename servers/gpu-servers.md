@@ -52,6 +52,7 @@ software](cluster.md).
 | `yss`         | `luthien`               | A100 (4)                  | 80 GB      |
 | `yss`         | `beren`                 | A100 (8)                  | 80 GB      |
 | `songmei`     | `feanor`[^fqdn]             | H200 (8)                  | 144 GB     |
+| `berkeleynlp` | `horton`[^fqdn]             | H200 (8)                  | 144 GB     |
 | `berkeleynlp` | `lorax`[^fqdn]              | H200 (8)                  | 144 GB     |
 
 [^lambda]: To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster), which is accessed separately from the other SCF resources.
