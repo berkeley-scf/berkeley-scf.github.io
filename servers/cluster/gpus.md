@@ -176,7 +176,22 @@ Some tools that you can use to monitor GPU use from the shell include `nvidia-sm
 nvidia-smi -q -d UTILIZATION,MEMORY -l 1
 ```
 
-and the [`gpustat` utility](https://github.com/wookayin/gpustat), available for installation via Python's `pip` installer.
+and the [`gpustat` utility](https://github.com/wookayin/gpustat), which makes it easy to see what processes of what user are using each GPU:
+
+```{code} shell
+gpustat -h   # Get help information on the `gpustat` options.
+gpustat -fup  # Get full information on all GPU-using processes.
+```
+
+as well `nvtop`, which is an `htop`-like (`htop` is a graphical version of `top`) tool.
+
+Finally, we have installed the various utilities in the [`cuda-samples` repository](https://github.com/NVIDIA/cuda-samples). These executables will not be on your PATH, so you'll need to go to `/usr/local/linux/cuda-samples/build/Samples` and then find and run the utility of interest. One useful one is the `deviceQuery` utility, which gives details on the GPU hardware that can be useful for CUDA programming (e.g., giving information about the GPU threads/grids/blocks).
+
+```{code} shell
+/usr/local/linux/cuda-samples/build/Samples/1_Utilities/deviceQuery
+./deviceQuery
+```
+
 
 ### Software
 

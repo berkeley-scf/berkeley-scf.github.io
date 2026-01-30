@@ -53,7 +53,8 @@ squeue and insert that in place of {jobid} in the following command:
 
     arwen:~$ srun --pty --jobid=<jobid> /bin/bash
 
-In either case, you can then run `top` and other tools. 
+In either case, you can then run `top` and other tools, as well as
+[tools for monitoring GPU activity](./gpus.md#monitoring-use).
 
 To see a history of your jobs (within a time range), including reasons
 they might have failed:
