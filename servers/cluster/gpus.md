@@ -246,6 +246,9 @@ Slurm will try to run the job on `shadowfax`, `sunstone`, `rainbowquartz`, or
 
 ### Song Mei Group
 
+Some group members have access to [tiered preemption](#tiered-qos).
+
+
 `feanor` has a very large, very fast (NVMe) disk with 6.6 TB of storage
 available to group members via the `/data` directory. For jobs that do
 a lot of I/O, it may speed things up to read and write from `/data`
@@ -253,9 +256,9 @@ rather than home or scratch directories. One can also put data into
 `/tmp` or `/var/tmp` temporarily for fast I/O, though the amount of
 space there is limited (less than 1 TB total across all users).
 
-Some group members have access to [tiered preemption](#tiered-qos).
-
 ### Berkeley NLP Group
+
+Some group members have access to [tiered preemption](#tiered-qos).
 
 `lorax` and `horton` have four very large and fast 14TB NVMe disks
 available to group members via the `/data` directory. For jobs that do a
@@ -264,6 +267,17 @@ than home or scratch directories. One can also put data into `/tmp` or
 `/var/tmp` temporarily for fast I/O, though the amount of space there is
 limited (less than 1 TB total across all users).
 
-Some group members have access to [tiered preemption](#tiered-qos).
+If one has data on disk on one machine, an easy way to make sure it
+is available to a job on a different machine is to insert syntax like
+this in one's job script:
+
+```
+someuser@lorax:~> rsync -av ${USER}@horton.stat.berkeley.edu:/data/project1 /data/
+```
+
+Data will be copied only if not already present on the machine 
+being copied to.
+
+
 
 
