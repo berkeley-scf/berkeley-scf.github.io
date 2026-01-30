@@ -188,7 +188,7 @@ as well `nvtop`, which is an `htop`-like (`htop` is a graphical version of `top`
 Finally, we have installed the various utilities in the [`cuda-samples` repository](https://github.com/NVIDIA/cuda-samples). These executables will not be on your PATH, so you'll need to go to `/usr/local/linux/cuda-samples/build/Samples` and then find and run the utility of interest. One useful one is the `deviceQuery` utility, which gives details on the GPU hardware that can be useful for CUDA programming (e.g., giving information about the GPU threads/grids/blocks).
 
 ```{code} shell
-/usr/local/linux/cuda-samples/build/Samples/1_Utilities/deviceQuery
+cd /usr/local/linux/cuda-samples/build/Samples/1_Utilities/deviceQuery
 ./deviceQuery
 ```
 
