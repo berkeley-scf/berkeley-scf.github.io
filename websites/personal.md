@@ -1,6 +1,71 @@
 ---
-title: Set up and use a personal website
+title: Personal Website
 ---
+
+We support department members in creating personal websites to share
+information about their own activities at UC Berkeley, such as their research
+groups, publications, courses, and other academic work.
+
+We can support two models for hosting personal websites: GitHub Pages-based
+sites and traditional HTML hosting.
+
+Modern alternatives not directly supported by SCF include [Netlify](https://netlify.com) and [bCourses sites](https://bcourses.berkeley.edu/courses/1336779/pages/2-dot-3-create-your-course-site).
+
+Some platforms like [Google Sites](https://bconnected.berkeley.edu/collaboration-services/google/sites) have been deprecated for accessibility considerations since cannot adjust the underlying HTML,
+
+## GitHub Pages-Based Sites
+
+For faculty and students who want to use [GitHub Pages](https://pages.github.com/) to publish their personal websites, we provide support for hosting and domain management. This approach can be particularly advantageous for:
+
+- **Reproducibility**: Use automation tools and workflows to keep your site content up-to-date.
+- **Collaboration**: Delegate authoring and content management to collaborators, students, or research group members
+- **Version control**: Track changes to your website over time using Git
+- **Modern tooling**: Use static site generators, markdown-based tools, and continuous deployment
+
+### How It Works
+
+We create repositories under the [berkeley-stat organization](https://github.com/berkeley-stat/) on GitHub for your website, and facilitate the creation of departmental subdomains such as these examples:
+
+::::{grid} 1 3 3 3
+
+:::{card}
+:header: Peter Bickel
+ - [bickel-site](https://github.com/berkeley-stat/bickel-site)
+ - [Peter Bickel](https://bickel.stat.berkeley.edu)
+:::
+
+:::{card}
+:header: Bin Yu
+ - [binyu-site](https://github.com/berkeley-stat/binyu-site)
+ - [Bin Yu](https://binyu.stat.berkeley.edu)
+:::
+
+:::{card}
+:header: Elizabeth Purdom
+ - [purdom-site](https://github.com/berkeley-stat/purdom-site)
+ - [Elizabeth Purdom](https://purdom.stat.berkeley.edu)
+:::
+
+::::
+
+
+These subdomains point to your GitHub Pages site, providing a professional departmental URL while maintaining all the benefits of GitHub-based hosting.
+
+### Getting Started
+
+Contact <consult@stat.berkeley.edu> to request a GitHub Pages-based personal website. We will:
+
+1. Create a repository under the berkeley-stat organization
+2. Set up the departmental subdomain for your site
+3. Provide you with access to manage your repository
+
+You'll then be able to use GitHub Pages with your choice of static site generator (Quarto, MyST, etc.) or plain HTML/CSS/JavaScript.
+
+:::{note}
+If you choose to host your site on an external provider (not GitHub Pages through our organization), we can still create a domain name alias for you in the `.stat.berkeley.edu` subdomain, e.g., `yourname.stat.berkeley.edu`.
+:::
+
+## Traditional HTML Hosting
 
 Department members can publish documents and data on the web by uploading
 files to their [computing
@@ -11,18 +76,7 @@ Your personal website will be available at `https://www.stat.berkeley.edu`,
 and not the departmental site, `https://statistics.berkeley.edu`.
 :::
 
-Modern alternatives include [Github Pages](https://pages.github.com/),
-[Netlify](https://netlify.com), and [bCourses
-sites](https://bcourses.berkeley.edu/courses/1336779/pages/2-dot-3-create-your-course-site).
-
-If you are faculty and choose to publish your site on an external hosting provider, we can create an domain name alias for you in the .stat.berkeley.edu subdomain, e.g. `yourname.stat.berkeley.edu`.
-
-[Google
-Sites](https://bconnected.berkeley.edu/collaboration-services/google/sites) and
-other web platforms where one cannot adjust the underlying HTML have
-been deprecated for accessibility considerations.
-
-## Guidelines
+### Guidelines
 
 Only individuals who are associated with either the Statistics or
 Biostatistics departments are eligible to use this resource to
@@ -50,7 +104,7 @@ guidelines:
   of any published material (including articles authored by the student)
   is forbidden.
 
-## Creating HTML
+### Creating HTML
 
 Many applications can generate HTML files and you can probably export to
 HTML from your favorite application suite. LaTeX, Google Docs, Microsoft
@@ -75,7 +129,7 @@ Other approaches to creating HTML include:
     "Rmd" with the appropriate extension, as necessary. Contact
     <consult@stat.berkeley.edu> if you have questions.
 
-## Setting up the web area
+### Setting up the web area
 
 You will need to [deposit your HTML files](../access/copying-files.md) into a
 user-specific directory, `/accounts/web/public/username/`, on the SCF.
@@ -86,7 +140,7 @@ are readable, e.g. `chmod go+r filename.html`, otherwise the public will
 not be able to view them. You can make use of this to hide content as
 well, e.g. `chmod go-r filename.html`.
 
-## Redirecting to Another Web Page
+### Redirecting to Another Web Page
 
 If you want to migrate your website to another provider and redirect
 people to the new site, you can create an index.html file of the form
