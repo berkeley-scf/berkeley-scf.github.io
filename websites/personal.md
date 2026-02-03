@@ -26,24 +26,18 @@ For faculty and students who want to use [GitHub Pages](https://pages.github.com
 
 We create repositories under the [berkeley-stat organization](https://github.com/berkeley-stat/) on GitHub for your website, and facilitate the creation of departmental subdomains such as these examples:
 
-::::{grid} 1 3 3 3
-
-:::{card}
-:header: Peter Bickel
- - [bickel-site](https://github.com/berkeley-stat/bickel-site)
- - [Peter Bickel](https://bickel.stat.berkeley.edu)
-:::
+::::{grid} 1 2 2 2
 
 :::{card}
 :header: Bin Yu
  - [binyu-site](https://github.com/berkeley-stat/binyu-site)
- - [Bin Yu](https://binyu.stat.berkeley.edu)
+ - [https://binyu.stat.berkeley.edu](https://binyu.stat.berkeley.edu)
 :::
 
 :::{card}
 :header: Elizabeth Purdom
  - [purdom-site](https://github.com/berkeley-stat/purdom-site)
- - [Elizabeth Purdom](https://purdom.stat.berkeley.edu)
+ - [https://purdom.stat.berkeley.edu](https://purdom.stat.berkeley.edu)
 :::
 
 ::::
