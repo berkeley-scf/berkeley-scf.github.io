@@ -59,6 +59,11 @@ project:
       children:
         - pattern: kb/*
           hidden: true
+    - file: websites.md
+      children:
+        - file: websites/courses.md
+        - file: websites/research.md
+        - file: websites/personal.md
     - file: tutorials.md
     - file: workshops.md
     - pattern: training/workshops/*

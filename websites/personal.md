@@ -11,7 +11,7 @@ Your personal website will be available at `https://www.stat.berkeley.edu`,
 and not the departmental site, `https://statistics.berkeley.edu`.
 :::
 
-Alternatives include [Github Pages](https://pages.github.com/),
+Modern alternatives include [Github Pages](https://pages.github.com/),
 [Netlify](https://netlify.com), and [bCourses
 sites](https://bcourses.berkeley.edu/courses/1336779/pages/2-dot-3-create-your-course-site).
 
