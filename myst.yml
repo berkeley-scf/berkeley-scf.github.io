@@ -55,15 +55,15 @@ project:
             - file: servers/cluster/monitoring.md
         - file: servers/gpu-servers.md
         - file: servers/savio.md
-    - file: kb.md
-      children:
-        - pattern: kb/*
-          hidden: true
     - file: websites.md
       children:
         - file: websites/courses.md
         - file: websites/research.md
         - file: websites/personal.md
+    - file: kb.md
+      children:
+        - pattern: kb/*
+          hidden: true
     - file: tutorials.md
     - file: workshops.md
     - pattern: training/workshops/*
