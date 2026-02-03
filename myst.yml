@@ -55,7 +55,7 @@ project:
             - file: servers/cluster/monitoring.md
         - file: servers/gpu-servers.md
         - file: servers/savio.md
-    - file: websites.md
+    - title: Websites
       children:
         - file: websites/courses.md
         - file: websites/research.md
