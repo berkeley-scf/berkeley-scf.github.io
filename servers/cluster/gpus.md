@@ -275,6 +275,8 @@ space there is limited (less than 1 TB total across all users).
 
 Some group members have access to [tiered preemption](#tiered-qos).
 
+#### Large local disks
+
 `lorax` and `horton` have four very large and fast 14TB NVMe disks
 available to group members via the `/data` directory. For jobs that do a
 lot of I/O, it may speed things up to read and write from `/data` rather
@@ -292,6 +294,13 @@ someuser@lorax:~> rsync -av ${USER}@horton.stat.berkeley.edu:/data/project1 /dat
 
 Data will be copied only if not already present on the machine 
 being copied to.
+
+#### GPU-to-GPU interconnect
+
+All of the GPUs on `horton` are connected directly via NVSwitch, whereas on `lorax` only the GPU
+pairs 0-1, 2-3, 4-5, 6-7 are connected directly (via NVLink). So multi-GPU workloads that do 
+a lot of data transfer between GPUs are likely to run faster on `horton`. To specifically 
+request `horton`, you can use `-w horton` in your Slurm invocation.
 
 
 
