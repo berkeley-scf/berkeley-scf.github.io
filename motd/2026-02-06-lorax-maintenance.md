@@ -1,6 +1,6 @@
 ---
 title: "lorax GPU maintenance"
-description: "fabricmanager ne due to a hardware problem."
+#description: "fabricmanager ne due to a hardware problem."
 thumbnail: ../images/computer-problem.svg
 author: "Ryan Lovett"
 date: "2026-02-06"
