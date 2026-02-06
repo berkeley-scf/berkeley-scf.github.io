@@ -11,6 +11,6 @@ keywords:
   - GPU
 ---
 
-We have place a reservation on lorax so that we can try to address system
+We have placed a reservation on lorax so that we can try to address system
 messages related to the PCIe bus. We will perform maintenance when all active
 jobs have completed.
