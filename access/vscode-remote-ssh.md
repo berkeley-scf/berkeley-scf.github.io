@@ -38,10 +38,12 @@ and choose "Host", providing one of the [SCF login nodes](../servers/login-serve
       :::{code} ini
       :caption: ProxyJump ssh configuration
           Host scf-slurm
+            # Your SCF username
+            User myusername
             # This must be the cluster node that `salloc` gave you.
             HostName scf-sm20.berkeley.edu
             # This must be the login server on which you ran `salloc`.
-            ProxyJump gandalf.berkeley.edu
+            ProxyJump myusername@gandalf.berkeley.edu
       :::
       
       If you regularly use the same login node and compute node,
@@ -55,8 +57,10 @@ and choose "Host", providing one of the [SCF login nodes](../servers/login-serve
       :caption: ProxyJump ssh alternative configuration
           Host saruman balrog
             HostName %h
+            # Your SCF username
+            User myusername
             # This must be the login server on which you ran `salloc`.
-            ProxyJump gandalf.berkeley.edu
+            ProxyJump myusername@gandalf.berkeley.edu
       :::
       
 
