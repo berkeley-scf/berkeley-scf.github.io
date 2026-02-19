@@ -11,6 +11,7 @@
 ```{image} ./images/logo-uc-berkeley.svg
 :width: 200px
 :align: left
+:alt: UC Berkeley logo
 ```
 
 :::{div .small}
