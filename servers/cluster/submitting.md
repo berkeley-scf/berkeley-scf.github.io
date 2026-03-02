@@ -321,17 +321,21 @@ srun --pty --cpus-per-task 4 /bin/bash
 
 Note that `-c` is a shorthand for `--cpus-per-task`.
 
-To request a specific amount of memory, use the `--mem` flag (memory per node):
+If your job requires most of the memory on a node and you do not want to
+share it with other jobs, you can use `--mem` to reserve memory at the
+scheduling level:
 
 ```{code} shell
 srun --pty --mem=32G /bin/bash
 ```
 
-This affects job placement: Slurm will not place your job on a node that doesn't have at least that much memory free according to its accounting. Note that memory is not strictly enforced at runtime, so other jobs on the same node may still consume memory that affects your job. You can combine resource requests:
-
-```{code} shell
-srun -p epurdom -c 8 --mem=64G --pty /bin/bash
-```
+Replace `32G` with a value appropriate for the node you are targeting
+(see [hardware](hardware.md) for per-node memory totals). This tells
+Slurm to account for that memory when placing your job, so other jobs
+won't be scheduled onto the same node if doing so would exceed the
+node's total. Note that memory is not enforced at runtime — jobs are
+not killed for exceeding their `--mem` request — so `--mem` is mainly
+useful as a reservation mechanism, not a guarantee of available memory.
 
 To transfer files to the local disk of a specific node, you need to
 request that your interactive session be started on the node of interest
@@ -352,15 +356,10 @@ of processes your code starts multiplied by threads per process) does
 not exceed the number of cores you request.
 
 Because most partitions are shared (multiple jobs run on the same node),
-you may find that a node has less free memory or fewer cores available
-than its total capacity. To see what other users are running on a node,
-use `squeue -w <nodename>` — for example, `squeue -w frodo`. Interactive
+you may want to check who else is running on a node. Use
+`squeue -w <nodename>` — for example, `squeue -w frodo`. Interactive
 jobs appear with the job name `bash` (or whatever shell was invoked,
-e.g., `zsh`); JupyterHub sessions appear as `jupyterhub`. To also see
-each job's requested memory and CPU count, use
-`squeue -w <nodename> -o "%.18i %.8u %.8j %.6D %.6C %.8m"` — the
-`%C` and `%m` fields show allocated CPUs and minimum memory,
-letting you account for why a node may be more constrained than expected.
+e.g., `zsh`); JupyterHub sessions appear as `jupyterhub`.
 
 If you are running an interactive session on a preemptible partition (such
 as `epurdom` or `jsteinhardt` for non-group members), be aware that your
