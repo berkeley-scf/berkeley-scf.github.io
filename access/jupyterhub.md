@@ -18,9 +18,19 @@ SCF Linux cluster, including nodes with GPUs.
 By default, your server will be spawned onto the first available
 standalone Linux machine, however you may optionally start your server
 on a cluster node in case you need access to more processing power. You
-can also pass [Slurm job submission options](../servers/cluster/submitting.md) to your
-server, and specify prologue commands that will run prior to your server
-startup. Please [let us
+can select the partition via a drop-down menu and pass additional
+[Slurm job submission options](../servers/cluster/submitting.md) (such as `-c 8 --mem=64G`
+to request 8 CPUs and 64 GB of memory) in the "Slurm options" field on
+the JupyterHub startup page. You can also specify prologue commands that
+will run prior to your server startup.
+
+Note that JupyterHub sessions on cluster nodes are subject to the same
+[24-hour default time limit](../servers/cluster/submitting.md#interactive-jobs) as other interactive jobs, and on
+preemptible partitions (such as `epurdom` for non-group members) sessions
+can be terminated without warning — see the note on
+[interactive sessions and preemption](../servers/cluster/submitting.md#interactive-jobs).
+
+Please [let us
 know](mailto:consult@stat.berkeley.edu?subject=JupyterHub%20feedback) if
 you have any difficulties or if you need us to add features to it.
 

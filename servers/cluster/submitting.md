@@ -16,12 +16,17 @@ discussed here:
 | high (default) | 96                     | 24     | 128 GB           | 7 days     | No  |
 | low            | 256                    | 32     | 256 GB           | 28 days    | No  |
 | gpu            | 8                      | 8      | 6 GB             | 28 days    | No  |
-| berkeleynlp    | 384                    | 128    | 1.5 TB | 28 days[^bnlp-i]     | Yes |
+| berkeleynlp    | 384                    | 128    | 1.5 TB           | 28 days[^bnlp-i] | Yes |
 | epurdom        | 256                    | 128    | 528 GB           | 28 days    | Yes |
 | jsteinhardt    | varied                 | varied | varied[^js-mem]  | 28 days    | Yes |
 | yugroup        | varied                 | varied | varied           | 28 days    | Yes |
 | yss            | 224                    | varied | 528 GB           | 28 days    | Yes |
 :::
+
+Interactive jobs default to a 24-hour time limit on all partitions. You
+can adjust this with the `-t` flag (up to the partition maximum) on all
+partitions except `berkeleynlp`, where 24 hours is a hard maximum that
+cannot be extended. See [](#interactive-jobs) for details.
 
 :::{note} About cores per job
 If you use software that can parallelize across multiple nodes (e.g., R packages that use MPI or the future package, Python's Dask or IPython Parallel, MATLAB, MPI), you can run individual jobs across more than one node. See [](#parallel-jobs).
@@ -29,7 +34,7 @@ If you use software that can parallelize across multiple nodes (e.g., R packages
 
 [^pe]: [Preemptible](gpus.md#preemption) jobs from non-group members run at normal priority.
 
-[^bnlp-i]: The `berkeleynlp` partition has a 24 hour time limit on interactive jobs, including those launched on JupyterHub.
+[^bnlp-i]: On `berkeleynlp`, 24 hours is a hard maximum for interactive jobs (including JupyterHub sessions) that cannot be extended with `-t`.
 
 [^js-mem]: 288 GB (smaug), 792 GB (balrog, rainbowquartz), 1 TB (saruman), 128 GB (various)
 
@@ -136,9 +141,10 @@ preempt jobs by users not in the group if it is needed for your job to run.
 
 Non-group members can submit jobs as well, but jobs may be preempted (killed)
 without warning if group member jobs need the resources being used.
-Pre-emptible jobs are requeued when preemption happens and should
+Pre-emptible jobs are requeued when preemption happens and should
 restart when the needed resources become available. If you see that your
-job is not being requeued, please contact us.
+job is not being requeued, please contact us. Note also the implications
+for [interactive sessions](#interactive-jobs).
 
 If you need more than one CPU, please request that using the
 `--cpus-per-task` flag. The value you specify actually requests that
@@ -150,14 +156,15 @@ jobs for a given physical core.
 ### jsteinhardt
 
 While the various nodes of the `jsteinhardt` partition are primarily intended
-for use for their GPUs, many of them have newer CPUs, a lot of memory, and very
+for use for their GPUs, many of them have newer CPUs, a lot of memory, and very
 fast disk I/O to `/tmp` and `/var/tmp` using an NVMe SSD.
 
 Non-group members can submit jobs as well, but jobs may be preempted (killed)
 without warning if group member jobs need the resources being used.
-Pre-emptible jobs are requeued when preemption happens and should
+Pre-emptible jobs are requeued when preemption happens and should
 restart when the needed resources become available. If you see that your
-job is not being requeued, please contact us.
+job is not being requeued, please contact us. Note also the implications
+for [interactive sessions](#interactive-jobs).
 
 For example to request use of one of these nodes, which are labelled as
 `manycore` nodes:
@@ -263,6 +270,7 @@ Then use scancel to delete the job (with id 380 in this case):
 scancel 380
 ```
 
+(interactive-jobs)=
 ## Interactive jobs
 
 You can work interactively on a node from the Linux shell command line
@@ -313,6 +321,18 @@ srun --pty --cpus-per-task 4 /bin/bash
 
 Note that `-c` is a shorthand for `--cpus-per-task`.
 
+To request a specific amount of memory, use the `--mem` flag (memory per node):
+
+```{code} shell
+srun --pty --mem=32G /bin/bash
+```
+
+This affects job placement: Slurm will not place your job on a node that doesn't have at least that much memory free according to its accounting. Note that memory is not strictly enforced at runtime, so other jobs on the same node may still consume memory that affects your job. You can combine resource requests:
+
+```{code} shell
+srun -p epurdom -c 8 --mem=64G --pty /bin/bash
+```
+
 To transfer files to the local disk of a specific node, you need to
 request that your interactive session be started on the node of interest
 (in this case scf-sm20):
@@ -330,3 +350,20 @@ with batch jobs, you can change `OMP_NUM_THREADS` from its default of one,
 provided you make sure that that the total number of cores used (number
 of processes your code starts multiplied by threads per process) does
 not exceed the number of cores you request.
+
+Because most partitions are shared (multiple jobs run on the same node),
+you may find that a node has less free memory or fewer cores available
+than its total capacity. To see what other users are running on a node,
+use `squeue -w <nodename>` — for example, `squeue -w frodo`. Interactive
+jobs appear with the job name `bash` (or whatever shell was invoked,
+e.g., `zsh`); JupyterHub sessions appear as `jupyterhub`. To also see
+each job's requested memory and CPU count, use
+`squeue -w <nodename> -o "%.18i %.8u %.8j %.6D %.6C %.8m"` — the
+`%C` and `%m` fields show allocated CPUs and minimum memory,
+letting you account for why a node may be more constrained than expected.
+
+If you are running an interactive session on a preemptible partition (such
+as `epurdom` or `jsteinhardt` for non-group members), be aware that your
+session can be terminated without warning if a higher-priority job needs
+the resources. The terminal connection will be lost and your session cannot
+be recovered.
