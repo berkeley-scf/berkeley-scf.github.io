@@ -123,9 +123,9 @@ jobs running by non-group members if there are not enough resources to run
 the submitted job. In turn, jobs submitted to `preemptive_high` can preempt jobs running
 in `preemptive`. 
 
-Users of  `preemptive_high` can use at most 8
-GPUs at a time in the `preemptive_high` QoS. Additional jobs
-will be queued. Such users can also submit to the `preemptive` QoS,
+Users of  `preemptive_high` can use at most 8  GPUs at a time in the `preemptive_high` QoS. 
+Additional jobs will be queued. 
+Such users can also submit to the `preemptive` QoS,
 (which has  no limit on the number of GPUs used, apart from hardware
 availability), using submission syntax like this:
 
@@ -133,6 +133,8 @@ availability), using submission syntax like this:
 sbatch -p jsteinhardt -q preemptive --gpus=1 job.sh
 ```
 
+Note that for users of the `berkeleynlp` partition, all users affiliated
+with a given PI and with access to high preemption can use at most 4 GPUs at a time, corresponding to the number of GPUs purchased by each PI.
 
 ### CPUs per task
 
@@ -274,6 +276,14 @@ space there is limited (less than 1 TB total across all users).
 ### Berkeley NLP Group
 
 Some group members have access to [tiered preemption](#tiered-qos).
+
+Note that for this group, there are PI-specific `preemptive_high`
+QoS. Users who have access to high preemption will actually be
+using QoS named `preemptive_high_sewonm`, `preemptive_high_suhr`,
+`preemptive_high_emmapierson`, and `preemptive_high_lijiechen`.
+Usage of each of these QoS is limited to 4 GPUs at a time (across all group members within a QoS), 
+corresponding to the number of GPUs purchased by each GPU. 
+Additional jobs will be queued.
 
 #### Large local disks
 
