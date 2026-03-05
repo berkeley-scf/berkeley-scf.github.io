@@ -283,7 +283,8 @@ using QoS named `preemptive_high_sewonm`, `preemptive_high_suhr`,
 `preemptive_high_emmapierson`, and `preemptive_high_lijiechen`.
 Usage of each of these QoS is limited to 4 GPUs at a time (across all group members within a QoS), 
 corresponding to the number of GPUs purchased by each GPU. 
-Additional jobs will be queued.
+Additional jobs will be queued, and Slurm will report `QoSGrpGRES`
+as the 'reason' for such a job being queued.
 
 #### Large local disks
 
