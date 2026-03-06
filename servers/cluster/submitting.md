@@ -104,6 +104,31 @@ email updates and name the output and error files:
 R CMD BATCH --no-save simulate.R simulate.Rout
 :::
  
+
+
+## Memory
+
+Unlike some Linux clusters, on the SCF cluster, you do not need to request
+a specific amount of memory.  Your job will have access to all the memory
+available on the machine. 
+
+The advantages of this are that users don't need to determine in advance
+how much memory a job needs and jobs are not killed because they
+exceed the anticipated memory use.
+
+The downside is that since multiple jobs are often running on a node at a given time,
+ jobs can try to use more memory collectively
+than is physically available and one or more of the jobs (potentially a job not needing even needing a lot of memory) may not
+be able to access the memory it needs and may fail. Historically, while
+this has happened on the SCF cluster nodes it has been relatively rare.
+
+As a partial workaround for this issue, if your job requires most of the memory on a node and 
+you do not want to share it with other jobs, you can use `--exclusive` to reserve the entire node. 
+We generally leave this decision to the user, but if your job requires more than, say, 2/3 of the memory
+on a node, it is probably a good idea to do this. And if your job requires less than, say, half the memory
+on the node, we would generally prefer that you not do it. 
+
+
 (parallel-jobs)=
 ## Parallel Jobs
 
@@ -321,21 +346,6 @@ srun --pty --cpus-per-task 4 /bin/bash
 
 Note that `-c` is a shorthand for `--cpus-per-task`.
 
-If your job requires most of the memory on a node and you do not want to
-share it with other jobs, you can use `--mem` to reserve memory at the
-scheduling level:
-
-```{code} shell
-srun --pty --mem=32G /bin/bash
-```
-
-Replace `32G` with a value appropriate for the node you are targeting
-(see [hardware](hardware.md) for per-node memory totals). This tells
-Slurm to account for that memory when placing your job, so other jobs
-won't be scheduled onto the same node if doing so would exceed the
-node's total. Note that memory is not enforced at runtime — jobs are
-not killed for exceeding their `--mem` request — so `--mem` is mainly
-useful as a reservation mechanism, not a guarantee of available memory.
 
 To transfer files to the local disk of a specific node, you need to
 request that your interactive session be started on the node of interest
