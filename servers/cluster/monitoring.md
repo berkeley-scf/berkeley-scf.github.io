@@ -120,7 +120,20 @@ To see GPU availability, you can use `sgpus`, which is an alias for
 
 ## Historical Utilization
 
-Faculty (or perhaps other) hoping to understand aggregate use of a partition over time can use our `susage` utility. Here are examples of using over the first six months of 2025 in the `epurdom` partition or of GPU usage in the `yss` partition.
+`swait` and `susage` give information about aggregate use of a partition over time. Note that if you choose a short time interval, you may have a small sample with few jobs.
+
+`swait` shows the distribution of wait times before jobs start, as well as the number of preempted jobs. This may be of use when deciding what partition to start a job in. 
+
+Here are examples of wait times over the last six months of 2025 in the `yss` and `jsteinhardt` (filtered to the nodes with A100 GPUs) partitions.
+
+:::{code} bash
+susage -p yss -S 2025-07-01 -E 2025-12-31
+susage -p jsteinhardt -S 2025-07-01 -E 2025-12-31 --gpu=A100    # A100 nodes only
+:::
+
+`susage` shows overall intensity of use of a partition and may be of most interest to PIs and research group managers.
+
+Here are examples of usage over the first six months of 2025 in the `epurdom` partition or of GPU usage in the `yss` partition.
 
 :::{code} bash
 susage -p epurdom -S 2025-01-01 -E 2025-06-30 --mode cpu
@@ -139,6 +152,7 @@ We've prepared a set of shortcut commands that wrap around `srun`,
  - `sassoc`: gives information about user access to cluster partitions
  - `sgpus`: gives information about GPU availability
  - `susage`: gives information about historical aggregate usage in a partition
+ - `swait`: gives information about historical wait times and preempted jobs in a partition
 
 For each of these commands, you can add the `-h` flag to see how to
 use them. For example:
