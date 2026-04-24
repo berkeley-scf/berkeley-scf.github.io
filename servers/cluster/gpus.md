@@ -199,52 +199,11 @@ cd /usr/local/linux/cuda-samples/build/Samples/1_Utilities/deviceQuery
 
 There are many ways to [set up your code to use the GPU](../../software/gpu-software.md).
 
-(steinhardt-remote-cluster)=
-### Steinhardt group remote cluster
-
-In addition to the GPU resources listed above, an additional 40 A100
-GPUs (on 5 servers) are available at a remote cluster hosted in a
-co-location facility in Washington state. These resources are operated
-in similar fashion as the GPUs in the `jsteinhardt` partition, available
-on a preemptible basis, with priority access for group members.
-
-To request access, either by a group member or a non-group member,
-please email consult@stat.berkeley.edu.
-
-To connect to the remote cluster, ssh to `lambda.stat.berkeley.edu`.
-Note that one cannot access the cluster via JupyterHub.
-
-The configuration of these servers is the same as other SCF machines,
-but the filesystem is distinct. Here are the key similarities and
-differences from running jobs on the SCF (local) cluster.
-
-- One can login with your SCF credentials.
-- All software installed by the SCF is available and should be similar
-  to that on the SCF (local) cluster. Software updates trail those on the SCF.
-- The job submission process is the same as on the SCF (local) cluster.
-- The home directories (and other parts of the filesystem) on this
-  remote cluster are **separate** from those on the SCF.
-  - You will need to copy over any data to the filesystem of the remote
-    cluster.
-  - If you've installed software yourself on the SCF, you'll need to
-    reinstall or copy over to the remote cluster.
-- The partition on the remote cluster is named *lambda*. However you
-  don't need to specify it when submitting a job.
-- As on the SCF (local) cluster, jobs submitted to the default
-  `preemptive_high` QoS can preempt jobs in the `preemptive` QoS,
-  which can in turm preempt jobs in the `normal` partition. Individual
-  group members can run at most 8 GPUs in `preemptive_high` at a
-  time. Non-group members only have access to the `normal` QoS.
-
-
 ## Research group details
 
 This section provides some details of usage for particular research groups.
 
 ### Steinhardt Group
-
-In addition to the GPUs available in the `jsteinhardt` partition,
-group members have priority access to the group's [co-located remote cluster](#steinhardt-remote-cluster).
 
 Group members have access to [tiered preemption](#tiered-qos).
 

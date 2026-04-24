@@ -44,7 +44,6 @@ software](cluster.md).
 | `jsteinhardt` | `sunstone`              | A4000 (8)                 | 16 GB      |
 | `jsteinhardt` | `smaug`                 | Quadro RTX 8000 (1)       | 48 GB      |
 | `jsteinhardt` | `shadowfax`             | GeForce RTX 2080 Ti (8)   | 11 GB      |
-| `lambda`      | Remote cluster [^lambda]      | A100 (40)                 | 80 GB      |
 | `yugroup`     | `treebeard`             | A100 (1)                  | 40 GB      |
 | `yugroup`     | `merry`                 | GeForce GTX TITAN X (1)   | 12 GB      |
 | `yugroup`     | `morgoth`               | Titan Xp (1)              | 12 GB      |
@@ -55,7 +54,6 @@ software](cluster.md).
 | `berkeleynlp` | `horton`[^fqdn]             | H200 (8)                  | 144 GB     |
 | `berkeleynlp` | `lorax`[^fqdn]              | H200 (8)                  | 144 GB     |
 
-[^lambda]: To use one of these five machines, one must specifically [connect to the remote cluster](cluster/gpus.md#steinhardt-remote-cluster), which is accessed separately from the other SCF resources.
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
 
