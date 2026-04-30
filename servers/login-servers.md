@@ -9,7 +9,7 @@ run jobs on these machines (see below).
 
 ## Available machines
 
-The stand-alone servers include arwen (16 cores), gandalf (8), ghan (4),
+The stand-alone servers include arwen (16 cores), gandalf (8),
 gollum (4), hermione (6), quidditch (8), radagast (8), shelob (8).
 
 To connect to machines, please use [SSH](../access/ssh.md), [remote
