@@ -473,6 +473,19 @@ Potter series.
 - snape
 - voldemort
 
+### Dr. Seuss
+
+In 2025 we pivoted to Dr. Seuss characters. We started off with horton and lorax, chosen by Dan Ackerman.
+
+ - cubbins
+ - horton
+ - lorax
+ - mcfuzz
+ - mooney
+ - sneetches
+
+### Others
+
 The other names also have stories. They are (or oringally were) faculty
 and staff workstations and named by their (original) main users. Some
 reflect the national origins of their choosers.
@@ -493,9 +506,6 @@ hobbes for awhile) (again note loose consistency with Leo's theme).
 
 kestrel  
 : chosen by Deb Nolan.
-
-lorax and horton
-: chosen by Dan Ackerman, after Dr. Seuss characters.
 
 smiley  
 : chosen by Andrew Gelman.
