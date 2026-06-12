@@ -53,10 +53,10 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `yugroup`     | `morgoth`            | Titan X (Pascal) (1)      | 12 GB      | Berkeley  |
 | `yss`         | `luthien`            | A100 (4)                  | 80 GB      | Berkeley  |
 | `yss`         | `beren`              | A100 (8)                  | 80 GB      | Berkeley  |
-| `songmei`     | `feanor`[^fqdn]          | H200 (8)                  | 144 GB     | NASA Ames |
-| `berkeleynlp` | `horton`[^fqdn]          | H200 (8)                  | 144 GB     | NASA Ames |
-| `berkeleynlp` | `lorax`[^fqdn]           | H200 (8)                  | 144 GB     | NASA Ames |
+| `songmei`     | `feanor`[^fqdn]          | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `berkeleynlp` | `horton`[^fqdn]          | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `berkeleynlp` | `lorax`[^fqdn]           | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
 
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
-
+[^latency]: Note that some GPU machines are located at the NASA Ames facility approximately 75 km from Berkeley, where the SCF fileservers hosting home and scratch directories (via NFS) are located. This distance results a two microsecond latency that when working with many (often small) files (including Conda/Mamba-related work) can sometimes cause slowness and laggy behavior. [Local disks are available to group members](./cluster/gpus/#research-group-details) to help work around this problem.
