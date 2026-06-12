@@ -224,8 +224,17 @@ Slurm will try to run the job on `shadowfax`, `sunstone`, `rainbowquartz`, or
 
 Some group members have access to [tiered preemption](#tiered-qos).
 
+#### Large local disk (and avoiding latency issues)
 
-`feanor` has a very large, very fast (NVMe) disk with 6.6 TB of storage
+`feanor` is located at a remote data center at the NASA Ames facility
+and accesses data in home and scratch directories on the SCF filesystems located here in Berkeley.
+
+Often this is not a problem, but in some cases and for some workflows involving
+accessing many (often small) files, including working with Conda/Mamba
+environments, users can experience slowness. To avoid this users may want
+to put data, and possibly Conda/Mamba environments, on feanor's local disk.
+
+That local disk is a very large, very fast (NVMe) disk with 6.6 TB of storage
 available to group members via the `/data` directory. For jobs that do
 a lot of I/O, it may speed things up to read and write from `/data`
 rather than home or scratch directories. One can also put data into
@@ -245,7 +254,16 @@ corresponding to the number of GPUs purchased by each GPU.
 Additional jobs will be queued, and Slurm will report `QoSGrpGRES`
 as the 'reason' for such a job being queued.
 
-#### Large local disks
+#### Large local disks (and avoiding latency issues)
+
+The `berkeleynlp` GPU servers (aka nodes) are located at a remote data center at the NASA Ames facility
+and access data in home and scratch directories on the SCF filesystems located here in Berkeley.
+
+Often this is not a problem, but in some cases and for some workflows that
+access many (often small) files, including working with Conda/Mamba
+environments, users can experience slowness (sometimes extreme). To avoid this users may want
+to put data, and possibly Conda/Mamba environments, on local disks on the
+berkeleynlp nodes.
 
 `lorax` and `horton` have four very large and fast 14TB NVMe disks
 available to group members via the `/data` directory. For jobs that do a
@@ -254,12 +272,20 @@ than home or scratch directories. One can also put data into `/tmp` or
 `/var/tmp` temporarily for fast I/O, though the amount of space there is
 limited (less than 1 TB total across all users).
 
-If one has data on disk on one machine, an easy way to make sure it
-is available to a job on a different machine is to insert syntax like
-this in one's job script:
+As of June 2026, users can access `/data` on a given node from any SCF machine
+at `/net/<node_name/data` (e.g., `/net/lorax/data`). Therefore one does not
+need to copy data specifically to the node on which your job is running --
+as long as the data is on a node at NASA Ames and your job is also running on
+a node at NASA Ames, any latency issues associated with network traffic between
+NASA Ames and Berkeley should be avoided. 
+
+However for very intensive I/O it may 
+still help to have the data on the specific node the job is running on.
+If one does want to automatically copy data specifically to the local disk, one can 
+insert syntax like this in one's job script:
 
 ```
-someuser@lorax:~> rsync -av ${USER}@horton.stat.berkeley.edu:/data/project1 /data/
+someuser@lorax:~> rsync -av /net/horton/data/project1 /net/lorax/data/
 ```
 
 Data will be copied only if not already present on the machine 
