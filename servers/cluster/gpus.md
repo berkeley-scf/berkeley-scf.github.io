@@ -78,23 +78,27 @@ We have a helper script, `sgpus`, that will give overall GPU usage:
 
 ```{code} shell-session
 paciorek@gandalf:~> sgpus
-NODELIST       PARTITION     GPUs      GPUs_USED               
-lorax          berkeleynlp   H200:8    H200:6 
-horton         berkeleynlp   H200:8    H200:0
-roo            gpu           TITAN:1   TITAN:1      
-sunstone       jsteinhardt   A4000:8   A4000:0    
-smokyquartz    jsteinhardt   A4000:8   A4000:5  
-shadowfax      jsteinhardt   RTX2080:8 RTX2080:1    
-smaug          jsteinhardt   RTX8000:2 RTX8000:0  
-saruman        jsteinhardt   A100:10   A100:7 
-balrog         jsteinhardt   A100:8    A100:0     
-rainbowquartz  jsteinhardt   A5000:8   A5000:0    
-feanor         songmei       H200:8    H200:1       
-luthien        yss           A100:4    A100:4     
-beren          yss           A100:8    A100:2     
-morgoth        yugroup       TITAN:2   TITAN:0    
-merry          yugroup       GTX:1     GTX:1        
-treebeard      yugroup       A100:1    A100:1       
+NODELIST       PARTITION     GPUs      GPUs_USED
+lorax          berkeleynlp   H200:8    H200:6
+horton         berkeleynlp   H200:8    H200:2
+roo            gpu           TITAN:1   TITAN:0
+smaug          jsteinhardt   RTX8000:2 RTX8000:0
+shadowfax      jsteinhardt   RTX2080:8 RTX2080:0
+sunstone       jsteinhardt   A4000:8   A4000:0
+rainbowquartz  jsteinhardt   A5000:8   A5000:0
+cubbins        jsteinhardt   H200:8    H200:0
+mooney         jsteinhardt   H200:8    H200:0
+sneetches      jsteinhardt   H200:8    H200:0
+mcfuzz         jsteinhardt   H200:8    H200:0
+smokyquartz    jsteinhardt   A4000:8   A4000:3
+balrog         jsteinhardt   A100:8    A100:4
+saruman        jsteinhardt   A100:10   A100:8
+feanor         songmei       H200:8    H200:5
+luthien        yss           A100:4    A100:4
+beren          yss           A100:8    A100:7
+merry          yugroup       GTX:1     GTX:0
+treebeard      yugroup       A100:1    A100:0
+morgoth        yugroup       TITAN:2   TITAN:0
 ```
 
 If you don't care what partition a job runs on, you can specify multiple
@@ -293,11 +297,9 @@ being copied to.
 
 #### GPU-to-GPU interconnect
 
-All of the GPUs on `horton` are connected directly via NVSwitch, whereas on `lorax` only the GPU
-pairs 0-1, 2-3, 4-5, 6-7 are connected directly (via NVLink). So multi-GPU workloads that do 
-a lot of data transfer between GPUs are likely to run faster on `horton`. To specifically 
-request `horton`, you can use `-w horton` in your Slurm invocation.
-
-
-
-
+All of the GPUs on `cubbins`, `horton`, `mcfuzz`, `mooney`, and `sneetches` are
+connected directly via NVSwitch, whereas on `lorax` only the GPU pairs 0-1,
+2-3, 4-5, 6-7 are connected directly (via NVLink). So multi-GPU workloads that
+do a lot of data transfer between GPUs are likely to run faster on `horton`. To
+specifically request `horton`, you can use `-w horton` in your Slurm
+invocation.

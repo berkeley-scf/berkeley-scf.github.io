@@ -41,6 +41,10 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | Partition     | Machine Name            | GPU Type (Number of GPUs) | GPU Memory | Location |
 |---------------|----------------------|---------------------------|------------|----------|
 | `jsteinhardt` | `balrog`             | A100 (8)                  | 40 GB      | Berkeley |
+| `jsteinhardt` | `cubbins`[^fqdn]     | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
+| `jsteinhardt` | `mcfuzz`[^fqdn]      | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
+| `jsteinhardt` | `mooney`[^fqdn]      | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
+| `jsteinhardt` | `sneetches`[^fqdn]   | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
 | `jsteinhardt` | `saruman`            | A100 (10)                 | 80 GB      | Berkeley  |
 | `jsteinhardt` | `rainbowquartz`      | A5000 (8)                 | 24 GB      | Berkeley  |
 | `jsteinhardt` | `smokyquartz`        | A4000 (8)                 | 16 GB      | Berkeley  |
@@ -53,9 +57,9 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `yugroup`     | `morgoth`            | Titan X (Pascal) (1)      | 12 GB      | Berkeley  |
 | `yss`         | `luthien`            | A100 (4)                  | 80 GB      | Berkeley  |
 | `yss`         | `beren`              | A100 (8)                  | 80 GB      | Berkeley  |
-| `songmei`     | `feanor`[^fqdn]          | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `berkeleynlp` | `horton`[^fqdn]          | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `berkeleynlp` | `lorax`[^fqdn]           | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `songmei`     | `feanor`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `berkeleynlp` | `horton`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `berkeleynlp` | `lorax`[^fqdn]       | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
 
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
