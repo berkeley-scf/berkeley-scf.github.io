@@ -215,7 +215,7 @@ In addition to the notes below, more details on optimal use of these
 servers can be obtained from the guide prepared by Steinhardt group
 members and the SCF and available by contacting one of us.
 
-The `smaug`, `saruman`, and `balrog` GPUs have a lot of GPU memory and are
+The `cubbins`,`sneetches`, `mcfuzz`, `mooney`, `smaug`, `saruman`, and `balrog` GPUs have a lot of GPU memory and are
 primarily intended for training very large models (e.g., ImageNet not
 CIFAR10 or MNIST), but it is fine to use these GPUs for smaller problems
 if `shadowfax`, `sunstone`, `rainbowquartz`, and `smokyquartz` are busy.
@@ -223,6 +223,51 @@ if `shadowfax`, `sunstone`, `rainbowquartz`, and `smokyquartz` are busy.
 By default, if you do not specify a GPU type or a particular GPU server,
 Slurm will try to run the job on `shadowfax`, `sunstone`, `rainbowquartz`, or
 `smokyquartz`, unless they are busy. 
+
+#### Large local disks (and avoiding latency issues)
+
+The four H200 GPU servers (aka nodes) ( `cubbins`,`sneetches`, `mcfuzz`, `mooney`)
+are located at a remote data center at the NASA Ames facility
+and access data in home and scratch directories on the SCF filesystems located here in Berkeley.
+
+Often this is not a problem, but in some cases and for some workflows that
+access many (often small) files, including working with Conda/Mamba
+environments, users can experience slowness (sometimes extreme). To avoid this users may want
+to put data, and possibly Conda/Mamba environments, on local disks on the
+berkeleynlp nodes.
+
+All four of the nodes have a very large and fast 14TB NVMe disk
+available to group members via the `/data` directory. For jobs that do a
+lot of I/O, it may speed things up to read and write from `/data` rather
+than home or scratch directories. One can also put data into `/tmp` or
+`/var/tmp` temporarily for fast I/O, though the amount of space there is
+limited (less than 1 TB total across all users).
+
+In addition, users can access `/data` on a given node from any SCF machine
+at `/net/<node_name/data` (e.g., `/net/mcfuzz/data`). Therefore one does not
+need to copy data specifically to the node on which your job is running --
+as long as the data is on a node at NASA Ames and your job is also running on
+a node at NASA Ames, any latency issues associated with network traffic between
+NASA Ames and Berkeley should be avoided. 
+
+However for very intensive I/O it may 
+still help to have the data on the specific node the job is running on.
+If one does want to automatically copy data specifically to the local disk, one can 
+insert syntax like this in one's job script:
+
+```shell-session
+someuser@mcfuzz:~$ rsync -av /net/mooney/data/project1 /data/
+```
+
+Data will be copied only if not already present on the machine 
+being copied to.
+
+#### GPU-to-GPU interconnect
+
+All of the GPUs on `cubbins`, `mcfuzz`, `mooney`, and
+`sneetches` are cross-connected via NVSwitch, which provides
+fast GPU-to-GPU transfer between all pairs of GPUs.
+
 
 ### Song Mei Group
 
@@ -244,6 +289,14 @@ a lot of I/O, it may speed things up to read and write from `/data`
 rather than home or scratch directories. One can also put data into
 `/tmp` or `/var/tmp` temporarily for fast I/O, though the amount of
 space there is limited (less than 1 TB total across all users).
+
+For ease of use, one can access feanor's `/data` directory at 
+`/net/feanor/data` from any SCF machine.
+
+#### GPU-to-GPU interconnect
+
+All of the GPUs on `feanor`  are cross-connected via NVSwitch, which provides
+fast GPU-to-GPU transfer between all pairs of GPUs.
 
 ### Berkeley NLP Group
 
@@ -297,8 +350,7 @@ being copied to.
 
 #### GPU-to-GPU interconnect
 
-All of the GPUs on `cubbins`, `feanor`, `horton`, `mcfuzz`, `mooney`, and
-`sneetches` are cross-connected via NVSwitch, whereas on `lorax` only the GPU
+All of the GPUs on `horton`  are cross-connected via NVSwitch, whereas on `lorax` only the GPU
 pairs 0-1, 2-3, 4-5, 6-7 are connected directly, via NVLink. Multi-GPU
 workloads that do a lot of data transfer between GPUs are likely to run faster
 on NVSwitch-based nodes. To request a specific node, you can use `-w

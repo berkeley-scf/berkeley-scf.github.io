@@ -40,11 +40,11 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 
 | Partition     | Machine Name            | GPU Type (Number of GPUs) | GPU Memory | Location |
 |---------------|----------------------|---------------------------|------------|----------|
+| `jsteinhardt` | `cubbins`[^fqdn]     | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `jsteinhardt` | `mcfuzz`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `jsteinhardt` | `mooney`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| `jsteinhardt` | `sneetches`[^fqdn]   | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
 | `jsteinhardt` | `balrog`             | A100 (8)                  | 40 GB      | Berkeley |
-| `jsteinhardt` | `cubbins`[^fqdn]     | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
-| `jsteinhardt` | `mcfuzz`[^fqdn]      | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
-| `jsteinhardt` | `mooney`[^fqdn]      | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
-| `jsteinhardt` | `sneetches`[^fqdn]   | H200 (8)                  | 2 TB       | NASA Ames[^latency] |
 | `jsteinhardt` | `saruman`            | A100 (10)                 | 80 GB      | Berkeley  |
 | `jsteinhardt` | `rainbowquartz`      | A5000 (8)                 | 24 GB      | Berkeley  |
 | `jsteinhardt` | `smokyquartz`        | A4000 (8)                 | 16 GB      | Berkeley  |
