@@ -288,8 +288,8 @@ still help to have the data on the specific node the job is running on.
 If one does want to automatically copy data specifically to the local disk, one can 
 insert syntax like this in one's job script:
 
-```
-someuser@lorax:~> rsync -av /net/horton/data/project1 /net/lorax/data/
+```shell-session
+someuser@lorax:~$ rsync -av /net/horton/data/project1 /data/
 ```
 
 Data will be copied only if not already present on the machine 
