@@ -297,9 +297,9 @@ being copied to.
 
 #### GPU-to-GPU interconnect
 
-All of the GPUs on `cubbins`, `horton`, `mcfuzz`, `mooney`, and `sneetches` are
-connected directly via NVSwitch, whereas on `lorax` only the GPU pairs 0-1,
-2-3, 4-5, 6-7 are connected directly (via NVLink). So multi-GPU workloads that
-do a lot of data transfer between GPUs are likely to run faster on `horton`. To
-specifically request `horton`, you can use `-w horton` in your Slurm
-invocation.
+All of the GPUs on `cubbins`, `feanor`, `horton`, `mcfuzz`, `mooney`, and
+`sneetches` are cross-connected via NVSwitch, whereas on `lorax` only the GPU
+pairs 0-1, 2-3, 4-5, 6-7 are connected directly, via NVLink. Multi-GPU
+workloads that do a lot of data transfer between GPUs are likely to run faster
+on NVSwitch-based nodes. To request a specific node, you can use `-w
+{hostname}` in your Slurm invocation.
