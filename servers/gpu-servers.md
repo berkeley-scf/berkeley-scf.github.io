@@ -35,10 +35,13 @@ which means they can be cancelled at any time by a higher-priority jobs.
 These servers can be accessed by submitting to specific partition of interest using the [Slurm scheduling
 software](cluster.md).
 
-See the first table below for information about the GPU servers and the second table for more detailed
+See the [first table](#gpu-server-specs) below for information about the GPU servers and the [second table](#gpu-server-additional-specs) for more detailed
 information related to local disk, GPU-to-GPU interconnect, and location/latency.
-With regard to the latter, note that some GPU machines are located at the NASA Ames facility approximately 75 km from Berkeley,
-where the SCF fileservers hosting home and scratch directories (via NFS) are located. This distance results a two microsecond latency that when working with many (often small) files (including Conda/Mamba-related work) can sometimes cause slowness and laggy behavior. [Local disks are available to group members](./cluster/gpus/#research-group-details) to help work around this problem.
+
+With regard to the latency, note that some GPU machines are located at the NASA Ames facility approximately 75 km from Berkeley,
+where the SCF fileservers hosting home and scratch directories (via NFS) are located. This distance results in a two microsecond latency that when working with many (often small) files (including Conda/Mamba-related work) can sometimes cause slowness and laggy behavior. [Local disks are available to group members](./cluster/gpus/#research-group-details) to help work around this problem.
+
+#### GPU server specs
 
 | Partition     | Machine Name            | GPU Type (Number of GPUs) | GPU Memory |
 |---------------|----------------------|---------------------------|------------|
@@ -66,6 +69,8 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
 
+#### GPU server additional specs
+
 | Partition     | Machine Name         | GPU-to-GPU Interconnect | Local storage[^disk] | Location |
 |---------------|----------------------|-------------------------|------------|----------|
 | `jsteinhardt` | `cubbins`[^fqdn]     | NVSwitch                | 14 TB NVME | NASA Ames[^latency] |
@@ -78,7 +83,7 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `jsteinhardt` | `smokyquartz`        | A4000 (8)               | 3.5 TB NVME      | Berkeley  |
 | `jsteinhardt` | `sunstone`           | A4000 (8)               | 3.5 TB NVME      | Berkeley  |
 | `jsteinhardt` | `smaug`              | NVLink (pairs)          | 2 TB NVME      | Berkeley  |
-| `jsteinhardt` | `shadowfax`          | None                    | 3.6 TB spinning | 11 GB      | Berkeley  |
+| `jsteinhardt` | `shadowfax`          | None                    | 3.6 TB spinning |  Berkeley  |
 | `yugroup`     | `treebeard`          | N/A                     |       | Berkeley  |
 | `yugroup`     | `merry`              | N/A                     |       | Berkeley  |
 | `yugroup`     | `morgoth`            | N/A                     |       | Berkeley  |
