@@ -35,32 +35,61 @@ which means they can be cancelled at any time by a higher-priority jobs.
 These servers can be accessed by submitting to specific partition of interest using the [Slurm scheduling
 software](cluster.md).
 
-Note that some GPU machines are located at the NASA Ames facility approximately 75 km from Berkeley,
+See the first table below for information about the GPU servers and the second table for more detailed
+information related to local disk, GPU-to-GPU interconnect, and location/latency.
+With regard to the latter, note that some GPU machines are located at the NASA Ames facility approximately 75 km from Berkeley,
 where the SCF fileservers hosting home and scratch directories (via NFS) are located. This distance results a two microsecond latency that when working with many (often small) files (including Conda/Mamba-related work) can sometimes cause slowness and laggy behavior. [Local disks are available to group members](./cluster/gpus/#research-group-details) to help work around this problem.
 
-| Partition     | Machine Name            | GPU Type (Number of GPUs) | GPU Memory | Location |
-|---------------|----------------------|---------------------------|------------|----------|
-| `jsteinhardt` | `cubbins`[^fqdn]     | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `jsteinhardt` | `mcfuzz`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `jsteinhardt` | `mooney`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `jsteinhardt` | `sneetches`[^fqdn]   | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `jsteinhardt` | `balrog`             | A100 (8)                  | 40 GB      | Berkeley |
-| `jsteinhardt` | `saruman`            | A100 (10)                 | 80 GB      | Berkeley  |
-| `jsteinhardt` | `rainbowquartz`      | A5000 (8)                 | 24 GB      | Berkeley  |
-| `jsteinhardt` | `smokyquartz`        | A4000 (8)                 | 16 GB      | Berkeley  |
-| `jsteinhardt` | `sunstone`           | A4000 (8)                 | 16 GB      | Berkeley  |
-| `jsteinhardt` | `smaug`              | Quadro RTX 8000 (1)       | 48 GB      | Berkeley  |
-| `jsteinhardt` | `shadowfax`          | GeForce RTX 2080 Ti (8)   | 11 GB      | Berkeley  |
-| `yugroup`     | `treebeard`          | A100 (1)                  | 40 GB      | Berkeley  |
-| `yugroup`     | `merry`              | GeForce GTX TITAN X (1)   | 12 GB      | Berkeley  |
-| `yugroup`     | `morgoth`            | Titan Xp (1)              | 12 GB      | Berkeley  |
-| `yugroup`     | `morgoth`            | Titan X (Pascal) (1)      | 12 GB      | Berkeley  |
-| `yss`         | `luthien`            | A100 (4)                  | 80 GB      | Berkeley  |
-| `yss`         | `beren`              | A100 (8)                  | 80 GB      | Berkeley  |
-| `songmei`     | `feanor`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `berkeleynlp` | `horton`[^fqdn]      | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
-| `berkeleynlp` | `lorax`[^fqdn]       | H200 (8)                  | 144 GB     | NASA Ames[^latency] |
+| Partition     | Machine Name            | GPU Type (Number of GPUs) | GPU Memory |
+|---------------|----------------------|---------------------------|------------|
+| `jsteinhardt` | `cubbins`[^fqdn]     | H200 (8)                  | 144 GB     |
+| `jsteinhardt` | `mcfuzz`[^fqdn]      | H200 (8)                  | 144 GB     |
+| `jsteinhardt` | `mooney`[^fqdn]      | H200 (8)                  | 144 GB     |
+| `jsteinhardt` | `sneetches`[^fqdn]   | H200 (8)                  | 144 GB     |
+| `jsteinhardt` | `balrog`             | A100 (8)                  | 40 GB      |
+| `jsteinhardt` | `saruman`            | A100 (10)                 | 80 GB      |
+| `jsteinhardt` | `rainbowquartz`      | A5000 (8)                 | 24 GB      |
+| `jsteinhardt` | `smokyquartz`        | A4000 (8)                 | 16 GB      |
+| `jsteinhardt` | `sunstone`           | A4000 (8)                 | 16 GB      |
+| `jsteinhardt` | `smaug`              | Quadro RTX 8000 (1)       | 48 GB      |
+| `jsteinhardt` | `shadowfax`          | GeForce RTX 2080 Ti (8)   | 11 GB      |
+| `yugroup`     | `treebeard`          | A100 (1)                  | 40 GB      |
+| `yugroup`     | `merry`              | GeForce GTX TITAN X (1)   | 12 GB      |
+| `yugroup`     | `morgoth`            | Titan Xp (1)              | 12 GB      |
+| `yugroup`     | `morgoth`            | Titan X (Pascal) (1)      | 12 GB      |
+| `yss`         | `luthien`            | A100 (4)                  | 80 GB      |
+| `yss`         | `beren`              | A100 (8)                  | 80 GB      |
+| `songmei`     | `feanor`[^fqdn]      | H200 (8)                  | 144 GB     | 
+| `berkeleynlp` | `horton`[^fqdn]      | H200 (8)                  | 144 GB     | 
+| `berkeleynlp` | `lorax`[^fqdn]       | H200 (8)                  | 144 GB     | 
 
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
+
+| Partition     | Machine Name         | GPU-to-GPU Interconnect | Local storage[^disk] | Location |
+|---------------|----------------------|-------------------------|------------|----------|
+| `jsteinhardt` | `cubbins`[^fqdn]     | NVSwitch                | 14 TB NVME | NASA Ames[^latency] |
+| `jsteinhardt` | `mcfuzz`[^fqdn]      | NVSwitch                | 14 TB NVME     | NASA Ames[^latency] |
+| `jsteinhardt` | `mooney`[^fqdn]      | NVSwitch                | 14 TB NVME     | NASA Ames[^latency] |
+| `jsteinhardt` | `sneetches`[^fqdn]   | NVSwitch                | 14 TB NVME     | NASA Ames[^latency] |
+| `jsteinhardt` | `balrog`             | NVLink (pairs)          | 3.5 TB spinning  | Berkeley |
+| `jsteinhardt` | `saruman`            | NVLink (pairs)          | 7 TB NVME      | Berkeley  |
+| `jsteinhardt` | `rainbowquartz`      | A5000 (8)               | 3.5 TB NVME      | Berkeley  |
+| `jsteinhardt` | `smokyquartz`        | A4000 (8)               | 3.5 TB NVME      | Berkeley  |
+| `jsteinhardt` | `sunstone`           | A4000 (8)               | 3.5 TB NVME      | Berkeley  |
+| `jsteinhardt` | `smaug`              | NVLink (pairs)          | 2 TB NVME      | Berkeley  |
+| `jsteinhardt` | `shadowfax`          | None                    | 3.6 TB spinning | 11 GB      | Berkeley  |
+| `yugroup`     | `treebeard`          | N/A                     |       | Berkeley  |
+| `yugroup`     | `merry`              | N/A                     |       | Berkeley  |
+| `yugroup`     | `morgoth`            | N/A                     |       | Berkeley  |
+| `yugroup`     | `morgoth`            | N/A                     |       | Berkeley  |
+| `yss`         | `luthien`            | None                    |       | Berkeley  |
+| `yss`         | `beren`              | NVLink (pairs)          |       | Berkeley  |
+| `songmei`     | `feanor`[^fqdn]      | NVSwitch                | 6.6 TB NVME | NASA Ames[^latency] |
+| `berkeleynlp` | `horton`[^fqdn]      | NVSwitch                | 56 TB NVME | NASA Ames[^latency] |
+| `berkeleynlp` | `lorax`[^fqdn]       | NVLink (pairs)          |  56 TB NVME | NASA Ames[^latency] |
+
+
+[^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
+[^disk]: Storage available at `/data` to group members. In addition, all machines have 100s of GB available on local `/tmp` and `/var/tmp` on spinning disks, available to all users.
 [^latency]: Note that some GPU machines are located at the NASA Ames facility approximately 75 km from Berkeley, where the SCF fileservers hosting home and scratch directories (via NFS) are located. This distance causes a two microsecond latency that when working with many (often small) files (including Conda/Mamba-related work) can sometimes cause slowness and laggy behavior. [Local disks are available to group members](./cluster/gpus/#research-group-details) to help work around this problem.
