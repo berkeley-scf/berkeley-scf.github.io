@@ -73,26 +73,26 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 
 | Partition     | Machine Name         | GPU-to-GPU Interconnect | Local storage[^disk] | Location |
 |---------------|----------------------|-------------------------|------------|----------|
-| `jsteinhardt` | `cubbins`[^fqdn]     | NVSwitch                | 14 TB NVME | NASA Ames[^latency] |
+| `jsteinhardt` | `cubbins`[^fqdn]     | NVSwitch                | 14 TB NVME     | NASA Ames[^latency] |
 | `jsteinhardt` | `mcfuzz`[^fqdn]      | NVSwitch                | 14 TB NVME     | NASA Ames[^latency] |
 | `jsteinhardt` | `mooney`[^fqdn]      | NVSwitch                | 14 TB NVME     | NASA Ames[^latency] |
 | `jsteinhardt` | `sneetches`[^fqdn]   | NVSwitch                | 14 TB NVME     | NASA Ames[^latency] |
-| `jsteinhardt` | `balrog`             | NVLink (pairs)          | 3.5 TB spinning  | Berkeley |
+| `jsteinhardt` | `balrog`             | NVLink (pairs)          | 3.5 TB spinning| Berkeley |
 | `jsteinhardt` | `saruman`            | NVLink (pairs)          | 7 TB NVME      | Berkeley  |
-| `jsteinhardt` | `rainbowquartz`      | A5000 (8)               | 3.5 TB NVME      | Berkeley  |
-| `jsteinhardt` | `smokyquartz`        | A4000 (8)               | 3.5 TB NVME      | Berkeley  |
-| `jsteinhardt` | `sunstone`           | A4000 (8)               | 3.5 TB NVME      | Berkeley  |
+| `jsteinhardt` | `rainbowquartz`      | A5000 (8)               | 3.5 TB NVME    | Berkeley  |
+| `jsteinhardt` | `smokyquartz`        | A4000 (8)               | 3.5 TB NVME    | Berkeley  |
+| `jsteinhardt` | `sunstone`           | A4000 (8)               | 3.5 TB NVME    | Berkeley  |
 | `jsteinhardt` | `smaug`              | NVLink (pairs)          | 2 TB NVME      | Berkeley  |
-| `jsteinhardt` | `shadowfax`          | None                    | 3.6 TB spinning |  Berkeley  |
+| `jsteinhardt` | `shadowfax`          | None                    | 3.6 TB spinning|  Berkeley  |
 | `yugroup`     | `treebeard`          | N/A                     |       | Berkeley  |
 | `yugroup`     | `merry`              | N/A                     |       | Berkeley  |
 | `yugroup`     | `morgoth`            | N/A                     |       | Berkeley  |
 | `yugroup`     | `morgoth`            | N/A                     |       | Berkeley  |
 | `yss`         | `luthien`            | None                    |       | Berkeley  |
 | `yss`         | `beren`              | NVLink (pairs)          |       | Berkeley  |
-| `songmei`     | `feanor`[^fqdn]      | NVSwitch                | 6.6 TB NVME | NASA Ames[^latency] |
-| `berkeleynlp` | `horton`[^fqdn]      | NVSwitch                | 56 TB NVME | NASA Ames[^latency] |
-| `berkeleynlp` | `lorax`[^fqdn]       | NVLink (pairs)          |  56 TB NVME | NASA Ames[^latency] |
+| `songmei`     | `feanor`[^fqdn]      | NVSwitch                | 6.6 TB NVME    | NASA Ames[^latency] |
+| `berkeleynlp` | `horton`[^fqdn]      | NVSwitch                | 56 TB NVME     | NASA Ames[^latency] |
+| `berkeleynlp` | `lorax`[^fqdn]       | NVLink (pairs)          |  56 TB NVME    | NASA Ames[^latency] |
 
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
