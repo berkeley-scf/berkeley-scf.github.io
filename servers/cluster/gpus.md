@@ -138,7 +138,12 @@ sbatch -p jsteinhardt -q preemptive --gpus=1 job.sh
 ```
 
 Note that for users of the `berkeleynlp` partition, all users affiliated
-with a given PI and with access to high preemption can use at most 4 GPUs at a time, corresponding to the number of GPUs purchased by each PI.
+with a given PI and with access to high preemption can use a maximum number of GPUs at a time, corresponding to to the number of GPUs purchased by each PI.
+
+| PI         | Max GPUs per Group |
+|============|====================|
+| Sewon Min  | 8                  |
+| All others | 4                  |
 
 ### CPUs per task
 
