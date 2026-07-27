@@ -44,7 +44,8 @@ resulting ssh session will be associated with your existing job on the
 node. One important caveat is that if your terminal on the login server is
 through JupyterHub, you'll need to run `ssh -F none {name_of_node}` rather
 than just `ssh {name_of_node}`. Note that to ssh to the `feanor`,
-`horton`, and `lorax` GPU servers, you'll need to use the full name, e.g.
+`horton`, `lorax`, `thidwick`, `cubbins`,`mcfuzz`,`mooney`, and `sneetches`. 
+GPU servers, you'll need to use the full name, e.g.
 `feanor.stat.berkeley.edu`, and not just `feanor`, unlike the other nodes.
 
 Alternatively, you can run an interactive job within the context of your

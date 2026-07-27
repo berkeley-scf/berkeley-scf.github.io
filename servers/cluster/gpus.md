@@ -327,7 +327,7 @@ environments, users can experience slowness (sometimes extreme). To avoid this u
 to put data, and possibly Conda/Mamba environments, on local disks on the
 berkeleynlp nodes.
 
-`lorax` and `horton` have four very large and fast 14TB NVMe disks
+`lorax`, `horton`, and `thidwick` have four very large and fast 14TB NVMe disks
 available to group members via the `/data` directory. For jobs that do a
 lot of I/O, it may speed things up to read and write from `/data` rather
 than home or scratch directories. One can also put data into `/tmp` or
@@ -356,7 +356,8 @@ being copied to.
 #### GPU-to-GPU interconnect
 
 All of the GPUs on `horton`  are cross-connected via NVSwitch, whereas on `lorax` only the GPU
-pairs 0-1, 2-3, 4-5, 6-7 are connected directly, via NVLink. Multi-GPU
+pairs 0-1, 2-3, 4-5, 6-7 are connected directly, and with `thidwick` all pairs within GPUs 0-3 
+and within GPUs 4-7 via NVLink. Multi-GPU
 workloads that do a lot of data transfer between GPUs are likely to run faster
 on NVSwitch-based nodes. To request a specific node, you can use `-w
 {hostname}` in your Slurm invocation.

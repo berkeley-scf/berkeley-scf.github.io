@@ -65,7 +65,7 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `songmei`     | `feanor`[^fqdn]      | H200 (8)                  | 144 GB     | 
 | `berkeleynlp` | `horton`[^fqdn]      | H200 (8)                  | 144 GB     | 
 | `berkeleynlp` | `lorax`[^fqdn]       | H200 (8)                  | 144 GB     | 
-
+| `berkeleynlp` | `thidwick`[^fqdn]    | H200 (8)                  | 144 GB     |
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
 
@@ -92,8 +92,8 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `yss`         | `beren`              | NVLink (pairs)          |       | Berkeley  |
 | `songmei`     | `feanor`[^fqdn]      | NVSwitch                | 6.6 TB NVME    | NASA Ames[^latency] |
 | `berkeleynlp` | `horton`[^fqdn]      | NVSwitch                | 56 TB NVME     | NASA Ames[^latency] |
-| `berkeleynlp` | `lorax`[^fqdn]       | NVLink (pairs)          |  56 TB NVME    | NASA Ames[^latency] |
-
+| `berkeleynlp` | `lorax`[^fqdn]       | NVLink (pairs)          | 56 TB NVME     | NASA Ames[^latency] |
+| `berkeleynlp` | `thidwick`[^fqdn]    | NVLink (pairs)          | 56 TB NVME     | NASA Ames[^latency] |
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
 [^disk]: Storage available at `/data` to group members. In addition, all machines have 100s of GB available on local `/tmp` and `/var/tmp` on spinning disks, available to all users.
