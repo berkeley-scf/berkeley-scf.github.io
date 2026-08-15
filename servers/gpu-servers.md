@@ -54,7 +54,7 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `jsteinhardt` | `rainbowquartz`      | A5000 (8)                 | 24 GB      |
 | `jsteinhardt` | `smokyquartz`        | A4000 (8)                 | 16 GB      |
 | `jsteinhardt` | `sunstone`           | A4000 (8)                 | 16 GB      |
-| `jsteinhardt` | `smaug`              | Quadro RTX 8000 (1)       | 48 GB      |
+| `jsteinhardt` | `smaug`[^fqdn]       | Quadro RTX 8000 (1)       | 48 GB      |
 | `jsteinhardt` | `shadowfax`          | GeForce RTX 2080 Ti (8)   | 11 GB      |
 | `yugroup`     | `treebeard`          | A100 (1)                  | 40 GB      |
 | `yugroup`     | `merry`              | GeForce GTX TITAN X (1)   | 12 GB      |
