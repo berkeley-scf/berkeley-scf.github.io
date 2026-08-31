@@ -30,7 +30,7 @@ the [University of California Electronic Communications Policy
 
 These accounts are a privilege and as such can be revoked if misused.
 All questions should be addressed to the Systems Manager of the
-Statistical Computing Facility in room 499 Evans Hall, 643-7407.
+Statistical Computing Facility in room 3118 Gateway, 643-7407.
 
 ## Account Types
 

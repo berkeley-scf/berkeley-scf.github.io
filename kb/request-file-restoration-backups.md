@@ -39,5 +39,5 @@ backup which was done before they were destroyed.
 ## Disaster Recovery
 
 The SCF backs up data off-site monthly for recovery in
-the event of a catastrophic disaster, for example, damage to Evans Hall
+the event of a catastrophic disaster, for example, damage to our building
 resulting from either an earthquake, fire, or bomb.

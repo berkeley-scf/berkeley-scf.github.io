@@ -25,7 +25,7 @@
 ::::{div}
 ## Department of Statistics
 
-367 Evans Hall, University of California  
+3150 Gateway, University of California  
 Berkeley, CA 94720-3860  
 T 510-642-2781 | F 510-642-7892  
 

@@ -56,7 +56,7 @@ filesystem.
 - You can [mount your SCF home directory as a directory on your personal
   machine](./access/remote-files.md) (available for any of Windows, MacOS, or
   Linux).
-- If you have a Mac or Linux desktop that you keep in your Evans office,
+- If you have a Mac or Linux desktop that you keep in your Gateway office,
   the SCF can administer that computer for you. In this case, you will have
   direct access to your home directory, mounted via NFS, as for all SCF
   machines. Please [email us](mailto:manager@stat.berkeley.edu) if you are

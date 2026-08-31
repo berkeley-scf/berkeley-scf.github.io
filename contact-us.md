@@ -3,7 +3,7 @@ title: Contact Us
 ---
 You can get help and report problems in several ways.
 
-We are located on the fourth floor of Evans Hall, Rooms 495-499. Feel free to drop by while we are in.
+We are located on the third floor of the Gateway building, and our office numbers are available at our [staff profile pages](https://statistics.berkeley.edu/people/staff). Feel free to drop by while we are in.
 
 ::::{grid} 1 2 2 2
 
