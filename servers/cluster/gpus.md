@@ -141,7 +141,7 @@ Note that for users of the `berkeleynlp` partition, all users affiliated
 with a given PI and with access to high preemption can use a maximum number of GPUs at a time, corresponding to to the number of GPUs purchased by each PI.
 
 | PI         | Max GPUs per Group |
-|============|====================|
+| ---------- | ------------------ |
 | Sewon Min  | 8                  |
 | All others | 4                  |
 
