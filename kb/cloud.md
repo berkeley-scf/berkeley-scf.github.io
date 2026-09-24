@@ -20,8 +20,7 @@ Note that access through the cloud service is distinct from pay-as-you go throug
 
 Finally note that at present Berkeley's agreement with Google only provides chat access to Google's Gemini models (at gemini.google.com and login with your CalNet credentials) and not access to Gemini Code Assist or API access to Gemini.
 
-The SCF has [some additional overview of the cloud landscape around AI/LLMs](https://docs.google.com/document/d/1vf_ODinTH3LJAhrHPF89kyBYaif4-2ZifMC1h3Z-36o/edit?usp=sharing
-) in an evolving document created in September 2026. 
+The SCF has [some additional overview of the cloud landscape around AI/LLMs](https://docs.google.com/document/d/1vf_ODinTH3LJAhrHPF89kyBYaif4-2ZifMC1h3Z-36o/edit?usp=sharing) in an evolving document created in September 2026. 
 
 ## bCloud
 
@@ -38,7 +37,7 @@ In particular, if a service is available through bCloud then it is generally bes
 The initial steps are: 
 
 1. Determine which cloud service you want to use based on their offerings.
-2. Apply for a bCloud Public Cloud Account specific to the cloud service of interest (GCP, AWS, or Azure).
+2. [Apply for a bCloud Public Cloud Account](https://docs.google.com/forms/d/e/1FAIpQLSceslz3fFeNW3qe0KvJlNLxcukc4bv5wHqpPLWhEu6ouiT6EA/viewform) specific to the cloud service of interest (GCP, AWS, or Azure). See [here for further details on the account application process](https://docs.google.com/document/d/1vf_ODinTH3LJAhrHPF89kyBYaif4-2ZifMC1h3Z-36o/edit?tab=t.0#heading=h.jihfjedm409c).
 
 Once you have access to your bCloud account on the service, you can use the service's console (a web-based GUI) or command-line interface (CLI).
 
