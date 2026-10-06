@@ -10,7 +10,7 @@ securing otherwise unsafe protocols.
 
 ## Getting SSH software on your personal machine
 
-- macOS comes with SSH preinstalled. Just open Terminal.app in
+- macOS comes with SSH preinstalled. Just open Terminal\.app in
   `/Applications/Utilities/`.
 
 - Windows users have several options:
