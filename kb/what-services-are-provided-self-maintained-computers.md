@@ -13,21 +13,26 @@ SCF.
 Access to the internet is available either by a [wired connection
 through the department network](../access/networking.md) or by a
 [wireless connection to campus](https://technology.berkeley.edu/wi-fi).
-Personal computers can only be connected to the network using an SCF
-provided purple cable. You will first need to register the MAC address
-of your computer with the SCF in order to get DHCP service (refer to
-help laptop for details). If you do not have a purple cable in your
-office, contact the SCF staff to install a purple cable for use with
-your computer. If you have a CalNet ID and a wireless network card, you
-can get internet access using the eduroam wireless network service.
-eduroam service is available to all offices within the Department of
-Statistics.
+Personal computers can be connected to the network using an ethernet cable. You
+will need to register your computer's MAC address at
+[socreg](https://socreg.berkeley.edu). You can get internet access using the
+eduroam wireless network service.
 
 - [How do I create a WiFi account for
   eduroam?](https://berkeley.service-now.com/kb_view.do?sysparm_article=KB0013807)
 - [How do I find my eduroam password (i.e., key) to use when logging on
   to eduroam?](https://technology.berkeley.edu/wi-fi)
 - [WiFi Account Management](https://wifi-keys.berkeley.edu/)
+
+## Security
+
+You are responsible for the security of your own devices. Any device on
+the campus network must meet the campus [Minimum Security Standards for
+Networked Devices](https://security.berkeley.edu/minimum-security-standards-networked-devices-mssnd):
+keep the operating system supported and updated, enable the firewall and
+anti-malware protection, and use strong passwords. A compromised device will
+be blocked from the network until it has been cleaned and patched; [contact
+us](../contact-us.md) to have access restored.
 
 ## Consulting
 
