@@ -126,7 +126,7 @@ servers and cluster and some solutions or workarounds.
   - For Python: ensure you're using a virtual environment or conda environment.
   - For R: check you have write permission to the library directory.
   - Install locally: in R use `install.packages("pkg", lib="~/R_libs")`.
-  - See [Installing Software](./install.md) for detailed instructions.
+  - See [Installing Software](../software/install.md) for detailed instructions.
 
 - **Segmentation fault or core dump**
   - Often caused by memory access errors in compiled code (C/C++/Fortran).

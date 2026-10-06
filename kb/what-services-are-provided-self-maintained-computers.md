@@ -3,7 +3,7 @@ title: "What services are provided for self-maintained computers?"
 ---
 ## Files
 
-Users can [directly read from and write to](../copying-files) their UNIX home directories
+Users can [directly read from and write to](../access/copying-files.md) their UNIX home directories
 and web areas. This service is provided by Samba and may require that
 the user have the same account name on their computer as they do on the
 SCF.

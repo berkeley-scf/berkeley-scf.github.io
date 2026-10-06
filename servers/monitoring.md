@@ -23,4 +23,4 @@ our Grafana dashboards. You must login with your SCF account.
 
 ## Slurm Job Monitoring
 
-In addition to monitoring Slurm activity via the dashboard above, you can [use Slurm monitoring tools](./servers/cluster/mointoring.md).
+In addition to monitoring Slurm activity via the dashboard above, you can [use Slurm monitoring tools](./cluster/monitoring.md).

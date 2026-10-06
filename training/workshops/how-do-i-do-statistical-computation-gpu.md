@@ -22,7 +22,7 @@ the cloud.
   on commercial cloud providers such as Amazon's AWS and Google cloud.
   Email us for more information.
 
-We have more details on the [SCF GPUs and on using GPUs on Savio](../servers/gpu.md).
+We have more details on the [SCF GPUs and on using GPUs on Savio](../../servers/gpu-servers.md).
 
 For the most part, researchers tend not to program directly on a GPU but
 to use libraries such as PyTorch and JAX for Python (also CUDA.jl for

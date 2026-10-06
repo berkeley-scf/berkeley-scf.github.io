@@ -18,7 +18,7 @@ There are a variety of ways you can access the SCF computers.
     others)
   - Terminal sessions (similar to SSH command-line sessions, but from
     within your browser)
-  - [RStudio](./software/rstudio.md)
+  - [RStudio](./software/r-rstudio.md)
   - [VS (Visual Studio) Code](./software/vscode.md) sessions
   - Linux desktop sessions
 - Using [Remote Desktop](./access/remote-desktop.md) to get a graphical Linux desktop

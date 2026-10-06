@@ -30,7 +30,7 @@ an [SSH tunnel](/kb/ssh-tunnel).
 
 ### Configuration
 
-Choose an [SCF server](../computing/servers.md), and specify your username in your
+Choose an [SCF server](../servers/login-servers.md), and specify your username in your
 RDP program. You may want to also change the defaults for sound output
 and whether you want the application to run in fullscreen.
 

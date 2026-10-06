@@ -325,7 +325,7 @@ the `bin` subdirectory of the active Conda environment.
 Conda can actually be used to install R and R packages inside a Conda
 environment. You're welcome to do this, but most SCF users make use of the R
 installation (and a wide range of R packages) that we provide at the
-system level and [install additional packages](software/r-rstudio.md) for use
+system level and [install additional packages](./r-rstudio.md) for use
 with the system R.
 
 
