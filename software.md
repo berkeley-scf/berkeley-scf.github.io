@@ -17,7 +17,7 @@ version of SAS.
 
 The primary computational software currently supported by SCF includes:
 
-- R (including an extensive set of packages from CRAN), RStudio, and [RStudio via a web browser](./software/rstudio.md)
+- R (including an extensive set of packages from CRAN), RStudio, and [RStudio via a web browser](./software/r-rstudio.md)
 - [Python](./software/python.md) (the Miniforge distribution, including an extensive set of packages)
 - [Jupyter notebooks](./access/jupyterhub.md) (IPython and R, among others)
 - [MATLAB](./software/matlab.md) (including all Mathworks toolboxes)
@@ -31,7 +31,7 @@ including vim, emacs, LaTeX (and LyX), and Perl, among others. Other
 supported resources include:
 
 - standard compilers for C, C++, Fortran, and other languages,
-- [fast, threaded linear algebra libraries](./kb/linear-algebra-and-parallelized-linear-algebra-using-blas.md) (OpenBLAS and ACML)
+- [fast, threaded linear algebra libraries](./kb/linear-algebra-using-blas.md) (OpenBLAS and ACML)
 - support for [parallel programming](https://computing.stat.berkeley.edu/tutorial-parallelization), including MPI and openMP,
 - other computational software, including JAGS and Stan.
 - [hosting of Shiny repositories](./kb/hosting-shiny-app.md)
@@ -44,7 +44,7 @@ to keep up with useful new software as it becomes available.
 
 Note that access to some software (in particular machine learning and
 GPU-using software, and switching between versions of Python) is
-controlled via [Linux environment modules](./kb/environment-modules.md)
+controlled via [Linux environment modules](./software/environment-modules.md)
 
 ## Campus Distributed Software
 
@@ -53,7 +53,7 @@ from the campus-wide [Software Central site](http://ist.berkeley.edu/software-ce
 
 ### MATLAB
 
-[Install MATLAB](./kb/how-can-i-install-matlab-my-computer.md) on your own computer, or contact SCF staff for assistance.
+[Install MATLAB](./software/matlab.md) on your own computer, or contact SCF staff for assistance.
 
 ### Self Service
 
