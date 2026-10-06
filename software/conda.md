@@ -14,7 +14,7 @@ It's common that installing packages using Conda is slow or fails
 because Conda is unable to resolve dependencies. To get around this,
 **we suggest the use of Mamba**.
 
-[Mamba](https://mamba.readthedocs.io/en/latest/) is a drop-in
+[Mamba](https://mamba.readthedocs.io/) is a drop-in
 replacement for Conda that is generally faster and better at resolving
 dependencies.
 
@@ -325,7 +325,7 @@ the `bin` subdirectory of the active Conda environment.
 Conda can actually be used to install R and R packages inside a Conda
 environment. You're welcome to do this, but most SCF users make use of the R
 installation (and a wide range of R packages) that we provide at the
-system level and [install additional packages](R.md) for use
+system level and [install additional packages](software/r-rstudio.md) for use
 with the system R.
 
 
