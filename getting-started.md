@@ -27,11 +27,11 @@ title: Getting Started
 
 - [Overview for self-managed/private computers](./kb/what-services-are-provided-self-maintained-computers.md)
   - Access your SCF home directory by
-    [copying files](./access/copying-files/sftp-scf) or [using network volumes](./access/copying-files/samba.md).
+    [copying files](./access/copying-files/sftp-scp.md) or [using network volumes](./access/copying-files/samba.md).
   - [Install software on your own computer](./software.md)
 
-- [Set up your personal webpage](./kb/how-do-i-set-and-use-my-personal-website.md) or
-  [set up a course website](./kb/course-website.md)
+- [Set up your personal webpage](./websites/personal.md) or
+  [set up a course website](./websites/courses.md)
 
 - [Questions about your \@berkeley.edu email](https://bconnected.berkeley.edu/account-information)
 
