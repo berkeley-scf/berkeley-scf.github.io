@@ -208,6 +208,8 @@ multiple input files (in this case, trans0.fq, trans1.fq, ...):
 tophat BowtieIndex trans$SLURM_ARRAY_TASK_ID.fq
 ```
 
+Job arrays are restricted to a maximum of 25000 jobs and a maximum ID of 24999.
+
 (gnu-parallel)=
 ### GNU parallel 
 
