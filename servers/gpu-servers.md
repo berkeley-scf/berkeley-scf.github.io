@@ -93,7 +93,7 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `songmei`     | `feanor`[^fqdn]      | NVSwitch                | 6.6 TB NVME    | NASA Ames[^latency] |
 | `berkeleynlp` | `horton`[^fqdn]      | NVSwitch                | 56 TB NVME     | NASA Ames[^latency] |
 | `berkeleynlp` | `lorax`[^fqdn]       | NVLink (pairs)          | 56 TB NVME     | NASA Ames[^latency] |
-| `berkeleynlp` | `thidwick`[^fqdn]    | NVLink (pairs)          | 56 TB NVME     | NASA Ames[^latency] |
+| `berkeleynlp` | `thidwick`[^fqdn]    | NVLink (0-3,4-7)        | 56 TB NVME     | NASA Ames[^latency] |
 
 [^fqdn]: Requires the fully qualified domain name when connecting, i.e., `ssh {hostname}.stat.berkeley.edu`.
 [^disk]: Storage available at `/data` to group members. In addition, all machines have 100s of GB available on local `/tmp` and `/var/tmp` on spinning disks, available to all users.
