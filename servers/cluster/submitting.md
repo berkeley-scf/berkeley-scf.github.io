@@ -19,7 +19,7 @@ discussed here:
 | berkeleynlp    | 384                    | 128    | 1.5 TB           | 28 days[^bnlp-i] | Yes |
 | epurdom        | 256                    | 128    | 528 GB           | 28 days    | Yes |
 | jsteinhardt    | varied                 | varied | varied[^js-mem]  | 28 days    | Yes |
-| yugroup        | varied                 | varied | varied           | 28 days    | Yes |
+| binyu          | varied                 | varied | varied           | 28 days    | Yes |
 | yss            | 224                    | varied | 528 GB           | 28 days    | Yes |
 :::
 
@@ -79,7 +79,7 @@ Note that Slurm is configured such that single-core jobs will have
 access to a single physical core (including both hyperthreads on our new
 machines), so there won't be any contention between the two threads on a
 physical core. However, if you have many single-core jobs to run on the
-high, jsteinhardt, or yugroup partitions; you might improve your
+`high`, `jsteinhardt`, or `binyu` partitions; you might improve your
 throughput by modifying your workflow so that you can one run job per
 hyperthread rather than one job per physical core. You could do this by
 taking advantage of [parallelization strategies in R, Python, or MATLAB

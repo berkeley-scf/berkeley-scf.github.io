@@ -48,8 +48,8 @@ gpu            up 28-00:00:0      1   idle roo
 jsteinhardt    up 28-00:00:0      6    mix balrog,rainbowquartz,saruman,shadowfax,smokyquartz,sunstone
 jsteinhardt    up 28-00:00:0      1   idle smaug
 yss            up 28-00:00:0      1   idle luthien
-yugroup        up 28-00:00:0      1    mix treebeard
-yugroup        up 28-00:00:0      2   idle merry,morgoth
+binyu          up 28-00:00:0      1    mix treebeard
+binyu          up 28-00:00:0      2   idle merry,morgoth
 ```
 
 Alternatively, we have a wrapper script *snodes* that shows usage on a

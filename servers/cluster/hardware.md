@@ -38,7 +38,7 @@ Here are the details of the nodes in the various partitions.
     /var/tmp.
   - Jobs are subject to preemption at any time and will be cancelled in
     that case without warning (more details below).
-- Additional GPU servers in the 'yugroup', 'yss', 'songmei', and 'berkeleynlp'
+- Additional GPU servers in the 'binyu', 'yss', 'songmei', and 'berkeleynlp'
   partitions.
 
 We have a number of [GPU servers](../gpu-servers) that are part of the

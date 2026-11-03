@@ -115,9 +115,9 @@ To see GPU availability, you can use `sgpus`, which is an alias for
     saruman        jsteinhardt   A100:8    A100:3   
     beren          yss           A100:8    A100:8     
     luthien        yss           A100:4    A100:4     
-    morgoth        yugroup       TITAN:2   TITAN:0    
-    merry          yugroup       GTX:1     GTX:1        
-    treebeard      yugroup       A100:1    A100:1       
+    morgoth        binyu         TITAN:2   TITAN:0    
+    merry          binyu         GTX:1     GTX:1        
+    treebeard      binyu         A100:1    A100:1       
 
 ## Historical Utilization
 

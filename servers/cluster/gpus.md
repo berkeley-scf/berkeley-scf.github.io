@@ -96,9 +96,9 @@ saruman        jsteinhardt   A100:10   A100:8
 feanor         songmei       H200:8    H200:5
 luthien        yss           A100:4    A100:4
 beren          yss           A100:8    A100:7
-merry          yugroup       GTX:1     GTX:0
-treebeard      yugroup       A100:1    A100:0
-morgoth        yugroup       TITAN:2   TITAN:0
+merry          binyu         GTX:1     GTX:0
+treebeard      binyu         A100:1    A100:0
+morgoth        binyu         TITAN:2   TITAN:0
 ```
 
 If you don't care what partition a job runs on, you can specify multiple
@@ -107,7 +107,7 @@ type as well. For example to request an A100 on any of the partitions
 with A100 GPUs:
 
 ```{code} shell
-sbatch --partition=yss,jsteinhardt,yugroup --gpus=A100:1 job.sh
+sbatch --partition=yss,jsteinhardt,binyu --gpus=A100:1 job.sh
 ```
 
 
@@ -164,7 +164,7 @@ of CPUs may be fully used before all the GPUs are used.
 
 ### Requesting a specific GPU type
 
-Given the heterogenity in the GPUs available on some partitions (`jsteinhardt` and `yugroup`), 
+Given the heterogenity in the GPUs available on some partitions (`jsteinhardt` and `binyu`), 
 or if you are submitting a job to multiple partitions,
 you may want to request use of a specific GPU type. To do so, you can add the type to the `--gpus` flag, e.g.,
 requesting an A100 GPU:

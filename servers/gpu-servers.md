@@ -56,10 +56,10 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `jsteinhardt` | `sunstone`           | A4000 (8)                 | 16 GB      |
 | `jsteinhardt` | `smaug`[^fqdn]       | Quadro RTX 8000 (1)       | 48 GB      |
 | `jsteinhardt` | `shadowfax`          | GeForce RTX 2080 Ti (8)   | 11 GB      |
-| `yugroup`     | `treebeard`          | A100 (1)                  | 40 GB      |
-| `yugroup`     | `merry`              | GeForce GTX TITAN X (1)   | 12 GB      |
-| `yugroup`     | `morgoth`            | Titan Xp (1)              | 12 GB      |
-| `yugroup`     | `morgoth`            | Titan X (Pascal) (1)      | 12 GB      |
+| `binyu`     | `treebeard`          | A100 (1)                  | 40 GB      |
+| `binyu`     | `merry`              | GeForce GTX TITAN X (1)   | 12 GB      |
+| `binyu`     | `morgoth`            | Titan Xp (1)              | 12 GB      |
+| `binyu`     | `morgoth`            | Titan X (Pascal) (1)      | 12 GB      |
 | `yss`         | `luthien`            | A100 (4)                  | 80 GB      |
 | `yss`         | `beren`              | A100 (8)                  | 80 GB      |
 | `songmei`     | `feanor`[^fqdn]      | H200 (8)                  | 144 GB     | 
@@ -84,10 +84,10 @@ where the SCF fileservers hosting home and scratch directories (via NFS) are loc
 | `jsteinhardt` | `sunstone`           | A4000 (8)               | 3.5 TB NVME    | Berkeley  |
 | `jsteinhardt` | `smaug`              | NVLink (pairs)          | 2 TB NVME      | Berkeley  |
 | `jsteinhardt` | `shadowfax`          | None                    | 3.6 TB spinning|  Berkeley  |
-| `yugroup`     | `treebeard`          | N/A                     |       | Berkeley  |
-| `yugroup`     | `merry`              | N/A                     |       | Berkeley  |
-| `yugroup`     | `morgoth`            | N/A                     |       | Berkeley  |
-| `yugroup`     | `morgoth`            | N/A                     |       | Berkeley  |
+| `binyu`     | `treebeard`          | N/A                     |       | Berkeley  |
+| `binyu`     | `merry`              | N/A                     |       | Berkeley  |
+| `binyu`     | `morgoth`            | N/A                     |       | Berkeley  |
+| `binyu`     | `morgoth`            | N/A                     |       | Berkeley  |
 | `yss`         | `luthien`            | None                    |       | Berkeley  |
 | `yss`         | `beren`              | NVLink (pairs)          |       | Berkeley  |
 | `songmei`     | `feanor`[^fqdn]      | NVSwitch                | 6.6 TB NVME    | NASA Ames[^latency] |
