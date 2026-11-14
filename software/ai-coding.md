@@ -1,44 +1,63 @@
 ---
 title: "AI-assisted Coding"
 ---
-AI coding assistants and AI-based (or AI-augmented) integrated
+AI coding assistants/agents and AI-based (or AI-augmented) integrated
 development environments (IDEs) are now widely-used. This page documents
 some ways you can use such tools for your work, in particular when using
 the SCF. 
 
 ## Overview of tools 
 
-The available tools include a wide variety of AI-based IDEs (such as
-Cursor), AI-enhanced IDEs (such as VS Code extensions for GitHub Copilot
-and Gemini Code Assist), and command-line interface (CLI) tools such as
-Claude Code and Gemini Code Assist. They use a variety of back-end large
-language models, generally hosted in the cloud, with some tools allowing
-one to choose amongst a set of models. 
+Many tools are now available as all of a VS Code extension, a desktop app,
+and a command-line interface (CLIs). These include Claude Code (Anthropic), Codex (OpenAI),
+and Antigravity (Google).
+
+Other tools include Cursor (an AI-based IDE built on top of VS Code)
+and the GitHub Copilot extension for VS Code. 
+
+They use a variety of back-end large
+language models, generally hosted in the cloud, and allow you
+to choose amongst a set of models. 
 
 This space is moving really fast, so new tools and improved existing
 tools are likely to change the landscape frequently, and some of the
 information here may be outdated (please contact us with suggestions!). 
 
-Since many of the tools are available either as VS Code extensions or
-are built on top of VS Code, if you are familiar with VS Code, the
-interface will look familiar. 
 
 Some tools have free access tiers, and one can of course pay
 out-of-pocket for more intensive use or access to premium back-end
-models, which some of our graduate students are doing. 
+models.
 
-The tools generally provide some or all of the following kinds of
-interactivity: 
+The tools have generally transitioned from focusing on inline code completion and code suggestions
+to operating as agents that accomplish entire tasks by writing or changing
+code across one or more files and running code on your behalf. 
 
-- Inline code completion and code suggestions. 
-- In-editor interactivity for modifying and generating code. 
-- Chat sidebars for asking questions and controlling the AI assistant,
-  including full agent mode in which the AI can carry out complicated
-  workflows. 
+## Ways to use AI assistants with the SCF 
 
-### GitHub Copilot
+There are a wide variety of ways to run AI coding assistants on the SCF, with 
+access to your files on the SCF and the ability to run commands on an SCF machine.
 
-GitHub Copilot is widely used and is available in several contexts,
+If you're using a GUI (including VS Code or an AI coding assistant desktop app)
+it's often best to run the GUI on your laptop and have it connect to the SCF to execute
+on an SCF machine with access to your files on the SCF.
+
+Here are some good options:
+
+- 1. The Claude Code desktop app allows you to select an "SSH environment" in order to run
+on a remote machine (e.g., an SCF login node). Make sure you are in the Claude Code interface rather than the 
+Claude Cowork interface.
+     - You can do something similar in the ChatGPT desktop app in the Codex interface. 
+     It takes a couple more steps to setup (going to `Settings -> Connections` and also
+     installing the Codex CLI on the SCF machine).
+- 2. Run VS Code and access the AI coding assistant as a VS Code extension. To use on the SCF, connect to an SCF login node using the 
+        [VS Code remote SSH extension](../access/vscode-remote-ssh). 
+     - With some additional configuration, you can connect to one of the SCF cluster machines from your local VS Code application. 
+- 3. Any tool built on top of VS Code (such as Cursor or Positron) should also allow you to set up a remote SSH extension to the SCF.
+- 4. You can ssh to an SCF login node and then run a CLI such as Claude Code CLI or Codex CLI in the terminal.
+
+## GitHub Copilot
+
+GitHub Copilot is available in several contexts,
 including: 
 
 - One can use GitHub Copilot in VS Code. 
@@ -48,7 +67,7 @@ including: 
   and code completion using GitHub Copilot. In the future, one will
   likely be able to use GitHub Copilot for chat-based assistance with
   Positron. 
-- One can configure Opencode to use GitHub Copilot for LLM access.
+- One can configure Open Code to use GitHub Copilot for LLM access.
 
 The free version of GitHub Copilot has various limits on requests. You
 can use the GitHub Copilot Pro version (which has no limits on the use
@@ -70,26 +89,6 @@ To enable Copilot in your VS Code app with your GitHub for Education access, you
 :alt: VS Code GUI with GitHub copilot icons
 ```
 
-
 Once you are logged in, you should see the GitHub Copilot icon in the top toolbar (see the green oval in the screenshot). Clicking there should allow you to open the Chat window (or do `Cmd+Alt+I` on MacOs or `Ctrl+Alt+I` on Windows). You can also start inline chat in a code file with `Cmd+I` on MacOS or `Ctrl+I` on Windows.
 
 
-## Ways to use AI assistants with the SCF 
-
-- Run VS Code with GitHub Copilot (or other VS Code extensions providing
-  AI assistants such as Cursor, Windsurf, Gemini Code Assist or Continue) on your personal
-  machine and connect to the SCF standalone servers using the remote SSH extension. 
-  - With some additional configuration, you can connect to one of the
-    SCF cluster machines from your local VS Code application. 
-- We expect to support the use of Jupyter AI on the SCF JupyterHub (in
-  particular the forthcoming version 3 with various improvements) in the
-  near future. 
-- One can use AI-assisted code completions in RStudio on the SCF
-  JupyterHub. This can be helpful, as it allows you to do a variety of
-  things all couched as code completions, but it doesn’t have the full
-  AI assistance of other tools. 
-- There are various AI assistants available through a command line
-  interface (CLI), including OpenAI CLI, Claude CLI, or Gemini CLI with
-  which one can chat with AI models, generate code, or get explanations
-  in the terminal. If you’re interested in using these on the SCF,
-  please let us know.
