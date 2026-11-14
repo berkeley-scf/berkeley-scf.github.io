@@ -38,7 +38,7 @@ There are a wide variety of ways to run AI coding assistants on the SCF, with
 access to your files on the SCF and the ability to run commands on an SCF machine.
 
 If you're using a GUI (including VS Code or an AI coding assistant desktop app)
-it's often best to run the GUI on your laptop and have it connect to the SCF to execute
+it's often best to run the GUI on your laptop and have it connect to the SCF to operate
 on an SCF machine with access to your files on the SCF.
 
 Here are some good options:
@@ -53,7 +53,8 @@ Claude Cowork interface.
         [VS Code remote SSH extension](../access/vscode-remote-ssh). 
      - With some additional configuration, you can connect to one of the SCF cluster machines from your local VS Code application. 
 - 3. Any tool built on top of VS Code (such as Cursor or Positron) should also allow you to set up a remote SSH extension to the SCF.
-- 4. You can ssh to an SCF login node and then run a CLI such as Claude Code CLI or Codex CLI in the terminal.
+- 4. You can ssh to an SCF login node and then run a CLI such as Claude Code CLI or Codex CLI in the terminal. For a long-running workflow that
+you want to leave running and reconnect to later, you can run the CLI within a `tmux` or `screen` session.
 
 ## GitHub Copilot
 
