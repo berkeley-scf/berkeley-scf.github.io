@@ -8,8 +8,8 @@ the SCF. 
 
 ## Overview of tools 
 
-Many tools are now available as all of a VS Code extension, a desktop app,
-and a command-line interface (CLIs). These include Claude Code (Anthropic), Codex (OpenAI),
+Many tools are now available as **all** of a VS Code extension, a desktop app,
+and a command-line interface (CLI). These include Claude Code (Anthropic), Codex (OpenAI),
 and Antigravity (Google).
 
 Other tools include Cursor (an AI-based IDE built on top of VS Code)
